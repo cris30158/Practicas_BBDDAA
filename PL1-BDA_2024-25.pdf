@@ -2286,3 +2286,512 @@ endobj
 startxref
 427920
 %%EOF
+126 0 obj
+<</AP<</N 1025 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 15 0 R/Rect[ 84.6024 25.1872 539.84 505.987]/Subtype/Widget/T(Text4)/Type/Annot/V(şÿ T a m a ñ o   d e   v a r i a b l e s : 
+         i n t   =   4 B y t e s . 
+         v a r c h a r ( 1 8 )   =   c a r a c t e r e s   a s c i i ( 1 B y t e   p o r   c a r a c t e r ) . 
+   
+ l o n g i t u d   d e l   1   r e g i s t r o   =   4 * 3 + 1 8 =   3 0   B y t e s 
+ 
+ c o n   s h o w   b l o c k _ s i z e ,   s e   o b t i e n e   u n a   c a n t i d a d   d e   8 1 9 2   B y t e s   d e   l o n g i t u d   d e   b l o q u e 
+ 
+ e l   g r a d o   d e   o c u p a c i ó n   e s   d e   1 0 0 %   p o r   d e f e c t o ,   p o r   l o   q u e   s e   o c u p a r a n   l a   l o n g i t u d   d e   b l o q u e 
+ 
+ c o m o   s e   u s a n   2 4   b y t e s   d e   c o n t r o l   p o r   b l o q u e ,   d e   l o s   8 1 9 2   B   ,   s e   u s a n   8 1 6 8   B   p a r a   d a t o s   ( B u t i l ) . 
+ 
+ e l   f a c t o r   d e   b l o q u e   s e r á :   8 1 6 8 / 3 0   ( r e d o n d e a   h a c i a   a b a j o )   =   2 7 2   r e g i s t r o s 
+ 
+ e l   N º   d e   b l o q u e s   t o t a l e s   s e r á :   2 5 M / 2 7 2   ( r e d o n d e o   h a c i a   a r r i b a )   =   9 1 . 9 1 2   b l o q u e s 
+ 
+ 
+ M e d i a n t e   c o n s u l t a s   d e   P o s t g r e s S Q L ,   s e   o b t i n e n   l o s   s i g u i e n t e s   d a t o s :   
+ 
+ c o n   e s t a   c o n s u l t a : 
+ 
+ S E L E C T   r e l n a m e   A S   t a b l e _ n a m e , 
+               r e l p a g e s   A S   b l o q u e s 
+ F R O M   p g _ c l a s s 
+ W H E R E   r e l n a m e   =   ' t a b l a 2 5 m ' ; 
+ 
+ s e   o b t i e n e   u n   t o t a l   d e   1 8 3 8 2 4   b l o q u e s .)>>
+endobj
+930 0 obj
+<</AP<</N 989 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 214.2 615 534.6 633.36]/Subtype/Widget/T(Nombre y Apellidos)/TU(Nombre y Apellidos)/Type/Annot/V(şÿ Á l v a r o   P a n i a g u a   C o r t i j o)>>
+endobj
+931 0 obj
+<</AP<</N 990 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 117.96 595.68 226.92 613.92]/Subtype/Widget/T(DNI)/TU(DNI)/Type/Annot/V(06593675N)>>
+endobj
+932 0 obj
+<</AP<</N 991 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 214.2 536.52 534.6 554.88]/Subtype/Widget/T(Nombre y Apellidos_2)/TU(Nombre y Apellidos)/Type/Annot/V(şÿ C r i s t i n a   M a r t í n e z   T o l e d o)>>
+endobj
+933 0 obj
+<</AP<</N 992 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 117.96 517.08 226.92 535.44]/Subtype/Widget/T(DNI_2)/TU(DNI)/Type/Annot/V(09109126E)>>
+endobj
+934 0 obj
+<</AP<</N 993 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 129.12 477.84 226.92 496.2]/Subtype/Widget/T(Fecha)/TU(Fecha)/Type/Annot/V(04/02/2025)>>
+endobj
+935 0 obj
+<</AP<</N 994 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 227.88 438.36 464.04 456.72]/Subtype/Widget/T(Profesor Responsable)/TU(Profesor Responsable)/Type/Annot/V(şÿ Ó s c a r   G u t i e r r e z)>>
+endobj
+989 0 obj
+<</Length 134/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 320.4 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 318.4 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Álvaro Paniagua Cortijo) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+990 0 obj
+<</Length 121/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 108.96 18.24]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 106.96 16.24 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.368000 Tf 0 g
+2 5.789176 Td
+(06593675N) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+991 0 obj
+<</Length 135/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 320.4 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 318.4 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Cristina Martínez Toledo) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+992 0 obj
+<</Length 121/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 108.96 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 106.96 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(09109126E) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+993 0 obj
+<</Length 120/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 97.8 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 95.8 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(04/02/2025) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+994 0 obj
+<</Length 127/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 236.16 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 234.16 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Óscar Gutierrez) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1025 0 obj
+<</Length 622/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 455.2376 480.7998]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 224 0 R>>>>>>
+stream
+xœ¤TİnÓ0¾÷Sø­ƒ’æ§]“¡]Ğ©¡ØiM§‰—y¤q±<ÍyŞ†G@¼ Çî@Z‘"ÒæÂÎw¾ïóùqÈCúŸ°`Âé?Œƒ8™ğñ4¦Y–r-˜a£ü3Ÿ-9ûÈ"*Ù¢ÒuÉòŠØNè}Åß½yIà;6ËÙèD(]IàQÈókú^±˜² 	ÃI˜ğ¼dƒVğCa)ğh	ËZ˜Ã}ßëÓ(&qgSDzdcñÇ³/V˜`7Œ¨ŠĞƒ(İ'x
++´0¦r¹x\+İ}ÚßEöğv­šJÚ¶$Û5F¨E%ÕÊY{œ<‰Ò#LBô&{ÑªAs£îpY«âÃ•‘_Å@µ´R4ÛÈqce	NÓ(‹72nõ‡)Gğ±½Äé$•†Ò—Bí
+ù³Áu†|¾Jq-
+«†~Q+$oĞá54XÃÿÚ(ÔJ9ÊÖ]<Æåöx”Jqí•7¼ÃÍ©Í}pØÅ¥ÑAJÎ–`	2˜µVÖ=ËL)¹¦öğç¾×$	ııĞŒ¨Æ-JÕ”ğ†òK¸U®çâiÜµE¿& Ñ×ß~´ÊMÅ½r<YŒùVYm•µ–KpÒYdQ¼ï¥½c{!JImçk`ÚÚ‚/È[elECuqvÚui#_#«–ZÖ—Îåÿ°Ÿ a,t‚»®„‡·/æ§óãœò_7°øü­»X®Üj¸ûÖ ‡BÖP‘kŠùg_œ¿Yàºº*j0; —/ççóÎÄî9OV{Ïzæ¯`Ó~&Ó$uó±q¹iìyÎÎØ|qÌ~  ÿÿ
+endstream
+endobj
+940 0 obj
+<</Author(Iván)/Company(yo)/CreationDate(D:20250129110805+01'00')/Creator(Acrobat PDFMaker 24 para Word)/Keywords()/ModDate(D:20250211094353+01'00')/Producer(Cliente @firma)/SourceModified()/Subject(Practica 1)/Title(Bases de Datos Avanzadas)>>
+endobj
+1026 0 obj
+<</Type/XRef/Size 1027/Prev 427920/Root 907 0 R/Info 940 0 R/ID[<8E05B06B05AD0AED101978A41485BDA1><977457ED675DCB8E726EA04A33805556>]/W[ 1 4 2]/Index[ 126 1 930 6 940 1 989 6 1025 2]/Filter/FlateDecode/Length 73>>
+stream
+xœbd`ëøÌÀÀÈÀÖÿ
+LM„P?ÀÔd505…BıSæ©iR`jz8˜šÑ¦fS³¾ƒ©9ª`jn˜Z¸„   ÿÿ
+endstream
+endobj
+startxref
+434596
+%%EOF
+126 0 obj
+<</AP<</N 1036 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 15 0 R/Rect[ 84.6024 25.1872 539.84 505.987]/Subtype/Widget/T(Text4)/Type/Annot/V(şÿ T a m a ñ o   d e   v a r i a b l e s : 
+         i n t   =   4 B y t e s . 
+         v a r c h a r ( 1 8 )   =   c a r a c t e r e s   a s c i i ( 1 B y t e   p o r   c a r a c t e r ) . 
+         c a b e c e r a   d e   r e g i s t r o   =   2 3 B y t e s 
+ l o n g i t u d   d e l   1   r e g i s t r o   =   4 * 3 + 1 8 + 2 3 =   5 3   B y t e s 
+ 
+ c o n   s h o w   b l o c k _ s i z e ,   s e   o b t i e n e   u n a   c a n t i d a d   d e   8 1 9 2   B y t e s   d e   l o n g i t u d   d e   b l o q u e 
+ 
+ e l   g r a d o   d e   o c u p a c i ó n   e s   d e   1 0 0 %   p o r   d e f e c t o ,   p o r   l o   q u e   s e   o c u p a r a n   l a   l o n g i t u d   d e   b l o q u e 
+ 
+ c o m o   s e   u s a n   2 4   b y t e s   d e   c o n t r o l   p o r   b l o q u e ,   d e   l o s   8 1 9 2   B   ,   s e   u s a n   8 1 6 8   B   p a r a   d a t o s   ( B u t i l ) . 
+ 
+ e l   f a c t o r   d e   b l o q u e   s e r á :   8 1 6 8 / 5 3   ( r e d o n d e a   h a c i a   a b a j o )   =   1 5 4   r e g i s t r o s 
+ 
+ e l   N º   d e   b l o q u e s   t o t a l e s   s e r á :   2 5 M / 1 5 4   ( r e d o n d e o   h a c i a   a r r i b a )   =   1 6 2 . 3 3 8   b l o q u e s 
+ 
+ 
+ M e d i a n t e   c o n s u l t a s   d e   P o s t g r e s S Q L ,   s e   o b t i n e n   l o s   s i g u i e n t e s   d a t o s :   
+ 
+ c o n   e s t a   c o n s u l t a : 
+ 
+ S E L E C T   r e l n a m e   A S   t a b l e _ n a m e , 
+               r e l p a g e s   A S   b l o q u e s 
+ F R O M   p g _ c l a s s 
+ W H E R E   r e l n a m e   =   ' t a b l a 2 5 m ' ; 
+ 
+ s e   o b t i e n e   u n   t o t a l   d e   1 8 3 8 7 2   b l o q u e s .)>>
+endobj
+930 0 obj
+<</AP<</N 1027 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 214.2 615 534.6 633.36]/Subtype/Widget/T(Nombre y Apellidos)/TU(Nombre y Apellidos)/Type/Annot/V(şÿ Á l v a r o   P a n i a g u a   C o r t i j o)>>
+endobj
+931 0 obj
+<</AP<</N 1028 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 117.96 595.68 226.92 613.92]/Subtype/Widget/T(DNI)/TU(DNI)/Type/Annot/V(06593675N)>>
+endobj
+932 0 obj
+<</AP<</N 1029 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 214.2 536.52 534.6 554.88]/Subtype/Widget/T(Nombre y Apellidos_2)/TU(Nombre y Apellidos)/Type/Annot/V(şÿ C r i s t i n a   M a r t í n e z   T o l e d o)>>
+endobj
+933 0 obj
+<</AP<</N 1030 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 117.96 517.08 226.92 535.44]/Subtype/Widget/T(DNI_2)/TU(DNI)/Type/Annot/V(09109126E)>>
+endobj
+934 0 obj
+<</AP<</N 1031 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 129.12 477.84 226.92 496.2]/Subtype/Widget/T(Fecha)/TU(Fecha)/Type/Annot/V(04/02/2025)>>
+endobj
+935 0 obj
+<</AP<</N 1032 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 227.88 438.36 464.04 456.72]/Subtype/Widget/T(Profesor Responsable)/TU(Profesor Responsable)/Type/Annot/V(şÿ Ó s c a r   G u t i e r r e z)>>
+endobj
+1027 0 obj
+<</Length 134/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 320.4 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 318.4 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Álvaro Paniagua Cortijo) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1028 0 obj
+<</Length 121/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 108.96 18.24]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 106.96 16.24 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.368000 Tf 0 g
+2 5.789176 Td
+(06593675N) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1029 0 obj
+<</Length 135/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 320.4 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 318.4 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Cristina Martínez Toledo) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1030 0 obj
+<</Length 121/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 108.96 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 106.96 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(09109126E) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1031 0 obj
+<</Length 120/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 97.8 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 95.8 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(04/02/2025) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1032 0 obj
+<</Length 127/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 236.16 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 234.16 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Óscar Gutierrez) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1036 0 obj
+<</Length 638/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 455.2376 480.7998]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 224 0 R>>>>>>
+stream
+xœ¤TİnÓ0¾ÏSø­c%Ío›í‚Ne­ÀºH»@h:I¼Ì#;ÛaÀÓœçàmxÄpì®eHë¤Š´¹°óïûÎ°€~óÏOı“4ñ£x4dÉhìÆãŒ)îioe“Ù1ón½…„Š×¨lƒºğZ/`5±Ğû–}ü°ŠÀwŞ$÷'\ªZ –_Ñ÷Ú‹X2ûq¤AÌòÊëå°€_+_@	(®÷Y~C¬/ÂÈO£q49$Ò#ZƒG˜L¾®ıí0¢*¯AõÂlŸà%((W\#èRˆ^hãq)ÕæÓşd%¼ä
+¬GÅk¡’ÄÅÎÅãqlkaºŠb†%Ïãƒ0;ˆâ#Lc|‚ß.e‹úZŞaÑÈòó¥ßy5GYÁ[]ä¸5¢«Y8V2võÀ—%¸íøNâ”L­ rí’e·„RünqEÁ3WÓŠ_ñÒÈ¾[4IÄ´x-6ğ¿6J¹–²ÓD%X¬Ó£âP•§¼âí¯²Ö÷uÀş&.‡mXOX!HoÒÑl…­%¹¢ryßk’„úyèÔãâ•l+xMõ„n¤Ë0M6“±Ûè»5i€NÎ½r”Î–|­,×ÊJ‰œô0òã8[Çï$¾e{Æ+Asçš »Æ€ëÈ©MM'ïüìt3¦-o]K´¨;šY×;Û€ÃİíIàÚÀFpÛ½ñøöùôtzœSš_£±·Ï¥]õ·ßôPÈjrM1Oğõüı—õeÙ€Ş¹x3O7&pÏš€(]ì½Ü)›n€Õ8¸C™ÅÙ(Z»\Mö4÷Î¼éìØû  ÿÿ
+endstream
+endobj
+940 0 obj
+<</Author(Iván)/Company(yo)/CreationDate(D:20250129110805+01'00')/Creator(Acrobat PDFMaker 24 para Word)/Keywords()/ModDate(D:20250211103529+01'00')/Producer(Cliente @firma)/SourceModified()/Subject(Practica 1)/Title(Bases de Datos Avanzadas)>>
+endobj
+1042 0 obj
+<</Type/XRef/Size 1043/Prev 434596/Root 907 0 R/Info 940 0 R/ID[<8E05B06B05AD0AED101978A41485BDA1><60B1E3741AB6350264133DC4C3D9F479>]/W[ 1 4 2]/Index[ 126 1 930 6 940 1 1027 6 1036 1 1042 1]/Filter/FlateDecode/Length 75>>
+stream
+xœbd`[ôŸ‘m•˜Z¦Ö€©µõ`j]&˜Z
+¦v€©e`jã0µé˜Ú¢
+¦¶†ƒ©mm`jû>0µGŒ   ÿÿ
+endstream
+endobj
+startxref
+441366
+%%EOF
+930 0 obj
+<</AP<</N 1043 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 214.2 615 534.6 633.36]/Subtype/Widget/T(Nombre y Apellidos)/TU(Nombre y Apellidos)/Type/Annot/V(şÿ Á l v a r o   P a n i a g u a   C o r t i j o)>>
+endobj
+931 0 obj
+<</AP<</N 1044 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 117.96 595.68 226.92 613.92]/Subtype/Widget/T(DNI)/TU(DNI)/Type/Annot/V(06593675N)>>
+endobj
+932 0 obj
+<</AP<</N 1045 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 214.2 536.52 534.6 554.88]/Subtype/Widget/T(Nombre y Apellidos_2)/TU(Nombre y Apellidos)/Type/Annot/V(şÿ C r i s t i n a   M a r t í n e z   T o l e d o)>>
+endobj
+933 0 obj
+<</AP<</N 1046 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 117.96 517.08 226.92 535.44]/Subtype/Widget/T(DNI_2)/TU(DNI)/Type/Annot/V(09109126E)>>
+endobj
+934 0 obj
+<</AP<</N 1047 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 129.12 477.84 226.92 496.2]/Subtype/Widget/T(Fecha)/TU(Fecha)/Type/Annot/V(04/02/2025)>>
+endobj
+935 0 obj
+<</AP<</N 1048 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 227.88 438.36 464.04 456.72]/Subtype/Widget/T(Profesor Responsable)/TU(Profesor Responsable)/Type/Annot/V(şÿ Ó s c a r   G u t i e r r e z)>>
+endobj
+1043 0 obj
+<</Length 134/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 320.4 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 318.4 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Álvaro Paniagua Cortijo) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1044 0 obj
+<</Length 121/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 108.96 18.24]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 106.96 16.24 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.368000 Tf 0 g
+2 5.789176 Td
+(06593675N) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1045 0 obj
+<</Length 135/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 320.4 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 318.4 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Cristina Martínez Toledo) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1046 0 obj
+<</Length 121/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 108.96 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 106.96 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(09109126E) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1047 0 obj
+<</Length 120/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 97.8 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 95.8 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(04/02/2025) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1048 0 obj
+<</Length 127/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 236.16 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 234.16 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Óscar Gutierrez) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+940 0 obj
+<</Author(Iván)/Company(yo)/CreationDate(D:20250129110805+01'00')/Creator(Acrobat PDFMaker 24 para Word)/Keywords()/ModDate(D:20250211110010+01'00')/Producer(Cliente @firma)/SourceModified()/Subject(Practica 1)/Title(Bases de Datos Avanzadas)>>
+endobj
+1049 0 obj
+<</Type/XRef/Size 1050/Prev 441366/Root 907 0 R/Info 940 0 R/ID[<8E05B06B05AD0AED101978A41485BDA1><0C4029A2E278998ABFD6F81DB0C9795D>]/W[ 1 4 2]/Index[ 930 6 940 1 1043 7]/Filter/FlateDecode/Length 69>>
+stream
+xœbd`Û[ÍÀÀÈÀ¶o1˜Úß¦ìS—€©CÀÔ©Ÿ`êğF0uä=˜:¦¦'€©“ÀÔÉƒ`êô    ÿÿ
+endstream
+endobj
+startxref
+445439
+%%EOF
