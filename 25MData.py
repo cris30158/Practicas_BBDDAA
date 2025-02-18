@@ -15,7 +15,7 @@ def main():
             id_producto = i+1
             nombre = "producto_" + str(i+1)
             stock = random.randint(0,20000)
-            precio = random.randint(0,5000)
+            precio = random.randint(10,5000)
             writer.writerow({'id_producto': id_producto, 'nombre': nombre, 'stock':stock, 'precio': precio})
             #los insertamos
 
