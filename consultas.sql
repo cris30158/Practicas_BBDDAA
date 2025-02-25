@@ -13,11 +13,16 @@ begin;
 
 
 
--- -- Obtener el total de bloques utilizados por la tabla tabla25M
-SELECT relname AS table_name,
-       relpages AS bloques
-FROM pg_class
-WHERE relname = 'tabla25m';
+-- --Obtener el total de bloques utilizados por la tabla tabla25M
+-- SELECT relname AS table_name,
+--        relpages AS bloques
+-- FROM pg_class
+-- WHERE relname = 'tabla25m';
+
+--Borrar 4 millones de registros de la tabla tabla25M
+-- DELETE FROM tabla25M WHERE id IN (SELECT id FROM tabla25M ORDER BY random() LIMIT 4000000);
+-- SELECT heap_blks_read, heap_blks_hit FROM pg_statio_user_tables WHERE relname = 'tabla25M';
+-- SELECT heap_blks_read, heap_blks_hit FROM pg_statio_user_tables WHERE relname = 'productos2';
 
 
 Rollback;
