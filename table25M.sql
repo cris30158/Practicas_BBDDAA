@@ -21,14 +21,14 @@ BEGIN;
 --     precio1 int,
 --     constraint ID1 primary key(id_producto1)
 -- );
+CREATE TABLE IF NOT EXISTS productos3 (
+    id_producto3 INT,
+    nombre3 VARCHAR(18),
+    stock3 INT,
+    precio3 INT,
+    CONSTRAINT ID3 PRIMARY KEY(id_producto3, precio3)
+) PARTITION BY RANGE (precio3);
 
-create table if not exists productos3(
-    id_producto3 int,
-    nombre3 varchar(18),
-    stock3 int,
-    precio3 int,
-    constraint ID3 primary key(id_producto3)
-)   PARTITION BY RANGE (precio);
 CREATE TABLE productos3_10_510 PARTITION OF productos3 FOR VALUES FROM (10) TO (510);
 CREATE TABLE productos3_510_1010 PARTITION OF productos3 FOR VALUES FROM (510) TO (1010);
 CREATE TABLE productos3_1010_1510 PARTITION OF productos3 FOR VALUES FROM (1010) TO (1510);
@@ -38,7 +38,7 @@ CREATE TABLE productos3_2510_3010 PARTITION OF productos3 FOR VALUES FROM (2510)
 CREATE TABLE productos3_3010_3510 PARTITION OF productos3 FOR VALUES FROM (3010) TO (3510);
 CREATE TABLE productos3_3510_4010 PARTITION OF productos3 FOR VALUES FROM (3510) TO (4010);
 CREATE TABLE productos3_4010_4510 PARTITION OF productos3 FOR VALUES FROM (4010) TO (4510);
-CREATE TABLE productos3_4510_5000 PARTITION OF productos3 FOR VALUES FROM (4510) TO (5000);
+CREATE TABLE productos3_4510_5000 PARTITION OF productos3 FOR VALUES FROM (4510) TO (5001);
 
 -- insert into productos2(id_producto1, nombre1, stock1, precio1)
 -- select * from tabla25M order by precio asc;
