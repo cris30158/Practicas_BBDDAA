@@ -38,7 +38,7 @@ CREATE TABLE productos3_2510_3010 PARTITION OF productos3 FOR VALUES FROM (2510)
 CREATE TABLE productos3_3010_3510 PARTITION OF productos3 FOR VALUES FROM (3010) TO (3510);
 CREATE TABLE productos3_3510_4010 PARTITION OF productos3 FOR VALUES FROM (3510) TO (4010);
 CREATE TABLE productos3_4010_4510 PARTITION OF productos3 FOR VALUES FROM (4010) TO (4510);
-CREATE TABLE productos3_4510_5000 PARTITION OF productos3 FOR VALUES FROM (4510) TO (5001);
+CREATE TABLE productos3_4510_5001 PARTITION OF productos3 FOR VALUES FROM (4510) TO (5001);
 
 -- insert into productos2(id_producto1, nombre1, stock1, precio1)
 -- select * from tabla25M order by precio asc;
