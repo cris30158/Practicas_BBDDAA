@@ -4328,3 +4328,423 @@ endobj
 startxref
 500897
 %%EOF
+124 0 obj
+<</AP<</N 1083 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 7 0 R/Rect[ 85.0913 374.54 539.347 546.064]/Subtype/Widget/T(Text1)/Type/Annot/V(şÿ S e   h i c i e r o n   a j u s t e s   e n   e l   a r c h i v o   d e   c o n f i g u r a c i ó n   p o s t g r e s q l . c o n f .   P r i m e r o ,   s e   a c t i v ó   e l   r e g i s t r o   d e 
+ s e n t e n c i a s   D D L   y   D M L   c o n f i g u r a n d o   e l   p a r á m e t r o   l o g _ s t a t e m e n t   a    m o d  .   L u e g o ,   p a r a   p e r s o n a l i z a r 
+ e l   p r e f i j o   d e   l a s   l í n e a s   d e l   l o g ,   s e   c o n f i g u r ó   e l   p a r á m e t r o   l o g _ l i n e _ p r e f i x   d e   l a   s i g u i e n t e   m a n e r a : 
+ l o g _ l i n e _ p r e f i x   =   ' % m   [ % p ]   0 9 1 0 9 1 2 6 E   0 6 5 9 3 6 7 5 N   % r   ' 
+ E l   % m   s e r v i r á   p a r a   m o s t r a r   e l   i n s t a n t e   d e   t i e m p o   e n   e l   q u e   s e   g e n e r a   e l   r e g i s t r o   e n   e l   l o g ,   e l   % p   p a r a   m o s t r a r   e l   i d 
+ d e l   p r o c e s o   q u e   l o   g e n e r ó ,   y   e l   % r   m u e s t r a   e l   n o m b r e   d e l   h o s t   y   e l   p u e r t o   d e s d e   e l   q u e   s e   h a   r e a l i z a d o   l a   c o n e x i ó n   a l 
+ s e r v i d o r   d e b a s e   d e d a t o s .)>>
+endobj
+125 0 obj
+<</AP<</N 1201 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 15 0 R/Rect[ 88.0368 584.651 543.274 814.103]/Subtype/Widget/T(Text2)/Type/Annot/V(şÿ P a r a   b u s c a r   e l   o i d   d e   n u e s t r a   t a b l a   u t i l i z a r e m o s   e l   c o m a n d o : 
+ S E L E C T   o i d ,   d a t n a m e   F R O M   p g _ d a t a b a s e   W H E R E   d a t n a m e   =   ' P L 1 ' ; 
+ 
+ d e s p u é s ,   e n   C : \\ P r o g r a m   F i l e s \\ P o s t g r e S Q L \\ 1 6 \\ d a t a \\ b a s e \\ o i d _ d e _ t a b l a   e n c o n t r a r e m o s   l o s   a r c h i v o s   d e l   l o g   c o r r e s p o n d i e n t e s   a   l a   t a b l a)>>
+endobj
+126 0 obj
+<</AP<</N 1202 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 15 0 R/Rect[ 84.6024 25.1872 539.84 505.987]/Subtype/Widget/T(Text4)/Type/Annot/V(şÿ T a m a ñ o   d e   v a r i a b l e s : 
+ i n t   =   4 B y t e s . 
+ v a r c h a r ( 1 8 )   =   c a r a c t e r e s   a s c i i ( 1 B y t e   p o r   c a r a c t e r ) . 
+ c a b e c e r a   d e   r e g i s t r o   =   2 3 B y t e s 
+ L o n g i t u d   d e   u n   r e g i s t r o   =   4 * 3 + 1 8 + 2 3 =   5 3   B y t e s 
+ C o n   s h o w   b l o c k _ s i z e ,   s e   o b t i e n e   u n a   c a n t i d a d   d e   8 1 9 2   B y t e s   d e   l o n g i t u d   d e   b l o q u e . 
+ E l   g r a d o   d e   o c u p a c i ó n   e s   d e   1 0 0 %   p o r   d e f e c t o ,   p o r   l o   q u e   s e   o c u p a r á   l a   l o n g i t u d   d e   b l o q u e 
+ C o m o   s e   u s a n   2 4   b y t e s   d e   c o n t r o l   p o r   b l o q u e ,   d e   l o s   8 1 9 2   B   ,   s e   u s a n   8 1 6 8   B   p a r a   d a t o s   ( B u t i l ) . 
+ E l   f a c t o r   d e   b l o q u e   s e r á :   8 1 6 8 / 5 3   ( r e d o n d e a   h a c i a   a b a j o )   =   1 5 4   r e g i s t r o s 
+ E l   N º   d e   b l o q u e s   t o t a l e s   s e r á :   2 5 M / 1 5 4   ( r e d o n d e o   h a c i a   a r r i b a )   =   1 6 2 . 3 3 8   b l o q u e s 
+ M e d i a n t e   c o n s u l t a s   d e   P o s t g r e s S Q L ,   s e   o b t i n e n   l o s   s i g u i e n t e s   d a t o s : 
+ C o n   e s t a   c o n s u l t a : 
+ S E L E C T   r e l n a m e A S   t a b l e _ n a m e , 
+ r e l p a g e s   A S   b l o q u e s   F R O M   p g _ c l a s s 
+ W H E R E   r e l n a m e = ' p r o d u c t o s ' ; 
+ s e   o b t i e n e   u n   t o t a l   d e   1 8 3 8 7 2   b l o q u e s . 
+ C o n   l a   c o n s u l t a : 
+ S E L E C T   8 1 9 2   /   a v g ( p g _ c o l u m n _ s i z e ( t ) )   A S   b l o c k _ f a c t o r   F R O M   p r o d u c t o s   t ; 
+ s e   o b t i e n e   u n   f a c t o r   d e   b l o q u e   d e   1 4 6 
+ S e   o b s e r v ó ,   q u e   s i   s e   c a l c u l a b a n   e l   n ú m e r o   d e   r e g i s t r o s   s i n   a ñ a d i r   l a s   c a b e c e r a s   d e   r e g i s t r o ,   l o s   c á l c u l o s   m o s t r a b a n   q u e   e l 
+ n ú m e r o   d e   b l o q u e s   e r a   a p r o x i m a d a m e n t e   l a   m i t a d   d e   b l o q u e s   a c t u a l e s ,   e s t o   s e   d e b í a   a   q u e   l a   c a b e c e r a   e s   c a s i   d e l   m i s m o   t a m a ñ o 
+ q u e   l a   l o n g i t u d   d e   r e g i s t r o .   E s t o   t a m b i é n   s e   o b s e r v a   e n   e l   f a c t o r   d e   b l o q u e   e l   c u a l   e s   m a y o r   q u e   e l   q u e   u s a   P o s t g r e S Q L . 
+ E l   r e s u l t a d o   d e   u n   f a c t o r   d e   b l o q u e   m e n o r   q u e   e l   t e ó r i c o   p o d r í a   i n d i c a r   q u e   P o s t g r e S Q L ,   e n   l a   p r á c t i c a , 
+ u t i l i z a   m e n o s   e s p a c i o   p o r   r e g i s t r o   e n   c o m p a r a c i ó n   c o n   e l   c á l c u l o   t e ó r i c o ,   p r o b a b l e m e n t e   d e b i d o   a   l a 
+ e f i c i e n c i a   e n   e l   a l m a c e n a m i e n t o   d e   p u n t e r o s   y   e l   u s o   d e   a l m a c e n a m i e n t o   a d i c i o n a l   q u e   o p t i m i z a   e l   u s o 
+ d e l   e s p a c i o 
+ E l   n ú m e r o   t o t a l   d e   b l o q u e s   e n t r e   P o s t g r e S Q L   y   l o s   c á l c u l o s   t a m p o c o   c o i n c i d e   d e l   t o d o ,   p r o b a b l e m e n t e 
+ p o r   e l   u s o   p o r   p a r t e   d e   P o s t g r e S Q L   d e   m á s   i n f o r m a c i ó n   d e   c o n t r o l   e n   l o s   r e g i s t r o s   c o m o   p u n t e r o s   u 
+ o t r o s   d a t o s .)>>
+endobj
+127 0 obj
+<</AP<</N 1205 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 18 0 R/Rect[ 85.5842 447.246 540.822 714.989]/Subtype/Widget/T(Text5)/Type/Annot/V(şÿ C o m o   p r e c i o   s e   t r a t a   d e   u n   c a m p o   n o   c l a v e ,   e l   v a l o r   V ( p r e c i o )   =   4 9 9 0 ,   q u e   s o n   t o d o s   l o s   v a l o r e s   d i s t i n t o s 
+ q u e   p u e d e   t o m a r   e l   c a m p o .   5 0 0 0   ( m á x ) - 1 0 ( m i n )   =   4 9 9 0 . 
+ T e n i e n d o   e n   c u a n t a   l a   e q u i p r o b a b i l i d a d   d e   t o d o s   l o s   v a l o r e s   d e l   c a m p o   p r e c i o .   E l   n ú m e r o   d e   r e g i s t r o s 
+ s e r á   d e   2 5 . 0 0 0 . 0 0 0 / 4 9 9 0   =   5 0 1 0   r e g i s t r o   d e   m e d i a . 
+ M i e n t r a s   q u e   c o m o   s e   t r a t a   d e   u n   c a m p o   n o   c l a v e ,   e l   c u a l   n o   e s t á   o r d e n a d o   s e   d e b e r á n   l e e r   t o d o s   l o s 
+ 2 5 . 0 0 0 . 0 0   d e   r e g i s t r o s   p a r a   c o m p r o b a r   t o d o s   y   c a d a   u n o   d e   e l l o s   d e   m a n e r a   s e c u e n c i a l . 
+ P a r a   o b t e n e r   l o s   r e s u l t a d o s ,   u t i l i z a r e m o s   l a s   s i g u i e n t e s   c o n s u l t a s : 
+ S E L E C T   p g _ s t a t _ r e s e t ( ) ; 
+ S E L E C T   c o u n t ( * )   F R O M   p r o d u c t o s   W H E R E   p r e c i o   =   3 0 0 0 ; 
+ S E L E C T   h e a p _ b l k s _ r e a d ,   h e a p _ b l k s _ h i t   F R O M   p g _ s t a t i o _ u s e r _ t a b l e s   W H E R E   r e l n a m e   =  p r o d u c t o s  ; 
+ C o n   e l   c o u n t ,   s e   o b t i e n e   u n   t o t a l   d e   4 9 6 5   r e g i s t r o s   c o n   p r e c i o   d e   3 0 0 0 ,   u n   v a l o r   l i g e r a m e n t e   m á s   b a j o 
+ q u e   e l   t e ó r i c o ,   l o   q u e   s e   d e b e   a   l a   a l e a t o r i e d a d   d e   l a   c r e a c i ó n   d e l   c s v   c o n   l o s   d a t o s   ( n o h a y 
+ e q u i p r o b a b i l i d a d ) 
+ A l   s e r   l a   p r i m e r a   v e z   q u e   s e   l e e   l a   t a b l a ,   d e   t o d o s   l o s   b l o q u e s   s e   h a n   l e í d o : 
+   1 8 3 8 7 2   b l o q u e s   e n   m e m o r i a   ( e l   t o t a l ) 
+   0   b l o q u e s   d e   c a c h é)>>
+endobj
+128 0 obj
+<</AP<</N 1206 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 18 0 R/Rect[ 84.6024 10.9507 539.84 390.623]/Subtype/Widget/T(Text6)/Type/Annot/V(şÿ 
+ S i   s e   v u e l v e   a   e j e c u t a r   l a   m i s m a   c o n s u l t a ,   s e   o b s e r v a r á   q u e   c o m o   l o s   d a t o s   n o   c a m b i a r o n ,   s e   o b t i e n e   e l 
+ m i s m o   n ú m e r o   d e   r e g i s t r o s   c o n   p r e c i o   3 0 0 0 ,   a u n q u e   e s t a   v e z ,   d e   t o d o s   l o s   b l o q u e s   s e   h a n   l e í d o : 
+   1 8 3 3 9 2   b l o q u e s   e n   m e m o r i a 
+   4 8 0   b l o q u e s   d e   c a c h é 
+ S i   s u m a s   l o s   b l o q u e s   d e   m e m o r i a   y   c a c h é ,   s a l e n   e n   t o t a l   1 8 3 8 7 2   b l o q u e s   l e í d o s .   E s t o   c o i n c i d e   c o n   u n a 
+ b ú s q u e d a   s e c u e n c i a l   y   c o n   e l   n ú m e r o   d e   b l o q u e s   d e l   a p a r t a d o   a n t e r i o r   d e   b l o q u e s   l e í d o s   ( d e   n u e v o , 
+ d e b i d o   a   q u e   l a   t a b l a   s i g u e   s i e n d o   i g u a l ,   s e   l e e r á n   l o s   m i s m o s   b l o q u e s ) 
+ C u a n d o   s e   r e a l i z a n   c o n s u l t a s   r e p e t i d a s ,   P o s t g r e S Q L   i n t e n t a   o p t i m i z a r   e l   r e n d i m i e n t o   a l   e v i t a r   l e c t u r a s 
+ r e d u n d a n t e s   d e s d e   e l   d i s c o ,   p r e f i r i e n d o   a c c e d e r   a   l o s   d a t o s   y a   a l m a c e n a d o s   e n   e l   c a c h e   d e   m e m o r i a .   P o r 
+ e s t o ,   c a d a   v e z   q u e   s e   e j e c u t e   l a   m i s m a   c o n s u l t a   g e n e r a l m e n t e   a u m e n t a r á   e l   n ú m e r o   d e   b l o q u e s   l e í d o s   d e 
+ c a c h é ,   y a   q u e   P o s t g r e S Q L   n o   n e c e s i t a r á   l e e r   l o s   b l o q u e s   d e s d e   e l   d i s c o   n u e v a m e n t e . 
+ S i   s e   r e i n i c i a   p o s t g r e s S Q L   y   s e   e j e c u t a   o t r a   v e z   l a   c o n s u l t a ,   e l   n ú m e r o   d e   r e g i s t r o s   l e í d o s   d e s d e   c a c h é 
+ v o l v e r á   a   0   y a   q u e   s e   v a c í a   e l   c a c h e   d e   m e m o r i a ,   l o   q u e   s i g n i f i c a   q u e   t o d o s   l o s   d a t o s   d e b e n   l e e r s e 
+ n u e v a m e n t e   d e s d e   e l   d i s c o)>>
+endobj
+129 0 obj
+<</AP<</N 1209 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 21 0 R/Rect[ 85.5842 424.937 540.822 692.68]/Subtype/Widget/T(Text7)/Type/Annot/V(şÿ S e   h a   c r e a d o   l a   t a b l a   p r o d u c t o s 2   y   s e   h a n   c a r g a d o   l o s   d a t o s   e n   e l l a   o r d e n á n d o l o s   d e   m e n o r   a   m a y o r 
+ m e d i a n t e   l a s   s i g u i e n t e s   c o n s u l t a s : 
+ c r e a t e   t a b l e   i f   n o t   e x i s t s   p r o d u c t o s 2 ( 
+ i d _ p r o d u c t o 1   i n t , 
+ n o m b r e 1   v a r c h a r ( 1 8 ) , 
+ s t o c k 1   i n t , 
+ p r e c i o 1   i n t , 
+ c o n s t r a i n t   I D 1   p r i m a r y   k e y ( i d _ p r o d u c t o 1 ) 
+ ) ; 
+ i n s e r t   i n t o   p r o d u c t o s 2 ( i d _ p r o d u c t o 1 ,   n o m b r e 1 ,   s t o c k 1 ,   p r e c i o 1 ) 
+ s e l e c t   *   f r o m   p r o d u c t o s   o r d e r   b y   p r e c i o   a s c ; 
+ A l   r e a l i z a r   u n a   c o n s u l t a   c o m o   l a   d e   l a   c u e s t i ó n   2 ,   e l   n ú m e r o   d e   b l o q u e s   e s   d e   1 8 3 8 2 4 ,   a l   s e r   l a   m i s m a 
+ c a n t i d a d   d e   i n f o r m a c i ó n   p e r o   c o n   u n   o r d e n   d i s t i n t o ,   p o r   l o   q u e   h a y   b l o q u e s   q u e   c o n t e n d r á n   a l g u n a 
+ t u p l a   m á s   q u e   o t r o s ,   p o r   l o   q u e   h a y   m e n o s   b l o q u e s   e n   l a   t a b l a   q u e   e n   l a   o r i g i n a l .)>>
+endobj
+130 0 obj
+<</AP<</N 1210 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 21 0 R/Rect[ 83.6205 9.96887 538.858 385.714]/Subtype/Widget/T(Text8)/Type/Annot/V(şÿ C o m o   p r e c i o   s e   t r a t a   d e   u n   c a m p o   n o   c l a v e ,   e l   v a l o r   V ( p r e c i o )   =   4 9 9 0 ,   q u e   s o n   t o d o s   l o s   v a l o r e s   d i s t i n t o s 
+ q u e   p u e d e   t o m a r   e l   c a m p o .   5 0 0 0   ( m á x ) - 1 0 ( m i n )   =   4 9 9 0 . 
+ T e n i e n d o   e n   c u a n t a   l a   e q u i p r o b a b i l i d a d   d e   t o d o s   l o s   v a l o r e s   d e l   c a m p o   p r e c i o .   E l   n u m e r o   d e   r e g i s t r o s 
+ s e r á   d e   2 5 . 0 0 0 . 0 0 0 / 4 9 9 0   =   5 0 1 0   r e g i s t r o   d e   m e d i a . 
+ M i e n t r a s   q u e   c o m o   s e   t r a t a   d e   u n   c a m p o   n o   c l a v e ,   e l   c u a l   e s t á   o r d e n a d o ,   s e   p u e d e   h a c e r   b u s u q e q d a 
+ s e c u e n c i a l   o   b u s q u e d a   b i n a r i a : 
+ S e c u e n c i a l :   l e e r   l o s   1 8 2 8 2 4   b l o q u e s 
+ B i n a r i a :   l o g 2 ( 1 8 2 8 2 4 ) +   ( n º r e g i s t r o s   a   r e c u p e r a r / f a c t o r   d e   b l o q u e )   =   1 8   +   ( 5 0 1 0 / 1 5 4 ) 
+ B B =   5 1   b l o q u e s 
+ S e   r e a l i z a n   l a s   s i g u i e n t e s   c o n s u l t a s ,   c o m o   l a s   d e   l a   c u e s t i ó n   3 : 
+ S E L E C T   p g _ s t a t _ r e s e t ( ) ; 
+ S E L E C T   c o u u n t ( p r e c i o 1 )   F R O M   p r o d u c t o s 2   W H E R E   p r e c i o 1   =   3 0 0 0 ; 
+ S E L E C T   h e a p _ b l k s _ r e a d ,   h e a p _ b l k s _ h i t   F R O M   p g _ s t a t i o _ u s e r _ t a b l e s   W H E R E 
+ r e l n a m e   =   ' p r o d u c t o s 2 ' ; 
+ C o n   e s t o ,   s e   o b t i e n e   u n   t o t a l   d e   4 9 6 5   r e g i s t r o s   c o n   p r e c i o   =   3 0 0 0 ,   l a   m i s m a   c a n t i d a d   q u e   e n   l a   c u e s t i ó n 
+ 3   y a   q u e   l o s   d a t o s   s o n   l o s   m i s m o s . 
+ P o r   l o   m i s m o   q u e   s u c e d í a   e n   l a   c u e s t i ó n   3 ,   d e   t o d o s   l o s   b l o q u e s   s e   h a n   l e í d o : 
+   1 8 3 8 2 4   b l o q u e s   e n   m e m o r i a 
+   0   b l o q u e s   d e   c a c h é)>>
+endobj
+132 0 obj
+<</AP<</N 1163 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 24 0 R/Rect[ 79.2007 64.1362 534.438 359.044]/Subtype/Widget/T(Text91)/Type/Annot/V(şÿ M e d i a n t e   l a   c o n s u l t a : 
+ i n s e r t   i n t o   p r o d u c t o s ( i d _ p r o d u c t o , n o m b r e , s t o c k , p r e c i o ) 
+ v a l u e s ( 2 5 0 0 0 0 0 1 , ' p r o d u c t o _ 2 5 0 0 0 0 0 1 ' , 2 5 0 , 2 0 ) ; 
+ i n s e r t a m o s   e l   n u e v o   d a t o ,   e l   c u a l   s e   i n s e r t a   e n   e l   p r i m e r   e s p a c i o   l i b r e   d e   l a   t a b l a ,   e l   c u a l   c o n   l a   c o n s u l t a : 
+ S E L E C T   c t i d ,   *   F R O M   p r o d u c t o s   W H E R E   i d _ p r o d u c t o   =   2 5 0 0 0 0 0 1 ; 
+ e s t a ,   n o s   i n d i c a   q u e   s e   e n c u e n t r a   e n   ( 1 8 3 8 2 3 , 6 0 ) ,   e s   d e c i r ,   s e   h a   c o l o c a d o   e n   e l   b l o q u e   n ú m e r o   1 8 3 8 2 3   y   e n 
+ l a   p o s i c i ó n   6 0   d e n t r o   d e l   b l o q u e . 
+ E s t o   p o d r í a   d e b e r s e   a   q u e   e l   e s p a c i o   l i b r e   q u e   d e j ó   l a   t u p l a   e n   l a   p o s i c i ó n   ( 1 8 3 8 2 3 , 6 0 )   , q u e   h a b í a   s i d o 
+ b o r r a d a   e n   e l   a p a r t a d o   a n t e r i o r ,   h a   s i d o   u t i l i z a d o   p o r   l a   n u e v a ,   y a   q u e   a d e m á s   e l   n ú m e r o   d e l   b l o q u e   e s 
+ m e n o r   a l   n ú m e r o   d e   b l o q u e s   t o t a l e s   q u e   h a b í a   e n   l a   t a b l a ,   p o r   l o   q u e   s e   d e s c a r t a   q u e   s e   h a y a   c r e a d o   u n 
+ b l o q u e   n u e v o   o   q u e   s e   h a y a   a ñ a d i d o   a l   f i n a l   e n   e l   ú l t i m o   b l o q u e   p o r q u e   h u b i e r a   e s p a c i o   l i b r e   d e s d e   u n   i n i c i o . 
+ 
+ 
+)>>
+endobj
+133 0 obj
+<</AP<</N 1211 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 28 0 R/Rect[ 83.6205 485.173 538.858 712.662]/Subtype/Widget/T(Text92)/Type/Annot/V(şÿ L a   o p e r a c i ó n   V A C U U M   p u e d e   s e r v i r   p a r a   r e c u p e r a r   e l   e s p a c i o   l i b e r a d o   p o r   l a s   t u p l a s   e l i m i n a d a s . 
+ T a m b i é n   s e   p u e d e   u s a r   V A C U U M   F U L L .   E s t a   o p e r a c i ó n   n o   s o l o   l i m p i a   l a s   t u p l a s   m u e r t a s ,   s i n o   q u e 
+ t a m b i é n   r e o r g a n i z a   f í s i c a m e n t e   l o s   b l o q u e s   d e   l a   t a b l a ,   r e d u c i e n d o   e l   t a m a ñ o   d e   l a   t a b l a   e n   d i s c o ,   p o r   l o 
+ q u e   s e   o p t i m i z a r á   e l   r e n d i m i e n t o   a ú n   m á s . 
+ P o r   e l l o   s i   s e   h a c e   d e   n u e v o   l a   c o n s u l t a : 
+ S E L E C T   r e l n a m e A S   t a b l e _ n a m e ,   r e l p a g e s 
+ A S   b l o q u e s   F R O M   p g _ c l a s s   W H E R E 
+ r e l n a m e = ' p r o d u c t o s ' ; 
+   s e   o b t i e n e   u n   t o t a l   d e   b l o q u e s   1 5 4 4 1 2   q u e 
+ e s   m e n o r   q u e   l o s   1 8 3 8 7 2   a n t e r i o r e s . 
+ A s í ,   f í s i c a m e n t e   s e   h a n   r e o r g a n i z a d o   y   r e e s c r i t o   t o d a s   y   c a d a   u n a   d e   l a s   t u p l a s   d e   l a   t a b l a .   C o n   e s t e 
+ m é t o d o ,   e l   s i g u i e n t e   d a t o   a   i n s e r t a r ,   s e   l o c a l i z a   a l   f i n a l   d e   l a s   t u p l a s   a n t e r i o r e s . 
+)>>
+endobj
+134 0 obj
+<</AP<</N 1165 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 28 0 R/Rect[ 84.6024 11.4417 539.84 374.422]/Subtype/Widget/T(Text10)/Type/Annot/V(şÿ S e   c r e a   l a   t a b l a   c o m o   l a s   d o s   t a b l a s   a n t e r i o r e s ,   p e r o   s e   u s a   c o m o   P K   ( i d _ p r o d u c t o , p r e c i o )   y   a l   f i n a l   s e 
+ p o n e :   P A R T I T I O N   B Y   R A N G E   ( p r e c i o 3 ) ; 
+ P a r a   h a c e r   l a s   p a r t i c i o n e s   s e   u t i l i z a : 
+ C R E A T E   T A B L E   p r o d u c t o s 3 _ 1 0 _ 5 1 0   P A R T I T I O N   O F   p r o d u c t o s 3   F O R   V A L U E S   F R O M   ( 1 0 )   T O   ( 5 1 0 ) ; 
+ c a m b i a n d o   e l   c a m p o   v a l o r e s   d e s d e   1 0   h a s t a   5 0 0 1 ,   p o r q u e   e l   v a l o r   q u e   e s t a   d e s p u é s   d e l   T O   e s   e x c l u y e n t e . 
+ P o r   e s o   e l   ú l t i m o   n ú m e r o   e s   e l   4 5 1 0 - 5 0 0 1 . 
+ G r a c i a s   a   e s t e   p r o c e s o   s e   c r e a   u n a   t a b l a   p r i n c i p a l ,   f o r m a d a   p o r   1 0   s u b t a b l a s   d o n d e   l o s   v a l o r e s   s e 
+ c o m p r e n d e n   d e n t r o   d e l   r a n g o   e s t a b l e c i d o .   L a   p a r t i c i ó n   s e r á   ú t i l ,   c u a n d o   h a y a   u n a   g r a n   c a n t i d a d   d e 
+ v a l o r e s   d i s p e r s o s ,   p o r q u e   e l   c o s t e   d e   b u s c a r   s e   r e d u c e   a   b u s c a r   e n   l a s   s u b t a b l a s . 
+ E s t a n d o   f o r m a d o   p o r   1 0   p a r t i c i o n e s ,   y   t e n i e n d o   e n   c u e n t a   l a   e q u i p r o b a b i l i d a d   d e   l o s   d a t o s , 
+ e l   n º   r e g / p a r t i c i ó n   =   2 5 . 0 0 0 . 0 0 0 / 1 0   = 2 . 5 0 0 . 0 0 0   d e   r e g i s t r o s   p o r   p a r t i c i ó n . 
+ T e n i e n d o   e n   c u e n t a   q u e   e l   f a c t o r   d e   b l o q u e   =   1 5 4   c a l c u l a d o   c o n   a n t e r i o r i d a d .   E l   n ú m e r o   d e   b l o q u e s   p o r 
+ p a r t i c i ó n   s e r a   d e   2 . 5 M / 1 5 4   =   1 6 . 2 3 4   b l o q u e s   e n   c a d a   p a r t i c i ó n . 
+ P a r a   c a l c u l a r   e l   n . º   d e   b l o q u e s   q u e   u s a   p o s t g r e s S Q L ,   s e   h a c e   u n   V A C U U M   F U L L ,   p a r a   r e o r g a n i z a r   l a   t a b l a 
+ y   s e   h a c e   l a   s i g u i e n t e   c o n s u l t a : 
+ S E L E C T   r e l n a m e   A S   t a b l e _ n a m e ,   r e l p a g e s   A S   b l o q u e s   F R O M   p g _ c l a s s   W H E R E   r e l n a m e = '   ' ; 
+ d o n d e   e n   r e l n a m e   s e   p o n e   e l   n o m b r e   d e   c a d a   u n a   d e   l a s   p a r t i c i o n e s : 
+ N o m b r e   S u b t a b l a   N . º   d e   B l o q u e s   N o m b r e   S u b t a b l a   N . º   d e   B l o q u e s 
+ P r o d u c t o s 3 _ 1 0 _ 5 1 0   1 8 4 7 0   P r o d u c t o s 3 _ 5 1 0 _ 1 0 1 0   1 8 4 0 9 
+ P r o d u c t o s 3 _ 1 0 1 0 _ 1 5 1 0   1 8 4 2 7   P r o d u c t o s 3 _ 1 5 1 0 _ 2 0 1 0   1 8 4 0 8 
+ P r o d u c t o s 3 _ 2 0 1 0 _ 2 5 1 0   1 8 4 1 2   P r o d u c t o s 3 _ 2 5 1 0 _ 3 0 1 0   1 8 4 3 3 
+ P r o d u c t o s 3 _ 3 0 1 0 _ 3 5 1 0   1 8 4 2 3   P r o d u c t o s 3 _ 3 5 1 0 _ 4 0 1 0   1 8 4 0 6 
+ P r o d u c t o s 3 _ 4 0 1 0 _ 4 5 1 0   1 8 4 0 9   P r o d u c t o s 3 _ 4 5 1 0 _ 5 0 1 1   1 8 0 9 5)>>
+endobj
+135 0 obj
+<</AP<</N 1212 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 31 0 R/Rect[ 82.6387 245.117 537.876 719.044]/Subtype/Widget/T(Text11)/Type/Annot/V(şÿ R e a l i z a n d o   l a s   m i s m a s   c o n s u l t a s : 
+ S E L E C T   p g _ s t a t _ r e s e t ( ) ; 
+ S E L E C T   c o u n t ( p r e c i o 3 )   F R O M   p r o d u c t o s 3   W H E R E   p r e c i o 3   =   3 0 0 0 ; 
+ s e   o b t i e n e   u n   t o t a l   d e   4 9 6 5   r e g i s t r o s   c o n   p r e c i o   =   3 0 0 0 
+ T e n i e n d o   e n   c u e n t a   q u e   s e   h a n   c r e a d o   s u b t a b l a s ,   h a y   q u e   m i r a r   c a d a   u n a   c o n   s u s   r e s p e c t i v o s   n o m b r e s . 
+ P e r o   c o m o   e l   v a l o r   q u e   e s t a m o s   b u s c a n d o   e s   d e l   r a n g o   [ 2 5 1 0 - 3 0 1 0 \) ,   s a b e m o s   q u e   h a   b u s c a d o   e n   l a   t a b l a 
+ q u e   f o r m a   e s t e   r a n g o . 
+ S E L E C T   h e a p _ b l k s _ r e a d ,   h e a p _ b l k s _ h i t   F R O M   p g _ s t a t i o _ u s e r _ t a b l e s 
+ W H E R E   r e l n a m e = ' p r o d u c t o s 3 _ 1 0 _ 5 1 0 ' ; 
+ e n   t o d a s   e s t a s   c o n s u l t a s   f u e r a   d e   r a n g o ,   e l   n ú m e r o   d e   b l o q u e s   l e i d o s   e s   0 
+ S E L E C T   h e a p _ b l k s _ r e a d ,   h e a p _ b l k s _ h i t   F R O M   p g _ s t a t i o _ u s e r _ t a b l e s 
+ W H E R E   r e l n a m e = ' p r o d u c t o s 3 _ 2 5 1 0 _ 3 0 1 0 ' ; 
+ D e   t o d o s   l o s   b l o q u e s   s e   h a n   l e i d o : 
+   1 8 3 9 9   b l o q u e s   e n   m e m o r i a 
+   9 7   b l o q u e s   d e   c a c h é)>>
+endobj
+171 0 obj
+<</DA(/Georgia 10 Tf 0 g)/DS(font: Georgia,serif 10.0pt; text-align:left; color:#000000 )/FT/Tx/Ff 41947136/Kids[ 131 0 R]/T(Text9)/V(şÿ P o s t g r e S Q L   n o   e l i m i n a   f í s i c a m e n t e   l a s   f i l a s   d e   l a   t a b l a   i n m e d i a t a m e n t e   a l   e j e c u t a r   e l   c o m a n d o 
+ D E L E T E .   E n   l u g a r   d e   e s o ,   m a r c a   l a s   f i l a s   c o m o   e l i m i n a d a s   y   l a s   d e j a   e n   e l   a l m a c e n a m i e n t o .   E s t a s 
+ t u p l a s   e l i m i n a d a s   p e r m a n e c e n   e n   e l   d i s c o   h a s t a   q u e   e l   p r o c e s o   d e   v a c u u m i n g   l a s   e l i m i n a   f í s i c a m e n t e . 
+ E s t a s   t u p l a s    m u e r t a s    s o n   f i l a s   e l i m i n a d a s   q u e   y a   n o   s o n   a c c e s i b l e s   d e s d e   l a s   c o n s u l t a s ,   p e r o   n o   s e 
+ h a n   e l i m i n a d o   f í s i c a m e n t e   d e   l a   t a b l a .   E s t o   s e   d e b e   a   q u e   P o s t g r e S Q L   u t i l i z a   u n   m o d e l o   d e 
+  m u l t i v e r s i o n   c o n c u r r e n c y   c o n t r o l    ( M V C C ) ,   d o n d e   m a n t i e n e   v e r s i o n e s   a n t e r i o r e s   d e   l a s   f i l a s   p a r a 
+ p r o t e g e r   l a s   t r a n s a c c i o n e s . 
+ E s t a s   t u p l a s   " m u e r t a s " ,   s o n   u t i l i z a d a s   p a r a   l a   f u t u r a   i n s e r c i ó n   d e   d a t o s   d e n t r o   d e   l a   B B D D ,   l o   q u e 
+ p r o v o c a   q u e   n o   a u m e n t e   e l   t a m a ñ o   h a s t a   q u e   s e   l l e n e n   l o s   d a t o s   b o r r a d o s . 
+ D e b i d o   a   e s t o ,   e l   t a m a ñ o   d e   l a   t a b l a   n o   v a r í a   y   s e   m a n t i e n e n   l o s   1 8 3 8 7 2   b l o q u e s   d e   d a t o s . 
+ S e   h a n   b o r r a d o   g r a c i a s   a   e s t e   c ó d i g o : 
+ D E L E T E   F R O M   p r o d u c t o s 
+ W H E R E   i d _ p r o d u c t o 
+ I N   ( S E L E C T   i d _ p r o d u c t o   F R O M   p r o d u c t o s   O R D E R   B Y   r a n d o m ( )   L I M I T   4 0 0 0 0 0 0 ) ;)>>
+endobj
+930 0 obj
+<</AP<</N 1195 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 214.2 615 534.6 633.36]/Subtype/Widget/T(Nombre y Apellidos)/TU(Nombre y Apellidos)/Type/Annot/V(şÿ Á l v a r o   P a n i a g u a   C o r t i j o)>>
+endobj
+931 0 obj
+<</AP<</N 1196 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 117.96 595.68 226.92 613.92]/Subtype/Widget/T(DNI)/TU(DNI)/Type/Annot/V(06593675N)>>
+endobj
+932 0 obj
+<</AP<</N 1197 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 214.2 536.52 534.6 554.88]/Subtype/Widget/T(Nombre y Apellidos_2)/TU(Nombre y Apellidos)/Type/Annot/V(şÿ C r i s t i n a   M a r t í n e z   T o l e d o)>>
+endobj
+933 0 obj
+<</AP<</N 1198 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 117.96 517.08 226.92 535.44]/Subtype/Widget/T(DNI_2)/TU(DNI)/Type/Annot/V(09109126E)>>
+endobj
+934 0 obj
+<</AP<</N 1199 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 129.12 477.84 226.92 496.2]/Subtype/Widget/T(Fecha)/TU(Fecha)/Type/Annot/V(04/02/2025)>>
+endobj
+935 0 obj
+<</AP<</N 1200 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 937 0 R>>/Font<</Helv 938 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 227.88 438.36 464.04 456.72]/Subtype/Widget/T(Profesor Responsable)/TU(Profesor Responsable)/Type/Annot/V(şÿ Ó s c a r   G u t i e r r e z)>>
+endobj
+1195 0 obj
+<</Length 134/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 320.4 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 318.4 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Álvaro Paniagua Cortijo) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1196 0 obj
+<</Length 121/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 108.96 18.24]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 106.96 16.24 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.368000 Tf 0 g
+2 5.789176 Td
+(06593675N) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1197 0 obj
+<</Length 135/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 320.4 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 318.4 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Cristina Martínez Toledo) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1198 0 obj
+<</Length 121/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 108.96 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 106.96 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(09109126E) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1199 0 obj
+<</Length 120/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 97.8 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 95.8 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(04/02/2025) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1200 0 obj
+<</Length 127/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 236.16 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 226 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 234.16 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+(Óscar Gutierrez) Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+1201 0 obj
+<</Length 333/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 455.2372 229.452]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 224 0 R>>>>>>
+stream
+xœtPÍNÃ0¾ç)rH£k³•²!.«º!´‰ıTÚ )kB)j“‘´€x¿o»§¡ÄR?¶}êãYM‰R¼ƒpà±~Ä(cWŞ dÔ*âH/ı ãyLÉ+	h€ ş/(úmˆ&>ÍQkŠqG}*ûNÆ)éM•±y!hàÓô	ë9AryÃE~Ÿ¦’œ-„°k\&,¨L!A*Ğr5j±+4uQŸÂªÊ¸”™JhiFç4}A÷‹€y!²atP\'³$N[¥.HQkQ)˜¬îç°Ï·˜‹p
+6·É*ù+ß@g1:×§áô·Tnß|¹.(ñˆó…5¹LŠR9L«s«ÖËçÁ%ç­5ç­9çØÛVªíq:¥3£qØãx%†°Ùsñ†ÿŒK„å¸k±£e¡t­åÏÊÄ$%K’Ìcò  ÿÿ
+endstream
+endobj
+1202 0 obj
+<</Length 1079/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 455.2376 480.7998]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 224 0 R>>>>>>
+stream
+xœŒUMoÛF½óWğRDjTI$%™JáCm¨
+«il9…1Z®èMI®²»tâüšıù7:öĞCà[OY~HMÈ"p‡äì{3oŞÌNı)şÜ\yã¹ÿfóÙ8ŒÎşìl9>[.c_qO{“Íÿb}é{ï¼À0*j¢â6êWxS?E´+üıÅÿı©Ÿ`ğ{ïbãM®¸T© ?˜ú›~O½ĞŸ-–ãh:O#“xƒäğYÚ„ÛP¶×/†şæ-¢ş„ãy¸—g.RÆÛÙÅ£ázÜ‚ìÔ ˆ‡Ê@3\qmA3!µ{©ÚOÃ [Î¸ÊKñTh£$"†‘cï>s-‹T˜2¡3eqzlö}ô<ˆŸ‡Ñ¹Gö .eaõ½|o·™dŞiñ‘¬æVnàÁ¦^‘€£‰ƒeXáÑSv’ ¼+yOu«Ì¦
+§ºdå˜x*lL§ß9‰¾ãÌÈ‘{È¤E8—
+Å«ƒÍ ƒ¯¯ª\ÒÑRCaÃ™İ6	3Y @™c¨ FUº®ÌÚsq°ˆñrcSÀ`Èà¢4"ëë Ö¸Ã»BjpÄR‡i‚}(È"á`ïQ °°…·’|Ìgm÷z…è¿~:"kk¤´nMÎ×Bi(dC¡”Ø‚ãX„ã(Š›óİ,kì¶J—™§ÚoR›M}ûúº5GÁ'›i‰Nqú’H=£D>ãÚ@Üw»º^]nPŒ¬€œÿtkè=ŒºO`èR¤ÇàF›Ÿo^­í>½cèJß¼\İ¬óg{%“›§ŸıØÿŸ™¨Äwæ£ø,lˆ{œAÅgßZºóáÄÂC: 
+dVæ…›Ëë"qRk«U•6É[óMÙeS*d¶èI‹¢ÉFÕD
+² ƒŒ•ÛšÙâŸœ+yººÈ……Ïœe´Q³ßôiÔÈYˆ«Ïø6G÷)ÇDô<ë;¦Ğ˜€–) 4D	6™l]È…ä4Å(i’FdP·6¾ıÏ:>ê[³š»™9‡ª$(D.4nãn˜îèót“5jŒíŠÀÓ[ñWQ	–;•¿j¾c˜:íÑñSı’şt³ãbk¦‡¹‘á°“S«…İå”óÈgø“LâVM
+'ŠDàuç¾ÉFTV¾Wfğ{Ï8Ó†Á`5]ÒíëözC&sÚËîaÒ©S»¨IfDS±¥åQu{*°TzÚ¸„–f%7d90ëÖ›b_"yû‘¾—Ú½ü"	PuAîÈ©œ*¾›™ŒSÚÛÚŞíŞiM÷Ù©Ê˜ÚéH‘™ö[Ã¤ÀÒî\jdò¥>İÄ${])ı%wJòáS~ĞØóTyÕ“{¶¾$[ÑÍÜêXvÓJê®“Ê¢«÷Ú[­/½  ÿÿ
+endstream
+endobj
+1205 0 obj
+<</Length 759/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 455.2378 267.743]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 224 0 R>>>>>>
+stream
+xœ„TÍrA¾ïSì,Ü,‚V†ÂX–”)s0Õì´0qv†ÌÌÆ$áôøP9zğäÍ“=KM
+´`0ßt?İ›Æ)N£$ùÛÏûIÖÄÙş~2è÷b‹‘‹ö¦WñÑdGQ7î2¨×€òté(\ë˜Ÿ—ñ‡i,û%:šF{ÇhìBBÜMãé'>_DYœåûIÖïÒ^<QkdJC+‹…4ä¼$*M”+CÚP¡à;„Š.AKï[ëm:¤şp˜vè¢BrF“7Â8RüÔHtÔ§çÌğq7Kòl˜uW!—Ú·ı8”[UÈ4¼)Á†Î5™„ò4M©UŞ^µ¿uÓV)uÃ!Ù^iŠZ¢†õT YœÂ‹J®¬™Ã\*)@Pİé!uÑ´½ó'¡±"ı«DkÂ‹Vawipho,Ëæ½À“éæi7İÜ…„&LŸCqµÅEëÿ)±PşAçoÉXD}OàœYiRˆöàí7¼ïi¥X<jûš"×ÌB ³©å 
+.] ‘Ñ‹
+u!AíĞø&Ô4s¯`÷+å™´ëPå9£°X¶l„“‹*˜Â	F×@÷d{áwãWãÑ”V‹™óàg\}«ıôŸàÂTÚ·µéùÉë	'oDUğ Òé‹ñÉ¸Ù”Cê±9ÿ.´DXÍæê³ã¾ :ı^JW}MLšYÅã2ó0WØt²¨4”¸c¿n˜}İAcÄû†!èé„ôÙaö­o<GÔîç¥Ë†6ù0hìøzí•\pœe°Ê[Gs87»÷—[{üiea:œéú±@ªw‚7Vâİşñ_UÈŸz½yî²¦SÏ„ÎZÚ,áz{Ë‡+}ÖŞ{¦˜†İVV–a</ñ¦aÇ{NBĞ¹ÿR˜+Ã PKôC˜SGİƒŞÁ Û\áWOÉÓk%P+¸¼ßÁÒÍ-î^@±ü^ÇÓèm4Œ¢ß   ÿÿ
+endstream
+endobj
+1206 0 obj
+<</Length 730/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 455.2376 379.6723]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 224 0 R>>>>>>
+stream
+xœ|TÁNÛ@½û+|)5N$ôBHU‘ Dê¡ô0ÙÌ¢õnØ]§_3¿Öcü §Î®C¨ƒâ8±wfŞÌ›7Sæ%¾]dÅQÎ×áÑa1ªÆÇy5ÇãQ•;Ì|v0ıŸ^åÙc6Ì‡lU½Z×Vß3“•yÍÑ.øû%ÿñ³Ì%ÿÊN§ÙÁZW+È‡e>½ãó:åÕñ¤«²¬ò©Ìöh?Ÿ>pˆOÃQq4:ŒÓëEiÑ¢^ áŠ6€#Ô(ß 	k|«¢ytpè±E>j,iëIBà»±$ ™)pÖ¬¬ƒBƒ„º;X2/:KÉa­|pŠAiîP(K\@9 hMDD€ø4ˆæÁJ6ø3mùÔGÌ{0¤ñYÚÏı˜4œTÕÉhí‚†l¬S°ÃşpR®T€¸ÿ»›Ê¶·)±Ë*>-;g¦4Ãòl 3šŒ7¥ì}Aç>0¡V¡".3ÒšIÎ^<»J`D‹ìÀQ—Éõ¿›œ4Á\ i	L@§¬Û6èR Û=~gZ\ØA?®Ä™Š!’X1f|÷ªæGÏ­ç3ş:©A#º?&‘“¿æèv¿?úY1‚Â ­¸³¯bôüjAIğº²>Ôo®¿’âbKÄÎƒjØÃE'ÂO|À©jÂ…JGZ¾Û¡lŒÜDº¼Œ"&©¼°ƒ(Ì;åºò@”è˜‚Í,ah ²ˆ©±õ¸¥†bÇ<^Y×ÀÒgl2@bœ™éæÿWªyòçÁeó`·ñ7Îm¯ VıŞÕäş÷+1/»îo5÷€A^%ÀØöw±MgÒ¤,‹6”Ce›æHËÜóà:jôöÒzSïfÁ¬*îrù`¦–÷"WT¾V×%ˆgèëê€+íŒTmÔËfSu
+á¹A“˜ñ;Èİ°ò¯d~>Í®³óË³ì   ÿÿ
+endstream
+endobj
+1209 0 obj
+<</Length 537/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 455.2378 267.743]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 224 0 R>>>>>>
+stream
+xœ|SËnÛ0¼ó+xŒÕÑÃ¯´§&ŒÈ¡­€š¢ ÅµÂF"%İÆùšı5Co=u)Ûq‚Ú,ÁÄÎìÌ’ÃT¦ü|ŠşPòo0ôób<‘ùhÔ
+‰ ¼8-ïåùÕ…w"“ƒŠh¸}V¤²æ^S~?ÊoßS©û[œ—ât
+k£d–ÊrÎõZä2úù §…,µ8ùt£¨BPÚQ£(¨èô²
+Îç´"!–*…ur´â%híPƒ][íºPÖ!)jÕÊaO–?Ùâë,ïó³ülÜÉ¶ ²XÒ“7õÒ ¯<UÎúe”s˜2+º2s².ÜüÏ×'‡ÉFÿØ226$‡aÖµ3„Œ~)¬nd“Ş¤®º}©Õ¡2/ŠÅ*Ğ‡÷aZ…+º…Õ3»½ÃìëŞÛ#£Z¢®{²1ÏZ&´4¡Í	míóĞ@èÍÑµû®İñ#ÍV[:)_qõ®!>¿Æ<(¤¥U§ÍÚ.}:‚ª%ø`şXÊÙ¿- ‹µYãî¸FĞÅ,›“|j8¢‰­ñ­:²Ïœ6£•Dcç[UE‰ElÍ>ØÏ&Ç¤9Mqßx;8Å#–ä°zTkf°×–åkå°jX.¢­õ†ä:ÿ_Ûx[ü~4»¿…±Y;4µ±ªéw2—¥ø$.¯.Ä?   ÿÿ
+endstream
+endobj
+1210 0 obj
+<</Length 771/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 455.2375 375.74513]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 224 0 R>>>>>>
+stream
+xœ„TKnGİÏ)fgfÈùZ¢oD02IdÂZQœ.‘íÌt“ı±œ¦.ä6ZfáU.àêR’²ƒ~UõêÕ«Nâ„×WÑ¸Œù_”Å8ËÏÊ8?+ÆgE™æ±ÁÈF“å—ør1‹£}”Æ)Ãò#,€İD*Jâç»âó:~ÿ!‰£?G—Ëhr…Úl$Äi/où~eqş‚ËåyÇKfºÑ´3XIMÉp@É+ª ÙiRšª>áˆ°¦OPkCï]À^R1&#Ú{$«9-´¥šO‹DKÃxù‘ş”fã2›fÓ³¶ªÖIå´=}Òí<2§0¡rKfLe’$4hî¾ÿN“A#Õ‘Ãøt¦%*‰JhBîÇƒâæj Ü{¹3zkYK‚ÚJ?RÇ²}Æ4¯Iù7Ü…éëÁ¢¹°¬3çp&'Ó-“4¹…„LŸ‡b[‰«0¬ÿŸ7ZZwGÚT ô(DuŠn¡BCkoı÷úÈWU%9X..€ÖR‘pq:æí}ÌÕÈ5‚–éyv´®5§èQêò–6Ù ‹>§úç^b¬ò;4`&·P9v!÷Ò¥HÏ‰#‚²“´,†=….Yüôi2oÃ`¡–b§X²rãÃØ•VÖ×ì¨D¸fì'nœıüŸ¢¼O›ù›ùlI»ÍÊ:p+vºÁğç'Á•ö^¹Ãª¥Cúåú×;QÏíÛŒn^Í¯çk¦,AÎ{:ãa·Z×X& bôè{+İ!ÇPê•g¯¬kî¼-u:µÁZAƒ\ÿÙ·g=<füD°RõÚ±°­‡vì4Ö²˜¾(+(~|›ºşFAíFÚ†5çenw7,†aõ¼5Çáœ¾ÍéOhS·
+`öíC¾Bm{öò7ŞaºçÏW(¾ÂÊƒ#Fß?.ó¶ÁbøUèÓ°©óGË27Øh^•|rå’TÛ[à|ıÍ³è   ÿÿ
+endstream
+endobj
+1211 0 obj
+<</Length 591/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 455.2375 227.489]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 224 0 R>>>>>>
+stream
+xœtSÁnÓ@½ïWì­ 7vb’€8¤‘„©CU{­wİİuıšùµ{èqãÄlHP¨Ù–µë·óŞ¼yîò.]‹)‹RNw?íGIoò$yõ‡#nsì4ÿÎÏæÎ®YÌcõö tºdšuù†jMéyÇ?éò’°·ì,g§SaìF»<_Ó÷Kx§Ñh8t{</Ù³ ©……BşÒøi<Y.çX7¢è„½‘k°€VM@Y
+…«	nPÉm•kcQCßÔá%”¬¤†\ôœçßHß‹8‰Òd”Œ[Îª•|ĞÄ°£jUŞ‘Ÿ/g³3ç…iƒÎ¨@YÕÉªFX®ƒNèºí”~Giƒ# åàúÑÉ*¡½@e®”¡ãIô°RĞ!|ÙRhê’:§*ğÓ"Ph,¥+LgëB;¹2íûD<0µ'ÃîÀŞKd´$Yá·Æêş˜L¹âd(ó
+¤éFÜ˜ °0Ú5ÊÃ«öãÙ,›äÄ§4¹0¾Ø6$®Â"ô­jØ×~”À{·Îï)0›«‚†áğòm¶ÈÚÏìxŞœÔÖ§Ş¸“×íÈ­'+OP24zãA…Æö”qÚïÇÉñY„¦JæÃdãao8HhÒV+:vÿb±uõ04ƒ´®°’æã…œv
+
+;I…¿Éø—ÍƒœD81šşDsõ@µ(D '7ÜÒ—2€R»qÛ	z”)@…ø’'kúËÔÎ§Mf9ûÈ²ù„ı  ÿÿ
+endstream
+endobj
+1212 0 obj
+<</Length 570/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 455.2373 473.927]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 224 0 R>>>>>>
+stream
+xœ¼SMsÓ0½ëWèÖf&¤²Ô¦—–P†!ÏôPloƒ,¥’\>~Íş~+Ç-=Ä™$“±ôö½}»Ï‚ú¬/ÙlÁé;_Ìgq’&|Æ³,N¹æØIşŸ¯.8»e”Üƒ¢{ĞÓLğq]Òï5¿ş$xMØ¯ì<g'—`ì¦‘<<¿¡û‹ùü4Íã4	Ïkv¼©šR×•tØ6®¥¿Êh×)/İ³	Ï?“Â“(-â,ÎÒ¾êÃòÍò"Çİ¦p^úÂ‚<yşOpe:íwªÆ$|¹~»Â5uWyã¼zµ\/q¸Æ3L„#„Ğ”¾ØiôÆK…5à<;] …Mã¼5½‡n`;L–ƒ&&²«´—xÛ’ÆVÒ‰Iw®+½,i@S:ıŞÚÆJ‹•¬%5!{5×9Òw;¨|sGhÓ–ô<;,ü¬¡²–”ŞIelÏ4Ñ–ŠËÎUıZÀ‘9…VêÁëx‰Ÿ‰ˆÄÇÉ,!`CİVîKöN”ÄÃª½ÃWåÆØV†`/8Òû°Ò-È]Qª/®cš>zŞ6~Øğ>"):¶òà“î`AiÙÂÙÑßl‘(ÈöÑH d ¦Ô†Ñ=Ê.Şt`eHFoeæ¬·aìtV*C†*hjjq$ ÿÙkXp<f÷»Ô²
+)\qíÍŒ¼³=M²ì¡‚¦ÖRxl3’ÌÒ,«’ÕöW\æì=[®.Ø   ÿÿ
+endstream
+endobj
+940 0 obj
+<</Author(Iván)/Company(yo)/CreationDate(D:20250129110805+01'00')/Creator(Acrobat PDFMaker 24 para Word)/Keywords()/ModDate(D:20250307083447+01'00')/Producer(Cliente @firma)/SourceModified()/Subject(Practica 1)/Title(Bases de Datos Avanzadas)>>
+endobj
+1217 0 obj
+<</Type/XRef/Size 1218/Prev 500897/Root 907 0 R/Info 940 0 R/ID[<8E05B06B05AD0AED101978A41485BDA1><39BC113C7B00CF52C908A4D954D9A1B1>]/W[ 1 4 2]/Index[ 124 7 132 4 171 1 930 6 940 1 1195 8 1205 2 1209 4 1217 1]/Filter/FlateDecode/Length 141>>
+stream
+xœ$Ë­‚ €Ñ‹şMÅ1‹ÁÍÍ sS#À«èKèsMja›aÃâ¦…æh’ènnÂüH'EÔc,¢ˆê»ş Áã	ÉÒdÈßğ]ÿÑjèÔOĞH y…–‹Šö:tmèmÁ ÿË„Á
+†Œª7¾Àä ÓÌ÷°<‹”   ÿÿ
+endstream
+endobj
+startxref
+537778
+%%EOF
