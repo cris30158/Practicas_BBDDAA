@@ -5,14 +5,15 @@ set client_encoding ='UTF8';
 BEGIN;
 
 
--- create table if not exists productos1(
---     id_producto int,
---     nombre varchar(18),
---     stock int,
---     precio int,
---     constraint ID primary key(id_producto)
--- );
--- \COPY  productos1 FROM 'PL1.csv' WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+create table if not exists productos1(
+    id_producto int,
+    nombre varchar(18),
+    stock int,
+    precio int,
+    constraint ID primary key(id_producto)
+);
+\COPY  productos1 FROM 'PL1.csv' WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+
 
 -- create table if not exists productos2(
 --     id_producto2 int,
@@ -58,4 +59,11 @@ BEGIN;
 -- CREATE INDEX idb_id_precio ON productos(precio);
 -- CREATE INDEX idh_id_precio ON productos using hash(precio);
 -- \COPY  productos FROM 'PL1.csv' WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+
+
+CREATE INDEX idb_precio ON productos1(precio);
+CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
+CREATE INDEX idh_precio ON productos1 using hash(precio);
+
+
 COMMIT;
