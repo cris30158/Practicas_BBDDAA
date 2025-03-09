@@ -61,9 +61,9 @@ BEGIN;
 -- \COPY  productos FROM 'PL1.csv' WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
 
 
--- CREATE INDEX idb_precio ON productos1(precio);
+CREATE INDEX idb_precio ON productos1(precio);
 -- CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
 -- CREATE INDEX idh_precio ON productos1 using hash(precio);
 
-Create index idmb_precio_stock on productos1 using btree(precio,stock);  
+-- Create index idmb_precio_stock on productos1 using btree(precio,stock);  
 COMMIT;

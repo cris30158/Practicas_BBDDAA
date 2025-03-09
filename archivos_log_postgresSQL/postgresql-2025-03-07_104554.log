@@ -1,0 +1,884 @@
+2025-03-07 10:45:54.477 CET [11340] 09109126E 06593675N LOG:  el sistema de bases de datos fue apagado en 2025-03-07 10:45:52 CET
+2025-03-07 10:48:12.884 CET [15212] 09109126E 06593675N ::1(61503)LOG:  sentencia: create database pl1bbdda;
+2025-03-07 10:48:45.353 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: create table if not exists productos1(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-07 10:48:45.403 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: COPY  tabla25M FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 10:48:45.407 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la relación «tabla25m»
+2025-03-07 10:48:45.407 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  COPY  tabla25M FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 10:48:45.412 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: COPY  productos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 10:48:45.412 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+2025-03-07 10:48:45.412 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  COPY  productos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 10:48:59.434 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: create table if not exists productos1(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-07 10:48:59.440 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: COPY  productos1 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 10:49:20.663 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 10:49:39.696 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 11116 búfers (67.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.336 s, sync=0.491 s, total=19.038 s; archivos sincronizados=312, más largo=0.087 s, promedio=0.002 s; distancia=531810 kB, estimación=531810 kB; lsn=1F/4B8DE9F0, lsn de redo=1F/2D35E118
+2025-03-07 10:49:41.143 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+2025-03-07 10:49:41.143 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 10:49:41.143 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 10:49:58.892 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 12077 búfers (73.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.398 s, sync=0.156 s, total=17.750 s; archivos sincronizados=2, más largo=0.084 s, promedio=0.078 s; distancia=539109 kB, estimación=539109 kB; lsn=1F/6C049BF0, lsn de redo=1F/4E1D7788
+2025-03-07 10:50:00.588 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+2025-03-07 10:50:00.588 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 10:50:00.588 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 10:50:18.172 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 11971 búfers (73.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.216 s, sync=0.144 s, total=17.584 s; archivos sincronizados=3, más largo=0.061 s, promedio=0.048 s; distancia=541176 kB, estimación=541176 kB; lsn=1F/8CF4FC40, lsn de redo=1F/6F2559F8
+2025-03-07 10:50:19.864 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+2025-03-07 10:50:19.864 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 10:50:19.864 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 10:50:36.264 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: COPY  productos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 10:50:36.265 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la relación «productos»
+2025-03-07 10:50:36.265 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  COPY  productos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 10:51:49.173 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 11629 búfers (71.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=89.108 s, sync=0.028 s, total=89.310 s; archivos sincronizados=1, más largo=0.028 s, promedio=0.028 s; distancia=540051 kB, estimación=541064 kB; lsn=1F/AC834100, lsn de redo=1F/901BA728
+2025-03-07 10:54:26.021 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: drop table productos1
+	;
+2025-03-07 10:54:26.023 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la tabla «productos1»
+2025-03-07 10:54:26.023 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  drop table productos1
+	;
+2025-03-07 10:54:50.051 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: create table if not exists productos1(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-07 10:54:50.098 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: COPY  productos1 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 10:54:53.423 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 10:55:13.873 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2052 búfers (12.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.077 s, sync=0.177 s, total=20.451 s; archivos sincronizados=29, más largo=0.099 s, promedio=0.007 s; distancia=539113 kB, estimación=540869 kB; lsn=1F/CEFFF9D8, lsn de redo=1F/B1034D78
+2025-03-07 10:55:15.823 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+2025-03-07 10:55:15.823 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 10:55:15.823 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 10:55:35.593 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 9028 búfers (55.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.359 s, sync=0.198 s, total=19.770 s; archivos sincronizados=2, más largo=0.147 s, promedio=0.099 s; distancia=540908 kB, estimación=540908 kB; lsn=1F/EFFC1978, lsn de redo=1F/D2070128
+2025-03-07 10:55:37.577 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+2025-03-07 10:55:37.577 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 10:55:37.577 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 10:55:56.807 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 12450 búfers (76.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.728 s, sync=0.283 s, total=19.230 s; archivos sincronizados=2, más largo=0.253 s, promedio=0.142 s; distancia=544044 kB, estimación=544044 kB; lsn=20/116709D8, lsn de redo=1F/F33BB4E0
+2025-03-07 10:55:58.314 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+2025-03-07 10:55:58.314 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 10:55:58.314 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 10:56:17.499 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 12707 búfers (77.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.638 s, sync=0.333 s, total=19.185 s; archivos sincronizados=3, más largo=0.218 s, promedio=0.111 s; distancia=537140 kB, estimación=543354 kB; lsn=20/3235FC20, lsn de redo=20/140487B0
+2025-03-07 10:56:19.144 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+2025-03-07 10:56:19.144 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 10:56:19.144 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 10:59:39.284 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  error de sintaxis en o cerca de «Con» en carácter 1
+2025-03-07 10:59:39.284 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  Con esta consulta:
+	SELECT relnameAS table_name, relpages AS bloques FROM pg_class WHERE relname='productos';
+2025-03-07 10:59:42.415 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «relnameas» en carácter 8
+2025-03-07 10:59:42.415 CET [8676] 09109126E 06593675N ::1(61517)HINT:  Probablemente quiera hacer referencia a la columna «pg_class.relname».
+2025-03-07 10:59:42.415 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT relnameAS table_name, relpages AS bloques FROM pg_class WHERE relname='productos';
+2025-03-07 11:00:01.394 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «relnameas» en carácter 8
+2025-03-07 11:00:01.394 CET [8676] 09109126E 06593675N ::1(61517)HINT:  Probablemente quiera hacer referencia a la columna «pg_class.relname».
+2025-03-07 11:00:01.394 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT relnameAS table_name, relpages AS bloques FROM pg_class WHERE relname='productos1';
+2025-03-07 11:00:15.036 CET [22592] 09109126E 06593675N ERROR:  cancelando tarea de autovacuum
+2025-03-07 11:00:15.036 CET [22592] 09109126E 06593675N CONTEXTO:  recorriendo el bloque 116002 de la relación «public.productos1»
+	vacuum automático de la tabla «pl1bbdda.public.productos1»
+2025-03-07 11:00:18.252 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 9717 búfers (59.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=238.795 s, sync=0.132 s, total=239.109 s; archivos sincronizados=6, más largo=0.069 s, promedio=0.022 s; distancia=541697 kB, estimación=543188 kB; lsn=20/532A2578, lsn de redo=20/35148F50
+2025-03-07 11:00:19.145 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:00:30.253 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 9458 búfers (57.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=10.897 s, sync=0.047 s, total=11.108 s; archivos sincronizados=19, más largo=0.032 s, promedio=0.003 s; distancia=543447 kB, estimación=543447 kB; lsn=20/742E0258, lsn de redo=20/563FECC0
+2025-03-07 11:00:31.156 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 12 segundos)
+2025-03-07 11:00:31.156 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:00:31.156 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:00:31.380 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=0.001 s, sync=0.001 s, total=0.225 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=537279 kB, estimación=542830 kB; lsn=20/77145FF0, lsn de redo=20/770AEA68
+2025-03-07 11:00:47.028 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+2025-03-07 11:00:47.028 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:00:47.030 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:00:50.982 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=3.538 s, sync=0.196 s, total=3.954 s; archivos sincronizados=2, más largo=0.192 s, promedio=0.098 s; distancia=544074 kB, estimación=544074 kB; lsn=20/9ED40DA8, lsn de redo=20/984015F8
+2025-03-07 11:00:54.695 CET [19164] 09109126E 06593675N LOG:  omitiendo el vacuum de «productos1»: el candado no está disponible
+2025-03-07 11:01:10.426 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+2025-03-07 11:01:10.426 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:01:10.427 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:01:22.662 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  error de sintaxis en o cerca de «Con» en carácter 1
+2025-03-07 11:01:22.662 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  Con esta consulta:
+	SELECT relnameAS table_name, relpages AS bloques FROM pg_class WHERE relname='productos1';
+2025-03-07 11:01:31.510 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «relnameas» en carácter 8
+2025-03-07 11:01:31.510 CET [8676] 09109126E 06593675N ::1(61517)HINT:  Probablemente quiera hacer referencia a la columna «pg_class.relname».
+2025-03-07 11:01:31.510 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT relnameAS table_name, relpages AS bloques FROM pg_class WHERE relname='productos1';
+2025-03-07 11:01:37.626 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «relnameas» en carácter 8
+2025-03-07 11:01:37.626 CET [8676] 09109126E 06593675N ::1(61517)HINT:  Probablemente quiera hacer referencia a la columna «pg_class.relname».
+2025-03-07 11:01:37.626 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT relnameAS table_name, relpages AS bloques FROM pg_class WHERE relname="productos1";
+2025-03-07 11:02:07.165 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la relación «productos» en carácter 59
+2025-03-07 11:02:07.165 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT 8192 / avg(pg_column_size(t)) AS block_factor FROM productos t;
+2025-03-07 11:02:21.758 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 412 búfers (2.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=70.894 s, sync=0.267 s, total=71.332 s; archivos sincronizados=287, más largo=0.041 s, promedio=0.001 s; distancia=540673 kB, estimación=543734 kB; lsn=20/C59975E0, lsn de redo=20/B9401A68
+2025-03-07 11:03:20.976 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la relación «productos» en carácter 27
+2025-03-07 11:03:20.976 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT count(precio) FROM productos WHERE precio = 3000;
+2025-03-07 11:03:30.849 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «’productos1’» en carácter 80
+2025-03-07 11:03:30.849 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT heap_blks_read, heap_blks_hit FROM pg_statio_user_tables WHERE relname
+	=’productos1’;
+2025-03-07 11:03:32.262 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «’productos1’» en carácter 80
+2025-03-07 11:03:32.262 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT heap_blks_read, heap_blks_hit FROM pg_statio_user_tables WHERE relname
+	=’productos1’;
+2025-03-07 11:04:07.287 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «’productos1’» en carácter 80
+2025-03-07 11:04:07.287 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT heap_blks_read, heap_blks_hit FROM pg_statio_user_tables WHERE relname
+	=’productos1’;
+2025-03-07 11:06:10.263 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-07 11:06:38.725 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 229 búfers (1.4%); 0 archivos WAL añadidos, 0 eliminados, 13 reciclados; write=28.162 s, sync=0.096 s, total=28.462 s; archivos sincronizados=35, más largo=0.065 s, promedio=0.003 s; distancia=210745 kB, estimación=510435 kB; lsn=20/C62D51D0, lsn de redo=20/C61CFF60
+2025-03-07 11:09:30.370 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: create table if not exists productos2(
+	    id_producto2 int,
+	    nombre2 varchar(18),
+	    stock2 int,
+	    precio2 int,
+	    constraint ID2 primary key(id_producto2)
+	);
+2025-03-07 11:09:30.394 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: insert into productos2(id_producto1, nombre1, stock1, precio1)
+	select * from tabla25M order by precio asc;
+2025-03-07 11:09:30.396 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «id_producto1» en la relación «productos2» en carácter 24
+2025-03-07 11:09:30.396 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  insert into productos2(id_producto1, nombre1, stock1, precio1)
+	select * from tabla25M order by precio asc;
+2025-03-07 11:09:54.401 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: create table if not exists productos2(
+	    id_producto2 int,
+	    nombre2 varchar(18),
+	    stock2 int,
+	    precio2 int,
+	    constraint ID2 primary key(id_producto2)
+	);
+2025-03-07 11:09:54.434 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: insert into productos2(id_producto2, nombre2, stock2, precio2)
+	select * from productos1 order by precio asc;
+2025-03-07 11:10:54.788 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:11:24.672 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 10229 búfers (62.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=29.198 s, sync=0.509 s, total=29.885 s; archivos sincronizados=38, más largo=0.368 s, promedio=0.014 s; distancia=540408 kB, estimación=540408 kB; lsn=21/51EDCD0, lsn de redo=20/E718E158
+2025-03-07 11:11:29.089 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:12:22.600 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 3054 búfers (18.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=52.821 s, sync=0.492 s, total=53.511 s; archivos sincronizados=3, más largo=0.451 s, promedio=0.164 s; distancia=539107 kB, estimación=540278 kB; lsn=21/25C610D8, lsn de redo=21/8006FE8
+2025-03-07 11:12:31.212 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:13:26.217 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2743 búfers (16.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=54.308 s, sync=0.526 s, total=55.005 s; archivos sincronizados=3, más largo=0.469 s, promedio=0.175 s; distancia=540694 kB, estimación=540694 kB; lsn=21/46C08918, lsn de redo=21/2900C9C0
+2025-03-07 11:13:36.155 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:14:32.992 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2459 búfers (15.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=55.581 s, sync=1.076 s, total=56.837 s; archivos sincronizados=3, más largo=1.028 s, promedio=0.359 s; distancia=541722 kB, estimación=541722 kB; lsn=21/67DC8C70, lsn de redo=21/4A113260
+2025-03-07 11:14:43.296 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:15:35.735 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2263 búfers (13.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=50.894 s, sync=1.369 s, total=52.439 s; archivos sincronizados=3, más largo=1.324 s, promedio=0.457 s; distancia=540475 kB, estimación=541597 kB; lsn=21/88E45CB0, lsn de redo=21/6B0E20E8
+2025-03-07 11:15:46.204 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:16:33.192 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2136 búfers (13.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=45.005 s, sync=1.811 s, total=46.989 s; archivos sincronizados=3, más largo=1.758 s, promedio=0.604 s; distancia=540094 kB, estimación=541447 kB; lsn=21/A9E7A3B0, lsn de redo=21/8C051B78
+2025-03-07 11:16:43.568 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:17:24.652 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2255 búfers (13.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=38.928 s, sync=1.985 s, total=41.084 s; archivos sincronizados=3, más largo=1.961 s, promedio=0.662 s; distancia=540466 kB, estimación=541349 kB; lsn=21/CADDD2F0, lsn de redo=21/AD01E4F0
+2025-03-07 11:17:35.299 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:18:11.784 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2242 búfers (13.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=33.614 s, sync=2.686 s, total=36.485 s; archivos sincronizados=4, más largo=2.642 s, promedio=0.672 s; distancia=540879 kB, estimación=541302 kB; lsn=21/EBFF54B8, lsn de redo=21/CE0522E0
+2025-03-07 11:18:21.937 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:18:53.243 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2212 búfers (13.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=28.456 s, sync=2.672 s, total=31.307 s; archivos sincronizados=3, más largo=2.650 s, promedio=0.891 s; distancia=541141 kB, estimación=541286 kB; lsn=22/CFFDC60, lsn de redo=21/EF0C7920
+2025-03-07 11:19:03.891 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:19:31.540 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2200 búfers (13.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.500 s, sync=2.990 s, total=27.649 s; archivos sincronizados=3, más largo=2.973 s, promedio=0.997 s; distancia=539967 kB, estimación=541154 kB; lsn=22/2DF1C140, lsn de redo=22/100177A8
+2025-03-07 11:19:41.618 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:20:05.580 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2180 búfers (13.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.874 s, sync=2.934 s, total=23.963 s; archivos sincronizados=3, más largo=2.927 s, promedio=0.978 s; distancia=541408 kB, estimación=541408 kB; lsn=22/4F077788, lsn de redo=22/310CFA98
+2025-03-07 11:20:16.030 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:20:35.462 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2126 búfers (13.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=16.934 s, sync=2.336 s, total=19.432 s; archivos sincronizados=3, más largo=2.314 s, promedio=0.779 s; distancia=540862 kB, estimación=541354 kB; lsn=22/700E20D8, lsn de redo=22/520FF508
+2025-03-07 11:20:45.387 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+2025-03-07 11:20:45.387 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:20:45.387 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:21:04.298 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2162 búfers (13.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=15.633 s, sync=3.113 s, total=18.911 s; archivos sincronizados=3, más largo=3.093 s, promedio=1.038 s; distancia=539965 kB, estimación=541215 kB; lsn=22/912C5EC8, lsn de redo=22/7304EC50
+2025-03-07 11:21:12.212 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 27 segundos)
+2025-03-07 11:21:12.212 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:21:12.212 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:21:29.913 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2087 búfers (12.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=14.411 s, sync=3.147 s, total=17.702 s; archivos sincronizados=3, más largo=3.127 s, promedio=1.049 s; distancia=541250 kB, estimación=541250 kB; lsn=22/B25ADE60, lsn de redo=22/940DF800
+2025-03-07 11:21:37.341 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 25 segundos)
+2025-03-07 11:21:37.341 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:21:37.342 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:21:54.677 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2060 búfers (12.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=13.752 s, sync=3.414 s, total=17.336 s; archivos sincronizados=3, más largo=3.376 s, promedio=1.138 s; distancia=540674 kB, estimación=541193 kB; lsn=22/D3707BF8, lsn de redo=22/B50E0308
+2025-03-07 11:22:00.184 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+2025-03-07 11:22:00.184 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:22:00.184 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:22:16.888 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2084 búfers (12.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=13.333 s, sync=3.200 s, total=16.705 s; archivos sincronizados=3, más largo=3.179 s, promedio=1.067 s; distancia=539955 kB, estimación=541069 kB; lsn=22/F494A020, lsn de redo=22/D602D188
+2025-03-07 11:22:21.323 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+2025-03-07 11:22:21.323 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:22:21.323 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:22:37.184 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2047 búfers (12.5%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=12.717 s, sync=2.995 s, total=15.861 s; archivos sincronizados=3, más largo=2.976 s, promedio=0.999 s; distancia=541994 kB, estimación=541994 kB; lsn=23/165DED00, lsn de redo=22/F7177988
+2025-03-07 11:22:40.236 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+2025-03-07 11:22:40.236 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:22:40.236 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:22:56.721 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2022 búfers (12.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=14.088 s, sync=2.235 s, total=16.486 s; archivos sincronizados=3, más largo=2.227 s, promedio=0.745 s; distancia=539821 kB, estimación=541776 kB; lsn=23/360742A0, lsn de redo=23/180A3070
+2025-03-07 11:24:43.413 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «precio1» en carácter 15
+2025-03-07 11:24:43.413 CET [8676] 09109126E 06593675N ::1(61517)HINT:  Probablemente quiera hacer referencia a la columna «productos2.precio2».
+2025-03-07 11:24:43.413 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT couunt(precio1) FROM productos2 WHERE precio1 = 3000;
+2025-03-07 11:24:54.630 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «precio1» en carácter 15
+2025-03-07 11:24:54.630 CET [8676] 09109126E 06593675N ::1(61517)HINT:  Probablemente quiera hacer referencia a la columna «productos2.precio2».
+2025-03-07 11:24:54.630 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT couunt(precio1) FROM productos2 WHERE precio2= 3000;
+2025-03-07 11:25:09.402 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la función couunt(integer) en carácter 8
+2025-03-07 11:25:09.402 CET [8676] 09109126E 06593675N ::1(61517)HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+2025-03-07 11:25:09.402 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT couunt(precio2) FROM productos2 WHERE precio2= 3000;
+2025-03-07 11:26:34.380 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: DELETE FROM productos1
+	WHERE id_producto
+	IN (SELECT id_producto FROM tabla25M ORDER BY random() LIMIT 4000000);
+2025-03-07 11:26:34.380 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la relación «tabla25m» en carácter 70
+2025-03-07 11:26:34.380 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  DELETE FROM productos1
+	WHERE id_producto
+	IN (SELECT id_producto FROM tabla25M ORDER BY random() LIMIT 4000000);
+2025-03-07 11:26:57.141 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: DELETE FROM productos1
+	WHERE id_producto
+	IN (SELECT id_producto FROM productos1 ORDER BY random() LIMIT 4000000);
+2025-03-07 11:27:40.699 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal time
+2025-03-07 11:28:03.412 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2986 búfers (18.2%); 0 archivos WAL añadidos, 2 eliminados, 31 reciclados; write=21.083 s, sync=1.422 s, total=22.713 s; archivos sincronizados=11, más largo=1.310 s, promedio=0.130 s; distancia=541334 kB, estimación=541732 kB; lsn=23/59F276D8, lsn de redo=23/39148B40
+2025-03-07 11:28:03.413 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+2025-03-07 11:28:03.413 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:28:03.413 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:28:14.367 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1452 búfers (8.9%); 0 archivos WAL añadidos, 6 eliminados, 27 reciclados; write=7.851 s, sync=2.911 s, total=10.955 s; archivos sincronizados=5, más largo=2.335 s, promedio=0.583 s; distancia=547010 kB, estimación=547010 kB; lsn=23/7E401060, lsn de redo=23/5A7795C8
+2025-03-07 11:28:14.368 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-07 11:28:14.368 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:28:14.368 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:28:25.484 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1259 búfers (7.7%); 0 archivos WAL añadidos, 9 eliminados, 27 reciclados; write=7.840 s, sync=3.074 s, total=11.117 s; archivos sincronizados=5, más largo=2.697 s, promedio=0.615 s; distancia=597115 kB, estimación=597115 kB; lsn=23/A2404160, lsn de redo=23/7EE983D0
+2025-03-07 11:28:25.485 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-07 11:28:25.485 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:28:25.485 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:28:35.627 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1265 búfers (7.7%); 0 archivos WAL añadidos, 8 eliminados, 29 reciclados; write=7.107 s, sync=2.807 s, total=10.143 s; archivos sincronizados=5, más largo=2.346 s, promedio=0.562 s; distancia=591347 kB, estimación=596538 kB; lsn=23/C5DB10A0, lsn de redo=23/A3015270
+2025-03-07 11:28:35.627 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+2025-03-07 11:28:35.627 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:28:35.627 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:28:46.334 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1351 búfers (8.2%); 0 archivos WAL añadidos, 8 eliminados, 27 reciclados; write=7.636 s, sync=2.919 s, total=10.707 s; archivos sincronizados=5, más largo=2.196 s, promedio=0.584 s; distancia=583445 kB, estimación=595229 kB; lsn=23/EA31A938, lsn de redo=23/C69DA7A0
+2025-03-07 11:28:46.334 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-07 11:28:46.334 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:28:46.334 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:28:57.305 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1281 búfers (7.8%); 0 archivos WAL añadidos, 6 eliminados, 30 reciclados; write=9.040 s, sync=1.791 s, total=10.971 s; archivos sincronizados=5, más largo=1.044 s, promedio=0.359 s; distancia=590834 kB, estimación=594789 kB; lsn=24/B306FD0, lsn de redo=23/EAAD7320
+2025-03-07 11:28:57.305 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-07 11:28:57.305 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:28:57.306 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:29:11.467 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1259 búfers (7.7%); 0 archivos WAL añadidos, 9 eliminados, 24 reciclados; write=9.657 s, sync=4.244 s, total=14.162 s; archivos sincronizados=5, más largo=3.419 s, promedio=0.849 s; distancia=539793 kB, estimación=589290 kB; lsn=24/3202AC68, lsn de redo=24/B9FB7A8
+2025-03-07 11:29:11.469 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+2025-03-07 11:29:11.469 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:29:11.469 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:29:24.430 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1179 búfers (7.2%); 0 archivos WAL añadidos, 12 eliminados, 27 reciclados; write=8.730 s, sync=4.012 s, total=12.962 s; archivos sincronizados=6, más largo=2.813 s, promedio=0.669 s; distancia=637981 kB, estimación=637981 kB; lsn=24/560BC318, lsn de redo=24/32902D08
+2025-03-07 11:29:24.431 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+2025-03-07 11:29:24.431 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:29:24.431 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:29:37.758 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 3701 búfers (22.6%); 0 archivos WAL añadidos, 10 eliminados, 26 reciclados; write=9.310 s, sync=3.692 s, total=13.328 s; archivos sincronizados=7, más largo=2.577 s, promedio=0.528 s; distancia=589562 kB, estimación=633139 kB; lsn=24/7B3949B8, lsn de redo=24/568C1688
+2025-03-07 11:29:37.761 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+2025-03-07 11:29:37.761 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:29:37.763 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:29:53.613 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1255 búfers (7.7%); 0 archivos WAL añadidos, 12 eliminados, 25 reciclados; write=12.123 s, sync=3.442 s, total=15.852 s; archivos sincronizados=5, más largo=2.619 s, promedio=0.689 s; distancia=612309 kB, estimación=631056 kB; lsn=24/A14111B0, lsn de redo=24/7BEB6CD0
+2025-03-07 11:29:53.614 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+2025-03-07 11:29:53.614 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:29:53.614 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:30:04.198 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 923 búfers (5.6%); 0 archivos WAL añadidos, 12 eliminados, 27 reciclados; write=7.855 s, sync=2.514 s, total=10.585 s; archivos sincronizados=3, más largo=2.191 s, promedio=0.838 s; distancia=624941 kB, estimación=630444 kB; lsn=24/C69965B8, lsn de redo=24/A21021E0
+2025-03-07 11:30:04.198 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-07 11:30:04.198 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:30:04.199 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:30:14.895 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1196 búfers (7.3%); 0 archivos WAL añadidos, 10 eliminados, 27 reciclados; write=7.009 s, sync=3.433 s, total=10.697 s; archivos sincronizados=3, más largo=2.385 s, promedio=1.145 s; distancia=611762 kB, estimación=628576 kB; lsn=24/EB873E40, lsn de redo=24/C766ED08
+2025-03-07 11:30:14.895 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+2025-03-07 11:30:14.895 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:30:14.897 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:30:25.989 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1246 búfers (7.6%); 0 archivos WAL añadidos, 6 eliminados, 31 reciclados; write=8.956 s, sync=1.931 s, total=11.093 s; archivos sincronizados=3, más largo=1.919 s, promedio=0.644 s; distancia=600015 kB, estimación=625720 kB; lsn=25/C88BAD8, lsn de redo=24/EC062A08
+2025-03-07 11:30:25.991 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-07 11:30:25.991 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:30:25.992 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:30:38.198 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1250 búfers (7.6%); 0 archivos WAL añadidos, 2 eliminados, 31 reciclados; write=11.068 s, sync=0.978 s, total=12.208 s; archivos sincronizados=3, más largo=0.959 s, promedio=0.326 s; distancia=544379 kB, estimación=617586 kB; lsn=25/2D45F328, lsn de redo=25/D401A00
+2025-03-07 11:30:38.248 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+2025-03-07 11:30:38.248 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:30:38.248 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:30:48.892 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1272 búfers (7.8%); 0 archivos WAL añadidos, 6 eliminados, 27 reciclados; write=7.398 s, sync=3.090 s, total=10.645 s; archivos sincronizados=3, más largo=2.461 s, promedio=1.030 s; distancia=537969 kB, estimación=609624 kB; lsn=25/52701DC0, lsn de redo=25/2E15E198
+2025-03-07 11:30:48.893 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+2025-03-07 11:30:48.893 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:30:48.893 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:30:59.359 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1182 búfers (7.2%); 0 archivos WAL añadidos, 9 eliminados, 28 reciclados; write=7.885 s, sync=2.364 s, total=10.467 s; archivos sincronizados=3, más largo=1.359 s, promedio=0.788 s; distancia=607008 kB, estimación=609363 kB; lsn=25/768EF770, lsn de redo=25/532261F8
+2025-03-07 11:30:59.359 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-07 11:30:59.359 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:30:59.360 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:31:08.203 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 778 búfers (4.7%); 0 archivos WAL añadidos, 6 eliminados, 30 reciclados; write=7.289 s, sync=1.321 s, total=8.844 s; archivos sincronizados=3, más largo=0.750 s, promedio=0.441 s; distancia=589622 kB, estimación=607389 kB; lsn=25/98811F78, lsn de redo=25/771F3D70
+2025-03-07 11:31:08.204 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:31:08.204 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:31:08.205 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:31:20.315 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1234 búfers (7.5%); 0 archivos WAL añadidos, 9 eliminados, 25 reciclados; write=7.524 s, sync=4.295 s, total=12.111 s; archivos sincronizados=3, más largo=3.254 s, promedio=1.432 s; distancia=559183 kB, estimación=602568 kB; lsn=25/BFA53400, lsn de redo=25/99407AB8
+2025-03-07 11:31:20.316 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 12 segundos)
+2025-03-07 11:31:20.316 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:31:20.316 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:31:31.655 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1189 búfers (7.3%); 0 archivos WAL añadidos, 11 eliminados, 28 reciclados; write=8.079 s, sync=2.893 s, total=11.339 s; archivos sincronizados=3, más largo=1.558 s, promedio=0.965 s; distancia=640461 kB, estimación=640461 kB; lsn=25/E32CF628, lsn de redo=25/C057B038
+2025-03-07 11:31:31.656 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-07 11:31:31.656 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:31:31.656 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:31:43.801 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1219 búfers (7.4%); 0 archivos WAL añadidos, 9 eliminados, 26 reciclados; write=9.436 s, sync=2.559 s, total=12.145 s; archivos sincronizados=3, más largo=1.964 s, promedio=0.853 s; distancia=582701 kB, estimación=634685 kB; lsn=26/8148BD8, lsn de redo=25/E3E86818
+2025-03-07 11:31:43.801 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 12 segundos)
+2025-03-07 11:31:43.801 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:31:43.801 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:31:51.679 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1271 búfers (7.8%); 0 archivos WAL añadidos, 6 eliminados, 31 reciclados; write=6.842 s, sync=0.759 s, total=7.879 s; archivos sincronizados=3, más largo=0.641 s, promedio=0.253 s; distancia=601850 kB, estimación=631401 kB; lsn=26/28DF7FB8, lsn de redo=26/8A45248
+2025-03-07 11:31:51.680 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+2025-03-07 11:31:51.680 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:31:51.680 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:32:01.370 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1249 búfers (7.6%); 0 archivos WAL añadidos, 7 eliminados, 27 reciclados; write=7.390 s, sync=1.949 s, total=9.690 s; archivos sincronizados=2, más largo=1.141 s, promedio=0.975 s; distancia=548935 kB, estimación=623155 kB; lsn=26/4E115998, lsn de redo=26/2A257098
+2025-03-07 11:32:01.370 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+2025-03-07 11:32:01.370 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:32:01.370 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:32:10.666 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1293 búfers (7.9%); 0 archivos WAL añadidos, 9 eliminados, 28 reciclados; write=6.738 s, sync=2.266 s, total=9.297 s; archivos sincronizados=3, más largo=2.259 s, promedio=0.756 s; distancia=606718 kB, estimación=621511 kB; lsn=26/72360590, lsn de redo=26/4F2D6B78
+2025-03-07 11:32:10.667 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:32:10.667 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:32:10.667 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:32:20.042 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1257 búfers (7.7%); 0 archivos WAL añadidos, 9 eliminados, 27 reciclados; write=6.872 s, sync=2.233 s, total=9.376 s; archivos sincronizados=2, más largo=1.438 s, promedio=1.116 s; distancia=593508 kB, estimación=618711 kB; lsn=26/976D25E0, lsn de redo=26/7366FCF8
+2025-03-07 11:32:20.043 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+2025-03-07 11:32:20.043 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:32:20.043 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:32:29.928 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1184 búfers (7.2%); 0 archivos WAL añadidos, 11 eliminados, 26 reciclados; write=6.833 s, sync=2.777 s, total=9.885 s; archivos sincronizados=2, más largo=1.884 s, promedio=1.389 s; distancia=610121 kB, estimación=617852 kB; lsn=26/BD8DEF18, lsn de redo=26/98A42138
+2025-03-07 11:32:29.929 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:32:29.929 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:32:29.929 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:32:39.952 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1335 búfers (8.1%); 0 archivos WAL añadidos, 13 eliminados, 25 reciclados; write=6.843 s, sync=2.818 s, total=10.024 s; archivos sincronizados=2, más largo=2.332 s, promedio=1.409 s; distancia=626569 kB, estimación=626569 kB; lsn=26/E40050F8, lsn de redo=26/BEE24828
+2025-03-07 11:32:39.953 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+2025-03-07 11:32:39.953 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:32:39.953 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:32:53.672 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1224 búfers (7.5%); 0 archivos WAL añadidos, 13 eliminados, 26 reciclados; write=9.105 s, sync=4.301 s, total=13.719 s; archivos sincronizados=2, más largo=3.187 s, promedio=2.151 s; distancia=628309 kB, estimación=628309 kB; lsn=27/A7F7090, lsn de redo=26/E53B9E98
+2025-03-07 11:32:53.672 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+2025-03-07 11:32:53.672 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:32:53.673 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:33:02.358 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1269 búfers (7.7%); 0 archivos WAL añadidos, 9 eliminados, 29 reciclados; write=7.202 s, sync=1.185 s, total=8.686 s; archivos sincronizados=2, más largo=0.697 s, promedio=0.593 s; distancia=633962 kB, estimación=633962 kB; lsn=27/2D033DA0, lsn de redo=27/BED4A78
+2025-03-07 11:33:02.359 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:33:02.359 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:33:02.359 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:33:12.254 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1227 búfers (7.5%); 0 archivos WAL añadidos, 9 eliminados, 26 reciclados; write=6.841 s, sync=2.737 s, total=9.896 s; archivos sincronizados=2, más largo=2.329 s, promedio=1.369 s; distancia=558676 kB, estimación=626434 kB; lsn=27/534024B8, lsn de redo=27/2E069CA0
+2025-03-07 11:33:12.254 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+2025-03-07 11:33:12.254 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:33:12.255 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:33:23.760 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1235 búfers (7.5%); 0 archivos WAL añadidos, 10 eliminados, 28 reciclados; write=8.914 s, sync=2.305 s, total=11.506 s; archivos sincronizados=2, más largo=1.455 s, promedio=1.153 s; distancia=627254 kB, estimación=627254 kB; lsn=27/77539658, lsn de redo=27/544F7898
+2025-03-07 11:33:23.760 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-07 11:33:23.760 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:33:23.760 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:33:32.257 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2723 búfers (16.6%); 0 archivos WAL añadidos, 7 eliminados, 29 reciclados; write=6.905 s, sync=1.319 s, total=8.498 s; archivos sincronizados=2, más largo=0.832 s, promedio=0.660 s; distancia=596120 kB, estimación=624141 kB; lsn=27/9A513640, lsn de redo=27/78B1DC48
+2025-03-07 11:33:32.258 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:33:32.258 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:33:32.258 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:33:41.858 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1227 búfers (7.5%); 0 archivos WAL añadidos, 8 eliminados, 27 reciclados; write=6.842 s, sync=2.470 s, total=9.601 s; archivos sincronizados=2, más largo=2.141 s, promedio=1.235 s; distancia=572360 kB, estimación=618963 kB; lsn=27/BFAE9970, lsn de redo=27/9BA0FDD8
+2025-03-07 11:33:41.859 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:33:41.859 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:33:41.859 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:33:51.432 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1509 búfers (9.2%); 0 archivos WAL añadidos, 11 eliminados, 26 reciclados; write=6.774 s, sync=2.511 s, total=9.574 s; archivos sincronizados=2, más largo=1.869 s, promedio=1.256 s; distancia=610357 kB, estimación=618102 kB; lsn=27/E5032220, lsn de redo=27/C0E1D310
+2025-03-07 11:33:51.433 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+2025-03-07 11:33:51.433 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:33:51.433 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:34:00.777 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1213 búfers (7.4%); 0 archivos WAL añadidos, 10 eliminados, 27 reciclados; write=6.851 s, sync=2.211 s, total=9.344 s; archivos sincronizados=2, más largo=1.299 s, promedio=1.106 s; distancia=607911 kB, estimación=617083 kB; lsn=28/942CDF0, lsn de redo=27/E5FC7080
+2025-03-07 11:34:00.777 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:34:00.777 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:34:00.777 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:34:09.306 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 871 búfers (5.3%); 0 archivos WAL añadidos, 8 eliminados, 29 reciclados; write=6.844 s, sync=1.362 s, total=8.529 s; archivos sincronizados=2, más largo=0.692 s, promedio=0.681 s; distancia=596559 kB, estimación=615031 kB; lsn=28/2C40A7F8, lsn de redo=28/A65ADD8
+2025-03-07 11:34:09.307 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:34:09.307 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:34:09.307 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:34:17.396 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1181 búfers (7.2%); 0 archivos WAL añadidos, 4 eliminados, 31 reciclados; write=6.850 s, sync=0.972 s, total=8.090 s; archivos sincronizados=2, más largo=0.933 s, promedio=0.486 s; distancia=574016 kB, estimación=610929 kB; lsn=28/4DC10EB8, lsn de redo=28/2D6EAF38
+2025-03-07 11:34:17.397 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+2025-03-07 11:34:17.397 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:34:17.397 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:34:26.710 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1861 búfers (11.4%); 0 archivos WAL añadidos, 3 eliminados, 30 reciclados; write=6.742 s, sync=2.318 s, total=9.313 s; archivos sincronizados=2, más largo=1.675 s, promedio=1.159 s; distancia=547493 kB, estimación=604586 kB; lsn=28/6F7A1448, lsn de redo=28/4ED94408
+2025-03-07 11:34:26.711 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:34:26.711 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:34:26.711 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:34:35.869 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1210 búfers (7.4%); 0 archivos WAL añadidos, 7 eliminados, 27 reciclados; write=6.639 s, sync=2.176 s, total=9.158 s; archivos sincronizados=2, más largo=1.937 s, promedio=1.088 s; distancia=552435 kB, estimación=599371 kB; lsn=28/94406328, lsn de redo=28/709113E0
+2025-03-07 11:34:35.869 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:34:35.869 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:34:35.869 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:34:45.640 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2505 búfers (15.3%); 0 archivos WAL añadidos, 10 eliminados, 27 reciclados; write=6.853 s, sync=2.599 s, total=9.771 s; archivos sincronizados=2, más largo=1.647 s, promedio=1.299 s; distancia=602752 kB, estimación=602752 kB; lsn=28/B94C28F0, lsn de redo=28/955B16C0
+2025-03-07 11:34:45.640 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+2025-03-07 11:34:45.640 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:34:45.641 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:34:58.693 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1334 búfers (8.1%); 0 archivos WAL añadidos, 9 eliminados, 28 reciclados; write=10.115 s, sync=2.661 s, total=13.053 s; archivos sincronizados=2, más largo=1.568 s, promedio=1.331 s; distancia=604473 kB, estimación=604473 kB; lsn=28/DD676758, lsn de redo=28/BA3FFEB0
+2025-03-07 11:34:58.693 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+2025-03-07 11:34:58.693 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:34:58.693 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:35:07.340 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 547 búfers (3.3%); 0 archivos WAL añadidos, 7 eliminados, 29 reciclados; write=6.996 s, sync=1.377 s, total=8.647 s; archivos sincronizados=2, más largo=0.702 s, promedio=0.689 s; distancia=596547 kB, estimación=603681 kB; lsn=29/E84AB0, lsn de redo=28/DEA90AD0
+2025-03-07 11:35:07.341 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+2025-03-07 11:35:07.341 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:35:07.341 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:35:15.189 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1206 búfers (7.4%); 0 archivos WAL añadidos, 3 eliminados, 33 reciclados; write=6.638 s, sync=0.974 s, total=7.848 s; archivos sincronizados=2, más largo=0.563 s, promedio=0.487 s; distancia=580914 kB, estimación=601404 kB; lsn=29/20830BB0, lsn de redo=29/21DD538
+2025-03-07 11:36:42.930 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: insert into productos1(id_producto,nombre,stock,precio) values(25000001,'producto_25000001',250,20);
+2025-03-07 11:36:53.480 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la relación «productos» en carácter 21
+2025-03-07 11:36:53.480 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT ctid, * FROM productos WHERE id_producto = 25000001;
+2025-03-07 11:38:24.181 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:38:37.906 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 9922 búfers (60.6%); 0 archivos WAL añadidos, 2 eliminados, 31 reciclados; write=11.916 s, sync=1.583 s, total=13.726 s; archivos sincronizados=22, más largo=0.939 s, promedio=0.072 s; distancia=539282 kB, estimación=595192 kB; lsn=29/43523A10, lsn de redo=29/23081D38
+2025-03-07 11:38:38.109 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+2025-03-07 11:38:38.109 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:38:38.109 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:38:44.916 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 31 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=6.232 s, sync=0.434 s, total=6.808 s; archivos sincronizados=1, más largo=0.434 s, promedio=0.434 s; distancia=543065 kB, estimación=589979 kB; lsn=29/53CE1BD0, lsn de redo=29/442D8530
+2025-03-07 11:38:51.248 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+2025-03-07 11:38:51.248 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:38:51.249 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:39:10.139 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 8034 búfers (49.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.326 s, sync=0.368 s, total=18.891 s; archivos sincronizados=3, más largo=0.281 s, promedio=0.123 s; distancia=541855 kB, estimación=585167 kB; lsn=29/83A21C18, lsn de redo=29/65400338
+2025-03-07 11:39:11.032 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-07 11:39:11.032 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:39:11.032 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:39:22.378 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 12 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=10.914 s, sync=0.197 s, total=11.346 s; archivos sincronizados=21, más largo=0.177 s, promedio=0.010 s; distancia=538927 kB, estimación=580543 kB; lsn=29/A45250C8, lsn de redo=29/8624C078
+2025-03-07 11:39:23.622 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 12 segundos)
+2025-03-07 11:39:23.622 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:39:23.622 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:39:27.652 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 35 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=3.762 s, sync=0.024 s, total=4.030 s; archivos sincronizados=20, más largo=0.002 s, promedio=0.002 s; distancia=542415 kB, estimación=576730 kB; lsn=29/AF308168, lsn de redo=29/A73FFE48
+2025-03-07 11:39:37.493 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+2025-03-07 11:39:37.493 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:39:37.493 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:39:37.702 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=0.001 s, sync=0.001 s, total=0.209 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=539926 kB, estimación=573050 kB; lsn=29/C8401248, lsn de redo=29/C8345798
+2025-03-07 11:40:06.353 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+2025-03-07 11:40:06.353 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:40:06.354 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:40:08.794 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 19 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=2.064 s, sync=0.159 s, total=2.441 s; archivos sincronizados=7, más largo=0.155 s, promedio=0.023 s; distancia=540473 kB, estimación=569792 kB; lsn=29/EF048A30, lsn de redo=29/E9313ED8
+2025-03-07 11:40:21.689 CET [8676] 09109126E 06593675N ::1(61517)ERROR:  no existe la columna «relnameas» en carácter 8
+2025-03-07 11:40:21.689 CET [8676] 09109126E 06593675N ::1(61517)HINT:  Probablemente quiera hacer referencia a la columna «pg_class.relname».
+2025-03-07 11:40:21.689 CET [8676] 09109126E 06593675N ::1(61517)SENTENCIA:  SELECT relnameAS table_name, relpages AS bloques FROM pg_class WHERE relname='productos1';
+2025-03-07 11:45:06.810 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-07 11:45:30.272 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 212 búfers (1.3%); 0 archivos WAL añadidos, 0 eliminados, 22 reciclados; write=22.983 s, sync=0.270 s, total=23.463 s; archivos sincronizados=277, más largo=0.030 s, promedio=0.001 s; distancia=365627 kB, estimación=549375 kB; lsn=29/FF822DA0, lsn de redo=29/FF822D68
+2025-03-07 11:47:33.354 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE IF NOT EXISTS productos3 (
+	    id_producto3 INT,
+	    nombre3 VARCHAR(18),
+	    stock3 INT,
+	    precio3 INT,
+	    CONSTRAINT ID3 PRIMARY KEY(id_producto3, precio3)
+	) PARTITION BY RANGE (precio3);
+2025-03-07 11:47:33.369 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE productos3_10_510 PARTITION OF productos3 FOR VALUES FROM (10) TO (510);
+2025-03-07 11:47:33.378 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE productos3_510_1010 PARTITION OF productos3 FOR VALUES FROM (510) TO (1010);
+2025-03-07 11:47:33.383 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE productos3_1010_1510 PARTITION OF productos3 FOR VALUES FROM (1010) TO (1510);
+2025-03-07 11:47:33.388 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE productos3_1510_2010 PARTITION OF productos3 FOR VALUES FROM (1510) TO (2010);
+2025-03-07 11:47:33.394 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE productos3_2010_2510 PARTITION OF productos3 FOR VALUES FROM (2010) TO (2510);
+2025-03-07 11:47:33.397 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE productos3_2510_3010 PARTITION OF productos3 FOR VALUES FROM (2510) TO (3010);
+2025-03-07 11:47:33.403 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE productos3_3010_3510 PARTITION OF productos3 FOR VALUES FROM (3010) TO (3510);
+2025-03-07 11:47:33.408 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE productos3_3510_4010 PARTITION OF productos3 FOR VALUES FROM (3510) TO (4010);
+2025-03-07 11:47:33.412 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE productos3_4010_4510 PARTITION OF productos3 FOR VALUES FROM (4010) TO (4510);
+2025-03-07 11:47:33.416 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE TABLE productos3_4510_5001 PARTITION OF productos3 FOR VALUES FROM (4510) TO (5001);
+2025-03-07 11:47:33.423 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 11:47:57.631 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:48:18.265 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 4981 búfers (30.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.301 s, sync=0.178 s, total=20.635 s; archivos sincronizados=61, más largo=0.018 s, promedio=0.003 s; distancia=535398 kB, estimación=547978 kB; lsn=2A/3E307738, lsn de redo=2A/202FC7D0
+2025-03-07 11:48:20.155 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+2025-03-07 11:48:20.155 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:48:20.155 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:48:39.205 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 4947 búfers (30.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.692 s, sync=0.166 s, total=19.050 s; archivos sincronizados=30, más largo=0.018 s, promedio=0.006 s; distancia=538146 kB, estimación=546995 kB; lsn=2A/5F02C9C0, lsn de redo=2A/41085050
+2025-03-07 11:48:41.061 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+2025-03-07 11:48:41.061 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:48:41.061 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:48:59.490 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 5088 búfers (31.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.079 s, sync=0.154 s, total=18.430 s; archivos sincronizados=30, más largo=0.016 s, promedio=0.006 s; distancia=540183 kB, estimación=546313 kB; lsn=2A/7FD81978, lsn de redo=2A/6200AD38
+2025-03-07 11:49:01.426 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-07 11:49:01.426 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:49:01.426 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:49:19.833 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 4984 búfers (30.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.028 s, sync=0.176 s, total=18.408 s; archivos sincronizados=30, más largo=0.024 s, promedio=0.006 s; distancia=541092 kB, estimación=545791 kB; lsn=2A/A0EA44E8, lsn de redo=2A/83073E48
+2025-03-07 11:50:38.706 CET [15172] 09109126E 06593675N ERROR:  cancelando tarea de autovacuum
+2025-03-07 11:50:38.706 CET [15172] 09109126E 06593675N CONTEXTO:  recorriendo el bloque 5131 de la relación «public.productos3_510_1010»
+	vacuum automático de la tabla «pl1bbdda.public.productos3_510_1010»
+2025-03-07 11:50:40.329 CET [15172] 09109126E 06593675N ERROR:  cancelando tarea de autovacuum
+2025-03-07 11:50:40.329 CET [15172] 09109126E 06593675N CONTEXTO:  recorriendo el bloque 934 de la relación «public.productos3_1010_1510»
+	vacuum automático de la tabla «pl1bbdda.public.productos3_1010_1510»
+2025-03-07 11:50:42.180 CET [15172] 09109126E 06593675N ERROR:  cancelando tarea de autovacuum
+2025-03-07 11:50:42.180 CET [15172] 09109126E 06593675N CONTEXTO:  recorriendo el bloque 1069 de la relación «public.productos3_1510_2010»
+	vacuum automático de la tabla «pl1bbdda.public.productos3_1510_2010»
+2025-03-07 11:50:44.003 CET [15172] 09109126E 06593675N ERROR:  cancelando tarea de autovacuum
+2025-03-07 11:50:44.003 CET [15172] 09109126E 06593675N CONTEXTO:  recorriendo el bloque 1052 de la relación «public.productos3_2010_2510»
+	vacuum automático de la tabla «pl1bbdda.public.productos3_2010_2510»
+2025-03-07 11:50:45.839 CET [15172] 09109126E 06593675N ERROR:  cancelando tarea de autovacuum
+2025-03-07 11:50:45.839 CET [15172] 09109126E 06593675N CONTEXTO:  recorriendo el bloque 1060 de la relación «public.productos3_2510_3010»
+	vacuum automático de la tabla «pl1bbdda.public.productos3_2510_3010»
+2025-03-07 11:50:47.707 CET [15172] 09109126E 06593675N ERROR:  cancelando tarea de autovacuum
+2025-03-07 11:50:47.707 CET [15172] 09109126E 06593675N CONTEXTO:  recorriendo el bloque 1079 de la relación «public.productos3_3010_3510»
+	vacuum automático de la tabla «pl1bbdda.public.productos3_3010_3510»
+2025-03-07 11:50:49.622 CET [15172] 09109126E 06593675N ERROR:  cancelando tarea de autovacuum
+2025-03-07 11:50:49.622 CET [15172] 09109126E 06593675N CONTEXTO:  recorriendo el bloque 1105 de la relación «public.productos3_3510_4010»
+	vacuum automático de la tabla «pl1bbdda.public.productos3_3510_4010»
+2025-03-07 11:50:51.596 CET [15172] 09109126E 06593675N ERROR:  cancelando tarea de autovacuum
+2025-03-07 11:50:51.596 CET [15172] 09109126E 06593675N CONTEXTO:  recorriendo el bloque 1141 de la relación «public.productos3_4010_4510»
+	vacuum automático de la tabla «pl1bbdda.public.productos3_4010_4510»
+2025-03-07 11:50:53.656 CET [15172] 09109126E 06593675N ERROR:  cancelando tarea de autovacuum
+2025-03-07 11:50:53.656 CET [15172] 09109126E 06593675N CONTEXTO:  recorriendo el bloque 1188 de la relación «public.productos3_4510_5001»
+	vacuum automático de la tabla «pl1bbdda.public.productos3_4510_5001»
+2025-03-07 11:54:01.314 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-07 11:55:09.508 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: drop table productos1
+	;
+2025-03-07 11:55:13.202 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: drop table productos2;
+2025-03-07 11:55:15.345 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: drop table productos3;
+2025-03-07 11:56:04.337 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: create table if not exists productos(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-07 11:56:04.378 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: CREATE INDEX idb_id_producto ON productos(id_producto);
+2025-03-07 11:56:04.383 CET [8676] 09109126E 06593675N ::1(61517)LOG:  sentencia: COPY  productos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 11:56:24.182 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 3881 búfers (23.7%); 0 archivos WAL añadidos, 0 eliminados, 32 reciclados; write=142.456 s, sync=0.223 s, total=142.868 s; archivos sincronizados=180, más largo=0.049 s, promedio=0.002 s; distancia=527036 kB, estimación=543916 kB; lsn=2A/C1458BB8, lsn de redo=2A/A3322EA0
+2025-03-07 11:56:25.942 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:56:44.216 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 6624 búfers (40.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.962 s, sync=0.105 s, total=18.274 s; archivos sincronizados=29, más largo=0.071 s, promedio=0.004 s; distancia=539745 kB, estimación=543499 kB; lsn=2A/E1ECF120, lsn de redo=2A/C423B2C8
+2025-03-07 11:56:46.108 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+2025-03-07 11:56:46.108 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:56:46.108 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:57:04.374 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 7043 búfers (43.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.849 s, sync=0.197 s, total=18.267 s; archivos sincronizados=3, más largo=0.081 s, promedio=0.066 s; distancia=541472 kB, estimación=543296 kB; lsn=2B/332E780, lsn de redo=2A/E5303688
+2025-03-07 11:57:06.041 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-07 11:57:06.041 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:57:06.041 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:57:24.394 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 7101 búfers (43.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.013 s, sync=0.110 s, total=18.353 s; archivos sincronizados=3, más largo=0.053 s, promedio=0.037 s; distancia=538443 kB, estimación=542811 kB; lsn=2B/23F243C8, lsn de redo=2B/60D6498
+2025-03-07 11:57:26.056 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-07 11:57:26.056 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:57:26.056 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:57:43.258 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 7047 búfers (43.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=16.900 s, sync=0.083 s, total=17.203 s; archivos sincronizados=3, más largo=0.054 s, promedio=0.028 s; distancia=542869 kB, estimación=542869 kB; lsn=2B/4536B8E0, lsn de redo=2B/272FBC00
+2025-03-07 11:57:44.823 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 18 segundos)
+2025-03-07 11:57:44.823 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:57:44.823 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:58:01.569 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 7274 búfers (44.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=16.440 s, sync=0.106 s, total=16.746 s; archivos sincronizados=4, más largo=0.046 s, promedio=0.027 s; distancia=539975 kB, estimación=542580 kB; lsn=2B/65F4FC50, lsn de redo=2B/4824DBA8
+2025-03-07 11:58:03.479 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+2025-03-07 11:58:03.479 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:58:03.480 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 11:58:21.060 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 7279 búfers (44.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.300 s, sync=0.077 s, total=17.581 s; archivos sincronizados=3, más largo=0.041 s, promedio=0.026 s; distancia=539230 kB, estimación=542245 kB; lsn=2B/86F8F100, lsn de redo=2B/690E5470
+2025-03-07 11:58:22.652 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+2025-03-07 11:58:22.652 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 11:58:22.652 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 12:01:13.109 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 7296 búfers (44.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=170.214 s, sync=0.072 s, total=170.457 s; archivos sincronizados=6, más largo=0.064 s, promedio=0.012 s; distancia=541988 kB, estimación=542219 kB; lsn=2B/A5899B08, lsn de redo=2B/8A22E5D8
+2025-03-07 12:03:22.926 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-07 12:07:52.206 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 14651 búfers (89.4%); 0 archivos WAL añadidos, 0 eliminados, 27 reciclados; write=269.070 s, sync=0.044 s, total=269.280 s; archivos sincronizados=11, más largo=0.029 s, promedio=0.004 s; distancia=453684 kB, estimación=533366 kB; lsn=2B/A5F04450, lsn de redo=2B/A5D3B8A8
+2025-03-07 13:13:37.309 CET [8676] 09109126E 06593675N ::1(61517)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2025-03-07 14:17:18.192 CET [20228] 09109126E 06593675N ::1(50695)LOG:  sentencia: create table if not exists productos(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-07 14:17:18.215 CET [20228] 09109126E 06593675N ::1(50695)LOG:  sentencia: CREATE INDEX idh_id_producto ON productos using hash(id_producto);
+2025-03-07 14:18:08.123 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 14:18:22.442 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 21 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=14.006 s, sync=0.132 s, total=14.321 s; archivos sincronizados=22, más largo=0.113 s, promedio=0.006 s; distancia=531218 kB, estimación=533151 kB; lsn=2B/E46DD800, lsn de redo=2B/C6400188
+2025-03-07 14:18:23.489 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 15 segundos)
+2025-03-07 14:18:23.489 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 14:18:23.491 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 14:18:36.988 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 26 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=13.209 s, sync=0.096 s, total=13.499 s; archivos sincronizados=1, más largo=0.096 s, promedio=0.096 s; distancia=540691 kB, estimación=540691 kB; lsn=2C/52EB308, lsn de redo=2B/E7404FB0
+2025-03-07 14:18:38.090 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 15 segundos)
+2025-03-07 14:18:38.090 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 14:18:38.091 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 14:18:39.643 CET [20228] 09109126E 06593675N ::1(50695)ERROR:  cancelando la sentencia debido a una petición del usuario
+2025-03-07 14:18:39.643 CET [20228] 09109126E 06593675N ::1(50695)SENTENCIA:  CREATE INDEX idh_id_producto ON productos using hash(id_producto);
+2025-03-07 14:19:28.490 CET [4908] 09109126E 06593675N ::1(50928)LOG:  sentencia: create table if not exists productos(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-07 14:19:28.494 CET [4908] 09109126E 06593675N ::1(50928)LOG:  sentencia: CREATE INDEX idh_id_producto ON productos using hash(id_producto);
+2025-03-07 14:19:34.064 CET [4908] 09109126E 06593675N ::1(50928)ERROR:  cancelando la sentencia debido a una petición del usuario
+2025-03-07 14:19:34.064 CET [4908] 09109126E 06593675N ::1(50928)SENTENCIA:  CREATE INDEX idh_id_producto ON productos using hash(id_producto);
+2025-03-07 14:19:44.913 CET [14944] 09109126E 06593675N ::1(50987)LOG:  sentencia: CREATE INDEX idh_id_producto ON productos using hash(id_producto);
+2025-03-07 14:20:30.925 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 19 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=112.555 s, sync=0.080 s, total=112.836 s; archivos sincronizados=18, más largo=0.061 s, promedio=0.005 s; distancia=536724 kB, estimación=540294 kB; lsn=2C/25EAA0B0, lsn de redo=2C/802A128
+2025-03-07 14:20:32.435 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 14:20:48.395 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 111 búfers (0.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=15.676 s, sync=0.108 s, total=15.961 s; archivos sincronizados=2, más largo=0.106 s, promedio=0.054 s; distancia=541327 kB, estimación=541327 kB; lsn=2C/46FA3530, lsn de redo=2C/290CE060
+2025-03-07 14:20:49.638 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 17 segundos)
+2025-03-07 14:20:49.638 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 14:20:49.639 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 14:21:04.039 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1864 búfers (11.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=14.116 s, sync=0.103 s, total=14.401 s; archivos sincronizados=1, más largo=0.103 s, promedio=0.103 s; distancia=543945 kB, estimación=543945 kB; lsn=2C/685B5078, lsn de redo=2C/4A4004A8
+2025-03-07 14:21:05.061 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+2025-03-07 14:21:05.061 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 14:21:05.062 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 14:24:47.503 CET [14944] 09109126E 06593675N ::1(50987)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+2025-03-07 14:25:02.932 CET [14944] 09109126E 06593675N ::1(50987)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+2025-03-07 14:25:06.495 CET [14944] 09109126E 06593675N ::1(50987)ERROR:  no existe la relación «idx_hash_producto_id»
+2025-03-07 14:25:06.495 CET [14944] 09109126E 06593675N ::1(50987)SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idx_hash_producto_id',0));
+2025-03-07 14:25:35.192 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 17 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.951 s, sync=0.007 s, total=270.132 s; archivos sincronizados=3, más largo=0.004 s, promedio=0.003 s; distancia=540674 kB, estimación=543618 kB; lsn=2C/7846BFE0, lsn de redo=2C/6B401060
+2025-03-07 14:28:37.296 CET [14944] 09109126E 06593675N ::1(50987)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2025-03-07 17:46:40.912 CET [10368] 09109126E 06593675N ::1(52717)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pgstattuple;
+2025-03-07 17:46:58.802 CET [10368] 09109126E 06593675N ::1(52717)ERROR:  no existe la relación «idx_producto_id»
+2025-03-07 17:46:58.802 CET [10368] 09109126E 06593675N ::1(52717)SENTENCIA:  SELECT * FROM pgstatindex('idx_producto_id');
+2025-03-07 17:48:22.969 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-07 17:52:52.262 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 4880 búfers (29.8%); 0 archivos WAL añadidos, 0 eliminados, 13 reciclados; write=269.116 s, sync=0.054 s, total=269.294 s; archivos sincronizados=26, más largo=0.030 s, promedio=0.003 s; distancia=213470 kB, estimación=510603 kB; lsn=2C/784788D0, lsn de redo=2C/78478898
+2025-03-07 17:57:51.371 CET [10368] 09109126E 06593675N ::1(52717)ERROR:  no existe la columna «‘idb_id_producto’» en carácter 40
+2025-03-07 17:57:51.371 CET [10368] 09109126E 06593675N ::1(52717)SENTENCIA:  SELECT pg_size_pretty(pg_relation_size(‘idb_id_producto’));
+2025-03-07 17:57:57.424 CET [10368] 09109126E 06593675N ::1(52717)ERROR:  no existe la columna «‘idh_id_producto’» en carácter 40
+2025-03-07 17:57:57.424 CET [10368] 09109126E 06593675N ::1(52717)SENTENCIA:  SELECT pg_size_pretty(pg_relation_size(‘idh_id_producto’));
+2025-03-07 17:58:05.028 CET [10368] 09109126E 06593675N ::1(52717)ERROR:  no existe la columna «‘idh_id_producto’» en carácter 40
+2025-03-07 17:58:05.028 CET [10368] 09109126E 06593675N ::1(52717)SENTENCIA:  SELECT pg_size_pretty(pg_relation_size(‘idh_id_producto’))
+	;
+2025-03-07 17:59:22.152 CET [23152] 09109126E 06593675N ::1(53460)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+2025-03-07 18:00:23.251 CET [18128] 09109126E 06593675N ::1(53514)ERROR:  error de sintaxis en o cerca de «;» en carácter 49
+2025-03-07 18:00:23.251 CET [18128] 09109126E 06593675N ::1(53514)SENTENCIA:  SELECT pg_relation_filepath('idh_id_producto'),
+	;
+2025-03-07 18:03:22.275 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-07 18:03:28.563 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 58 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=6.222 s, sync=0.019 s, total=6.288 s; archivos sincronizados=18, más largo=0.003 s, promedio=0.002 s; distancia=367 kB, estimación=459579 kB; lsn=2C/784D47E0, lsn de redo=2C/784D47A8
+2025-03-07 18:08:20.102 CET [18128] 09109126E 06593675N ::1(53514)ERROR:  relation "idh_id_producto" is not a btree index
+2025-03-07 18:08:20.102 CET [18128] 09109126E 06593675N ::1(53514)SENTENCIA:  SELECT * FROM pgstatindex('idh_id_producto');
+2025-03-07 18:08:53.641 CET [18128] 09109126E 06593675N ::1(53514)ERROR:  no existe la función pageinspect(unknown) en carácter 24
+2025-03-07 18:08:53.641 CET [18128] 09109126E 06593675N ::1(53514)HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+2025-03-07 18:08:53.641 CET [18128] 09109126E 06593675N ::1(53514)SENTENCIA:  SELECT index_size FROM pageinspect('idh_id_producto');
+2025-03-07 18:09:12.547 CET [18128] 09109126E 06593675N ::1(53514)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+2025-03-07 18:09:28.967 CET [18128] 09109126E 06593675N ::1(53514)ERROR:  error de sintaxis en o cerca de «idh_id_producto» en carácter 115
+2025-03-07 18:09:28.967 CET [18128] 09109126E 06593675N ::1(53514)SENTENCIA:  SELECT *FROM hash_metapage_info(get_raw_page('idh_id_producto,0));
+	SELECT * FROM hash_metapage_info(get_raw_page('idh_id_producto,0));
+2025-03-07 18:09:42.808 CET [18128] 09109126E 06593675N ::1(53514)ERROR:  error de sintaxis en o cerca de «idh_id_producto» en carácter 117
+2025-03-07 18:09:42.808 CET [18128] 09109126E 06593675N ::1(53514)SENTENCIA:  SELECT * FROM hash_metapage_info(get_raw_page('idh_id_producto,0));
+	SELECT * FROM hash_metapage_info( get_raw_page('idh_id_producto,0));
+2025-03-07 18:10:01.377 CET [18128] 09109126E 06593675N ::1(53514)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+2025-03-07 18:10:09.015 CET [18128] 09109126E 06593675N ::1(53514)ERROR:  error de sintaxis en o cerca de «idh_id_producto» en carácter 150
+2025-03-07 18:10:09.015 CET [18128] 09109126E 06593675N ::1(53514)SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idh_id_producto,0));
+	SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idh_id_producto,0));
+2025-03-07 18:10:17.487 CET [18128] 09109126E 06593675N ::1(53514)ERROR:  no existe la función get_raw_page(unknown) en carácter 51
+2025-03-07 18:10:17.487 CET [18128] 09109126E 06593675N ::1(53514)HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+2025-03-07 18:10:17.487 CET [18128] 09109126E 06593675N ::1(53514)SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idh_id_producto,0'));
+2025-03-07 18:11:25.960 CET [18128] 09109126E 06593675N ::1(53514)ERROR:  no existe la columna «bmsiza» en carácter 16
+2025-03-07 18:11:25.960 CET [18128] 09109126E 06593675N ::1(53514)HINT:  Probablemente quiera hacer referencia a la columna «hash_metapage_info.bmsize».
+2025-03-07 18:11:25.960 CET [18128] 09109126E 06593675N ::1(53514)SENTENCIA:  SELECT  bsize, bmsiza FROM hash_metapage_info(get_raw_page('idh_id_producto',0));
+2025-03-07 18:20:43.135 CET [18128] 09109126E 06593675N ::1(53514)LOG:  sentencia: CREATE INDEX idb_id_precio ON productos(precio);
+2025-03-07 18:22:55.907 CET [18128] 09109126E 06593675N ::1(53514)ERROR:  no existe la columna «‘idb_id_precio’» en carácter 40
+2025-03-07 18:22:55.907 CET [18128] 09109126E 06593675N ::1(53514)SENTENCIA:  SELECT pg_size_pretty(pg_relation_size(‘idb_id_precio’));
+2025-03-07 18:23:22.583 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-07 18:23:24.243 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 14 búfers (0.1%); 0 archivos WAL añadidos, 7 eliminados, 2 reciclados; write=1.458 s, sync=0.051 s, total=1.660 s; archivos sincronizados=15, más largo=0.029 s, promedio=0.004 s; distancia=153932 kB, estimación=429015 kB; lsn=2C/81B27A98, lsn de redo=2C/81B27A60
+2025-03-07 18:23:29.769 CET [18128] 09109126E 06593675N ::1(53514)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pgstattuple;
+2025-03-07 18:26:04.399 CET [18128] 09109126E 06593675N ::1(53514)LOG:  sentencia: CREATE INDEX idh_id_precio ON productos using hash(precio);
+2025-03-07 18:27:04.021 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 18:27:27.321 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1222 búfers (7.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=22.808 s, sync=0.257 s, total=23.300 s; archivos sincronizados=15, más largo=0.202 s, promedio=0.018 s; distancia=532181 kB, estimación=532181 kB; lsn=2C/C00D96E0, lsn de redo=2C/A22DCF80
+2025-03-07 18:27:29.906 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 25 segundos)
+2025-03-07 18:27:29.906 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 18:27:29.906 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 18:27:54.433 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1222 búfers (7.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.184 s, sync=0.193 s, total=24.527 s; archivos sincronizados=2, más largo=0.177 s, promedio=0.097 s; distancia=538124 kB, estimación=538124 kB; lsn=2C/E1031688, lsn de redo=2C/C3060038
+2025-03-07 18:27:56.567 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 27 segundos)
+2025-03-07 18:27:56.567 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 18:27:56.567 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-07 18:30:00.141 CET [18128] 09109126E 06593675N ::1(53514)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+2025-03-07 18:30:01.028 CET [18128] 09109126E 06593675N ::1(53514)ERROR:  error de sintaxis en o cerca de «FROM» en carácter 16
+2025-03-07 18:30:01.028 CET [18128] 09109126E 06593675N ::1(53514)SENTENCIA:  SELECT  bsize, FROM hash_metapage_info(get_raw_page('idh_id_precio',0));
+2025-03-07 18:32:16.973 CET [13284] 09109126E 06593675N ::1(54731)ERROR:  basura sigue después de un literal numérico en o cerca de «0f» en carácter 82
+2025-03-07 18:32:16.973 CET [13284] 09109126E 06593675N ::1(54731)SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idh_id_producto',0fdadf));
+2025-03-07 18:32:26.287 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 10065 búfers (61.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.487 s, sync=0.033 s, total=269.720 s; archivos sincronizados=2, más largo=0.032 s, promedio=0.017 s; distancia=542478 kB, estimación=542478 kB; lsn=2C/EE12F5D0, lsn de redo=2C/E4223AB8
+2025-03-07 18:44:39.690 CET [13284] 09109126E 06593675N ::1(54731)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2025-03-08 13:02:30.910 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «all» en carácter 6
+2025-03-08 13:02:30.910 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  drop all
+	;
+2025-03-08 13:03:58.479 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «tabla» en carácter 6
+2025-03-08 13:03:58.479 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  drop tabla productos;
+2025-03-08 13:04:01.640 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: drop table productos;
+2025-03-08 13:04:01.642 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  no existe la tabla «productos»
+2025-03-08 13:04:01.642 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  drop table productos;
+2025-03-08 13:04:09.549 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-08 13:04:11.106 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 14 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 10 reciclados; write=1.437 s, sync=0.009 s, total=1.557 s; archivos sincronizados=10, más largo=0.002 s, promedio=0.001 s; distancia=162927 kB, estimación=504523 kB; lsn=2C/EE13FAD0, lsn de redo=2C/EE13FA98
+2025-03-08 13:08:30.942 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: create table if not exists productos1(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-08 13:08:30.984 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: COPY  productos1 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-08 13:08:53.807 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:09:13.339 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 8258 búfers (50.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.316 s, sync=0.113 s, total=19.534 s; archivos sincronizados=24, más largo=0.085 s, promedio=0.005 s; distancia=543493 kB, estimación=543493 kB; lsn=2D/2D2EC680, lsn de redo=2D/F401040
+2025-03-08 13:09:15.153 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+2025-03-08 13:09:15.153 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:09:15.154 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:09:33.398 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 11972 búfers (73.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.927 s, sync=0.132 s, total=18.246 s; archivos sincronizados=2, más largo=0.068 s, promedio=0.066 s; distancia=540676 kB, estimación=543211 kB; lsn=2D/4E269EF8, lsn de redo=2D/30402308
+2025-03-08 13:09:35.083 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-08 13:09:35.083 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:09:35.084 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:09:53.194 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 12507 búfers (76.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.793 s, sync=0.124 s, total=18.111 s; archivos sincronizados=3, más largo=0.073 s, promedio=0.042 s; distancia=538410 kB, estimación=542731 kB; lsn=2D/6F157A20, lsn de redo=2D/511CCCF0
+2025-03-08 13:09:54.815 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+2025-03-08 13:09:54.815 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:09:54.816 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:10:10.515 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «CREATE» en carácter 14
+2025-03-08 13:10:10.515 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  create index CREATE INDEX idb_precio ON productos1(precio);
+2025-03-08 13:10:11.070 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «CREATE» en carácter 14
+2025-03-08 13:10:11.070 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  create index CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
+2025-03-08 13:10:11.074 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «CREATE» en carácter 14
+2025-03-08 13:10:11.074 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  create index CREATE INDEX idb_precio ON productos1 using hash(precio);
+2025-03-08 13:12:32.687 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 11574 búfers (70.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=157.698 s, sync=0.007 s, total=157.871 s; archivos sincronizados=1, más largo=0.007 s, promedio=0.007 s; distancia=541240 kB, estimación=542582 kB; lsn=2D/8D4FFD90, lsn de redo=2D/7225B090
+2025-03-08 13:17:13.220 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: create table if not exists productos1(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-08 13:17:13.241 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: COPY  productos1 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-08 13:17:17.428 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:17:37.528 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2641 búfers (16.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.817 s, sync=0.137 s, total=20.101 s; archivos sincronizados=25, más largo=0.119 s, promedio=0.006 s; distancia=540717 kB, estimación=542396 kB; lsn=2D/B1128360, lsn de redo=2D/93266880
+2025-03-08 13:17:39.305 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+2025-03-08 13:17:39.305 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:17:39.305 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:17:58.777 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 7620 búfers (46.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.140 s, sync=0.110 s, total=19.472 s; archivos sincronizados=2, más largo=0.068 s, promedio=0.055 s; distancia=539968 kB, estimación=542153 kB; lsn=2D/D1E28E08, lsn de redo=2D/B41B6B08
+2025-03-08 13:18:00.487 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+2025-03-08 13:18:00.487 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:18:00.487 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:18:18.966 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 12336 búfers (75.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.152 s, sync=0.144 s, total=18.479 s; archivos sincronizados=2, más largo=0.112 s, promedio=0.072 s; distancia=539346 kB, estimación=541872 kB; lsn=2D/F30BCC78, lsn de redo=2D/D506B438
+2025-03-08 13:18:20.618 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-08 13:18:20.618 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:18:20.618 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:18:38.491 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 12792 búfers (78.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.558 s, sync=0.123 s, total=17.873 s; archivos sincronizados=3, más largo=0.105 s, promedio=0.041 s; distancia=541348 kB, estimación=541820 kB; lsn=2E/13FADE28, lsn de redo=2D/F6114568
+2025-03-08 13:18:40.382 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-08 13:18:40.382 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:18:40.383 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:18:53.076 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idb_precio ON productos1(precio);
+2025-03-08 13:19:16.381 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 12643 búfers (77.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=35.551 s, sync=0.198 s, total=35.999 s; archivos sincronizados=3, más largo=0.162 s, promedio=0.066 s; distancia=543681 kB, estimación=543681 kB; lsn=2E/3548C1B0, lsn de redo=2E/17404B48
+2025-03-08 13:19:16.778 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
+2025-03-08 13:19:52.311 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:19:55.083 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  cancelando la sentencia debido a una petición del usuario
+2025-03-08 13:19:55.083 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
+2025-03-08 13:20:00.463 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+2025-03-08 13:20:00.463 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  set client_encoding ='UTF8';
+2025-03-08 13:20:00.468 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+2025-03-08 13:20:00.468 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  BEGIN;
+2025-03-08 13:20:00.474 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idb_precio ON productos1(precio);
+2025-03-08 13:20:00.474 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+2025-03-08 13:20:00.474 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  CREATE INDEX idb_precio ON productos1(precio);
+2025-03-08 13:20:00.479 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
+2025-03-08 13:20:00.479 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+2025-03-08 13:20:00.479 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
+2025-03-08 13:20:00.483 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idb_precio ON productos1 using hash(precio);
+2025-03-08 13:20:00.483 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+2025-03-08 13:20:00.483 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  CREATE INDEX idb_precio ON productos1 using hash(precio);
+2025-03-08 13:20:05.243 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idb_precio ON productos1(precio);
+2025-03-08 13:20:05.243 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  no existe la relación «productos1»
+2025-03-08 13:20:05.243 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  CREATE INDEX idb_precio ON productos1(precio);
+2025-03-08 13:20:05.245 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
+2025-03-08 13:20:05.245 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+2025-03-08 13:20:05.245 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
+2025-03-08 13:20:05.253 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idb_precio ON productos1 using hash(precio);
+2025-03-08 13:20:05.253 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+2025-03-08 13:20:05.253 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  CREATE INDEX idb_precio ON productos1 using hash(precio);
+2025-03-08 13:20:35.788 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: create table if not exists productos1(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-08 13:20:35.794 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: COPY  productos1 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-08 13:20:50.849 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2260 búfers (13.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=58.250 s, sync=0.112 s, total=58.538 s; archivos sincronizados=17, más largo=0.063 s, promedio=0.007 s; distancia=540653 kB, estimación=543378 kB; lsn=2E/56358090, lsn de redo=2E/38400158
+2025-03-08 13:20:52.525 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:21:12.118 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 8277 búfers (50.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.235 s, sync=0.158 s, total=19.594 s; archivos sincronizados=25, más largo=0.117 s, promedio=0.007 s; distancia=536793 kB, estimación=542720 kB; lsn=2E/76F8AE18, lsn de redo=2E/59036738
+2025-03-08 13:21:13.938 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+2025-03-08 13:21:13.938 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:21:13.938 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:21:32.065 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 11530 búfers (70.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.800 s, sync=0.142 s, total=18.127 s; archivos sincronizados=2, más largo=0.111 s, promedio=0.071 s; distancia=541337 kB, estimación=542581 kB; lsn=2E/9809E9F0, lsn de redo=2E/7A0DCD08
+2025-03-08 13:21:33.507 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-08 13:21:33.507 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:21:33.507 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:21:51.316 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 13296 búfers (81.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.411 s, sync=0.161 s, total=17.809 s; archivos sincronizados=3, más largo=0.096 s, promedio=0.054 s; distancia=540316 kB, estimación=542355 kB; lsn=2E/B8FDA760, lsn de redo=2E/9B083E10
+2025-03-08 13:21:53.050 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-08 13:21:53.050 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:21:53.050 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:22:10.223 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 13626 búfers (83.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=16.811 s, sync=0.187 s, total=17.173 s; archivos sincronizados=2, más largo=0.129 s, promedio=0.094 s; distancia=543255 kB, estimación=543255 kB; lsn=2E/DA257398, lsn de redo=2E/BC309B08
+2025-03-08 13:22:11.719 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 18 segundos)
+2025-03-08 13:22:11.719 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:22:11.719 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:22:12.385 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idb_precio ON productos1(precio);
+2025-03-08 13:22:35.443 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
+2025-03-08 13:23:19.252 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 2509 búfers (15.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=67.212 s, sync=0.121 s, total=67.534 s; archivos sincronizados=17, más largo=0.091 s, promedio=0.008 s; distancia=537728 kB, estimación=542702 kB; lsn=2E/FAEDA1C0, lsn de redo=2E/DD029CC8
+2025-03-08 13:23:20.933 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:23:34.895 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 118 búfers (0.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=13.687 s, sync=0.098 s, total=13.963 s; archivos sincronizados=1, más largo=0.098 s, promedio=0.098 s; distancia=544516 kB, estimación=544516 kB; lsn=2F/1C5D3EE8, lsn de redo=2E/FE3EAF90
+2025-03-08 13:23:35.998 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 15 segundos)
+2025-03-08 13:23:35.998 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:23:35.999 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:23:49.491 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 63 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=13.190 s, sync=0.111 s, total=13.493 s; archivos sincronizados=1, más largo=0.111 s, promedio=0.111 s; distancia=538262 kB, estimación=543891 kB; lsn=2F/3D3FC990, lsn de redo=2F/1F190A78
+2025-03-08 13:23:50.588 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 15 segundos)
+2025-03-08 13:23:50.588 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:23:50.588 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:24:01.655 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idb_precio ON productos1 using hash(precio);
+2025-03-08 13:24:01.656 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  la relación «idb_precio» ya existe
+2025-03-08 13:24:01.656 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  CREATE INDEX idb_precio ON productos1 using hash(precio);
+2025-03-08 13:24:45.796 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  no existe la relación «productos1» en carácter 15
+2025-03-08 13:24:45.796 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  select * from productos1
+	;
+2025-03-08 13:25:07.266 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: create table if not exists productos1(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-08 13:25:07.276 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: COPY  productos1 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-08 13:25:14.514 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 918 búfers (5.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=83.648 s, sync=0.086 s, total=83.926 s; archivos sincronizados=3, más largo=0.075 s, promedio=0.029 s; distancia=541352 kB, estimación=543637 kB; lsn=2F/5DED7588, lsn de redo=2F/4023AAA8
+2025-03-08 13:25:16.453 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:25:37.161 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 5756 búfers (35.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.373 s, sync=0.151 s, total=20.708 s; archivos sincronizados=25, más largo=0.087 s, promedio=0.007 s; distancia=542483 kB, estimación=543521 kB; lsn=2F/7F39ACA8, lsn de redo=2F/613FF730
+2025-03-08 13:25:38.807 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+2025-03-08 13:25:38.807 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:25:38.807 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:25:57.242 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 9229 búfers (56.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.042 s, sync=0.188 s, total=18.436 s; archivos sincronizados=2, más largo=0.186 s, promedio=0.094 s; distancia=538995 kB, estimación=543069 kB; lsn=2F/A02084C0, lsn de redo=2F/8225C588
+2025-03-08 13:25:58.797 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-08 13:25:58.797 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:25:58.797 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:26:16.525 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 13746 búfers (83.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.352 s, sync=0.182 s, total=17.728 s; archivos sincronizados=2, más largo=0.158 s, promedio=0.091 s; distancia=538665 kB, estimación=542628 kB; lsn=2F/C0FA43E8, lsn de redo=2F/A3066D58
+2025-03-08 13:26:18.197 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-08 13:26:18.197 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:26:18.197 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:26:36.617 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 13607 búfers (83.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.941 s, sync=0.273 s, total=18.420 s; archivos sincronizados=3, más largo=0.222 s, promedio=0.091 s; distancia=540696 kB, estimación=542435 kB; lsn=2F/E2277630, lsn de redo=2F/C406CED0
+2025-03-08 13:26:38.140 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+2025-03-08 13:26:38.140 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:26:38.140 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:26:46.490 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idb_precio ON productos1(precio);
+2025-03-08 13:27:10.023 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idh_producto_id ON productos1 using hash(id_producto);
+2025-03-08 13:27:48.298 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 8139 búfers (49.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=69.847 s, sync=0.097 s, total=70.158 s; archivos sincronizados=17, más largo=0.067 s, promedio=0.006 s; distancia=540872 kB, estimación=542279 kB; lsn=30/2F30950, lsn de redo=2F/E509EF50
+2025-03-08 13:27:49.942 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:28:04.078 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 9400 búfers (57.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=13.848 s, sync=0.103 s, total=14.137 s; archivos sincronizados=1, más largo=0.103 s, promedio=0.103 s; distancia=544133 kB, estimación=544133 kB; lsn=30/24376080, lsn de redo=30/64005B0
+2025-03-08 13:28:05.209 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+2025-03-08 13:28:05.209 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:28:05.209 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:28:18.670 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 13 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=13.172 s, sync=0.109 s, total=13.462 s; archivos sincronizados=1, más largo=0.109 s, promedio=0.109 s; distancia=536937 kB, estimación=543413 kB; lsn=30/45063888, lsn de redo=30/2705AA90
+2025-03-08 13:28:20.182 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 15 segundos)
+2025-03-08 13:28:20.182 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:28:20.183 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:28:33.452 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 25 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=12.997 s, sync=0.110 s, total=13.270 s; archivos sincronizados=1, más largo=0.110 s, promedio=0.110 s; distancia=544405 kB, estimación=544405 kB; lsn=30/661DB708, lsn de redo=30/484001C8
+2025-03-08 13:28:34.587 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: CREATE INDEX idh_precio ON productos1 using hash(precio);
+2025-03-08 13:28:36.231 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+2025-03-08 13:28:36.231 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:28:36.231 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:29:34.148 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 13 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=57.664 s, sync=0.069 s, total=57.917 s; archivos sincronizados=15, más largo=0.057 s, promedio=0.005 s; distancia=536615 kB, estimación=543626 kB; lsn=30/86BADC50, lsn de redo=30/69009F70
+2025-03-08 13:29:36.680 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:30:00.056 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1225 búfers (7.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=22.855 s, sync=0.326 s, total=23.377 s; archivos sincronizados=1, más largo=0.326 s, promedio=0.326 s; distancia=543304 kB, estimación=543594 kB; lsn=30/A8194568, lsn de redo=30/8A29C0E0
+2025-03-08 13:30:02.371 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 26 segundos)
+2025-03-08 13:30:02.371 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:30:02.371 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:30:26.264 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 1225 búfers (7.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=23.475 s, sync=0.230 s, total=23.893 s; archivos sincronizados=2, más largo=0.216 s, promedio=0.115 s; distancia=541538 kB, estimación=543388 kB; lsn=30/C92CEAA8, lsn de redo=30/AB374AA0
+2025-03-08 13:30:28.611 CET [23200] 09109126E 06593675N LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 26 segundos)
+2025-03-08 13:30:28.611 CET [23200] 09109126E 06593675N HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 13:30:28.611 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: wal
+2025-03-08 13:34:58.270 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 10495 búfers (64.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.418 s, sync=0.067 s, total=269.660 s; archivos sincronizados=5, más largo=0.057 s, promedio=0.014 s; distancia=537829 kB, estimación=542832 kB; lsn=30/D5B78808, lsn de redo=30/CC0AE050
+2025-03-08 13:35:28.443 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-08 13:39:58.165 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 5492 búfers (33.5%); 0 archivos WAL añadidos, 0 eliminados, 9 reciclados; write=269.558 s, sync=0.072 s, total=269.723 s; archivos sincronizados=11, más largo=0.045 s, promedio=0.007 s; distancia=159602 kB, estimación=504509 kB; lsn=30/D5EBCE50, lsn de redo=30/D5C8A990
+2025-03-08 13:45:28.184 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-08 13:45:28.975 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.761 s, sync=0.010 s, total=0.791 s; archivos sincronizados=9, más largo=0.006 s, promedio=0.002 s; distancia=2256 kB, estimación=454284 kB; lsn=30/D5EBE9E0, lsn de redo=30/D5EBE9A8
+2025-03-08 13:47:53.597 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «WHERE» en carácter 1
+2025-03-08 13:47:53.597 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  WHERE i.relname = 'productos1';
+2025-03-08 13:48:04.918 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «WHERE» en carácter 1
+2025-03-08 13:48:04.918 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  WHERE i.relname = 'productos1';
+2025-03-08 13:48:22.675 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «ç» en carácter 1
+2025-03-08 13:48:22.675 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  ç
+	 SELECT  i.indexrelname,   i.idx_scan, i.idx_tup_read,   i.idx_tup_fetch,  s.heap_blks_read, 	s.heap_blks_hit 
+	FROM pg_stat_user_indexes i JOIN pg_statio_user_tables s  ON i.relname = s.relname
+	WHERE i.relname = 'productos1';
+2025-03-08 13:48:56.973 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «i» en carácter 119
+2025-03-08 13:48:56.973 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  SELECT  i.indexrelname,   i.idx_scan, i.idx_tup_read,   i.idx_tup_fetch,  s.heap_blks_read, 	s.heap_blks_hit 
+	SELECT  i.indexrelname,   i.idx_scan, i.idx_tup_read,   i.idx_tup_fetch,  s.heap_blks_read, 	s.heap_blks_hit 
+	FROM pg_stat_user_indexes i JOIN pg_statio_user_tables s  ON i.relname = s.relname
+	WHERE i.relname = 'productos1';
+2025-03-08 14:06:17.693 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «WHERE» en carácter 1
+2025-03-08 14:06:17.693 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  WHERE i.relname = 'productos1';
+2025-03-08 14:13:18.227 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  error de sintaxis en o cerca de «d» en carácter 194
+2025-03-08 14:13:18.227 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  SELECT  i.indexrelname,   i.idx_scan, i.idx_tup_read,   i.idx_tup_fetch,  s.heap_blks_read, 	s.heap_blks_hit 
+	FROM pg_stat_user_indexes i JOIN pg_statio_user_tables s  ON i.relname = s.relname
+	d
+	;
+2025-03-08 14:17:57.051 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: insert into productos1(id_producto,nombre,stock,precio)
+	values(25000001,'producto_25000001',250,20);
+2025-03-08 14:20:22.450 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: delete from productos1 where id_producto = 25000001;
+2025-03-08 14:20:29.028 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-08 14:20:29.951 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 9 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.885 s, sync=0.012 s, total=0.923 s; archivos sincronizados=8, más largo=0.005 s, promedio=0.002 s; distancia=29 kB, estimación=408859 kB; lsn=30/D5EC6178, lsn de redo=30/D5EC6140
+2025-03-08 14:20:52.138 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: insert into productos1(id_producto,nombre,stock,precio)
+	values(25000001,'producto_25000001',250,1000);
+2025-03-08 14:21:58.396 CET [13096] 09109126E 06593675N ::1(62094)ERROR:  no existe la relación «productos» en carácter 21
+2025-03-08 14:21:58.396 CET [13096] 09109126E 06593675N ::1(62094)SENTENCIA:  SELECT ctid, * FROM productos WHERE id_producto = 25000001;
+2025-03-08 14:24:11.581 CET [13096] 09109126E 06593675N ::1(62094)LOG:  sentencia: UPDATE productos1 SET precio = 2000 WHERE id_producto = 25000001;
+2025-03-08 14:25:29.967 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-08 14:25:31.101 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 11 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.104 s, sync=0.013 s, total=1.135 s; archivos sincronizados=8, más largo=0.008 s, promedio=0.002 s; distancia=38 kB, estimación=367977 kB; lsn=30/D5ECFC80, lsn de redo=30/D5ECFC48
+2025-03-08 15:33:37.759 CET [12112] 09109126E 06593675N ::1(57553)ERROR:  error de sintaxis en o cerca de «PL1» en carácter 1
+2025-03-08 15:33:37.759 CET [12112] 09109126E 06593675N ::1(57553)SENTENCIA:  PL1.csv
+	;
+2025-03-08 15:54:34.679 CET [12112] 09109126E 06593675N ::1(57553)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2025-03-08 16:06:47.275 CET [22856] 09109126E 06593675N ::1(60380)LOG:  sentencia: drop index idb_precio
+	;
+2025-03-08 16:06:53.115 CET [22856] 09109126E 06593675N ::1(60380)LOG:  sentencia: drop index idh_precio;
+2025-03-08 16:07:02.807 CET [22856] 09109126E 06593675N ::1(60380)LOG:  sentencia: drop index idh_producto_id;
+2025-03-08 16:08:09.931 CET [22856] 09109126E 06593675N ::1(60380)LOG:  sentencia: create table if not exists productos1(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-08 16:08:09.937 CET [22856] 09109126E 06593675N ::1(60380)LOG:  sentencia: COPY  productos1 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-08 16:08:09.949 CET [22856] 09109126E 06593675N ::1(60380)ERROR:  llave duplicada viola restricción de unicidad «id»
+2025-03-08 16:08:09.949 CET [22856] 09109126E 06593675N ::1(60380)DETALLE:  Ya existe la llave (id_producto)=(1).
+2025-03-08 16:08:09.949 CET [22856] 09109126E 06593675N ::1(60380)CONTEXTO:  COPY productos1, línea 2
+2025-03-08 16:08:09.949 CET [22856] 09109126E 06593675N ::1(60380)SENTENCIA:  COPY  productos1 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-08 16:08:14.623 CET [22856] 09109126E 06593675N ::1(60380)ERROR:  error de sintaxis en o cerca de «(» en carácter 52
+2025-03-08 16:08:14.623 CET [22856] 09109126E 06593675N ::1(60380)SENTENCIA:  Create index idmb_precio_stock on productos1 using (precio,stock);
+2025-03-08 16:08:27.435 CET [7524] 09109126E 06593675N ::1(60545)ERROR:  error de sintaxis en o cerca de «(» en carácter 52
+2025-03-08 16:08:27.435 CET [7524] 09109126E 06593675N ::1(60545)SENTENCIA:  Create index idmb_precio_stock on productos1 using (precio,stock);
+2025-03-08 16:09:33.967 CET [7524] 09109126E 06593675N ::1(60545)LOG:  sentencia: Create index idmb_precio_stock on productos1 using btree(precio,stock);
+2025-03-08 16:10:29.246 CET [23200] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-08 16:10:32.080 CET [23200] 09109126E 06593675N LOG:  checkpoint completo: escritos 25 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 30 reciclados; write=2.619 s, sync=0.034 s, total=2.836 s; archivos sincronizados=18, más largo=0.015 s, promedio=0.002 s; distancia=485393 kB, estimación=485393 kB; lsn=30/F38D40E0, lsn de redo=30/F38D40A8
+2025-03-08 16:28:32.023 CET [7524] 09109126E 06593675N ::1(60545)ERROR:  no existe la columna «id_nombre» en carácter 21
+2025-03-08 16:28:32.023 CET [7524] 09109126E 06593675N ::1(60545)HINT:  Probablemente quiera hacer referencia a la columna «productos1.nombre».
+2025-03-08 16:28:32.023 CET [7524] 09109126E 06593675N ::1(60545)SENTENCIA:  select id_producto, id_nombre from productos1 where stock=100 and precio= 1000;
+2025-03-08 17:00:07.628 CET [7524] 09109126E 06593675N ::1(60545)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

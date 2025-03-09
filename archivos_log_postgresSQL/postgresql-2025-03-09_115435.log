@@ -1,0 +1,35 @@
+2025-03-09 11:54:35.324 CET [7376] 09109126E 06593675N LOG:  el sistema de bases de datos fue apagado en 2025-03-08 18:56:45 CET
+2025-03-09 11:59:35.343 CET [7356] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-09 11:59:35.373 CET [7356] 09109126E 06593675N LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.005 s, sync=0.005 s, total=0.044 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.003 s; distancia=0 kB, estimación=0 kB; lsn=30/F38D4278, lsn de redo=30/F38D4240
+2025-03-09 12:15:35.532 CET [17188] 09109126E 06593675N ::1(51698)LOG:  sentencia: drop index
+	idmb_precio_stock
+	;
+2025-03-09 12:16:16.638 CET [17188] 09109126E 06593675N ::1(51698)LOG:  sentencia: drop index id
+	;
+2025-03-09 12:16:16.656 CET [17188] 09109126E 06593675N ::1(51698)ERROR:  no se puede eliminar índice id porque restricción «id» en tabla productos1 lo requiere
+2025-03-09 12:16:16.656 CET [17188] 09109126E 06593675N ::1(51698)HINT:  Puede eliminar restricción «id» en tabla productos1 en su lugar.
+2025-03-09 12:16:16.656 CET [17188] 09109126E 06593675N ::1(51698)SENTENCIA:  drop index id
+	;
+2025-03-09 12:16:43.291 CET [17188] 09109126E 06593675N ::1(51698)LOG:  sentencia: CREATE INDEX idb_id_precio ON productos1(precio);
+2025-03-09 12:17:16.009 CET [17188] 09109126E 06593675N ::1(51698)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pgstattuple;
+2025-03-09 12:19:35.400 CET [7356] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-09 12:19:37.073 CET [7356] 09109126E 06593675N LOG:  checkpoint completo: escritos 15 búfers (0.1%); 0 archivos WAL añadidos, 9 eliminados, 0 reciclados; write=1.559 s, sync=0.011 s, total=1.674 s; archivos sincronizados=16, más largo=0.003 s, promedio=0.001 s; distancia=153932 kB, estimación=153932 kB; lsn=30/FCF275B8, lsn de redo=30/FCF27580
+2025-03-09 12:20:15.528 CET [17188] 09109126E 06593675N ::1(51698)ERROR:  no existe la relación «idb_precio» en carácter 50
+2025-03-09 12:20:15.528 CET [17188] 09109126E 06593675N ::1(51698)SENTENCIA:  SELECT
+	    pg_size_pretty(pg_total_relation_size('idb_precio')) AS index_size;
+2025-03-09 12:20:25.140 CET [17188] 09109126E 06593675N ::1(51698)ERROR:  no existe la relación «idb_precio» en carácter 50
+2025-03-09 12:20:25.140 CET [17188] 09109126E 06593675N ::1(51698)SENTENCIA:  SELECT
+	    pg_size_pretty(pg_total_relation_size('idb_precio')) AS index_size;
+2025-03-09 12:20:37.610 CET [17188] 09109126E 06593675N ::1(51698)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2025-03-09 12:21:41.463 CET [15312] 09109126E 06593675N ::1(52263)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pgstattuple;
+2025-03-09 12:21:44.614 CET [15312] 09109126E 06593675N ::1(52263)ERROR:  no existe la relación «idb_id_precio»
+2025-03-09 12:21:44.614 CET [15312] 09109126E 06593675N ::1(52263)SENTENCIA:  SELECT * FROM pgstatindex('idb_id_precio');
+2025-03-09 12:21:56.891 CET [15312] 09109126E 06593675N ::1(52263)LOG:  sentencia: drop Extension pgstattuple
+	;
+2025-03-09 12:22:02.932 CET [9716] 09109126E 06593675N ::1(52368)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pgstattuple;
+2025-03-09 12:24:35.079 CET [7356] 09109126E 06593675N LOG:  empezando checkpoint: time
+2025-03-09 12:24:37.399 CET [7356] 09109126E 06593675N LOG:  checkpoint completo: escritos 22 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.287 s, sync=0.015 s, total=2.321 s; archivos sincronizados=15, más largo=0.003 s, promedio=0.001 s; distancia=106 kB, estimación=138550 kB; lsn=30/FCF42110, lsn de redo=30/FCF420D8
+2025-03-09 12:26:37.634 CET [9716] 09109126E 06593675N ::1(52368)ERROR:  error de sintaxis en o cerca de «Index» en carácter 1
+2025-03-09 12:26:37.634 CET [9716] 09109126E 06593675N ::1(52368)SENTENCIA:  Index Scan using idx_precio_btree on productos1
+	;

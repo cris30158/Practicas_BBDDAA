@@ -1,0 +1,4 @@
+2025-03-07 10:45:51.101 CET [7624] 09109126E 06593675N LOG:  el sistema de bases de datos fue apagado en 2025-03-07 10:45:38 CET
+2025-03-07 10:45:52.206 CET [16540] 09109126E 06593675N LOG:  apagando
+2025-03-07 10:45:52.208 CET [16540] 09109126E 06593675N LOG:  empezando checkpoint: shutdown immediate
+2025-03-07 10:45:52.230 CET [16540] 09109126E 06593675N LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.005 s, sync=0.004 s, total=0.025 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=1F/CC055E8, lsn de redo=1F/CC055E8
