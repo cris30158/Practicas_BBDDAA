@@ -1,0 +1,106 @@
+2025-03-09 00:11:29.376 CET [8924] 09109126E 06593675N  LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-03-08 18:53:14 CET
+2025-03-09 00:11:31.286 CET [8924] 09109126E 06593675N  LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2025-03-09 00:11:31.295 CET [8924] 09109126E 06593675N  LOG:  redo comienza en 15/873FF950
+2025-03-09 00:11:39.079 CET [8924] 09109126E 06593675N  LOG:  largo de registro no válido en 15/9A2B40D0: se esperaba al menos 24, se obtuvo 0
+2025-03-09 00:11:39.079 CET [8924] 09109126E 06593675N  LOG:  redo listo en 15/9A2B4098 utilización del sistema: CPU: usuario: 4.81 s, sistema: 0.64 s, transcurrido: 7.78 s
+2025-03-09 00:11:39.087 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: end-of-recovery immediate wait
+2025-03-09 00:11:39.412 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 16385 búfers (100.0%); 0 archivos WAL añadidos, 19 eliminados, 0 reciclados; write=0.181 s, sync=0.081 s, total=0.328 s; archivos sincronizados=4, más largo=0.077 s, promedio=0.021 s; distancia=309969 kB, estimación=309969 kB; lsn=15/9A2B40D0, lsn de redo=15/9A2B40D0
+2025-03-09 00:46:30.999 CET [19324] 09109126E 06593675N ::1(51229) LOG:  sentencia: CREATE INDEX idh_id_precio ON productos using hash(precio);
+2025-03-09 00:46:31.019 CET [19324] 09109126E 06593675N ::1(51229) ERROR:  la relaciÃ³n Â«idh_id_precioÂ» ya existe
+2025-03-09 00:46:31.019 CET [19324] 09109126E 06593675N ::1(51229) SENTENCIA:  CREATE INDEX idh_id_precio ON productos using hash(precio);
+2025-03-09 00:46:52.549 CET [19324] 09109126E 06593675N ::1(51229) LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pgstattuple;
+2025-03-09 00:46:52.616 CET [19324] 09109126E 06593675N ::1(51229) ERROR:  no existe la relaciÃ³n Â«idb_id_precioÂ»
+2025-03-09 00:46:52.616 CET [19324] 09109126E 06593675N ::1(51229) SENTENCIA:  SELECT * FROM pgstatindex('idb_id_precio');
+2025-03-09 00:47:19.896 CET [19324] 09109126E 06593675N ::1(51229) LOG:  sentencia: CREATE INDEX idb_id_precio ON productos(precio);
+2025-03-09 00:51:39.488 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-09 00:51:41.676 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 19 búfers (0.1%); 0 archivos WAL añadidos, 5 eliminados, 4 reciclados; write=1.961 s, sync=0.035 s, total=2.189 s; archivos sincronizados=17, más largo=0.005 s, promedio=0.002 s; distancia=153930 kB, estimación=294365 kB; lsn=15/A3906B98, lsn de redo=15/A3906B60
+2025-03-09 00:58:49.025 CET [19324] 09109126E 06593675N ::1(51229) LOG:  sentencia: CREATE INDEX idh_id_precio ON productos using hash(precio);
+2025-03-09 00:58:49.025 CET [19324] 09109126E 06593675N ::1(51229) ERROR:  la relaciÃ³n Â«idh_id_precioÂ» ya existe
+2025-03-09 00:58:49.025 CET [19324] 09109126E 06593675N ::1(51229) SENTENCIA:  CREATE INDEX idh_id_precio ON productos using hash(precio);
+2025-03-09 01:09:09.465 CET [19324] 09109126E 06593675N ::1(51229) ERROR:  error de sintaxis en o cerca de Â«ELECTÂ» en carÃ¡cter 1
+2025-03-09 01:09:09.465 CET [19324] 09109126E 06593675N ::1(51229) SENTENCIA:  ELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idh_id_producto,0));
+	SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idh_id_producto,0));
+2025-03-09 01:11:43.297 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la funciÃ³n hash_indexam_params(unknown) en carÃ¡cter 8
+2025-03-09 01:11:43.297 CET [13372] 09109126E 06593675N ::1(51862) HINT:  Ninguna funciÃ³n coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversiÃ³n explÃ­cita de tipos.
+2025-03-09 01:11:43.297 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT hash_indexam_params('nombre_indice');
+2025-03-09 01:11:57.335 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la funciÃ³n hash_indexam_params(unknown) en carÃ¡cter 8
+2025-03-09 01:11:57.335 CET [13372] 09109126E 06593675N ::1(51862) HINT:  Ninguna funciÃ³n coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversiÃ³n explÃ­cita de tipos.
+2025-03-09 01:11:57.335 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT hash_indexam_params('idb_id_precio');
+2025-03-09 01:12:17.909 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la relaciÃ³n Â«pageinspectÂ» en carÃ¡cter 50
+2025-03-09 01:12:17.909 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT hash_indexam_params('idb_id_precio') from pageinspect;
+2025-03-09 01:12:31.621 CET [13372] 09109126E 06593675N ::1(51862) LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+2025-03-09 01:12:47.781 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la funciÃ³n hash_indexam_params(unknown) en carÃ¡cter 8
+2025-03-09 01:12:47.781 CET [13372] 09109126E 06593675N ::1(51862) HINT:  Ninguna funciÃ³n coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversiÃ³n explÃ­cita de tipos.
+2025-03-09 01:12:47.781 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT hash_indexam_params('idb_id_precio');
+2025-03-09 01:13:12.770 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  input page is not a valid hash page
+2025-03-09 01:13:12.770 CET [13372] 09109126E 06593675N ::1(51862) DETALLE:  Expected 0000ff80, got 00000000.
+2025-03-09 01:13:12.770 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT * FROM hash_page_stats(get_raw_page('idb_id_precio', 0));
+2025-03-09 01:14:09.235 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la relaciÃ³n Â«nombre_indiceÂ»
+2025-03-09 01:14:09.235 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT * FROM hash_page_stats(get_raw_page('nombre_indice', 0));
+2025-03-09 01:14:18.994 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  input page is not a valid hash page
+2025-03-09 01:14:18.994 CET [13372] 09109126E 06593675N ::1(51862) DETALLE:  Expected 0000ff80, got 00000000.
+2025-03-09 01:14:18.994 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT * FROM hash_page_stats(get_raw_page('idb_id_precio', 0));
+2025-03-09 01:15:12.197 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  error de sintaxis en o cerca de Â«INDEXÂ» en carÃ¡cter 19
+2025-03-09 01:15:12.197 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  CREATE or replace INDEX idh_id_precio ON productos using hash(precio);
+2025-03-09 01:15:34.779 CET [13372] 09109126E 06593675N ::1(51862) LOG:  sentencia: CREATE INDEX idb_id_precio_hash ON tabla USING hash(columna);
+2025-03-09 01:15:34.780 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la relaciÃ³n Â«tablaÂ»
+2025-03-09 01:15:34.780 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  CREATE INDEX idb_id_precio_hash ON tabla USING hash(columna);
+2025-03-09 01:15:57.437 CET [13372] 09109126E 06593675N ::1(51862) LOG:  sentencia: CREATE INDEX idb_id_precio_hash ON productos USING hash(precio);
+2025-03-09 01:16:39.255 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-09 01:17:08.768 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 8276 búfers (50.5%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=29.353 s, sync=0.120 s, total=29.513 s; archivos sincronizados=15, más largo=0.095 s, promedio=0.008 s; distancia=7770 kB, estimación=265706 kB; lsn=15/C1DE17C0, lsn de redo=15/A409D5F0
+2025-03-09 01:17:11.945 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-09 01:17:39.613 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 1214 búfers (7.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=27.355 s, sync=0.069 s, total=27.669 s; archivos sincronizados=1, más largo=0.069 s, promedio=0.069 s; distancia=541451 kB, estimación=541451 kB; lsn=15/E2E6BDF8, lsn de redo=15/C5160408
+2025-03-09 01:17:42.160 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-09 01:18:10.324 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 1221 búfers (7.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=27.879 s, sync=0.065 s, total=28.164 s; archivos sincronizados=2, más largo=0.044 s, promedio=0.033 s; distancia=540279 kB, estimación=541334 kB; lsn=16/3CCFA48, lsn de redo=15/E60FE030
+2025-03-09 01:18:13.461 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-09 01:18:48.422 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  page is not a hash bucket or overflow page
+2025-03-09 01:18:48.422 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT * FROM hash_page_stats(get_raw_page('idb_id_precio_hash', 0));
+2025-03-09 01:21:29.667 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la columna Â«num_bucketsÂ» en carÃ¡cter 8
+2025-03-09 01:21:29.667 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT num_buckets, ffactor, bsize
+	FROM hash_metapage_info(get_raw_page('idh_id_producto', 0));
+2025-03-09 01:22:32.479 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la columna Â«num_bucketsÂ» en carÃ¡cter 8
+2025-03-09 01:22:32.479 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT num_buckets, ffactor, bsize
+	FROM hash_metapage_info(get_raw_page('idh_id_producto', 0));
+2025-03-09 01:22:43.226 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 10694 búfers (65.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.546 s, sync=0.006 s, total=269.765 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.003 s; distancia=541820 kB, estimación=541820 kB; lsn=16/FF23B40, lsn de redo=16/721D408
+2025-03-09 01:22:48.954 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la columna Â«num_bucketsÂ» en carÃ¡cter 8
+2025-03-09 01:22:48.954 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT num_buckets, ffactor, bsize
+	FROM hash_metapage_info(get_raw_page('idb_id_precio_hash', 0));
+2025-03-09 01:25:33.557 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la columna Â«hashm_maxbucketÂ» en carÃ¡cter 13
+2025-03-09 01:25:33.557 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT 
+	    hashm_maxbucket AS max_bucket,
+	    hashm_ffactor AS fill_factor,
+	    hashm_bsize AS page_size
+	FROM hash_metapage_info(get_raw_page('idb_id_precio_hash', 0));
+2025-03-09 01:35:18.715 CET [13372] 09109126E 06593675N ::1(51862) ERROR:  no existe la columna Â«stockÂ» en carÃ¡cter 56
+2025-03-09 01:35:18.715 CET [13372] 09109126E 06593675N ::1(51862) HINT:  Probablemente quiera hacer referencia a la columna Â«productos3.stock3Â».
+2025-03-09 01:35:18.715 CET [13372] 09109126E 06593675N ::1(51862) SENTENCIA:  SELECT COUNT(*) AS num_productos
+	FROM productos3
+	WHERE stock = 200;
+2025-03-09 01:37:29.116 CET [13372] 09109126E 06593675N ::1(51862) LOG:  sentencia: drop table productos3;
+2025-03-09 01:38:13.274 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-09 01:38:18.897 CET [16288] 09109126E 06593675N ::1(52705) FATAL:  no existe la base de datos «create.sql»
+2025-03-09 01:38:28.961 CET [13372] 09109126E 06593675N ::1(51862) LOG:  sentencia: CREATE TABLE productos3 (
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    CONSTRAINT productos3_pkey PRIMARY KEY (id_producto, stock)
+	) PARTITION BY HASH (stock);
+2025-03-09 01:38:29.132 CET [13372] 09109126E 06593675N ::1(51862) LOG:  sentencia: COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-09 01:38:55.970 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 797 búfers (4.9%); 0 archivos WAL añadidos, 0 eliminados, 8 reciclados; write=42.379 s, sync=0.202 s, total=42.696 s; archivos sincronizados=69, más largo=0.015 s, promedio=0.003 s; distancia=144526 kB, estimación=502091 kB; lsn=16/2E048408, lsn de redo=16/FF40ED8
+2025-03-09 01:38:57.811 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-09 01:39:23.707 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5056 búfers (30.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.466 s, sync=0.174 s, total=25.896 s; archivos sincronizados=30, más largo=0.018 s, promedio=0.006 s; distancia=526524 kB, estimación=526524 kB; lsn=16/4E14D938, lsn de redo=16/30170020
+2025-03-09 01:39:25.633 CET [8908] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 28 segundos)
+2025-03-09 01:39:25.633 CET [8908] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-09 01:39:25.633 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-09 01:39:48.913 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5065 búfers (30.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=22.634 s, sync=0.315 s, total=23.280 s; archivos sincronizados=30, más largo=0.047 s, promedio=0.011 s; distancia=540100 kB, estimación=540100 kB; lsn=16/6F237E10, lsn de redo=16/510E1370
+2025-03-09 01:39:50.885 CET [8908] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 25 segundos)
+2025-03-09 01:39:50.885 CET [8908] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-09 01:39:50.885 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-09 01:40:16.634 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5116 búfers (31.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.036 s, sync=0.390 s, total=25.749 s; archivos sincronizados=30, más largo=0.053 s, promedio=0.013 s; distancia=542079 kB, estimación=542079 kB; lsn=16/90318F58, lsn de redo=16/72241120
+2025-03-09 01:40:18.655 CET [8908] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 28 segundos)
+2025-03-09 01:40:18.655 CET [8908] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-09 01:40:18.655 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-09 01:40:42.659 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5053 búfers (30.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=23.212 s, sync=0.451 s, total=24.005 s; archivos sincronizados=30, más largo=0.038 s, promedio=0.016 s; distancia=539318 kB, estimación=541803 kB; lsn=16/B167EAD8, lsn de redo=16/930EEA08
+2025-03-09 01:45:18.890 CET [8908] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-09 01:49:48.372 CET [8908] 09109126E 06593675N  LOG:  checkpoint completo: escritos 11108 búfers (67.8%); 0 archivos WAL añadidos, 0 eliminados, 30 reciclados; write=269.099 s, sync=0.061 s, total=269.483 s; archivos sincronizados=38, más largo=0.009 s, promedio=0.002 s; distancia=500372 kB, estimación=537660 kB; lsn=16/B1993C70, lsn de redo=16/B1993C38

@@ -1,0 +1,10 @@
+2025-03-07 07:15:48.982 CET [9824] 09109126E 06593675N  LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-03-07 03:40:33 CET
+2025-03-07 07:15:50.254 CET [9824] 09109126E 06593675N  LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2025-03-07 07:15:50.260 CET [9824] 09109126E 06593675N  LOG:  redo comienza en 10/2127CE68
+2025-03-07 07:15:50.260 CET [9824] 09109126E 06593675N  LOG:  largo de registro no válido en 10/2127CEA0: se esperaba al menos 24, se obtuvo 0
+2025-03-07 07:15:50.260 CET [9824] 09109126E 06593675N  LOG:  redo listo en 10/2127CE68 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2025-03-07 07:15:50.269 CET [9808] 09109126E 06593675N  LOG:  empezando checkpoint: end-of-recovery immediate wait
+2025-03-07 07:15:50.285 CET [9808] 09109126E 06593675N  LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.003 s, total=0.019 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=10/2127CEA0, lsn de redo=10/2127CEA0
+2025-03-07 08:42:19.860 CET [9808] 09109126E 06593675N  LOG:  apagando
+2025-03-07 08:42:19.865 CET [9808] 09109126E 06593675N  LOG:  empezando checkpoint: shutdown immediate
+2025-03-07 08:42:19.904 CET [9808] 09109126E 06593675N  LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.001 s, total=0.044 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=0 kB; lsn=10/2127CF50, lsn de redo=10/2127CF50

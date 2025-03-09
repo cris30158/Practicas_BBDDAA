@@ -1,0 +1,403 @@
+2025-03-07 08:42:22.629 CET [12924] 09109126E 06593675N  LOG:  el sistema de bases de datos fue apagado en 2025-03-07 08:42:19 CET
+2025-03-07 08:47:22.621 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-07 08:47:22.677 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.014 s, sync=0.007 s, total=0.063 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=0 kB, estimación=0 kB; lsn=10/2127D038, lsn de redo=10/2127D000
+2025-03-07 21:32:40.771 CET [1780] 09109126E 06593675N ::1(64543) FATAL:  la autentificación password falló para el usuario «postgres»
+2025-03-07 21:32:40.771 CET [1780] 09109126E 06593675N ::1(64543) DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+2025-03-07 21:33:04.885 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: drop table productos3;
+2025-03-07 21:33:04.894 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  no existe la tabla Â«productos3Â»
+2025-03-07 21:33:04.894 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  drop table productos3;
+2025-03-07 21:36:08.760 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-07 21:36:09.252 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.452 s, sync=0.007 s, total=0.500 s; archivos sincronizados=3, más largo=0.004 s, promedio=0.003 s; distancia=5 kB, estimación=5 kB; lsn=10/2127E7D8, lsn de redo=10/2127E7A0
+2025-03-07 21:39:23.418 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE if not exists productos3 (
+	    id_producto3 int,
+	     nombre3 varchar(18),
+	     stock3 int,
+	     precio3 int,
+	     constraint ID3 primary key(id_producto3)
+	) PARTITION BY HASH (stock3);
+2025-03-07 21:39:23.477 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  las restricciones unique en tablas particionadas deben incluir todas las columnas de particionamiento
+2025-03-07 21:39:23.477 CET [5008] 09109126E 06593675N ::1(64554) DETALLE:  La restricciÃ³n PRIMARY KEY en la tabla Â«productos3Â» no incluye la columna Â«stock3Â» que es parte de la llave de particionamiento.
+2025-03-07 21:39:23.477 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE if not exists productos3 (
+	    id_producto3 int,
+	     nombre3 varchar(18),
+	     stock3 int,
+	     precio3 int,
+	     constraint ID3 primary key(id_producto3)
+	) PARTITION BY HASH (stock3);
+2025-03-07 21:39:23.501 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p0 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 0);
+2025-03-07 21:39:23.501 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.501 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE productos3_p0 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 0);
+2025-03-07 21:39:23.510 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p1 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 1);
+2025-03-07 21:39:23.510 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.510 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE productos3_p1 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 1);
+2025-03-07 21:39:23.520 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p2 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 2);
+2025-03-07 21:39:23.520 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.520 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE productos3_p2 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 2);
+2025-03-07 21:39:23.528 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p3 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 3);
+2025-03-07 21:39:23.528 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.528 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE productos3_p3 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 3);
+2025-03-07 21:39:23.536 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p4 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 4);
+2025-03-07 21:39:23.536 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.536 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE productos3_p4 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 4);
+2025-03-07 21:39:23.545 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p5 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 5);
+2025-03-07 21:39:23.545 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.545 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE productos3_p5 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 5);
+2025-03-07 21:39:23.554 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p6 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 6);
+2025-03-07 21:39:23.554 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.554 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE productos3_p6 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 6);
+2025-03-07 21:39:23.564 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p7 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 7);
+2025-03-07 21:39:23.565 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.565 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE productos3_p7 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 7);
+2025-03-07 21:39:23.572 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p8 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 8);
+2025-03-07 21:39:23.572 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.572 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE productos3_p8 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 8);
+2025-03-07 21:39:23.581 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p9 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 9);
+2025-03-07 21:39:23.581 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.581 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  CREATE TABLE productos3_p9 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 9);
+2025-03-07 21:39:23.613 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 21:39:23.613 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:39:23.613 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 21:39:42.272 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE if not exists productos3 (
+	    id_producto3 int,
+	     nombre3 varchar(18),
+	     stock3 int,
+	     precio3 int,
+	     constraint ID3 primary key(id_producto3,stock3)
+	) PARTITION BY HASH (stock3);
+2025-03-07 21:39:42.302 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p0 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 0);
+2025-03-07 21:39:42.347 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p1 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 1);
+2025-03-07 21:39:42.362 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p2 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 2);
+2025-03-07 21:39:42.377 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p3 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 3);
+2025-03-07 21:39:42.393 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p4 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 4);
+2025-03-07 21:39:42.411 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p5 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 5);
+2025-03-07 21:39:42.427 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p6 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 6);
+2025-03-07 21:39:42.443 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p7 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 7);
+2025-03-07 21:39:42.461 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p8 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 8);
+2025-03-07 21:39:42.475 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3_p9 PARTITION OF productos3 FOR VALUES WITH (MODULUS 10, REMAINDER 9);
+2025-03-07 21:39:42.491 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 21:40:14.833 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 21:40:40.016 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5218 búfers (31.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.822 s, sync=0.174 s, total=25.183 s; archivos sincronizados=62, más largo=0.014 s, promedio=0.003 s; distancia=539142 kB, estimación=539142 kB; lsn=10/6008FB08, lsn de redo=10/42100040
+2025-03-07 21:40:42.408 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 28 segundos)
+2025-03-07 21:40:42.408 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 21:40:42.409 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 21:41:06.861 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 4996 búfers (30.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.141 s, sync=0.104 s, total=24.453 s; archivos sincronizados=30, más largo=0.009 s, promedio=0.004 s; distancia=543043 kB, estimación=543043 kB; lsn=10/811A9DA8, lsn de redo=10/63350FD0
+2025-03-07 21:41:09.197 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 27 segundos)
+2025-03-07 21:41:09.197 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 21:41:09.197 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 21:41:36.280 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5047 búfers (30.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=26.570 s, sync=0.205 s, total=27.084 s; archivos sincronizados=30, más largo=0.018 s, promedio=0.007 s; distancia=539444 kB, estimación=542683 kB; lsn=10/A226FB40, lsn de redo=10/8421E350
+2025-03-07 21:41:38.225 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+2025-03-07 21:41:38.225 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 21:41:38.225 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 21:42:04.633 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 4971 búfers (30.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.689 s, sync=0.383 s, total=26.408 s; archivos sincronizados=30, más largo=0.044 s, promedio=0.013 s; distancia=539881 kB, estimación=542403 kB; lsn=10/C2CCD070, lsn de redo=10/A5158930
+2025-03-07 21:43:27.991 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  no existe la columna Â«stockÂ» en carÃ¡cter 39
+2025-03-07 21:43:27.991 CET [5008] 09109126E 06593675N ::1(64554) HINT:  Probablemente quiera hacer referencia a la columna Â«productos3.stock3Â».
+2025-03-07 21:43:27.991 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  SELECT COUNT(*) FROM productos3 WHERE stock = 200;
+2025-03-07 21:45:11.106 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  no existe la columna Â«relnameÂ» en carÃ¡cter 32
+2025-03-07 21:45:11.106 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  SELECT * FROM pg_stat_io WHERE relname LIKE 'productos3%';
+2025-03-07 21:45:37.016 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  no existe la relaciÃ³n Â«pg_statioÂ» en carÃ¡cter 15
+2025-03-07 21:45:37.016 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  SELECT * FROM pg_statio WHERE relname LIKE 'productos3%';
+2025-03-07 21:46:38.361 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-07 21:48:07.017 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  secuencia de bytes no vÃ¡lida para codificaciÃ³n Â«UTF8Â»: 0xa1
+2025-03-07 21:51:08.488 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 14071 búfers (85.9%); 0 archivos WAL añadidos, 0 eliminados, 29 reciclados; write=269.681 s, sync=0.062 s, total=270.127 s; archivos sincronizados=42, más largo=0.008 s, promedio=0.002 s; distancia=488090 kB, estimación=536972 kB; lsn=10/C2DFF1B8, lsn de redo=10/C2DFF180
+2025-03-07 21:55:07.011 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  no existe la columna Â«stockÂ» en carÃ¡cter 39
+2025-03-07 21:55:07.011 CET [5008] 09109126E 06593675N ::1(64554) HINT:  Probablemente quiera hacer referencia a la columna Â«productos3.stock3Â».
+2025-03-07 21:55:07.011 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  SELECT COUNT(*) FROM productos3 WHERE stock = 200;
+2025-03-07 21:55:07.031 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 21:55:07.031 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  SELECT relname AS nombre_tabla, heap_blks_read, heap_blks_hit 
+	FROM pg_statio_user_tables
+	WHERE relname LIKE 'productos3%';
+2025-03-07 21:59:31.308 CET [5008] 09109126E 06593675N ::1(64554) WARNING:  ya hay una transacciÃ³n en curso
+2025-03-07 21:59:42.723 CET [5008] 09109126E 06593675N ::1(64554) WARNING:  ya hay una transacciÃ³n en curso
+2025-03-07 22:03:47.361 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: drop table productos3;
+2025-03-07 22:04:10.974 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: CREATE TABLE productos3 (
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    CONSTRAINT productos3_pkey PRIMARY KEY (id_producto)
+	) PARTITION BY HASH (id_producto);
+2025-03-07 22:04:11.059 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 22:04:38.889 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:05:05.750 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 4937 búfers (30.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=26.428 s, sync=0.184 s, total=26.862 s; archivos sincronizados=63, más largo=0.015 s, promedio=0.003 s; distancia=527803 kB, estimación=536055 kB; lsn=11/1053AB0, lsn de redo=10/E316E038
+2025-03-07 22:05:07.750 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+2025-03-07 22:05:07.750 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 22:05:07.750 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:05:33.821 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5086 búfers (31.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.699 s, sync=0.131 s, total=26.072 s; archivos sincronizados=30, más largo=0.014 s, promedio=0.005 s; distancia=540009 kB, estimación=540009 kB; lsn=11/21EA01E8, lsn de redo=11/40C8548
+2025-03-07 22:05:36.025 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+2025-03-07 22:05:36.025 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 22:05:36.025 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:05:50.026 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  cancelando la sentencia debido a una peticiÃ³n del usuario
+2025-03-07 22:05:50.026 CET [5008] 09109126E 06593675N ::1(64554) CONTEXTO:  COPY productos3, lÃ­nea 18070001
+2025-03-07 22:05:50.026 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 22:06:09.793 CET [5008] 09109126E 06593675N ::1(64554) LOG:  sentencia: drop table productos3;
+2025-03-07 22:06:09.793 CET [5008] 09109126E 06593675N ::1(64554) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:06:09.793 CET [5008] 09109126E 06593675N ::1(64554) SENTENCIA:  drop table productos3;
+2025-03-07 22:06:35.171 CET [4996] 09109126E 06593675N ::1(65493) LOG:  sentencia: drop table productos3;
+2025-03-07 22:06:35.173 CET [4996] 09109126E 06593675N ::1(65493) ERROR:  no existe la tabla Â«productos3Â»
+2025-03-07 22:06:35.173 CET [4996] 09109126E 06593675N ::1(65493) SENTENCIA:  drop table productos3;
+2025-03-07 22:07:14.860 CET [4996] 09109126E 06593675N ::1(65493) LOG:  sentencia: CREATE TABLE productos3 (
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    CONSTRAINT productos3_pkey PRIMARY KEY (id_producto, stock)
+	) PARTITION BY HASH (stock);
+2025-03-07 22:07:14.989 CET [4996] 09109126E 06593675N ::1(65493) LOG:  sentencia: COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 22:07:25.457 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5131 búfers (31.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=108.997 s, sync=0.188 s, total=109.432 s; archivos sincronizados=56, más largo=0.011 s, promedio=0.004 s; distancia=542351 kB, estimación=542351 kB; lsn=11/43124AB8, lsn de redo=11/2526C440
+2025-03-07 22:07:27.815 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:07:53.519 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 4497 búfers (27.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.183 s, sync=0.209 s, total=25.704 s; archivos sincronizados=60, más largo=0.016 s, promedio=0.004 s; distancia=539275 kB, estimación=542044 kB; lsn=11/63F9FA30, lsn de redo=11/4610F3A8
+2025-03-07 22:07:55.990 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 28 segundos)
+2025-03-07 22:07:55.990 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 22:07:55.990 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:08:21.758 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5066 búfers (30.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.247 s, sync=0.214 s, total=25.769 s; archivos sincronizados=30, más largo=0.022 s, promedio=0.008 s; distancia=541728 kB, estimación=542012 kB; lsn=11/85061BC8, lsn de redo=11/67217678
+2025-03-07 22:08:24.667 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+2025-03-07 22:08:24.667 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 22:08:24.668 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:08:49.090 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5120 búfers (31.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=23.786 s, sync=0.258 s, total=24.423 s; archivos sincronizados=30, más largo=0.024 s, promedio=0.009 s; distancia=539570 kB, estimación=541768 kB; lsn=11/A62578D8, lsn de redo=11/88104138
+2025-03-07 22:08:51.254 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 27 segundos)
+2025-03-07 22:08:51.254 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 22:08:51.254 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:09:13.939 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 4955 búfers (30.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=22.115 s, sync=0.221 s, total=22.686 s; archivos sincronizados=30, más largo=0.026 s, promedio=0.008 s; distancia=542344 kB, estimación=542344 kB; lsn=11/C73CE1F8, lsn de redo=11/A92A6410
+2025-03-07 22:09:15.951 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 24 segundos)
+2025-03-07 22:09:15.951 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 22:09:15.951 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:13:45.508 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5886 búfers (35.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.052 s, sync=0.141 s, total=269.557 s; archivos sincronizados=43, más largo=0.023 s, promedio=0.004 s; distancia=539882 kB, estimación=542098 kB; lsn=11/D9D789A0, lsn de redo=11/CA1E0CF8
+2025-03-07 22:14:15.327 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-07 22:18:45.306 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 11102 búfers (67.8%); 0 archivos WAL añadidos, 0 eliminados, 15 reciclados; write=269.659 s, sync=0.077 s, total=269.979 s; archivos sincronizados=48, más largo=0.006 s, promedio=0.002 s; distancia=258655 kB, estimación=513754 kB; lsn=11/DA072E50, lsn de redo=11/D9E789A0
+2025-03-07 22:21:53.557 CET [4996] 09109126E 06593675N ::1(65493) ERROR:  error de sintaxis en o cerca de Â«*Â» en carÃ¡cter 9
+2025-03-07 22:21:53.557 CET [4996] 09109126E 06593675N ::1(65493) SENTENCIA:  select (*) from productos3_p0 limit 1;
+2025-03-07 22:22:00.756 CET [4996] 09109126E 06593675N ::1(65493) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:22:00.756 CET [4996] 09109126E 06593675N ::1(65493) SENTENCIA:  select * from productos3_p0 limit 1;
+2025-03-07 22:22:08.670 CET [4996] 09109126E 06593675N ::1(65493) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:22:08.670 CET [4996] 09109126E 06593675N ::1(65493) SENTENCIA:  select * from productos3_p0 limit 1;
+2025-03-07 22:28:40.950 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: drop table productos3;
+2025-03-07 22:28:49.826 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  error de sintaxis en o cerca de Â«%Â» en carÃ¡cter 193
+2025-03-07 22:28:49.826 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3 (
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    CONSTRAINT productos3_pkey PRIMARY KEY (id_producto)
+	) PARTITION BY LIST (stock % 10);
+2025-03-07 22:28:49.835 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p0 PARTITION OF productos3 
+	FOR VALUES IN (0);
+2025-03-07 22:28:49.835 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.835 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p0 PARTITION OF productos3 
+	FOR VALUES IN (0);
+2025-03-07 22:28:49.843 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p1 PARTITION OF productos3 
+	FOR VALUES IN (1);
+2025-03-07 22:28:49.843 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.843 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p1 PARTITION OF productos3 
+	FOR VALUES IN (1);
+2025-03-07 22:28:49.850 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p2 PARTITION OF productos3 
+	FOR VALUES IN (2);
+2025-03-07 22:28:49.850 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.850 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p2 PARTITION OF productos3 
+	FOR VALUES IN (2);
+2025-03-07 22:28:49.856 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p3 PARTITION OF productos3 
+	FOR VALUES IN (3);
+2025-03-07 22:28:49.856 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.856 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p3 PARTITION OF productos3 
+	FOR VALUES IN (3);
+2025-03-07 22:28:49.864 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p4 PARTITION OF productos3 
+	FOR VALUES IN (4);
+2025-03-07 22:28:49.864 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.864 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p4 PARTITION OF productos3 
+	FOR VALUES IN (4);
+2025-03-07 22:28:49.870 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p5 PARTITION OF productos3 
+	FOR VALUES IN (5);
+2025-03-07 22:28:49.870 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.870 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p5 PARTITION OF productos3 
+	FOR VALUES IN (5);
+2025-03-07 22:28:49.878 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p6 PARTITION OF productos3 
+	FOR VALUES IN (6);
+2025-03-07 22:28:49.878 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.878 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p6 PARTITION OF productos3 
+	FOR VALUES IN (6);
+2025-03-07 22:28:49.886 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p7 PARTITION OF productos3 
+	FOR VALUES IN (7);
+2025-03-07 22:28:49.886 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.886 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p7 PARTITION OF productos3 
+	FOR VALUES IN (7);
+2025-03-07 22:28:49.893 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p8 PARTITION OF productos3 
+	FOR VALUES IN (8);
+2025-03-07 22:28:49.894 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.894 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p8 PARTITION OF productos3 
+	FOR VALUES IN (8);
+2025-03-07 22:28:49.903 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p9 PARTITION OF productos3 
+	FOR VALUES IN (9);
+2025-03-07 22:28:49.903 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.903 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p9 PARTITION OF productos3 
+	FOR VALUES IN (9);
+2025-03-07 22:28:49.912 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 22:28:49.912 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:49.912 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 22:28:58.836 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  error de sintaxis en o cerca de Â«%Â» en carÃ¡cter 192
+2025-03-07 22:28:58.836 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3 (
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    CONSTRAINT productos3_pkey PRIMARY KEY (id_producto)
+	) PARTITION BY LIST (stock%10);
+2025-03-07 22:28:58.847 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p0 PARTITION OF productos3 
+	FOR VALUES IN (0);
+2025-03-07 22:28:58.847 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.847 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p0 PARTITION OF productos3 
+	FOR VALUES IN (0);
+2025-03-07 22:28:58.855 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p1 PARTITION OF productos3 
+	FOR VALUES IN (1);
+2025-03-07 22:28:58.856 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.856 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p1 PARTITION OF productos3 
+	FOR VALUES IN (1);
+2025-03-07 22:28:58.865 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p2 PARTITION OF productos3 
+	FOR VALUES IN (2);
+2025-03-07 22:28:58.865 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.865 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p2 PARTITION OF productos3 
+	FOR VALUES IN (2);
+2025-03-07 22:28:58.875 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p3 PARTITION OF productos3 
+	FOR VALUES IN (3);
+2025-03-07 22:28:58.875 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.875 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p3 PARTITION OF productos3 
+	FOR VALUES IN (3);
+2025-03-07 22:28:58.884 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p4 PARTITION OF productos3 
+	FOR VALUES IN (4);
+2025-03-07 22:28:58.884 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.884 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p4 PARTITION OF productos3 
+	FOR VALUES IN (4);
+2025-03-07 22:28:58.893 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p5 PARTITION OF productos3 
+	FOR VALUES IN (5);
+2025-03-07 22:28:58.893 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.893 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p5 PARTITION OF productos3 
+	FOR VALUES IN (5);
+2025-03-07 22:28:58.900 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p6 PARTITION OF productos3 
+	FOR VALUES IN (6);
+2025-03-07 22:28:58.900 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.900 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p6 PARTITION OF productos3 
+	FOR VALUES IN (6);
+2025-03-07 22:28:58.908 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p7 PARTITION OF productos3 
+	FOR VALUES IN (7);
+2025-03-07 22:28:58.908 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.908 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p7 PARTITION OF productos3 
+	FOR VALUES IN (7);
+2025-03-07 22:28:58.917 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p8 PARTITION OF productos3 
+	FOR VALUES IN (8);
+2025-03-07 22:28:58.917 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.917 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p8 PARTITION OF productos3 
+	FOR VALUES IN (8);
+2025-03-07 22:28:58.926 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_p9 PARTITION OF productos3 
+	FOR VALUES IN (9);
+2025-03-07 22:28:58.926 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.926 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  CREATE TABLE productos3_p9 PARTITION OF productos3 
+	FOR VALUES IN (9);
+2025-03-07 22:28:58.934 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 22:28:58.934 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+2025-03-07 22:28:58.934 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 22:29:15.320 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-07 22:29:18.367 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 27 búfers (0.2%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=2.853 s, sync=0.027 s, total=3.047 s; archivos sincronizados=17, más largo=0.003 s, promedio=0.002 s; distancia=2161 kB, estimación=462594 kB; lsn=11/DA095198, lsn de redo=11/DA095160
+2025-03-07 22:34:15.384 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-07 22:34:18.901 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 33 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.477 s, sync=0.019 s, total=3.518 s; archivos sincronizados=14, más largo=0.003 s, promedio=0.002 s; distancia=92 kB, estimación=416344 kB; lsn=11/DA0AC568, lsn de redo=11/DA0AC530
+2025-03-07 22:39:34.697 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3 (
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    CONSTRAINT productos3_pkey PRIMARY KEY (id_producto, stock)
+	) PARTITION BY HASH (stock);
+2025-03-07 22:39:34.848 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 22:40:06.012 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:40:31.232 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 4758 búfers (29.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.694 s, sync=0.231 s, total=25.221 s; archivos sincronizados=61, más largo=0.016 s, promedio=0.004 s; distancia=540607 kB, estimación=540607 kB; lsn=12/19018D08, lsn de redo=11/FB09C1C8
+2025-03-07 22:40:33.539 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 27 segundos)
+2025-03-07 22:40:33.539 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 22:40:33.539 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:40:58.374 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 4845 búfers (29.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.414 s, sync=0.181 s, total=24.836 s; archivos sincronizados=30, más largo=0.016 s, promedio=0.006 s; distancia=540918 kB, estimación=540918 kB; lsn=12/3A076710, lsn de redo=12/1C0D9D90
+2025-03-07 22:41:00.662 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 27 segundos)
+2025-03-07 22:41:00.662 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 22:41:00.662 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:41:25.767 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5085 búfers (31.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.481 s, sync=0.297 s, total=25.106 s; archivos sincronizados=30, más largo=0.026 s, promedio=0.010 s; distancia=542509 kB, estimación=542509 kB; lsn=12/5B4C2B18, lsn de redo=12/3D2A52E0
+2025-03-07 22:41:27.575 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 27 segundos)
+2025-03-07 22:41:27.575 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 22:41:27.575 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 22:41:58.369 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5048 búfers (30.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=30.274 s, sync=0.282 s, total=30.794 s; archivos sincronizados=30, más largo=0.029 s, promedio=0.010 s; distancia=538681 kB, estimación=542126 kB; lsn=12/7BAE4768, lsn de redo=12/5E0B3710
+2025-03-07 22:43:25.168 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  no existe la columna Â«stock3Â» en carÃ¡cter 8
+2025-03-07 22:43:25.168 CET [5720] 09109126E 06593675N ::1(49557) HINT:  Probablemente quiera hacer referencia a la columna Â«productos3.stockÂ».
+2025-03-07 22:43:25.168 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  SELECT stock3, mod(hashtext(stock3::text), 10) AS hash_calculado
+	FROM productos3;
+2025-03-07 22:45:51.498 CET [5720] 09109126E 06593675N ::1(49557) WARNING:  ya hay una transacciÃ³n en curso
+2025-03-07 22:45:53.746 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  no existe la columna Â«stock3Â» en carÃ¡cter 8
+2025-03-07 22:45:53.746 CET [5720] 09109126E 06593675N ::1(49557) HINT:  Probablemente quiera hacer referencia a la columna Â«productos3.stockÂ».
+2025-03-07 22:45:53.746 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  SELECT stock3, mod(hashtext(stock3::text), 10) AS hash_calculado
+	FROM productos3;
+2025-03-07 22:46:27.227 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-07 22:46:46.144 CET [5720] 09109126E 06593675N ::1(49557) WARNING:  ya hay una transacciÃ³n en curso
+2025-03-07 22:48:11.490 CET [5720] 09109126E 06593675N ::1(49557) WARNING:  no hay una transacciÃ³n en curso
+2025-03-07 22:50:57.420 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 13024 búfers (79.5%); 0 archivos WAL añadidos, 0 eliminados, 30 reciclados; write=269.770 s, sync=0.075 s, total=270.194 s; archivos sincronizados=51, más largo=0.006 s, promedio=0.002 s; distancia=493873 kB, estimación=537301 kB; lsn=12/7C6736C0, lsn de redo=12/7C2FFEE0
+2025-03-07 23:16:16.202 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: drop table productos3;
+2025-03-07 23:16:27.467 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-07 23:16:30.421 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 27 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.869 s, sync=0.030 s, total=2.954 s; archivos sincronizados=12, más largo=0.004 s, promedio=0.003 s; distancia=3659 kB, estimación=483937 kB; lsn=12/7C692B38, lsn de redo=12/7C692B00
+2025-03-07 23:16:34.003 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE IF NOT EXISTS productos3 (
+	    id_producto3 INT,
+	    nombre3 VARCHAR(18),
+	    stock3 INT,
+	    precio3 INT,
+	    CONSTRAINT ID3 PRIMARY KEY(id_producto3, precio3)
+	) PARTITION BY RANGE (precio3);
+2025-03-07 23:16:34.017 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_10_510 PARTITION OF productos3 FOR VALUES FROM (10) TO (510);
+2025-03-07 23:16:34.026 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_510_1010 PARTITION OF productos3 FOR VALUES FROM (510) TO (1010);
+2025-03-07 23:16:34.035 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_1010_1510 PARTITION OF productos3 FOR VALUES FROM (1010) TO (1510);
+2025-03-07 23:16:34.043 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_1510_2010 PARTITION OF productos3 FOR VALUES FROM (1510) TO (2010);
+2025-03-07 23:16:34.050 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_2010_2510 PARTITION OF productos3 FOR VALUES FROM (2010) TO (2510);
+2025-03-07 23:16:34.058 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_2510_3010 PARTITION OF productos3 FOR VALUES FROM (2510) TO (3010);
+2025-03-07 23:16:34.066 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_3010_3510 PARTITION OF productos3 FOR VALUES FROM (3010) TO (3510);
+2025-03-07 23:16:34.073 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_3510_4010 PARTITION OF productos3 FOR VALUES FROM (3510) TO (4010);
+2025-03-07 23:16:34.082 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_4010_4510 PARTITION OF productos3 FOR VALUES FROM (4010) TO (4510);
+2025-03-07 23:16:34.089 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: CREATE TABLE productos3_4510_5001 PARTITION OF productos3 FOR VALUES FROM (4510) TO (5001);
+2025-03-07 23:16:34.098 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: COPY  productos3 FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 23:17:03.772 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 23:17:31.041 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 4948 búfers (30.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=26.806 s, sync=0.213 s, total=27.270 s; archivos sincronizados=64, más largo=0.016 s, promedio=0.004 s; distancia=537727 kB, estimación=537727 kB; lsn=12/BB2D0BD0, lsn de redo=12/9D3B2AC8
+2025-03-07 23:17:33.774 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 23:17:59.233 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5083 búfers (31.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.056 s, sync=0.171 s, total=25.460 s; archivos sincronizados=30, más largo=0.017 s, promedio=0.006 s; distancia=539890 kB, estimación=539890 kB; lsn=12/DC1DCE48, lsn de redo=12/BE2EF460
+2025-03-07 23:18:01.993 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 28 segundos)
+2025-03-07 23:18:01.993 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 23:18:01.993 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 23:18:26.732 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5146 búfers (31.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.151 s, sync=0.276 s, total=24.740 s; archivos sincronizados=30, más largo=0.056 s, promedio=0.010 s; distancia=540763 kB, estimación=540763 kB; lsn=12/FD3D39B0, lsn de redo=12/DF3061B8
+2025-03-07 23:18:28.765 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 27 segundos)
+2025-03-07 23:18:28.765 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 23:18:28.765 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 23:18:52.932 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 5021 búfers (30.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=23.522 s, sync=0.302 s, total=24.168 s; archivos sincronizados=30, más largo=0.034 s, promedio=0.011 s; distancia=540702 kB, estimación=540757 kB; lsn=13/1E0D4068, lsn de redo=13/30DA50
+2025-03-07 23:19:16.559 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  error de sintaxis en o cerca de Â«fromÂ» en carÃ¡cter 16
+2025-03-07 23:19:16.559 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  select count * from productos3_1010_1510;
+2025-03-07 23:21:11.919 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  error de sintaxis en o cerca de Â«3010_3510Â» en carÃ¡cter 22
+2025-03-07 23:21:11.919 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  select count(*) from 3010_3510;
+2025-03-07 23:23:28.893 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-07 23:26:25.983 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  error de sintaxis en o cerca de Â«pÂ» en carÃ¡cter 22
+2025-03-07 23:26:25.983 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  drop table productos p;
+2025-03-07 23:26:28.358 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: drop table productos ;
+2025-03-07 23:26:57.240 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: create table if not exists productos(
+	    id_producto int,
+	    nombre varchar(18),
+	    stock int,
+	    precio int,
+	    constraint ID primary key(id_producto)
+	);
+2025-03-07 23:26:57.262 CET [5720] 09109126E 06593675N ::1(49557) LOG:  sentencia: COPY  productos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-07 23:27:22.666 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 11882 búfers (72.5%); 0 archivos WAL añadidos, 0 eliminados, 30 reciclados; write=233.354 s, sync=0.195 s, total=233.773 s; archivos sincronizados=75, más largo=0.056 s, promedio=0.003 s; distancia=497944 kB, estimación=536475 kB; lsn=13/3CA77940, lsn de redo=13/1E953AF8
+2025-03-07 23:27:24.530 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 23:27:47.617 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 7377 búfers (45.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=22.788 s, sync=0.068 s, total=23.087 s; archivos sincronizados=19, más largo=0.035 s, promedio=0.004 s; distancia=534462 kB, estimación=536274 kB; lsn=13/5D06E0A8, lsn de redo=13/3F343380
+2025-03-07 23:27:49.429 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 25 segundos)
+2025-03-07 23:27:49.429 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 23:27:49.429 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 23:28:10.617 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 8000 búfers (48.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.828 s, sync=0.100 s, total=21.188 s; archivos sincronizados=8, más largo=0.060 s, promedio=0.013 s; distancia=537710 kB, estimación=537710 kB; lsn=13/7DD2EDD8, lsn de redo=13/6005ED00
+2025-03-07 23:28:12.688 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+2025-03-07 23:28:12.688 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 23:28:12.688 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 23:28:36.684 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 7779 búfers (47.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=23.447 s, sync=0.178 s, total=23.997 s; archivos sincronizados=7, más largo=0.085 s, promedio=0.026 s; distancia=540456 kB, estimación=540456 kB; lsn=13/9F00AE40, lsn de redo=13/81028D80
+2025-03-07 23:28:38.669 CET [18180] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 26 segundos)
+2025-03-07 23:28:38.669 CET [18180] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-07 23:28:38.669 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-07 23:30:32.900 CET [5720] 09109126E 06593675N ::1(49557) ERROR:  no existe la relaciÃ³n Â«nombre_de_tu_tablaÂ» en carÃ¡cter 30
+2025-03-07 23:30:32.900 CET [5720] 09109126E 06593675N ::1(49557) SENTENCIA:  SELECT 
+	    pg_relation_size('nombre_de_tu_tabla') AS size_bytes, 
+	    pg_size_pretty(pg_relation_size('nombre_de_tu_tabla')) AS size_pretty;
+2025-03-07 23:30:48.478 CET [18180] 09109126E 06593675N  LOG:  checkpoint completo: escritos 7581 búfers (46.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=129.406 s, sync=0.057 s, total=129.809 s; archivos sincronizados=11, más largo=0.036 s, promedio=0.006 s; distancia=543077 kB, estimación=543077 kB; lsn=13/BE379458, lsn de redo=13/A2282348
+2025-03-07 23:33:38.530 CET [18180] 09109126E 06593675N  LOG:  empezando checkpoint: time

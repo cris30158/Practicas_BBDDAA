@@ -1,0 +1,113 @@
+2025-03-08 02:38:57.841 CET [10032] 09109126E 06593675N  LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-03-07 23:30:48 CET
+2025-03-08 02:38:59.215 CET [10032] 09109126E 06593675N  LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2025-03-08 02:38:59.222 CET [10032] 09109126E 06593675N  LOG:  redo comienza en 13/A2282348
+2025-03-08 02:39:10.140 CET [10032] 09109126E 06593675N  LOG:  redo en progreso, tiempo transcurrido: 10.91 s, LSN actual: 13/BE6EA880
+2025-03-08 02:39:12.336 CET [10032] 09109126E 06593675N  LOG:  largo de registro no válido en 13/BEBE58B8: se esperaba al menos 24, se obtuvo 0
+2025-03-08 02:39:12.337 CET [10032] 09109126E 06593675N  LOG:  redo listo en 13/BEBE5880 utilización del sistema: CPU: usuario: 5.32 s, sistema: 3.64 s, transcurrido: 13.11 s
+2025-03-08 02:39:12.348 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: end-of-recovery immediate wait
+2025-03-08 02:39:12.931 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 16339 búfers (99.7%); 0 archivos WAL añadidos, 2 eliminados, 26 reciclados; write=0.230 s, sync=0.213 s, total=0.587 s; archivos sincronizados=11, más largo=0.188 s, promedio=0.020 s; distancia=468365 kB, estimación=468365 kB; lsn=13/BEBE58B8, lsn de redo=13/BEBE58B8
+2025-03-08 14:59:29.201 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: drop table productos
+	;
+2025-03-08 14:59:38.680 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: create table if not exists productos(
+	   id_producto int,
+	   nombre varchar(18),
+	   stock int,
+	   precio int,
+	   constraint ID primary key(id_producto)
+	);
+2025-03-08 14:59:38.722 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: CREATE INDEX idb_id_producto ON productos(id_producto);
+2025-03-08 14:59:38.730 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  error de sintaxis en o cerca de Â«/Â» en carÃ¡cter 1
+2025-03-08 14:59:38.730 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  /COPY  productos FROM 'PL1.csv' WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-08 14:59:47.924 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: create table if not exists productos(
+	   id_producto int,
+	   nombre varchar(18),
+	   stock int,
+	   precio int,
+	   constraint ID primary key(id_producto)
+	);
+2025-03-08 14:59:47.934 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: CREATE INDEX idb_id_producto ON productos(id_producto);
+2025-03-08 14:59:47.955 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: COPY  productos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+2025-03-08 15:00:03.905 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:00:17.377 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 6192 búfers (37.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=13.257 s, sync=0.057 s, total=13.474 s; archivos sincronizados=35, más largo=0.007 s, promedio=0.002 s; distancia=528954 kB, estimación=528954 kB; lsn=13/FCE5A168, lsn de redo=13/DF0741C8
+2025-03-08 15:00:18.426 CET [10016] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 15 segundos)
+2025-03-08 15:00:18.426 CET [10016] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 15:00:18.426 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:00:30.849 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 7086 búfers (43.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=12.259 s, sync=0.009 s, total=12.423 s; archivos sincronizados=3, más largo=0.005 s, promedio=0.003 s; distancia=542904 kB, estimación=542904 kB; lsn=14/1DEF03D8, lsn de redo=14/2A24D8
+2025-03-08 15:00:32.147 CET [10016] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+2025-03-08 15:00:32.147 CET [10016] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 15:00:32.149 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:00:43.988 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 7023 búfers (42.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=11.478 s, sync=0.078 s, total=11.841 s; archivos sincronizados=3, más largo=0.044 s, promedio=0.026 s; distancia=542102 kB, estimación=542824 kB; lsn=14/3F4032D8, lsn de redo=14/21408038
+2025-03-08 15:00:44.897 CET [10016] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 12 segundos)
+2025-03-08 15:00:44.897 CET [10016] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 15:00:44.897 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:00:56.310 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 7198 búfers (43.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=11.044 s, sync=0.075 s, total=11.413 s; archivos sincronizados=3, más largo=0.044 s, promedio=0.025 s; distancia=538881 kB, estimación=542430 kB; lsn=14/6017FFB0, lsn de redo=14/42248618
+2025-03-08 15:00:57.310 CET [10016] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+2025-03-08 15:00:57.310 CET [10016] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 15:00:57.310 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:01:08.004 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 7195 búfers (43.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=10.382 s, sync=0.061 s, total=10.694 s; archivos sincronizados=4, más largo=0.026 s, promedio=0.016 s; distancia=541618 kB, estimación=542349 kB; lsn=14/811D3050, lsn de redo=14/63334F48
+2025-03-08 15:01:08.824 CET [10016] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-08 15:01:08.824 CET [10016] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 15:01:08.824 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:01:19.124 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 7230 búfers (44.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=9.968 s, sync=0.069 s, total=10.300 s; archivos sincronizados=3, más largo=0.036 s, promedio=0.023 s; distancia=538220 kB, estimación=541936 kB; lsn=14/A2235DF0, lsn de redo=14/840D0310
+2025-03-08 15:01:19.896 CET [10016] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-08 15:01:19.896 CET [10016] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 15:01:19.897 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:03:29.147 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 7236 búfers (44.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=129.020 s, sync=0.048 s, total=129.251 s; archivos sincronizados=6, más largo=0.037 s, promedio=0.008 s; distancia=540727 kB, estimación=541815 kB; lsn=14/C0FB16E8, lsn de redo=14/A50DE2D8
+2025-03-08 15:06:19.286 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: time
+2025-03-08 15:08:18.553 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  error de sintaxis en o cerca de Â«FROMÂ» en carÃ¡cter 16
+2025-03-08 15:08:18.553 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  SELECT  bsize, FROM hash_metapage_info(get_raw_page('idh_id_producto',0));
+2025-03-08 15:08:59.704 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  error de sintaxis en o cerca de Â«:Â» en carÃ¡cter 1
+2025-03-08 15:08:59.704 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  : SELECT pg_size_pretty(pg_relation_size('idb_id_producto'));
+2025-03-08 15:09:38.870 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pgstattuple;
+2025-03-08 15:10:49.257 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 14870 búfers (90.8%); 0 archivos WAL añadidos, 0 eliminados, 28 reciclados; write=269.717 s, sync=0.028 s, total=269.972 s; archivos sincronizados=12, más largo=0.007 s, promedio=0.003 s; distancia=463760 kB, estimación=534009 kB; lsn=14/C17BC118, lsn de redo=14/C15C2588
+2025-03-08 15:22:32.961 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+2025-03-08 15:22:33.033 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  error de sintaxis en o cerca de Â«FROMÂ» en carÃ¡cter 16
+2025-03-08 15:22:33.033 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  SELECT  bsize, FROM hash_metapage_info(get_raw_page('idh_id_producto',0));
+2025-03-08 15:24:18.993 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  no existe la columna Â«free_spaceÂ» en carÃ¡cter 63
+2025-03-08 15:24:18.993 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  SELECT 
+	    index_size AS total_size_bytes,
+	    (index_size - free_space) AS used_space_bytes,
+	    (index_size - free_space) / pages AS bu_real
+	FROM pgstatindex('idx_producto_id');
+2025-03-08 15:25:18.374 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: CREATE INDEX idh_id_precio ON productos using hash(precio);
+2025-03-08 15:26:00.166 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:26:18.295 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 1220 búfers (7.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.934 s, sync=0.059 s, total=18.130 s; archivos sincronizados=32, más largo=0.029 s, promedio=0.002 s; distancia=538690 kB, estimación=538690 kB; lsn=15/3C1818, lsn de redo=14/E23D30A8
+2025-03-08 15:26:19.695 CET [10016] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+2025-03-08 15:26:19.695 CET [10016] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 15:26:19.696 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:26:35.850 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 1232 búfers (7.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=15.970 s, sync=0.055 s, total=16.155 s; archivos sincronizados=2, más largo=0.034 s, promedio=0.028 s; distancia=540398 kB, estimación=540398 kB; lsn=15/2102C028, lsn de redo=15/338EB30
+2025-03-08 15:26:37.209 CET [10016] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 18 segundos)
+2025-03-08 15:26:37.209 CET [10016] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 15:26:37.209 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:27:05.215 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  error de sintaxis en o cerca de Â«Â» en carÃ¡cter 1
+2025-03-08 15:27:05.215 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  i create.sql
+	CREATE EXTENSION IF NOT EXISTS pageinspect;
+2025-03-08 15:27:05.230 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  error de sintaxis en o cerca de Â«FROMÂ» en carÃ¡cter 16
+2025-03-08 15:27:05.230 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  SELECT  bsize, FROM hash_metapage_info(get_raw_page('idh_id_producto',0));
+2025-03-08 15:27:20.914 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+2025-03-08 15:27:30.015 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  error de sintaxis en o cerca de Â«FROMÂ» en carÃ¡cter 16
+2025-03-08 15:27:30.015 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  SELECT  bsize, FROM hash_metapage_info(get_raw_page('idh_id_producto',0));
+2025-03-08 15:27:39.911 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  no existe la relaciÃ³n Â«idh_id_productoÂ»
+2025-03-08 15:27:39.911 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  SELECT  bsize FROM hash_metapage_info(get_raw_page('idh_id_producto',0));
+2025-03-08 15:31:07.327 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 10129 búfers (61.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.883 s, sync=0.012 s, total=270.119 s; archivos sincronizados=2, más largo=0.011 s, promedio=0.006 s; distancia=537901 kB, estimación=540148 kB; lsn=15/2DDE30B8, lsn de redo=15/240DA038
+2025-03-08 15:42:13.086 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  no existe la relaciÃ³n Â«productos1Â» en carÃ¡cter 60
+2025-03-08 15:42:13.086 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  SELECT AVG(pg_column_size(t.*)) AS media_tamano_bytes FROM productos1 t;
+2025-03-08 15:48:21.964 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  error de sintaxis en o cerca de Â«idh_id_productoÂ» en carÃ¡cter 151
+2025-03-08 15:48:21.964 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idh_id_producto,0));
+	
+	SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idh_id_producto,0));
+2025-03-08 15:48:32.174 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  no existe la relaciÃ³n Â«idh_id_productoÂ»
+2025-03-08 15:48:32.174 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idh_id_producto',0));
+2025-03-08 15:48:39.995 CET [22364] 09109126E 06593675N ::1(57796) ERROR:  no existe la columna Â«idh_id_productoÂ» en carÃ¡cter 64
+2025-03-08 15:48:39.995 CET [22364] 09109126E 06593675N ::1(57796) SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page(idh_id_producto,0));
+2025-03-08 15:49:20.318 CET [22364] 09109126E 06593675N ::1(57796) LOG:  sentencia: CREATE INDEX idh_id_producto ON productos using hash(id_producto);
+2025-03-08 15:49:46.139 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:49:56.655 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 16 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=10.326 s, sync=0.017 s, total=10.517 s; archivos sincronizados=22, más largo=0.003 s, promedio=0.001 s; distancia=543899 kB, estimación=543899 kB; lsn=15/633C6690, lsn de redo=15/45400DE0
+2025-03-08 15:49:57.739 CET [10016] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-08 15:49:57.739 CET [10016] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 15:49:57.740 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 15:50:07.389 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 46 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=9.453 s, sync=0.044 s, total=9.649 s; archivos sincronizados=1, más largo=0.044 s, promedio=0.044 s; distancia=539743 kB, estimación=543483 kB; lsn=15/84456250, lsn de redo=15/66318A20
+2025-03-08 15:50:08.153 CET [10016] 09109126E 06593675N  LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+2025-03-08 15:50:08.153 CET [10016] 09109126E 06593675N  HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+2025-03-08 15:50:08.153 CET [10016] 09109126E 06593675N  LOG:  empezando checkpoint: wal
+2025-03-08 18:53:15.026 CET [10016] 09109126E 06593675N  LOG:  checkpoint completo: escritos 40 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=10985.388 s, sync=0.527 s, total=10986.872 s; archivos sincronizados=1, más largo=0.028 s, promedio=0.028 s; distancia=541595 kB, estimación=543294 kB; lsn=15/9A2B4020, lsn de redo=15/873FF950
