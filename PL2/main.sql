@@ -1,5 +1,5 @@
 \c investigar
-
+\timing ON
 \set pager off
 set client_encoding ='UTF8';
 
@@ -19,14 +19,14 @@ create table if not exists contratos(
     nombre text,
     entidad text,
     coste numeric,
-    PRIMARY KEY(codigo_investigador)
+    PRIMARY KEY(codigo_contrato)
 );
 
 create table if not exists investigadores_contratos(
     codigo_investigador numeric, 
     codigo_contrato numeric, 
     horas numeric,
-    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+    FOREIGN KEY (codigo_investigador) REFERENCES investigadores(codigo_investigador)
         ON DELETE RESTRICT
         ON UPDATE RESTRICT,
 
@@ -35,10 +35,11 @@ create table if not exists investigadores_contratos(
         ON UPDATE RESTRICT,
 
     PRIMARY KEY (codigo_investigador,codigo_contrato)
-
-
-
 ); 
+
+\copy contratos from 'data/datos_contratos.csv' WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+\copy investigadores from 'data/datos_investigadores.csv' WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+\copy investigadores_contratos from 'data/datos_investigadores_contratos.csv' WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
 
 
 

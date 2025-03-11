@@ -3132,3 +3132,453 @@ endobj
 startxref
 618360
 %%EOF
+103 0 obj
+<</AP<</N 923 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 33558528/MK<</BC[ 0 0 0]>>/P 21 0 R/Rect[ 80.2434 83.3779 541.678 430.791]/Subtype/Widget/T(Text4)/Type/Annot/V(˛ˇ C r e a c i o n   d e   l a s   t a b l a s   c o n   l o s   v a l o r e s   e s t a b l e c i d o s   p o r   e l   e n u n c i o d a : 
+ 
+ T a b l a   i n v e s t i g a d o r e s (   c o d i g o _ i n v e s t i g a d o r   n u m e r i c , n o m b r e   t e x t , a p e l l i d o   t e x t , s a l a t i o   n u m e r i c , 
+                                                                       P R I M A R Y   K E Y ( c o d i g o _ i n v e s t i g a d o r ) ) ; 
+ 
+ T a b l a   c o n t r a t o s ( c o d i g o _ c o n t r a t o   n u m e r i c , n o m b r e   t e x t , e n t i d a d   t e x t , c o s t e   n u m e r i c , 
+                                                         P R I M A R Y   K E Y ( c o d i g o _ i n v e s t i g a d o r ) ) ; 
+ T a b l a   i n v e s t i g a d o r e s _ c o n t r a t o s ( c o d i g o _ i n v e s t i g a d o r   n u m e r i c ,   c o d i g o _ c o n t r a t o   n u m e r i c ,   o r a s   n u m e r i c , 
+                   F O R E I G N   K E Y   ( c o d i g o _ i n v e s t i g a d o r )   R E F E R E N C E S   c o n t r a t o s ( c o d i g o _ c o n t r a t o ) 
+                           O N   D E L E T E   R E S T R I C T 
+                           O N   U P D A T E   R E S T R I C T , 
+ 
+                 F O R E I G N   K E Y   ( c o d i g o _ c o n t r a t o )   R E F E R E N C E S   c o n t r a t o s ( c o d i g o _ c o n t r a t o ) 
+                       O N   D E L E T E   R E S T R I C T 
+                       O N   U P D A T E   R E S T R I C T , 
+ 
+         P R I M A R Y   K E Y   ( c o d i g o _ i n v e s t i g a d o r , c o d i g o _ c o n t r a t o ) ) ; 
+ 
+ C o p i a m o s   l o s   d a t o s   c o n : 
+ \\ c o p y   c o n t r a t o s   f r o m   ' d a t a / d a t o s _ c o n t r a t o s . c s v '   
+ \\ c o p y   i n v e s t i g a d o r e s   f r o m   ' d a t a / d a t o s _ i n v e s t i g a d o r e s . c s v '   
+ \\ c o p y   i n v e s t i g a d o r e s _ c o n t r a t o s   f r o m   ' d a t a / d a t o s _ i n v e s t i g a d o r e s _ c o n t r a t o s . c s v '   
+ 
+ A Ò a d i m o s   a l   f i n a l   W I T H   ( F O R M A T   c s v ,   D E L I M I T E R   E ' , ' ,   N U L L   ' N U L L ' ,   E N C O D I N G   ' U T F - 8 ' ) ; 
+ 
+ T i e m p o s   d e   c a r g a : 
+         C o n t r a t o s   =   9 1 4 , 9 9 9   m s   [ ] ( C O P Y   2 0 0 0 0 0 ) 
+         I n v e s t i g a d o r e s   =   1 8 3 7 2 , 0 7 5   m s   [ 1 9   s e g u n d o s ]   ( C O P Y   3 0 0 0 0 0 0 ) 
+         I n v e s t i g a d o r e s _ C o n t r a t o s   =     8 3 9 5 9 5 , 8 4 7   m s   [ 1 4   m i n u t o s ]   ( C O P Y   9 0 0 0 0 0 0 ))>>
+endobj
+108 0 obj
+<</AP<</N 884 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 195.84 268.2 305.52 287.04]/Subtype/Widget/T(TablaRow1)/TU(Tabla_Row_1)/Type/Annot>>
+endobj
+109 0 obj
+<</AP<</N 885 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 307.32 268.2 427.92 287.04]/Subtype/Widget/T(Tiempo segRow1)/TU(Tiempo (seg)_Row_1)/Type/Annot>>
+endobj
+110 0 obj
+<</AP<</N 886 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 195.84 248.16 305.52 266.88]/Subtype/Widget/T(TablaRow2)/TU(Tabla_Row_2)/Type/Annot>>
+endobj
+111 0 obj
+<</AP<</N 887 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 307.32 248.16 427.92 266.88]/Subtype/Widget/T(Tiempo segRow2)/TU(Tiempo (seg)_Row_2)/Type/Annot>>
+endobj
+112 0 obj
+<</AP<</N 888 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 195.84 228 305.52 246.84]/Subtype/Widget/T(TablaRow3)/TU(Tabla_Row_3)/Type/Annot>>
+endobj
+113 0 obj
+<</AP<</N 889 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 307.32 228 427.92 246.84]/Subtype/Widget/T(Tiempo segRow3)/TU(Tiempo (seg)_Row_3)/Type/Annot>>
+endobj
+114 0 obj
+<</AP<</N 890 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 195.84 207.84 305.52 226.68]/Subtype/Widget/T(TablaRow4)/TU(Tabla_Row_4)/Type/Annot>>
+endobj
+115 0 obj
+<</AP<</N 891 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 307.32 207.84 427.92 226.68]/Subtype/Widget/T(Tiempo segRow4)/TU(Tiempo (seg)_Row_4)/Type/Annot>>
+endobj
+116 0 obj
+<</AP<</N 892 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 195.84 187.68 305.52 206.52]/Subtype/Widget/T(TablaRow5)/TU(Tabla_Row_5)/Type/Annot>>
+endobj
+117 0 obj
+<</AP<</N 893 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 307.32 187.68 427.92 206.52]/Subtype/Widget/T(Tiempo segRow5)/TU(Tiempo (seg)_Row_5)/Type/Annot>>
+endobj
+118 0 obj
+<</AP<</N 894 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 195.84 167.52 305.52 186.36]/Subtype/Widget/T(TablaRow6)/TU(Tabla_Row_6)/Type/Annot>>
+endobj
+119 0 obj
+<</AP<</N 895 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 307.32 167.52 427.92 186.36]/Subtype/Widget/T(Tiempo segRow6)/TU(Tiempo (seg)_Row_6)/Type/Annot>>
+endobj
+780 0 obj
+<</AP<</N 878 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 786 0 R>>/Font<</Helv 787 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 214.2 539.16 538.8 557.52]/Subtype/Widget/T(Nombre y Apellidos)/TU(Nombre y Apellidos)/Type/Annot>>
+endobj
+781 0 obj
+<</AP<</N 879 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 786 0 R>>/Font<</Helv 787 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 117.96 519.6 226.92 537.84]/Subtype/Widget/T(DNI)/TU(DNI)/Type/Annot>>
+endobj
+782 0 obj
+<</AP<</N 880 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 786 0 R>>/Font<</Helv 787 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 214.2 460.68 538.8 479.04]/Subtype/Widget/T(Nombre y Apellidos_2)/TU(Nombre y Apellidos)/Type/Annot>>
+endobj
+783 0 obj
+<</AP<</N 881 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 786 0 R>>/Font<</Helv 787 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 117.96 441 226.92 459.36]/Subtype/Widget/T(DNI_2)/TU(DNI)/Type/Annot>>
+endobj
+784 0 obj
+<</AP<</N 882 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 786 0 R>>/Font<</Helv 787 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 129.12 401.76 226.92 420.12]/Subtype/Widget/T(Fecha)/TU(Fecha)/Type/Annot>>
+endobj
+785 0 obj
+<</AP<</N 883 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 786 0 R>>/Font<</Helv 787 0 R>>>>/F 4/FT/Tx/P 5 0 R/Rect[ 227.88 362.28 464.04 380.64]/Subtype/Widget/T(Profesor Responsable)/TU(Profesor Responsable)/Type/Annot>>
+endobj
+878 0 obj
+<</Length 111/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 324.6 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 322.6 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+879 0 obj
+<</Length 112/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 108.96 18.24]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 106.96 16.24 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.368000 Tf 0 g
+2 5.789176 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+880 0 obj
+<</Length 111/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 324.6 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 322.6 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+881 0 obj
+<</Length 112/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 108.96 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 106.96 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+882 0 obj
+<</Length 110/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 97.8 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 95.8 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+883 0 obj
+<</Length 112/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 236.16 18.36]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 234.16 16.36 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.452000 Tf 0 g
+2 5.824564 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+884 0 obj
+<</Length 116/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 109.68 18.84]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 107.68 16.84 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.788000 Tf 0 g
+54.84 5.966116 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+885 0 obj
+<</Length 114/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 120.6 18.84]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 118.6 16.84 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.788000 Tf 0 g
+60.3 5.966116 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+886 0 obj
+<</Length 116/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 109.68 18.72]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 107.68 16.72 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.704000 Tf 0 g
+54.84 5.930728 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+887 0 obj
+<</Length 114/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 120.6 18.72]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 118.6 16.72 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.704000 Tf 0 g
+60.3 5.930728 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+888 0 obj
+<</Length 116/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 109.68 18.84]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 107.68 16.84 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.788000 Tf 0 g
+54.84 5.966116 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+889 0 obj
+<</Length 114/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 120.6 18.84]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 118.6 16.84 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.788000 Tf 0 g
+60.3 5.966116 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+890 0 obj
+<</Length 116/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 109.68 18.84]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 107.68 16.84 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.788000 Tf 0 g
+54.84 5.966116 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+891 0 obj
+<</Length 114/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 120.6 18.84]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 118.6 16.84 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.788000 Tf 0 g
+60.3 5.966116 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+892 0 obj
+<</Length 116/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 109.68 18.84]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 107.68 16.84 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.788000 Tf 0 g
+54.84 5.966116 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+893 0 obj
+<</Length 114/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 120.6 18.84]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 118.6 16.84 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.788000 Tf 0 g
+60.3 5.966116 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+894 0 obj
+<</Length 116/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 109.68 18.84]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 107.68 16.84 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.788000 Tf 0 g
+54.84 5.966116 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+895 0 obj
+<</Length 114/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 120.6 18.84]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Helv 165 0 R>>>>>>
+stream
+/Tx BMC 
+q
+1 1 118.6 16.84 re
+W
+n
+0 g 0 G 0 J []0 d 1 w
+BT
+/Helv 11.788000 Tf 0 g
+60.3 5.966116 Td
+() Tj
+ET
+Q
+EMC
+
+endstream
+endobj
+923 0 obj
+<</Length 640/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 461.4346 347.4131]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 98 0 R>>>>>>
+stream
+xú¨U·nõ0˛Ôß?â%†	õ˙#•4ckíé∫™™¶ä\pë'¿ê¨{õ{Å=‹ﬁ`&iì¥Ö¨Èj0»Áªœ˜›ùmkÚÒ®ea˘öZÀ4Ã,{À‘gÂ®MÓÒ—–¡Ë“±éMÀ~‘≤÷Zó(Eé$⁄@ˆ/¯˙F√°T˛âéjò»"N±Æar'Á#‘¡Üaµl›Ëi&!j8£)ÑböCAoÀ_ %±»aAcë±X^N∞ÄáR8∞X:O•iH?61˘.›¯†wZV«Óÿ›%4TãIπt!1yD√“ê+Ü<”m9§ÛÑe<PSë‹f
+v_®t∆‚X∫±Â4¶kÕO˛›Œ|oÿ˜Ø‡´{’®p•9i~zK∆"£Öê@%ï‹XZêÜ´A ÚÇ˝±73™J–Ù%ì LAMô,´W≤9˚Æ7ïÆC•Ô‡ª'ÆÔé˜|„Á!næ"f„ªß.q%‚9Ò=áºŒË‚Ï∏øeTGh7XÕµÛÔDÒﬂÉﬁVÒUfP}Ndﬂ˝Âàßâ<å S*,cSF©Ê$öL1˚µ	#‹e"Eö—ˆ“vSﬁ≠ _(5k>¿<›/±ûŒÔ8›·fùÊÆEjƒ˝?4‰e iw<ïﬂKè|ÜÜ, aüÄTÀ ÒÜq}pUQatqz
+J˘ïYö„co4 ÂÇú¸Ó)˚êú%≥2wöEµóàlŒ: á`Î¶j€6$9\ﬂ4úÒŸt¥≤Ìÿ
+ﬁ”ÑÇﬁ3∫UÎZK›ÜúEÛT^m7∞Ç4¥˝0ß€.Bœ∞-€R{fwÖoB¬”y±Å∑∑·]Çæ!wË†ø   ˇˇ
+endstream
+endobj
+791 0 obj
+<</Author(yo)/Company(yo)/CreationDate(D:20250310203331+01'00')/Creator(Acrobat PDFMaker 24 para Word)/Keywords()/ModDate(D:20250311110426+01'00')/Producer(Cliente @firma)/SourceModified()/Subject()/Title(PL2 BDA 2023-24)>>
+endobj
+925 0 obj
+<</Type/XRef/Size 926/Prev 618360/Root 756 0 R/Info 791 0 R/ID[<99A0A5D93A62E8AC2F5BBBE862CDA3D2><D17F7FB99B16B3E70CF828C28B1D1FC5>]/W[ 1 4 2]/Index[ 103 1 108 12 780 6 791 1 878 18 923 1 925 1]/Filter/FlateDecode/Length 153>>
+stream
+xú$Õ;Q@·:◊tÖZC,A¬
+¶`	®4ﬁØa∆;Ç!¢SP+tˆ !ÏA-9∑˙äSCT>!bà*¶†ár*A®†&ö‘ø–xBÛ≠;¥œ`ù†„A∑ vΩÌÖ·`B?›Ü9π0æ¡‰S?Ãb‡f`Ó¿‚
+À7¨¨£∞IÉg√ˆªÏ}pLä¸  ˇˇ
+endstream
+endobj
+startxref
+632395
+%%EOF
