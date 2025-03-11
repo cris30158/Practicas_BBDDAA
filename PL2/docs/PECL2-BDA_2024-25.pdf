@@ -2639,6 +2639,7 @@ startxref
 endobj
 102 0 obj
 <</AP<</N 858 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 41947136/MK<</BC[ 0 0 0]>>/P 18 0 R/Rect[ 80.8478 105.104 542.282 386.148]/Subtype/Widget/T(Text3)/Type/Annot/V(şÿ e l   s e r v i d o r   d e   P o s t g r e s   c u e n t a   c o n   u n   r e c o l e c t o r   d e   e s t a d í s t i c a s   s o b r e   l o s   d a t o s   d e   c a d a   c a m p o   d e   l a s   t a b l a s .   
+ 
  E n   p g _ s t a t _ a l l _ t a b l e s   g u a r d a   l o s   s i g u i e n t e s   v a l o r e s : 
  
      + r e l i d   o i d :   O I D   d e   l a   t a b l a                                                                   +   s c h e m a   n a m e :   n o m b r e   d e l   e s q u e m a 
@@ -2659,8 +2660,28 @@ endobj
      + l a s t _ v a c u u m :   ú l t i m a   v e z   q u e   s e   h i z o   v a c u u m   m a n u a l m e n t e 
      + v a c u u m _ c o u n t :   n ú m e r o   d e   v e c e s   q u e   s e   h i z o   v a c u u m   m a n u a l m e n t e 
      
-     + a n a l y z e _ c o u n t :   n ú m e r o   d e   v e c e s   q u e   s e   h i z o   a n a l y z e   m a n u a l m e n t e 
-     + a n a l y z a _)>>
+     + a n a l y z e _ c o u n t :   n ú m e r o   d e   v e c e s   q u e   s e   h i z o   a n a l y z e   m a n u a l m e n t e)>>
+endobj
+103 0 obj
+<</AP<</N 876 0 R>>/DA(/Georgia 10 Tf 0 g)/F 4/FT/Tx/Ff 33558528/MK<</BC[ 0 0 0]>>/P 21 0 R/Rect[ 80.2434 83.3779 541.678 430.791]/Subtype/Widget/T(Text4)/Type/Annot/V(şÿ C r e a c i o n   d e   l a s   t a b l a s   c o n   l o s   v a l o r e s   e s t a b l e c i d o s   p o r   e l   e n u n c i o d a : 
+ 
+ T a b l a   i n v e s t i g a d o r e s (   c o d i g o _ i n v e s t i g a d o r   n u m e r i c , n o m b r e   t e x t , a p e l l i d o   t e x t , s a l a t i o   n u m e r i c , 
+                                                                       P R I M A R Y   K E Y ( c o d i g o _ i n v e s t i g a d o r ) ) ; 
+ 
+ T a b l a   c o n t r a t o s ( c o d i g o _ c o n t r a t o   n u m e r i c , n o m b r e   t e x t , e n t i d a d   t e x t , c o s t e   n u m e r i c , 
+                                                         P R I M A R Y   K E Y ( c o d i g o _ i n v e s t i g a d o r ) ) ; 
+ T a b l a   i n v e s t i g a d o r e s _ c o n t r a t o s ( c o d i g o _ i n v e s t i g a d o r   n u m e r i c ,   c o d i g o _ c o n t r a t o   n u m e r i c ,   o r a s   n u m e r i c , 
+                   F O R E I G N   K E Y   ( c o d i g o _ i n v e s t i g a d o r )   R E F E R E N C E S   c o n t r a t o s ( c o d i g o _ c o n t r a t o ) 
+                           O N   D E L E T E   R E S T R I C T 
+                           O N   U P D A T E   R E S T R I C T , 
+ 
+                 F O R E I G N   K E Y   ( c o d i g o _ c o n t r a t o )   R E F E R E N C E S   c o n t r a t o s ( c o d i g o _ c o n t r a t o ) 
+                       O N   D E L E T E   R E S T R I C T 
+                       O N   U P D A T E   R E S T R I C T , 
+ 
+         P R I M A R Y   K E Y   ( c o d i g o _ i n v e s t i g a d o r , c o d i g o _ c o n t r a t o ) 
+ 
+ ))>>
 endobj
 108 0 obj
 <</AP<</N 799 0 R>>/DA(/Helv  0 Tf 0 g)/DR<</Encoding<</PDFDocEncoding 144 0 R>>/Font<</Helv 145 0 R>>>>/F 4/FT/Tx/P 31 0 R/Q 1/Rect[ 195.84 268.2 305.52 287.04]/Subtype/Widget/T(TablaRow1)/TU(Tabla_Row_1)/Type/Annot>>
@@ -3091,18 +3112,23 @@ stream
 xœäRÉnÛ0½ó+xlaT‘9®|Lj-t€ŠB É‰Ê‚"e.i>g~°ÿĞ¡F ¥Í¹–%Aœå-3%/éú²cÅŠÓ¿¾(‹ú¼®xõ¶,ÊºæX`gí=¿¼¾âìÀ–|ÉëUó˜´nI7Ì²’÷ÔkG÷şõ[Éåşd—-;Ûó½|Yòö–â=£â‹¦XÕõº<ç­b¯À` §•ó¨ ?¹{eJg1Yô ’ D¡~…¨¥ÜŞP‰˜Ÿ€R(ªÃèò—¡¤×¼ıA<ß,«bU5U³°£ØS°˜‰Îo-}Gb'Œér¢Û'á	4ÓºOšÈÓé0Äl^€¸ğ`´B§Õ?¾÷ '¶ø·ßƒüƒ@+Ø uC¶G‘Í‰Ï>©ùÔE€C¤°¸×½¶‘ÊÓ ~r>“g)µÈ>½Ô	šOì]ÔCı0nP%/¤¦íÈÒR4zpŞ	Üq5E³ ¹LcçAã'nu^ZÑk¤å{‚0ÛQ«û‰ñ©4Ñ„¢û‡ÔóÂmN…ÏVüçmË>³íõû  ÿÿ
 endstream
 endobj
-791 0 obj
-<</Author(yo)/Company(yo)/CreationDate(D:20250310203331+01'00')/Creator(Acrobat PDFMaker 24 para Word)/Keywords()/ModDate(D:20250311093818+01'00')/Producer(Cliente @firma)/SourceModified()/Subject()/Title(PL2 BDA 2023-24)>>
-endobj
-866 0 obj
-<</Type/XRef/Size 867/Prev 598918/Root 756 0 R/Info 791 0 R/ID[<99A0A5D93A62E8AC2F5BBBE862CDA3D2><6768A19F15D6A4F310BDE01FFF95F486>]/W[ 1 4 2]/Index[ 101 2 108 13 780 6 791 1 793 19 823 1 858 1 866 1]/Filter/FlateDecode/Length 165>>
+876 0 obj
+<</Length 415/Filter/FlateDecode/Type/XObject/Subtype/Form/FormType 1/BBox[ 0 0 461.4346 347.4131]/Matrix[ 1 0 0 1 0 0]/Resources<</ProcSet[/PDF]/Font<</Georgia 98 0 R>>>>>>
 stream
-xœ$Ï9a…áo¨&ÑªõHTËŒu0b±]BTj•†Ú_!
-?B§C­SQèh$ï­â&çœ«)=xRJSzÄ±%Ä]H84Àˆ‚€”Òá™'d»@şÖ
-
-ÒP´ $Ñ¶„ÙXèP~CEnUjs¨ïÀ9BãM/´ÂĞîAgİ¸7èËêA†òíhã=L®0}Ál-Ë¾Jı  ÿÿ
+xœ¬’ÑNã0Eßı~l¥’&-ûÁTZ 5ZU[„Ll"£ƒ“Ÿ3Ÿº
+¥w·ê’ÄŠ<_ß3cŸúø¦}âÅ¿hÇ÷¢0Ú¡8¼(j©È6¡Ã„’GĞ€Fqï=+^dı"%ñij}Çô÷•O%&?“N¶ûÊØ\ø”ßâzNº4c¯„?ürIZ‰U"Ó¦© Ôâ¦ùe)LO¢0VU ªfAeZbğÁXP¨rVâV)öÚ”ß¡­ ëÅİ^··û*î0oN ]>¡¦Î…lô§-<QêÜ\/Ç¡œİ+«³Niîo¬‚Z½Ôñ ŠmÌg•(D­Í"s…“?çé`¸ŸNà„MZ+íiûç”XÆÚŠÚ à›è{ÄÉ¦ÊZK!ç“ÌTµú°‰\ºşJâì¬ÂcñZ­Ist–²AÔX§wHÙKÙ(aã.q{šà2ÎPqÌÓAÂ×Ûty~¸¿´iĞßÅ\˜óß„¸àwà-]>g;k‚¸ÃÓy:ãä‚°aBş   ÿÿ
+endstream
+endobj
+791 0 obj
+<</Author(yo)/Company(yo)/CreationDate(D:20250310203331+01'00')/Creator(Acrobat PDFMaker 24 para Word)/Keywords()/ModDate(D:20250311095932+01'00')/Producer(Cliente @firma)/SourceModified()/Subject()/Title(PL2 BDA 2023-24)>>
+endobj
+877 0 obj
+<</Type/XRef/Size 878/Prev 598918/Root 756 0 R/Info 791 0 R/ID[<99A0A5D93A62E8AC2F5BBBE862CDA3D2><7768DC84FD4C69B7BAA3D8020CDD0F14>]/W[ 1 4 2]/Index[ 101 3 108 13 780 6 791 1 793 19 823 1 858 1 876 2]/Filter/FlateDecode/Length 172>>
+stream
+xœ$Ï;Á`Æñ·›&&À(kM¨kë~)A‰K+‘F³……Ù÷0ÃfÃl31ÿ;ırr’çœGjè(„"Ôˆ4b+ˆ;°A7 ©C*é d|õHŞ{qó
+ù5ä…bJ2º,Ã*æ9}¡&wuK°Ğ¼@ë	m?t¢ĞuÁŞCïıä×CF²íxÎ	Ü;L>0İÂ, ‹‡   ÿÿ
 endstream
 endobj
 startxref
-615930
+618360
 %%EOF
