@@ -25,7 +25,7 @@ create table if not exists contratos(
 create table if not exists investigadores_contratos(
     codigo_investigador numeric, 
     codigo_contrato numeric, 
-    horas numeric,
+    soras numeric,
     FOREIGN KEY (codigo_investigador) REFERENCES investigadores(codigo_investigador)
         ON DELETE RESTRICT
         ON UPDATE RESTRICT,
@@ -37,9 +37,9 @@ create table if not exists investigadores_contratos(
     PRIMARY KEY (codigo_investigador,codigo_contrato)
 ); 
 
-\copy contratos from 'data/datos_contratos.csv' WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
-\copy investigadores from 'data/datos_investigadores.csv' WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
-\copy investigadores_contratos from 'data/datos_investigadores_contratos.csv' WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+\copy contratos from 'data_profe/datos_contratos.csv' WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+\copy investigadores from 'data_profe/datos_investigadores.csv' WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+\copy investigadores_contratos from 'data_profe/datos_investigadores_contratos.csv' WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
 
 
 
