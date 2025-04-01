@@ -1,4 +1,3 @@
-letras = ["A", "B", "C","D","E","F"]
 
 metodos_pago = ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito", "PayPal", "Bizzum", "Transferencia"]
 
