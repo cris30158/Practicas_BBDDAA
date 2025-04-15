@@ -7,12 +7,12 @@ import random
 def main():
     # Cargar los vehículos y sus clientes en memoria para sacar el id correspondiente
     vehiculos = {}
-    with open('ej7/vehiculos.csv', mode='r', encoding='utf-8') as archivo:
+    with open('PL2/ej7/vehiculos.csv', mode='r', encoding='utf-8') as archivo:
         lector_csv = csv.DictReader(archivo)
         for fila in lector_csv:
             vehiculos[int(fila['vehiculo_id'])] = fila['cliente_id']
 
-    with open('ej7/reservas.csv', 'w', newline='') as file_reservas:
+    with open('PL2/ej7/reservas.csv', 'w', newline='') as file_reservas:
         campos_reserva = ['reserva_id', 'vehiculo_id', 'plaza_id', 'cliente_id', 'fecha_inicio', 'fecha_final']
         writer_reservas = csv.DictWriter(file_reservas, fieldnames=campos_reserva)
         writer_reservas.writeheader()

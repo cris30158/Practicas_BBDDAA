@@ -4,7 +4,7 @@ import random
 seccion = ["A", "B", "C","D","E","F"]
 
 def main():
-    with open('ej7/plazas.csv', 'w', newline='') as file:
+    with open('PL2/ej7/plazas.csv', 'w', newline='') as file:
         campos = ['plaza_id', 'numero', 'seccion','nivel']      
         writer = csv.DictWriter(file,fieldnames=campos)
         writer.writeheader()

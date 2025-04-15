@@ -4,7 +4,7 @@ import random
 import calendar
 import csv
 
-archivo_csv = 'ej7/vehiculos.csv'
+archivo_csv = 'PL2/ej7/vehiculos.csv'
 
 def cargar_vehiculos():
     df = pd.read_csv(archivo_csv, dtype={'vehiculo_id': int, 'cliente_id': str})
@@ -47,7 +47,7 @@ def main():
     total_registros = 40_000_000
     bloque_size = 1_000_000
     bloques = total_registros // bloque_size
-    archivo_salida = "ej7/reservas_final.csv"
+    archivo_salida = "PL2/ej7/reservas_final.csv"
 
     for i in range(bloques):
         print(f"🧱 Generando bloque {i+1}/{bloques}...")

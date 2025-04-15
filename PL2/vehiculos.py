@@ -5,7 +5,7 @@ colores = ["Negro", "Azul", "Verde", "Amarillo", "Rojo", "Blanco", "Gris", "Nara
     "Rosa", "Morado", "Marrón", "Turquesa", "Beige", "Dorado", "Plateado"]
 letras = list("BCDFGHJKLMNPQRSTVWXYZ")
 def main():
-    with open('ej7/vehiculos.csv', 'w', newline='') as file:
+    with open('PL2/ej7/vehiculos.csv', 'w', newline='') as file:
         campos = ['vehiculo_id', 'matricula', 'marca','modelo', 'color', 'cliente_id']  
         writer = csv.DictWriter(file,fieldnames=campos)
         writer.writeheader()
