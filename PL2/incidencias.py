@@ -1,7 +1,7 @@
 import csv
 import random
 
-archivo_incidencias = 'ej7/incidencias.csv'
+archivo_incidencias = 'PL2/ej7/incidencias.csv'
 estados = ['nueva', 'abierta', 'en proceso', 'resuelta', 'cerrada']
 
 total_incidencias = 4_000_000
