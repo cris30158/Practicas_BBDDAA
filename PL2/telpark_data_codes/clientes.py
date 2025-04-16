@@ -28,21 +28,21 @@ apellidos = [
 ]
 dominios = ["gmail.com", "yahoo.com", "outlook.com"]
 def main():
-    with open('ej7/clientes.csv', 'w', newline='') as file:
+    with open('PL2/ej7/clientes.csv', 'w', newline='') as file:
         campos = ['cliente_id', 'nombre', 'apellido','email', 'telefono', 'provincia']
         writer = csv.DictWriter(file,fieldnames=campos)
         writer.writeheader()
-
+               
         #rellenar los datos
         for i in range (3000000):
             #creamos los valores
             cliente_id = i+1
             nombre = nombres[random.randint(0,len(nombres)-1)]
             apellido = apellidos[random.randint(0,len(apellidos)-1)]
-            email = str(nombre)+"_"+str(apellido)+str(cliente_id%1000)+"@"+dominios[random.randint(0,2)]
-            telefono = '+34'+str(random.randint(600000000, 799999999))
-            provincia = provincias[random.randint(0,len(provincias)-1)]
-            
+            email = f"{nombre}_{apellido}{cliente_id}@{random.choice(dominios)}"
+            telefono = 655000000 + cliente_id
+
+            provincia = random.choice(provincias);           
             #lo insertamos
             writer.writerow({'cliente_id': cliente_id, 'nombre': nombre, 
                              'apellido': apellido, 'email': email, 
