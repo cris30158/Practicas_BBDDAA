@@ -109,7 +109,7 @@ def crear_vehiculos():
 
             color = colores[random.randint(0,len(colores)-1)] 
 
-            cliente_id = random.randint(3000000)
+            cliente_id = random.randint(0,3000000)
 
             #lo insertamos
             writer.writerow({
