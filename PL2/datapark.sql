@@ -9,7 +9,7 @@
 -- 
 -- object: "PL2" | type: DATABASE --
 -- DROP DATABASE IF EXISTS "PL2";
-CREATE DATABASE "PL2"
+CREATE DATABASE "DataPark"
 	ENCODING = 'UTF8'
 	LC_COLLATE = 'Spanish_Spain.1252'
 	LC_CTYPE = 'Spanish_Spain.1252'
