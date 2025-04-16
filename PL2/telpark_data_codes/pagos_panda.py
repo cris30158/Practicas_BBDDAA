@@ -13,7 +13,6 @@ metodos_pago = ['efectivo', 'tarjeta de crédito', 'tarjeta de débito', 'PayPal
 
 # Tamaño de cada bloque y el número total de registros
 bloque_size = 1_000_000
-total_registros = 40_000_000
 
 # Función para generar el pago a partir de los datos de la reserva
 def generar_pago(row, pago_id):

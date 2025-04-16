@@ -4,10 +4,10 @@ import random
 import calendar
 import csv
 
-archivo_csv = 'PL2/ej7/vehiculos.csv'
+archivo_vehiculos = 'PL2/ej7/vehiculos.csv'
 
 def cargar_vehiculos():
-    df = pd.read_csv(archivo_csv, dtype={'vehiculo_id': int, 'cliente_id': str})
+    df = pd.read_csv(archivo_vehiculos, dtype={'vehiculo_id': int, 'cliente_id': str})
     return dict(zip(df['vehiculo_id'], df['cliente_id']))
 
 def generar_fecha_random():

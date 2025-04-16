@@ -51,7 +51,6 @@ def generar_bloque_incidencias(reservas_dict, reserva_ids, inicio_idx, cantidad)
     return bloque
 
 def main():
-    inicio = time.time()
     reservas_dict = cargar_reservas_dict()
 
     print("Seleccionando 4 millones de reservas únicas...")
@@ -66,10 +65,8 @@ def main():
             print(f"Escribiendo bloque {(i // bloque_size) + 1}...")
             bloque = generar_bloque_incidencias(reservas_dict, reserva_ids, i, min(bloque_size, total_incidencias - i))
             writer.writerows(bloque)
-
-    fin = time.time()
     print(f"Incidencias generadas y guardadas en: {archivo_incidencias}")
-    print(f"Tiempo total: {fin - inicio:.2f} segundos")
+    
 
 if __name__ == "__main__":
     main()
