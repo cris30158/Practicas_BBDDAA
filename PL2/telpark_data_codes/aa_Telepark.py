@@ -63,7 +63,7 @@ def crear_clientes():
         #rellenar los datos
         for i in range (3000000):
             #creamos los valores
-            cliente_id = i+1
+            cliente_id = i
             nombre = nombres[random.randint(0,len(nombres)-1)]
             apellido = apellidos[random.randint(0,len(apellidos)-1)]
             email = f"{nombre}_{apellido}{cliente_id}@{random.choice(dominios)}"
@@ -109,7 +109,7 @@ def crear_vehiculos():
 
             color = colores[random.randint(0,len(colores)-1)] 
 
-            cliente_id = random.randint(1,3000000)
+            cliente_id = random.randint(3000000)
 
             #lo insertamos
             writer.writerow({
