@@ -34,7 +34,7 @@ def main():
         writer.writeheader()
                
         #rellenar los datos
-        for i in range (3000000):
+        for i in range (3000001):
             #creamos los valores
             cliente_id = i
             nombre = nombres[random.randint(0,len(nombres)-1)]

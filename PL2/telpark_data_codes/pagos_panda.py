@@ -19,7 +19,7 @@ def generar_pago(row, pago_id):
     fecha_inicio = datetime.datetime.strptime(row.fecha_inicio, '%Y-%m-%d %H:%M')
     fecha_final = datetime.datetime.strptime(row.fecha_final, '%Y-%m-%d %H:%M')
     dias = (fecha_final - fecha_inicio).days
-    cantidad = dias * 3
+    cantidad = dias * 3 * 24
     fecha_pago = fecha_final + datetime.timedelta(days=1.5)
     metodo = random.choice(metodos_pago)
 
