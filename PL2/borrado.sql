@@ -1,63 +1,51 @@
-DO $$
-DECLARE
-    cliente_a_borrar RECORD;
-    total_borrar INTEGER;
-    contador INTEGER := 0;
+\c pl2
+BEGIN;
 
-    clientes_cursor CURSOR FOR
-        SELECT clienteid
-        FROM clientes
-        ORDER BY RANDOM()
-        LIMIT (SELECT ROUND(COUNT(*) * 0.3) FROM clientes);
-BEGIN
-    -- Calcular total de clientes a borrar
-    SELECT ROUND(COUNT(*) * 0.3) INTO total_borrar FROM clientes;
+CREATE TEMP TABLE IF NOT EXISTS temp_clientes AS
+    SELECT clienteid
+    FROM clientes c 
+    ORDER BY random()
+    LIMIT (SELECT ceil(COUNT(*) * 0.3) FROM clientes);
 
-    -- Abrir el cursor
-    OPEN clientes_cursor;
+CREATE TEMP TABLE IF NOT EXISTS temp_vehiculos AS
+SELECT vehiculoid FROM vehiculos
+WHERE clienteid_clientes IN (SELECT clienteid FROM temp_clientes);
 
-    LOOP
-        FETCH clientes_cursor INTO cliente_a_borrar;
-        EXIT WHEN NOT FOUND;
+CREATE TEMP TABLE IF NOT EXISTS temp_reservas AS
+SELECT r.reservaid
+FROM reservas r
+WHERE r.clienteid_clientes IN (SELECT clienteid FROM temp_clientes)
+   OR r.vehiculoid_vehiculos IN (SELECT vehiculoid FROM temp_vehiculos);
 
-        -- Incrementar contador
-        contador := contador + 1;
+CREATE INDEX IF NOT EXISTS idb_temp_vehiculos ON temp_vehiculos(vehiculoid);
+CREATE INDEX IF NOT EXISTS idb_temp_clientes ON temp_clientes(clienteid); 
+CREATE INDEX IF NOT EXISTS idb_temp_reservas ON temp_reservas(reservaid); 
 
-        -- Mostrar progreso
-        RAISE NOTICE 'Borrando cliente % de % (ID: %)', contador, total_borrar, cliente_a_borrar.clienteid;
+CREATE INDEX IF NOT EXISTS idb_vehiculos_con_cleinteid ON vehiculos(clienteid_clientes);  
+CREATE INDEX IF NOT EXISTS idb_reservas_con_vehiculoid ON reservas(vehiculoid_vehiculos); 
+CREATE INDEX IF NOT EXISTS idb_reservas_con_ ON reservas(plazaid_plazas); 
+CREATE INDEX IF NOT EXISTS idb_reservas_con_clienteid ON reservas(clienteid_clientes); 
+CREATE INDEX IF NOT EXISTS idb_incidencias_con_reservaid ON incidencias(reservaid_reservas);   
+CREATE INDEX IF NOT EXISTS idb_pagos_con_reservaid ON pagos(reservaid_reservas);   
 
-        -- Borrar incidencias
-        DELETE FROM incidencias
-        WHERE reservaid_reservas IN (
-            SELECT reservaid FROM reservas WHERE clienteid_clientes = cliente_a_borrar.clienteid
-        );
-        
+DELETE FROM pagos p
+USING temp_reservas trb
+WHERE p.reservaid_reservas = trb.reservaid;
 
-        -- Borrar pagos
-        DELETE FROM pagos
-        WHERE reservaid_reservas IN (
-            SELECT reservaid FROM reservas WHERE clienteid_clientes = cliente_a_borrar.clienteid
-        );
-       
+DELETE FROM incidencias i
+USING temp_reservas trb
+WHERE i.reservaid_reservas = trb.reservaid;
 
-        -- Borrar reservas
-        DELETE FROM reservas
-        WHERE clienteid_clientes = cliente_a_borrar.clienteid;
-        
+DELETE FROM reservas r
+USING temp_reservas trb
+WHERE r.reservaid = trb.reservaid;
 
-        -- Borrar vehículos
-        DELETE FROM vehiculos
-        WHERE clienteid_clientes = cliente_a_borrar.clienteid;
-        
+DELETE FROM vehiculos v
+USING temp_vehiculos tvb
+WHERE v.vehiculoid = tvb.vehiculoid;
 
-        -- Borrar cliente
-        DELETE FROM clientes
-        WHERE clienteid = cliente_a_borrar.clienteid;
-        
+DELETE FROM clientes c
+USING temp_clientes tcb
+WHERE c.clienteid = tcb.clienteid;
 
-    END LOOP;
-
-    CLOSE clientes_cursor;
-
-    RAISE NOTICE 'Eliminación finalizada. Se eliminaron % clientes.', contador;
-END $$;
+COMMIT;
