@@ -52,5 +52,5 @@ def main():
                 print(f"Generados {i} registros...")
             
 if __name__ == "__main__":  
-    main()
-
+#    main()
+    print(len(provincias))

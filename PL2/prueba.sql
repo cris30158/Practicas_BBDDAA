@@ -4,7 +4,7 @@
 -- create database pl2;
 -- \c pl2
 -- \i datapark2.sql
---  \timing
+-- \timing
 
 -- \copy clientes(clienteid, nombre, apellido, email, telefono, provincia) FROM 'ej7/clientes.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
@@ -24,34 +24,31 @@
 
 
 -- --9:
+SELECT  (COUNT(DISTINCT selClientes) * 100.0 / 3000000) AS porcentaje_clientes
+FROM (
+    (SELECT c.clienteid
+    FROM clientes c 
+    JOIN reservas r ON c.clienteid = r.clienteid_clientes
+    JOIN pagos p ON r.reservaid = p.reservaid_reservas
+    JOIN plazas pl ON r.plazaid_plazas = pl.plazaid
+    WHERE 
+        c.provincia IN ('Almería','Cádiz','Córdoba','Granada','Huelva','Jaén','Málaga','Sevilla')
+        AND (EXTRACT(MONTH FROM r.fechainicio) IN (6,7,8) OR EXTRACT(MONTH FROM r.fechafin) IN (6,7,8))
+        AND p.cantidad > 150
+        AND pl.nivel < -4
+    )
+    EXCEPT
+    (
+    SELECT r2.clienteid_clientes 
+    FROM incidencias i
+    JOIN reservas r2 ON i.reservaid_reservas = r2.reservaid
+    JOIN vehiculos v2 ON r2.vehiculoid_vehiculos = v2.vehiculoid
+    WHERE 
+        i.estado = 'cerrada'
+        AND v2.color = 'Negro'
+    )
+    ) AS selClientes;
 
--- SELECT  (COUNT(DISTINCT selClientes) * 100.0 / 3000000) AS porcentaje_clientes
--- FROM (
---     (SELECT  c.clienteid
---     FROM clientes c 
---     JOIN reservas r ON c.clienteid = r.clienteid_clientes
---     JOIN pagos p ON r.reservaid = p.reservaid_reservas
---     JOIN plazas pl ON r.plazaid_plazas = pl.plazaid
---     WHERE 
---         c.provincia IN ('Almería','Cádiz','Córdoba','Granada','Huelva','Jaén','Málaga','Sevilla')
---         AND (EXTRACT(MONTH FROM r.fechainicio) IN (6,7,8) OR EXTRACT(MONTH FROM r.fechafin) IN (6,7,8))
---         AND p.cantidad > 150
---         AND pl.nivel < -4
---     )
---     EXCEPT
---     (
---     SELECT c2.clienteid 
---     FROM incidencias i
---     JOIN reservas r2 ON i.reservaid_reservas = r2.reservaid
---     JOIN clientes c2 ON c2.clienteid = r2.clienteid_clientes
---     JOIN vehiculos v2 ON r2.vehiculoid_vehiculos = v2.vehiculoid
---     WHERE 
---         i.estado = 'cerrada'
---         AND v2.color = 'Negro'
---     )
---     ) AS selClientes 
--- ;
-    
 
 
 
