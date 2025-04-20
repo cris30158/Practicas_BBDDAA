@@ -24,7 +24,7 @@
 
 
 -- --9:
-SELECT  (COUNT(DISTINCT selClientes) * 100.0 / 3000000) AS porcentaje_clientes
+SELECT  (COUNT(DISTINCT selClientes) * 100.0 / 2100000) AS porcentaje_clientes
 FROM (
     (SELECT c.clienteid
     FROM clientes c 
