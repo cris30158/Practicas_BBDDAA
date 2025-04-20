@@ -1,0 +1,648 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 09:20:28 CETLOG:  el sistema de bases de datos fue apagado en 2025-03-11 09:20:26 CET
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 09:25:28 CETLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 09:25:28 CETLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.006 s, sync=0.004 s, total=0.037 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=31/DF07A930, lsn de redo=31/DF07A8F8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61155), 2025-03-11 09:39:20 CETFATAL:  la autentificación password falló para el usuario «postgres»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61155), 2025-03-11 09:39:20 CETDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61177), 2025-03-11 09:40:20 CETERROR:  error de sintaxis en o cerca de «ºl» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61177), 2025-03-11 09:40:20 CETSENTENCIA:  ºl
+	drop database tiendadiscos;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61177), 2025-03-11 09:40:27 CETLOG:  sentencia: drop database tiendadiscos
+	;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 09:40:27 CETLOG:  empezando checkpoint: immediate force wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 09:40:27 CETLOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.004 s, total=0.023 s; archivos sincronizados=4, más largo=0.002 s, promedio=0.001 s; distancia=5 kB, estimación=5 kB; lsn=31/DF07BF68, lsn de redo=31/DF07BF30
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61177), 2025-03-11 09:40:47 CETLOG:  sentencia: create database investigar
+	;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 09:45:27 CETLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 09:47:13 CETLOG:  checkpoint completo: escritos 970 búfers (5.9%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=105.077 s, sync=0.145 s, total=105.249 s; archivos sincronizados=300, más largo=0.006 s, promedio=0.001 s; distancia=4592 kB, estimación=4592 kB; lsn=31/DF4F7F68, lsn de redo=31/DF4F7F30
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61766), 2025-03-11 09:59:57 CETLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETERROR:  no existe la columna «codigo_investigador» en la llave en carácter 131
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETSENTENCIA:  create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETSENTENCIA:  create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETERROR:  error de sintaxis en o cerca de «/» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETSENTENCIA:  /copy contratos from 'data/datos_contratos.csv' WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETERROR:  error de sintaxis en o cerca de «/» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETSENTENCIA:  /copy investigadores from 'data/datos_investigadores.csv' WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETERROR:  error de sintaxis en o cerca de «/» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49265), 2025-03-11 10:18:43 CETSENTENCIA:  /copy investigadores_contratos from 'data/datos_investigadores_contratos.csv' WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETERROR:  no existe la columna «codigo_investigador» en la llave en carácter 131
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETSENTENCIA:  create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETSENTENCIA:  create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETERROR:  error de sintaxis en o cerca de «/» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETSENTENCIA:  /copy contratos from 'data/datos_contratos.csv' WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETERROR:  error de sintaxis en o cerca de «/» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETSENTENCIA:  /copy investigadores from 'data/datos_investigadores.csv' WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETERROR:  error de sintaxis en o cerca de «/» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49306), 2025-03-11 10:19:31 CETSENTENCIA:  /copy investigadores_contratos from 'data/datos_investigadores_contratos.csv' WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49344), 2025-03-11 10:19:52 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49344), 2025-03-11 10:19:52 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49344), 2025-03-11 10:19:52 CETERROR:  no existe la columna «codigo_investigador» en la llave en carácter 131
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49344), 2025-03-11 10:19:52 CETSENTENCIA:  create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49344), 2025-03-11 10:19:52 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49344), 2025-03-11 10:19:52 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49344), 2025-03-11 10:19:52 CETSENTENCIA:  create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:20:38 CETLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:20:43 CETLOG:  checkpoint completo: escritos 50 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.344 s, sync=0.037 s, total=5.409 s; archivos sincronizados=43, más largo=0.006 s, promedio=0.001 s; distancia=223 kB, estimación=4155 kB; lsn=31/DF52FC88, lsn de redo=31/DF52FC50
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETERROR:  no existe la columna «codigo_investigador» en la llave en carácter 131
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETSENTENCIA:  create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETSENTENCIA:  create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETSENTENCIA:  COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETLOG:  sentencia: COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETSENTENCIA:  COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETLOG:  sentencia: COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49709), 2025-03-11 10:20:46 CETSENTENCIA:  COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETERROR:  la sintaxis de entrada no es válida para tipo numeric: « 2,nombre2,entidad2,12550.00»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETCONTEXTO:  COPY contratos, línea 2, columna codigo_contrato: « 2,nombre2,entidad2,12550.00»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETSENTENCIA:  COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETLOG:  sentencia: COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETSENTENCIA:  COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETLOG:  sentencia: COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49746), 2025-03-11 10:21:09 CETSENTENCIA:  COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador int,
+	    nombre text,
+	    apellido text,
+	    salatio int,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato int,
+	    nombre text,
+	    entidad text,
+	    coste int,
+	    PRIMARY KEY(codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador int, 
+	    codigo_contrato int, 
+	    horas int,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETERROR:  la sintaxis de entrada no es válida para tipo integer: « 2,nombre2,entidad2,12550.00»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETCONTEXTO:  COPY contratos, línea 2, columna codigo_contrato: « 2,nombre2,entidad2,12550.00»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETSENTENCIA:  COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETLOG:  sentencia: COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETSENTENCIA:  COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETLOG:  sentencia: COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49849), 2025-03-11 10:21:56 CETSENTENCIA:  COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E';', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49957), 2025-03-11 10:23:33 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49957), 2025-03-11 10:23:33 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49957), 2025-03-11 10:23:33 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49957), 2025-03-11 10:23:33 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49957), 2025-03-11 10:23:34 CETLOG:  sentencia: COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49957), 2025-03-11 10:23:47 CETERROR:  cancelando la sentencia debido a una petición del usuario
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49957), 2025-03-11 10:23:47 CETCONTEXTO:  COPY investigadores, línea 2382001: « 2382001,nombre2382001,apellidos2382001,54674.00»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49957), 2025-03-11 10:23:47 CETSENTENCIA:  COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49957), 2025-03-11 10:24:10 CETERROR:  error de sintaxis en o cerca de «c» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49957), 2025-03-11 10:24:10 CETSENTENCIA:  c
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50028), 2025-03-11 10:24:20 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50028), 2025-03-11 10:24:20 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50028), 2025-03-11 10:24:20 CETERROR:  error de sintaxis en o cerca de «COMMIT» en carácter 906
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50028), 2025-03-11 10:24:20 CETSENTENCIA:  create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	-- ); 
+	
+	-- \copy contratos from 'data/datos_contratos.csv' WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+	-- -- \copy investigadores from 'data/datos_investigadores.csv' WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+	-- -- \copy investigadores_contratos from 'data/datos_investigadores_contratos.csv' WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+	
+	
+	
+	
+	COMMIT;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50041), 2025-03-11 10:24:32 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50041), 2025-03-11 10:24:32 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50041), 2025-03-11 10:24:32 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50109), 2025-03-11 10:24:52 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:25:38 CETLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50276), 2025-03-11 10:26:37 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50276), 2025-03-11 10:26:37 CETERROR:  llave duplicada viola restricción de unicidad «contratos_pkey»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50276), 2025-03-11 10:26:37 CETDETALLE:  Ya existe la llave (codigo_contrato)=(2).
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50276), 2025-03-11 10:26:37 CETCONTEXTO:  COPY contratos, línea 2
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50276), 2025-03-11 10:26:37 CETSENTENCIA:  COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50276), 2025-03-11 10:26:53 CETLOG:  sentencia: drop table contratos;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50276), 2025-03-11 10:26:53 CETERROR:  no se puede eliminar tabla contratos porque otros objetos dependen de él
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50276), 2025-03-11 10:26:53 CETDETALLE:  restricción «investigadores_contratos_codigo_investigador_fkey» en tabla investigadores_contratos depende de tabla contratos
+	restricción «investigadores_contratos_codigo_contrato_fkey» en tabla investigadores_contratos depende de tabla contratos
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50276), 2025-03-11 10:26:53 CETHINT:  Use DROP ... CASCADE para eliminar además los objetos dependientes.
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50276), 2025-03-11 10:26:53 CETSENTENCIA:  drop table contratos;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50303), 2025-03-11 10:27:15 CETLOG:  sentencia: drop database investigar
+	;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:27:15 CETLOG:  checkpoint completo: escritos 896 búfers (5.5%); 0 archivos WAL añadidos, 20 eliminados, 0 reciclados; write=96.907 s, sync=0.002 s, total=97.107 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=325101 kB, estimación=325101 kB; lsn=31/F32B7A10, lsn de redo=31/F32AB0E0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:27:15 CETLOG:  empezando checkpoint: immediate force wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:27:15 CETLOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.003 s, total=0.017 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=50 kB, estimación=292596 kB; lsn=31/F32B7AC0, lsn de redo=31/F32B7A88
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50397), 2025-03-11 10:28:05 CETLOG:  sentencia: create database investigar;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50411), 2025-03-11 10:28:11 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50411), 2025-03-11 10:28:11 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50411), 2025-03-11 10:28:11 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50455), 2025-03-11 10:29:28 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50455), 2025-03-11 10:29:29 CETLOG:  sentencia: COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50455), 2025-03-11 10:29:45 CETLOG:  sentencia: COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:30:00 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50455), 2025-03-11 10:30:40 CETERROR:  cancelando la sentencia debido a una petición del usuario
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50455), 2025-03-11 10:30:40 CETCONTEXTO:  COPY investigadores_contratos, línea 4302001: « 2228088,136605,11»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50455), 2025-03-11 10:30:40 CETSENTENCIA:  COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50455), 2025-03-11 10:30:48 CETLOG:  sentencia: drop table contratos;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50455), 2025-03-11 10:30:48 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50455), 2025-03-11 10:30:48 CETSENTENCIA:  drop table contratos;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50573), 2025-03-11 10:31:00 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50573), 2025-03-11 10:31:01 CETLOG:  sentencia: COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:31:08 CETLOG:  checkpoint completo: escritos 4042 búfers (24.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=66.760 s, sync=0.829 s, total=67.837 s; archivos sincronizados=315, más largo=0.469 s, promedio=0.003 s; distancia=538659 kB, estimación=538659 kB; lsn=32/32163828, lsn de redo=32/140C0850
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:31:12 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50573), 2025-03-11 10:31:36 CETLOG:  sentencia: COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:32:04 CETLOG:  checkpoint completo: escritos 1049 búfers (6.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=51.286 s, sync=0.228 s, total=51.714 s; archivos sincronizados=11, más largo=0.120 s, promedio=0.021 s; distancia=541429 kB, estimación=541429 kB; lsn=32/52D64F20, lsn de redo=32/3517DE68
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:32:20 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:34:29 CETLOG:  checkpoint completo: escritos 1814 búfers (11.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=128.898 s, sync=0.277 s, total=129.364 s; archivos sincronizados=13, más largo=0.189 s, promedio=0.022 s; distancia=539168 kB, estimación=541203 kB; lsn=32/73BAA6E0, lsn de redo=32/56005EC8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:34:40 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:36:03 CETLOG:  checkpoint completo: escritos 3180 búfers (19.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=82.553 s, sync=0.514 s, total=83.272 s; archivos sincronizados=5, más largo=0.486 s, promedio=0.103 s; distancia=540712 kB, estimación=541154 kB; lsn=32/94C226E0, lsn de redo=32/770101E8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:36:17 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50573), 2025-03-11 10:36:50 CETERROR:  inserción o actualización en la tabla «investigadores_contratos» viola la llave foránea «investigadores_contratos_codigo_investigador_fkey»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50573), 2025-03-11 10:36:50 CETDETALLE:  La llave (codigo_investigador)=(2122138) no está presente en la tabla «contratos».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50573), 2025-03-11 10:36:50 CETSENTENCIA:  COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51018), 2025-03-11 10:40:19 CETLOG:  sentencia: drop database investigar;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:40:19 CETFATAL:  terminando el proceso autovacuum debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:40:19 CETCONTEXTO:  recorriendo el bloque 40537 de la relación «public.investigadores_contratos»
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:40:20 CETLOG:  checkpoint completo: escritos 2520 búfers (15.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=242.676 s, sync=0.001 s, total=242.829 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=540707 kB, estimación=541109 kB; lsn=32/B5088080, lsn de redo=32/98018E18
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:40:20 CETLOG:  empezando checkpoint: immediate force wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:40:20 CETLOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 29 reciclados; write=0.003 s, sync=0.003 s, total=0.168 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=475580 kB, estimación=534556 kB; lsn=32/B5088130, lsn de redo=32/B50880F8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51018), 2025-03-11 10:40:58 CETLOG:  sentencia: create database investigar;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES investigador(codigo_investigador)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETERROR:  no existe la relación «investigador»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETSENTENCIA:  create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES investigador(codigo_investigador)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETSENTENCIA:  COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETLOG:  sentencia: COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETSENTENCIA:  COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETLOG:  sentencia: COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51054), 2025-03-11 10:41:02 CETSENTENCIA:  COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51083), 2025-03-11 10:41:24 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51083), 2025-03-11 10:41:24 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51083), 2025-03-11 10:41:24 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES investigadores(codigo_investigador)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51083), 2025-03-11 10:41:24 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51083), 2025-03-11 10:41:25 CETLOG:  sentencia: COPY  investigadores FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51083), 2025-03-11 10:41:45 CETLOG:  sentencia: COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:42:00 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:43:01 CETLOG:  checkpoint completo: escritos 5122 búfers (31.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=59.891 s, sync=0.860 s, total=60.915 s; archivos sincronizados=324, más largo=0.534 s, promedio=0.003 s; distancia=541305 kB, estimación=541305 kB; lsn=32/F3FC3400, lsn de redo=32/D61267B8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:43:11 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:44:45 CETLOG:  checkpoint completo: escritos 2773 búfers (16.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=93.043 s, sync=0.734 s, total=93.933 s; archivos sincronizados=2, más largo=0.726 s, promedio=0.367 s; distancia=540036 kB, estimación=541178 kB; lsn=33/14CF07E8, lsn de redo=32/F7087B48
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:45:00 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51083), 2025-03-11 10:45:55 CETERROR:  inserción o actualización en la tabla «investigadores_contratos» viola la llave foránea «investigadores_contratos_codigo_contrato_fkey»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51083), 2025-03-11 10:45:55 CETDETALLE:  La llave (codigo_contrato)=(1) no está presente en la tabla «contratos».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51083), 2025-03-11 10:45:55 CETSENTENCIA:  COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, HEADER, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51444), 2025-03-11 10:47:48 CETLOG:  sentencia: drop database investigar
+	;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:47:49 CETLOG:  checkpoint completo: escritos 1388 búfers (8.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=168.455 s, sync=0.001 s, total=168.634 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=543053 kB, estimación=543053 kB; lsn=33/293B4878, lsn de redo=33/182DB0C0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:47:49 CETLOG:  empezando checkpoint: immediate force wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:47:49 CETLOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 17 reciclados; write=0.003 s, sync=0.004 s, total=0.136 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=279398 kB, estimación=516687 kB; lsn=33/293B4960, lsn de redo=33/293B48F0
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51444), 2025-03-11 10:48:01 CETERROR:  error de sintaxis en o cerca de «datebase» en carácter 8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51444), 2025-03-11 10:48:01 CETSENTENCIA:  create datebase investigar;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51444), 2025-03-11 10:48:06 CETLOG:  sentencia: create database investigar;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51465), 2025-03-11 10:48:11 CETLOG:  sentencia: create table if not exists investigadores(
+	    codigo_investigador numeric,
+	    nombre text,
+	    apellido text,
+	    salatio numeric,
+	    PRIMARY KEY(codigo_investigador)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51465), 2025-03-11 10:48:11 CETLOG:  sentencia: create table if not exists contratos(
+	    codigo_contrato numeric,
+	    nombre text,
+	    entidad text,
+	    coste numeric,
+	    PRIMARY KEY(codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51465), 2025-03-11 10:48:11 CETLOG:  sentencia: create table if not exists investigadores_contratos(
+	    codigo_investigador numeric, 
+	    codigo_contrato numeric, 
+	    horas numeric,
+	    FOREIGN KEY (codigo_investigador) REFERENCES investigadores(codigo_investigador)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato)
+	        ON DELETE RESTRICT
+	        ON UPDATE RESTRICT,
+	
+	    PRIMARY KEY (codigo_investigador,codigo_contrato)
+	);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51465), 2025-03-11 10:48:11 CETLOG:  sentencia: COPY  contratos FROM STDIN WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51465), 2025-03-11 10:48:12 CETLOG:  sentencia: COPY  investigadores FROM STDIN WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51465), 2025-03-11 10:48:31 CETLOG:  sentencia: COPY  investigadores_contratos FROM STDIN WITH (FORMAT csv, DELIMITER E',', NULL 'NULL', ENCODING 'UTF-8');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:48:47 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:49:48 CETLOG:  checkpoint completo: escritos 4692 búfers (28.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=60.241 s, sync=0.641 s, total=61.078 s; archivos sincronizados=312, más largo=0.350 s, promedio=0.003 s; distancia=538990 kB, estimación=538990 kB; lsn=33/67EAC210, lsn de redo=33/4A210410
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:50:00 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:51:37 CETLOG:  checkpoint completo: escritos 2776 búfers (16.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=96.462 s, sync=0.700 s, total=97.330 s; archivos sincronizados=2, más largo=0.689 s, promedio=0.350 s; distancia=539066 kB, estimación=539066 kB; lsn=33/88D7B650, lsn de redo=33/6B07EE48
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:51:51 CETLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:56:21 CETLOG:  checkpoint completo: escritos 1336 búfers (8.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.355 s, sync=0.510 s, total=270.061 s; archivos sincronizados=4, más largo=0.506 s, promedio=0.128 s; distancia=544268 kB, estimación=544268 kB; lsn=33/A26BB848, lsn de redo=33/8C402078
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 10:56:51 CETLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 11:01:22 CETLOG:  checkpoint completo: escritos 1870 búfers (11.4%); 0 archivos WAL añadidos, 0 eliminados, 22 reciclados; write=269.256 s, sync=0.992 s, total=270.432 s; archivos sincronizados=2, más largo=0.991 s, promedio=0.496 s; distancia=369867 kB, estimación=526828 kB; lsn=33/B2708398, lsn de redo=33/A2D34E68
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 11:01:51 CETLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 11:02:58 CETLOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 16 reciclados; write=66.135 s, sync=0.453 s, total=66.738 s; archivos sincronizados=3, más largo=0.448 s, promedio=0.151 s; distancia=257514 kB, estimación=499897 kB; lsn=33/BC6DF5A0, lsn de redo=33/B28AF810
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51465), 2025-03-11 11:03:34 CETERROR:  error de sintaxis en o cerca de «3000000» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51465), 2025-03-11 11:03:34 CETSENTENCIA:  3000000
+		;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51465), 2025-03-11 11:04:53 CETLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 11:06:51 CETLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-11 11:11:21 CETLOG:  checkpoint completo: escritos 9143 búfers (55.8%); 0 archivos WAL añadidos, 2 eliminados, 8 reciclados; write=269.984 s, sync=0.046 s, total=270.153 s; archivos sincronizados=17, más largo=0.028 s, promedio=0.003 s; distancia=166839 kB, estimación=466591 kB; lsn=33/BCB9D530, lsn de redo=33/BCB9D4F8

@@ -1,0 +1,4 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-28 23:26:57 CETERROR:  cancelando la sentencia debido a una petición del usuario
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-28 23:26:57 CETLOG:  apagando
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-28 23:26:57 CETLOG:  empezando checkpoint: shutdown immediate
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-28 23:26:57 CETLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.001 s, total=0.014 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=0 kB; lsn=33/BCBE8F60, lsn de redo=33/BCBE8F60

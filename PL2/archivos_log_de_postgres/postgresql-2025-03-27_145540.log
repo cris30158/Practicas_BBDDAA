@@ -1,0 +1,3 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-27 14:55:40 CETLOG:  el sistema de bases de datos fue apagado en 2025-03-27 14:43:53 CET
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-27 15:00:40 CETLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-27 15:00:40 CETLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.006 s, sync=0.003 s, total=0.043 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=33/BCBE8EB0, lsn de redo=33/BCBE8E78

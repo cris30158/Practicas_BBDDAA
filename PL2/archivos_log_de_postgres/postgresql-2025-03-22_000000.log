@@ -1,0 +1,82 @@
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 09:54:00 CETERROR:  error de sintaxis en o cerca de «->» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 09:54:00 CETSENTENCIA:  ->  Seq Scan on investigadores i  (cost=0.00..65540.00 rows=16 width=6)
+	         Filter: (salatio = '20000'::numeric)
+	   ->  Index Scan using investigadores_contratos_pkey on investigadores_contratos ic  (cost=0.43..20.51 rows=1 width=12)
+	         Index Cond: (codigo_investigador = i.codigo_investigador)
+	         Filter: (horas = '8'::numeric)SHOW seq_page_cost;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 09:54:08 CETERROR:  parámetro de configuración «bin_page_cost» no reconocido
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 09:54:08 CETSENTENCIA:  SHOW bin_page_cost;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 10:01:03 CETERROR:  no existe la relación «investigador» en carácter 49
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 10:01:03 CETSENTENCIA:  select count(distinct codigo_investigador) from investigador i natural join investigadores_contratos ic where i.codigo_investigador = ic.codigo_investigador;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 10:01:35 CETLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63655), 2025-03-25 10:08:00 CETERROR:  error de sintaxis en o cerca de «where» en carácter 101
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63655), 2025-03-25 10:08:00 CETSENTENCIA:  SELECT COUNT(DISTINCT i.codigo_investigador)
+	FROM investigadores i
+	join investigadores_contratos ic
+	where i.codigo_investigador = ic.codigo_investigador;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63655), 2025-03-25 10:08:28 CETERROR:  la referencia a la columna «codigo_investigador» es ambigua en carácter 104
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63655), 2025-03-25 10:08:28 CETSENTENCIA:  SELECT COUNT(DISTINCT i.codigo_investigador)
+	FROM investigadores i
+	join investigadores_contratos ic
+	on codigo_investigador;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:08:51 CETERROR:  error de sintaxis en o cerca de «FROM» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:08:51 CETSENTENCIA:  FROM investigadores i
+	c
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:10:10 CETERROR:  error de sintaxis en o cerca de «JOINSELECT» en carácter 76
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:10:10 CETSENTENCIA:  SELECT COUNT(DISTINCT i.codigo_investigador)
+	FROM investigadores i
+	NATURAL JOINSELECT COUNT(DISTINCT i.codigo_investigador)
+	FROM investigadores i
+	NATURAL JOIN;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:10:15 CETERROR:  error de sintaxis en o cerca de «;» en carácter 80
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:10:15 CETSENTENCIA:  SELECT COUNT(DISTINCT i.codigo_investigador)
+	FROM investigadores i
+	NATURAL JOIN;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:10:27 CETERROR:  error de sintaxis en o cerca de «NATURAL» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:10:27 CETSENTENCIA:  NATURAL JOIN investigadores_contratos ic;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:41:44 CETERROR:  no existe la función pg_stat_index(oid) en carácter 49
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:41:44 CETHINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:41:44 CETSENTENCIA:  SELECT 
+	  indexrelid::regclass AS index_name,
+	  pg_stat_index(indexrelid) AS stats
+	FROM 
+	  pg_index
+	WHERE 
+	  indrelid = 'investigadores_contratos'::regclass;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:41:52 CETERROR:  no existe la relación «nombre_del_indice» en carácter 40
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:41:52 CETSENTENCIA:  SELECT pg_size_pretty(pg_relation_size('nombre_del_indice'));
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:42:17 CETERROR:  no existe la función pg_stat_index(oid) en carácter 49
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:42:17 CETHINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:42:17 CETSENTENCIA:  SELECT 
+	  indexrelid::regclass AS index_name,
+	  pg_stat_index(indexrelid) AS stats
+	FROM 
+	  pg_index
+	WHERE 
+	  indrelid = 'investigadores_contratos'::regclass;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:42:37 CETERROR:  no existe la columna «idx_tup_inserted» en carácter 109
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:42:37 CETSENTENCIA:  SELECT 
+	  indexrelid::regclass AS index_name,
+	  idx_scan AS index_scans, 
+	  idx_tup_read AS tuples_read, 
+	  idx_tup_inserted AS tuples_inserted
+	FROM 
+	  pg_stat_user_indexes
+	WHERE 
+	  relname = 'investigadores_contratos';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 10:43:38 CETLOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pgstattuple;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-25 10:46:37 CETLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-25 10:46:43 CETLOG:  checkpoint completo: escritos 47 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.053 s, sync=0.054 s, total=5.155 s; archivos sincronizados=23, más largo=0.034 s, promedio=0.003 s; distancia=249 kB, estimación=249 kB; lsn=33/BCBE8D18, lsn de redo=33/BCBE8CE0
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63703), 2025-03-25 11:46:19 CETLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52734), 2025-03-25 16:06:50 CETFATAL:  la autentificación password falló para el usuario «postgres»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52734), 2025-03-25 16:06:50 CETDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52748), 2025-03-25 16:07:35 CETERROR:  no existe la relación «costratos» en carácter 35
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52748), 2025-03-25 16:07:35 CETSENTENCIA:  select count(distinct coste) from costratos;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52748), 2025-03-25 16:19:41 CETERROR:  no existe la columna «saatio» en carácter 12
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52748), 2025-03-25 16:19:41 CETHINT:  Probablemente quiera hacer referencia a la columna «investigadores.salatio».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52748), 2025-03-25 16:19:41 CETSENTENCIA:  select max(saatio) from investigadores group by salatio;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52748), 2025-03-25 19:52:01 CETLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

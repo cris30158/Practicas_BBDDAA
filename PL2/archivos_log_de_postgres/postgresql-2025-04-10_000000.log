@@ -1,0 +1,4 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-04-10 11:54:04 CESTERROR:  cancelando la sentencia debido a una petición del usuario
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-04-10 11:54:04 CESTLOG:  apagando
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-04-10 11:54:04 CESTLOG:  empezando checkpoint: shutdown immediate
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-04-10 11:54:04 CESTLOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.001 s, total=0.013 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=33/BCBE9468, lsn de redo=33/BCBE9468

@@ -1,0 +1,5 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-29 20:41:54 CETLOG:  el sistema de bases de datos fue apagado en 2025-03-29 20:41:21 CET
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-29 20:42:45 CETERROR:  cancelando la sentencia debido a una petición del usuario
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-29 20:42:45 CETLOG:  apagando
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-29 20:42:45 CETLOG:  empezando checkpoint: shutdown immediate
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-03-29 20:42:45 CETLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.002 s, total=0.010 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=33/BCBE92D0, lsn de redo=33/BCBE92D0

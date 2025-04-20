@@ -1,0 +1,42 @@
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:13:15 CESTERROR:  no existe la columna «cod_contrato» en carácter 14
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:13:15 CESTHINT:  Probablemente quiera hacer referencia a la columna «contratos.codigo_contrato».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:13:15 CESTSENTENCIA:  select count(cod_contrato) from contratos where 10000<coste and coste<15000;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:14:16 CESTERROR:  no existe la columna «cod_contrato» en carácter 14
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:14:16 CESTHINT:  Probablemente quiera hacer referencia a la columna «investigadores_contratos.codigo_contrato».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:14:16 CESTSENTENCIA:  select count(cod_contrato) from investigadores_contratos where horas=5;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:14:45 CESTERROR:  no existe la columna «soras» en carácter 67
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:14:45 CESTHINT:  Probablemente quiera hacer referencia a la columna «investigadores_contratos.horas».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:14:45 CESTSENTENCIA:  select count(codigo_contrato) from investigadores_contratos where soras=5;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:15:04 CESTERROR:  no existe la función count(numeric, numeric) en carácter 8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:15:04 CESTHINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:15:04 CESTSENTENCIA:  select count(codigo_contrato,codigo_investigador) from investigadores_contratos where horas=5;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:27:08 CESTERROR:  error de sintaxis en o cerca de «jjoin» en carácter 118
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 08:27:08 CESTSENTENCIA:  select c.nombre, c.entidad from contratos c join investigadores_contratos ic on c.codigo_contrato=ic.codigo_contrato jjoin investigadores i on ic.codigo_investigador=i.codigo_investigador where ic.horas=5 and i.salatio>16000 and 10000<coste and coste<15000;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(51169), 2025-04-01 11:20:17 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62581), 2025-04-01 18:36:03 CESTERROR:  no existe la columna c.nombre_contrato en carácter 13
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62581), 2025-04-01 18:36:03 CESTSENTENCIA:  SELECT 
+	    c.nombre_contrato,
+	    c.entidad
+	FROM 
+	    contratos c
+	JOIN 
+	    investigadores_contratos ic ON c.codigo_contrato = ic.codigo_contrato
+	JOIN 
+	    investigadores i ON ic.codigo_investigador = i.codigo_investigador
+	WHERE 
+	    c.coste > 10000 AND c.coste < 15000
+	    AND i.salario > 16000
+	    AND ic.horas_trabajadas = 5;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62581), 2025-04-01 18:36:55 CESTERROR:  no existe la columna i.salario en carácter 251
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62581), 2025-04-01 18:36:55 CESTHINT:  Probablemente quiera hacer referencia a la columna «i.salatio».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62581), 2025-04-01 18:36:55 CESTSENTENCIA:  explain
+	SELECT c.nombre, c.entidad FROM contratos c JOIN investigadores_contratos ic ON c.codigo_contrato = ic.codigo_contrato
+	JOIN investigadores i ON ic.codigo_investigador = i.codigo_investigador WHERE 
+	    c.coste > 10000 AND c.coste < 15000 AND i.salario > 16000 AND ic.horas_trabajadas = 5;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62631), 2025-04-01 18:37:25 CESTERROR:  no existe la columna ic.horas_trabajadas en carácter 265
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62631), 2025-04-01 18:37:25 CESTSENTENCIA:  SELECT c.nombre, c.entidad FROM contratos c JOIN investigadores_contratos ic ON c.codigo_contrato = ic.codigo_contrato
+	JOIN investigadores i ON ic.codigo_investigador = i.codigo_investigador WHERE 
+	    c.coste > 10000 AND c.coste < 15000 AND i.salatio > 16000 AND ic.horas_trabajadas = 5;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62631), 2025-04-01 18:43:39 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

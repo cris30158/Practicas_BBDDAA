@@ -1,0 +1,11 @@
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 08:22:33 CETERROR:  la referencia a la columna «codigo_investigador» es ambigua en carácter 82
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 08:22:33 CETSENTENCIA:  Select codigo_contrato from investigadores_contratos ic join investigadores i on codigo_investigador where ic.horas=8 and  i.salatio=20000;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 08:22:55 CETERROR:  el argumento de JOIN/ON debe ser de tipo boolean, no tipo numeric en carácter 82
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 08:22:55 CETSENTENCIA:  Select codigo_contrato from investigadores_contratos ic join investigadores i on i.codigo_investigador where ic.horas=8 and  i.salatio=20000;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 08:24:17 CETERROR:  no existe la columna i.codigo_contrato en carácter 8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 08:24:17 CETHINT:  Probablemente quiera hacer referencia a la columna «ic.codigo_contrato».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 08:24:17 CETSENTENCIA:  Select i.codigo_contrato,ic.horas,i.salatio,ic.codigo_investigador from investigadores_contratos ic join investigadores i on i.codigo_investigador=ic.codigo_investigador where ic.horas=8 and  i.salatio=20000;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 08:28:52 CETERROR:  no existe la columna «relname» en carácter 50
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60973), 2025-03-25 08:28:52 CETSENTENCIA:  SELECT indexname, indexdef
+	FROM pg_indexes
+	where relname='investigadores_contratos';
