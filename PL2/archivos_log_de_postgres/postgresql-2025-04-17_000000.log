@@ -1,0 +1,232 @@
+alumno_1: 09109126E y alumno_2:06593675N ::1(51122), 2025-04-17 00:05:32 CESTERROR:  falta una entrada para la tabla Â«vÂ» en la clÃ¡usula FROM en carÃ¡cter 636
+alumno_1: 09109126E y alumno_2:06593675N ::1(51122), 2025-04-17 00:05:32 CESTSENTENCIA:  SELECT  COUNT(DISTINCT c.clienteid) 
+	FROM clientes c 
+	JOIN  reservas r ON c.clienteid = r.clienteid_clientes
+	--JOIN pagos p ON r.reservaid = p.reservaid_reservas
+	--JOIN plazas pl ON r.plazaid_plazas = pl.plazaid
+	--JOIN vehiculos v ON r.vehiculoid_vehiculos = v.vehiculoid
+	LEFT JOIN incidencias i ON i.reservaid_reservas = r.reservaid
+	WHERE 
+	    c.provincia IN ('AlmerÃ­a','CÃ¡diz','CÃ³rdoba','Granada','Huelva','JaÃ©n','MÃ¡laga','Sevilla')
+	    --AND (EXTRACT(MONTH FROM r.fechainicio) IN (6,7,8) OR EXTRACT(MONTH FROM r.fechafin) IN (6,7,8))
+	    --AND p.cantidad > 150
+	    --AND pl.nivel < -4
+	    AND ( i.estado != 'cerrada' OR v.color != 'Negro' OR i IS NULL)
+	;
+alumno_1: 09109126E y alumno_2:06593675N ::1(51122), 2025-04-17 00:08:48 CESTLOG:  sentencia: UPDATE pagos
+	SET cantidad = cantidad * 24;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:01 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:16 CESTLOG:  checkpoint completo: escritos 1209 búfers (7.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=14.138 s, sync=0.484 s, total=14.780 s; archivos sincronizados=18, más largo=0.270 s, promedio=0.027 s; distancia=537603 kB, estimación=543088 kB; lsn=36/BF74C140, lsn de redo=36/A1100040
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:17 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:17 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:17 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:31 CESTLOG:  checkpoint completo: escritos 2248 búfers (13.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=13.579 s, sync=0.075 s, total=13.799 s; archivos sincronizados=5, más largo=0.056 s, promedio=0.015 s; distancia=540905 kB, estimación=542870 kB; lsn=36/E0126108, lsn de redo=36/C213A5B0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:33 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:33 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:33 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:48 CESTLOG:  checkpoint completo: escritos 1654 búfers (10.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=14.791 s, sync=0.142 s, total=15.085 s; archivos sincronizados=6, más largo=0.073 s, promedio=0.024 s; distancia=542283 kB, estimación=542811 kB; lsn=37/13B5EC0, lsn de redo=36/E32CD548
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:49 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:49 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:09:49 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:05 CESTLOG:  checkpoint completo: escritos 2269 búfers (13.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=14.772 s, sync=0.279 s, total=15.367 s; archivos sincronizados=5, más largo=0.248 s, promedio=0.056 s; distancia=541900 kB, estimación=542720 kB; lsn=37/224860D0, lsn de redo=37/44006F8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:06 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 17 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:06 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:06 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:23 CESTLOG:  checkpoint completo: escritos 1979 búfers (12.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=16.389 s, sync=0.439 s, total=17.139 s; archivos sincronizados=6, más largo=0.245 s, promedio=0.074 s; distancia=540094 kB, estimación=542457 kB; lsn=37/434F52A8, lsn de redo=37/25370038
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:25 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:25 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:25 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:41 CESTLOG:  checkpoint completo: escritos 2159 búfers (13.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=15.432 s, sync=0.430 s, total=16.187 s; archivos sincronizados=6, más largo=0.149 s, promedio=0.072 s; distancia=540938 kB, estimación=542305 kB; lsn=37/645ED4F0, lsn de redo=37/463B2980
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:42 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 17 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:42 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:42 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:10:59 CESTLOG:  checkpoint completo: escritos 2067 búfers (12.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=15.426 s, sync=0.739 s, total=16.506 s; archivos sincronizados=6, más largo=0.327 s, promedio=0.124 s; distancia=540980 kB, estimación=542173 kB; lsn=37/85CD0088, lsn de redo=37/673FFAA0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:00 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 18 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:00 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:00 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:17 CESTLOG:  checkpoint completo: escritos 2099 búfers (12.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=15.867 s, sync=0.869 s, total=17.074 s; archivos sincronizados=6, más largo=0.435 s, promedio=0.145 s; distancia=537737 kB, estimación=541729 kB; lsn=37/A684A088, lsn de redo=37/88122078
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:19 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:19 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:19 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:37 CESTLOG:  checkpoint completo: escritos 2029 búfers (12.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.274 s, sync=0.702 s, total=18.324 s; archivos sincronizados=7, más largo=0.294 s, promedio=0.101 s; distancia=541667 kB, estimación=541723 kB; lsn=37/C746A1C0, lsn de redo=37/A921B050
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:38 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:38 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:38 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:55 CESTLOG:  checkpoint completo: escritos 2109 búfers (12.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=16.293 s, sync=0.427 s, total=17.079 s; archivos sincronizados=6, más largo=0.266 s, promedio=0.072 s; distancia=542611 kB, estimación=542611 kB; lsn=37/E8668890, lsn de redo=37/CA400028
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:57 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:57 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:11:57 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:15 CESTLOG:  checkpoint completo: escritos 1930 búfers (11.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.064 s, sync=0.425 s, total=17.950 s; archivos sincronizados=6, más largo=0.199 s, promedio=0.071 s; distancia=540672 kB, estimación=542418 kB; lsn=38/958D4F0, lsn de redo=37/EB4002C0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:16 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:16 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:16 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:32 CESTLOG:  checkpoint completo: escritos 2054 búfers (12.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=15.767 s, sync=0.494 s, total=16.643 s; archivos sincronizados=7, más largo=0.194 s, promedio=0.071 s; distancia=540642 kB, estimación=542240 kB; lsn=38/2A5AB0A0, lsn de redo=38/C3F8B60
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:34 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 18 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:34 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:34 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:50 CESTLOG:  checkpoint completo: escritos 1974 búfers (12.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=15.313 s, sync=0.400 s, total=16.049 s; archivos sincronizados=7, más largo=0.180 s, promedio=0.058 s; distancia=540701 kB, estimación=542086 kB; lsn=38/4B5EA2A0, lsn de redo=38/2D400110
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:51 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 17 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:51 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:12:51 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:09 CESTLOG:  checkpoint completo: escritos 2078 búfers (12.7%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=16.404 s, sync=1.261 s, total=18.378 s; archivos sincronizados=6, más largo=0.630 s, promedio=0.211 s; distancia=540671 kB, estimación=541945 kB; lsn=38/6D402040, lsn de redo=38/4E400048
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:10 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:10 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:10 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:29 CESTLOG:  checkpoint completo: escritos 1949 búfers (11.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.597 s, sync=0.588 s, total=18.569 s; archivos sincronizados=6, más largo=0.405 s, promedio=0.098 s; distancia=537964 kB, estimación=541546 kB; lsn=38/8D450078, lsn de redo=38/6F15B048
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:30 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 20 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:30 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:30 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:48 CESTLOG:  checkpoint completo: escritos 2052 búfers (12.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=16.312 s, sync=0.931 s, total=17.619 s; archivos sincronizados=6, más largo=0.381 s, promedio=0.156 s; distancia=543377 kB, estimación=543377 kB; lsn=38/AEBBA0E8, lsn de redo=38/903FF788
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:49 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:49 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:13:49 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N ::1(51122), 2025-04-17 00:13:55 CESTERROR:  no se pudo extender el archivo Â«base/139365/139418.4Â»: No space left on device
+alumno_1: 09109126E y alumno_2:06593675N ::1(51122), 2025-04-17 00:13:55 CESTHINT:  Verifique el espacio libre en disco.
+alumno_1: 09109126E y alumno_2:06593675N ::1(51122), 2025-04-17 00:13:55 CESTSENTENCIA:  UPDATE pagos
+	SET cantidad = cantidad * 24;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:18:19 CESTLOG:  checkpoint completo: escritos 5555 búfers (33.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.571 s, sync=0.051 s, total=269.881 s; archivos sincronizados=7, más largo=0.035 s, promedio=0.008 s; distancia=540674 kB, estimación=543107 kB; lsn=38/BF5BA820, lsn de redo=38/B1400278
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:18:49 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:23:19 CESTLOG:  checkpoint completo: escritos 9208 búfers (56.2%); 0 archivos WAL añadidos, 0 eliminados, 14 reciclados; write=269.668 s, sync=0.040 s, total=269.797 s; archivos sincronizados=10, más largo=0.032 s, promedio=0.004 s; distancia=238295 kB, estimación=512626 kB; lsn=38/C70ECD78, lsn de redo=38/BFCB6160
+alumno_1: 09109126E y alumno_2:06593675N ::1(51122), 2025-04-17 00:23:31 CESTLOG:  sentencia: UPDATE pagos
+	SET cantidad = cantidad * 24;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:23:39 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:23:53 CESTLOG:  checkpoint completo: escritos 2395 búfers (14.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=12.531 s, sync=0.197 s, total=13.097 s; archivos sincronizados=8, más largo=0.055 s, promedio=0.025 s; distancia=527898 kB, estimación=527898 kB; lsn=38/FE0078A0, lsn de redo=38/E003CA80
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:23:55 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:23:55 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:23:55 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:24:16 CESTLOG:  checkpoint completo: escritos 5856 búfers (35.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.608 s, sync=0.507 s, total=21.449 s; archivos sincronizados=8, más largo=0.294 s, promedio=0.064 s; distancia=541071 kB, estimación=541071 kB; lsn=39/1F5A85C0, lsn de redo=39/10A0838
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:24:18 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:24:18 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:24:18 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:24:38 CESTLOG:  checkpoint completo: escritos 6496 búfers (39.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.050 s, sync=0.493 s, total=20.880 s; archivos sincronizados=6, más largo=0.335 s, promedio=0.083 s; distancia=540162 kB, estimación=540980 kB; lsn=39/40835420, lsn de redo=39/22021330
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:24:40 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:24:40 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:24:40 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:05 CESTLOG:  checkpoint completo: escritos 2360 búfers (14.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.827 s, sync=0.324 s, total=25.541 s; archivos sincronizados=7, más largo=0.141 s, promedio=0.047 s; distancia=541132 kB, estimación=541132 kB; lsn=39/610949E8, lsn de redo=39/430945D0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:08 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 28 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:08 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:08 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:29 CESTLOG:  checkpoint completo: escritos 4536 búfers (27.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=21.017 s, sync=0.386 s, total=21.745 s; archivos sincronizados=7, más largo=0.174 s, promedio=0.056 s; distancia=543822 kB, estimación=543822 kB; lsn=39/8289EBF8, lsn de redo=39/643A7FF0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:31 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:31 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:31 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:51 CESTLOG:  checkpoint completo: escritos 6599 búfers (40.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.733 s, sync=0.385 s, total=20.474 s; archivos sincronizados=6, más largo=0.184 s, promedio=0.065 s; distancia=537495 kB, estimación=543189 kB; lsn=39/A3394680, lsn de redo=39/8508DD80
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:53 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:53 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:25:53 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:26:18 CESTLOG:  checkpoint completo: escritos 5717 búfers (34.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.422 s, sync=0.349 s, total=25.103 s; archivos sincronizados=6, más largo=0.166 s, promedio=0.059 s; distancia=540895 kB, estimación=542960 kB; lsn=39/C414B908, lsn de redo=39/A60C5C70
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:26:20 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 27 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:26:20 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:26:20 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:26:55 CESTLOG:  checkpoint completo: escritos 1914 búfers (11.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=33.730 s, sync=0.347 s, total=34.420 s; archivos sincronizados=9, más largo=0.127 s, promedio=0.039 s; distancia=542293 kB, estimación=542893 kB; lsn=39/E53AC178, lsn de redo=39/C725B168
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:26:56 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:27:16 CESTLOG:  checkpoint completo: escritos 6883 búfers (42.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.682 s, sync=0.823 s, total=19.861 s; archivos sincronizados=8, más largo=0.382 s, promedio=0.103 s; distancia=538807 kB, estimación=542485 kB; lsn=3A/67007F0, lsn de redo=39/E8088FF8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:27:18 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:27:18 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:27:18 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:27:41 CESTLOG:  checkpoint completo: escritos 1914 búfers (11.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=22.172 s, sync=0.549 s, total=23.210 s; archivos sincronizados=6, más largo=0.228 s, promedio=0.092 s; distancia=540400 kB, estimación=542276 kB; lsn=3A/26F6C658, lsn de redo=3A/9044FF8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:27:43 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 25 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:27:43 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:27:43 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:28:10 CESTLOG:  checkpoint completo: escritos 3388 búfers (20.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=26.029 s, sync=0.552 s, total=26.999 s; archivos sincronizados=6, más largo=0.225 s, promedio=0.092 s; distancia=541333 kB, estimación=542182 kB; lsn=3A/481D1678, lsn de redo=3A/2A0EA740
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:28:12 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:28:12 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:28:12 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:28:35 CESTLOG:  checkpoint completo: escritos 2546 búfers (15.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=22.015 s, sync=0.659 s, total=23.186 s; archivos sincronizados=7, más largo=0.253 s, promedio=0.095 s; distancia=540061 kB, estimación=541970 kB; lsn=3A/6905D238, lsn de redo=3A/4B051E70
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:28:37 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 25 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:28:37 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:28:37 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:01 CESTLOG:  checkpoint completo: escritos 4224 búfers (25.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=22.414 s, sync=0.750 s, total=23.579 s; archivos sincronizados=6, más largo=0.308 s, promedio=0.125 s; distancia=540597 kB, estimación=541832 kB; lsn=3A/8AB1F050, lsn de redo=3A/6C03F3B0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:02 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 25 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:02 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:02 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:20 CESTLOG:  checkpoint completo: escritos 2560 búfers (15.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.347 s, sync=0.622 s, total=18.346 s; archivos sincronizados=8, más largo=0.238 s, promedio=0.078 s; distancia=542068 kB, estimación=542068 kB; lsn=3A/ABD9A798, lsn de redo=3A/8D19C5B8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:21 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:21 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:21 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:41 CESTLOG:  checkpoint completo: escritos 2636 búfers (16.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.274 s, sync=0.754 s, total=19.427 s; archivos sincronizados=8, más largo=0.383 s, promedio=0.095 s; distancia=539349 kB, estimación=541796 kB; lsn=3A/CCBCC630, lsn de redo=3A/AE051C90
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:42 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:42 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:29:42 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:05 CESTLOG:  checkpoint completo: escritos 738 búfers (4.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=22.303 s, sync=0.436 s, total=23.099 s; archivos sincronizados=8, más largo=0.148 s, promedio=0.055 s; distancia=541478 kB, estimación=541764 kB; lsn=3A/ED13F440, lsn de redo=3A/CF11B6D0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:08 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 26 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:08 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:08 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:29 CESTLOG:  checkpoint completo: escritos 3377 búfers (20.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.969 s, sync=0.582 s, total=20.936 s; archivos sincronizados=7, más largo=0.259 s, promedio=0.084 s; distancia=539614 kB, estimación=541549 kB; lsn=3B/E97E950, lsn de redo=3A/F0013280
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:30 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:30 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:30 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:51 CESTLOG:  checkpoint completo: escritos 459 búfers (2.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.375 s, sync=0.640 s, total=21.394 s; archivos sincronizados=8, más largo=0.269 s, promedio=0.080 s; distancia=540726 kB, estimación=541467 kB; lsn=3B/2F9D8E88, lsn de redo=3B/11020C20
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:53 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:53 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:30:53 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:31:18 CESTLOG:  checkpoint completo: escritos 729 búfers (4.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=23.960 s, sync=0.654 s, total=25.104 s; archivos sincronizados=7, más largo=0.366 s, promedio=0.094 s; distancia=540943 kB, estimación=541415 kB; lsn=3B/4FF102D8, lsn de redo=3B/32064A30
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:31:20 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 27 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:31:20 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:31:20 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:31:45 CESTLOG:  checkpoint completo: escritos 647 búfers (3.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.036 s, sync=0.588 s, total=25.154 s; archivos sincronizados=7, más largo=0.204 s, promedio=0.084 s; distancia=541157 kB, estimación=541389 kB; lsn=3B/71076448, lsn de redo=3B/530DDF40
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:31:48 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 28 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:31:48 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:31:48 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:08 CESTLOG:  checkpoint completo: escritos 281 búfers (1.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.522 s, sync=0.522 s, total=20.483 s; archivos sincronizados=7, más largo=0.184 s, promedio=0.075 s; distancia=540236 kB, estimación=541274 kB; lsn=3B/92554E60, lsn de redo=3B/74071210
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:09 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:09 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:09 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:29 CESTLOG:  checkpoint completo: escritos 207 búfers (1.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.365 s, sync=0.348 s, total=20.040 s; archivos sincronizados=6, más largo=0.167 s, promedio=0.058 s; distancia=540591 kB, estimación=541205 kB; lsn=3B/B310BAD8, lsn de redo=3B/9505CFD0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:32 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:32 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:32 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:51 CESTLOG:  checkpoint completo: escritos 399 búfers (2.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.363 s, sync=0.540 s, total=19.330 s; archivos sincronizados=6, más largo=0.188 s, promedio=0.090 s; distancia=541724 kB, estimación=541724 kB; lsn=3B/D49CC6B8, lsn de redo=3B/B61641E0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:54 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:54 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:32:54 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:33:17 CESTLOG:  checkpoint completo: escritos 1046 búfers (6.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=21.870 s, sync=0.833 s, total=23.178 s; archivos sincronizados=8, más largo=0.290 s, promedio=0.105 s; distancia=540112 kB, estimación=541563 kB; lsn=3B/F531FDA0, lsn de redo=3B/D70D8428
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:33:19 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 25 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:33:19 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:33:19 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:33:41 CESTLOG:  checkpoint completo: escritos 527 búfers (3.2%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=20.231 s, sync=1.170 s, total=21.787 s; archivos sincronizados=8, más largo=0.454 s, promedio=0.147 s; distancia=540838 kB, estimación=541490 kB; lsn=3C/1740A910, lsn de redo=3B/F8101CD0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:33:42 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:33:42 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:33:42 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:34:10 CESTLOG:  checkpoint completo: escritos 782 búfers (4.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=27.176 s, sync=0.494 s, total=28.155 s; archivos sincronizados=7, más largo=0.305 s, promedio=0.071 s; distancia=540102 kB, estimación=541352 kB; lsn=3C/369C9310, lsn de redo=3C/19073840
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:36:47 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:38:20 CESTLOG:  vacuum automÃ¡tico de la tabla Â«pl2.public.pagosÂ»: recorridos de Ã­ndice: 3
+	pÃ¡ginas: 0 eliminadas, 594239 quedan, 530668 recorridas (89.30% del total)
+	tuplas: 27163005 eliminadas, 39998127 permanecen, 0 estÃ¡n muertas pero aÃºn no se pueden quitar
+	tuplas faltantes: 227 muertas en 2 pÃ¡ginas no eliminadas debido a contenciÃ³n del lock de limpieza
+	punto de corte de eliminaciÃ³n: 2295, que era 2 XIDs de antiguo cuando la operaciÃ³n terminÃ³
+	congelado: 15235 pÃ¡ginas de la tabla (2.56% del total) tuvieron 1713485 tuplas congeladas
+	recorrido de Ã­ndice necesario: en 255437 pÃ¡ginas de la tabla (42.99% del total) se eliminaron 27163005 identificadores de elementos muertos
+	Ã­ndice Â«pagos_pkeyÂ»: pÃ¡ginas: 222479 en total, 0 recientemente eliminadas, 0 eliminadas hasta ahora, 0 reusables
+	tasa lectura promedio: 7.740 MB/s, tasa escritura promedio: 4.938 MB/s
+	uso de bÃºfers: 571477 aciertos, 1409874 fallos, 899557 ensuciados
+	uso de WAL: 1135260 registros, 638285 imÃ¡genes de pÃ¡gina completa, 1099050723 bytes
+	uso de sistema: CPU: usuario: 54.42 s, sistema: 38.54 s, transcurrido: 1423.11 s
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:41:17 CESTLOG:  checkpoint completo: escritos 13801 búfers (84.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.263 s, sync=0.075 s, total=269.730 s; archivos sincronizados=13, más largo=0.047 s, promedio=0.006 s; distancia=540320 kB, estimación=541248 kB; lsn=3C/43411FE8, lsn de redo=3C/3A01B850
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:41:47 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:46:17 CESTLOG:  checkpoint completo: escritos 4293 búfers (26.2%); 0 archivos WAL añadidos, 0 eliminados, 10 reciclados; write=269.276 s, sync=0.038 s, total=269.438 s; archivos sincronizados=14, más largo=0.021 s, promedio=0.003 s; distancia=175199 kB, estimación=504643 kB; lsn=3C/54AC4BD0, lsn de redo=3C/44B336A8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:46:47 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:51:17 CESTLOG:  checkpoint completo: escritos 18 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 17 reciclados; write=269.442 s, sync=0.047 s, total=269.796 s; archivos sincronizados=13, más largo=0.015 s, promedio=0.004 s; distancia=276332 kB, estimación=481812 kB; lsn=3C/6A1E89E0, lsn de redo=3C/5590E738
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:51:47 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:56:17 CESTLOG:  checkpoint completo: escritos 3191 búfers (19.5%); 0 archivos WAL añadidos, 3 eliminados, 18 reciclados; write=269.653 s, sync=0.031 s, total=269.996 s; archivos sincronizados=6, más largo=0.015 s, promedio=0.006 s; distancia=339254 kB, estimación=467556 kB; lsn=3C/7936EF08, lsn de redo=3C/6A45BFC8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 00:56:47 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 01:20:12 CESTLOG:  checkpoint completo: escritos 3278 búfers (20.0%); 0 archivos WAL añadidos, 2 eliminados, 13 reciclados; write=1404.457 s, sync=0.652 s, total=1405.258 s; archivos sincronizados=7, más largo=0.539 s, promedio=0.094 s; distancia=246210 kB, estimación=445422 kB; lsn=3C/79DF9778, lsn de redo=3C/794CC9D8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 01:20:12 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 01:20:16 CESTLOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.934 s, sync=0.099 s, total=4.072 s; archivos sincronizados=2, más largo=0.090 s, promedio=0.050 s; distancia=9401 kB, estimación=401820 kB; lsn=3C/79E2F468, lsn de redo=3C/79DFAE88
+alumno_1: 09109126E y alumno_2:06593675N ::1(51122), 2025-04-17 01:22:07 CESTERROR:  secuencia de bytes no vÃ¡lida para codificaciÃ³n Â«UTF8Â»: 0xa1
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 01:25:12 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 01:25:16 CESTLOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 4 eliminados, 0 reciclados; write=4.001 s, sync=0.053 s, total=4.304 s; archivos sincronizados=5, más largo=0.033 s, promedio=0.011 s; distancia=54035 kB, estimación=367041 kB; lsn=3C/7DB2D510, lsn de redo=3C/7D2BFDB0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 01:27:43 CESTLOG:  vacuum automÃ¡tico de la tabla Â«pl2.public.pagosÂ»: recorridos de Ã­ndice: 4
+	pÃ¡ginas: 0 eliminadas, 849192 quedan, 707822 recorridas (83.35% del total)
+	tuplas: 22377892 eliminadas, 46615046 permanecen, 0 estÃ¡n muertas pero aÃºn no se pueden quitar
+	punto de corte de eliminaciÃ³n: 2298, que era 0 XIDs de antiguo cuando la operaciÃ³n terminÃ³
+	nuevo relfrozenxid: 2295, que estÃ¡ 5 XIDs mÃ¡s adelante del valor anterior
+	congelado: 8493 pÃ¡ginas de la tabla (1.00% del total) tuvieron 8493 tuplas congeladas
+	recorrido de Ã­ndice necesario: en 354037 pÃ¡ginas de la tabla (41.69% del total) se eliminaron 39988978 identificadores de elementos muertos
+	Ã­ndice Â«pagos_pkeyÂ»: pÃ¡ginas: 222479 en total, 0 recientemente eliminadas, 0 eliminadas hasta ahora, 0 reusables
+	tasa lectura promedio: 5.186 MB/s, tasa escritura promedio: 3.053 MB/s
+	uso de bÃºfers: 744433 aciertos, 1915517 fallos, 1127765 ensuciados
+	uso de WAL: 1490171 registros, 737581 imÃ¡genes de pÃ¡gina completa, 1017940270 bytes
+	uso de sistema: CPU: usuario: 66.85 s, sistema: 38.54 s, transcurrido: 2885.71 s
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 01:30:12 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-17 01:31:00 CESTLOG:  checkpoint completo: escritos 440 búfers (2.7%); 0 archivos WAL añadidos, 6 eliminados, 0 reciclados; write=47.487 s, sync=0.014 s, total=47.613 s; archivos sincronizados=7, más largo=0.003 s, promedio=0.002 s; distancia=95894 kB, estimación=339926 kB; lsn=3C/83065638, lsn de redo=3C/83065600

@@ -1,0 +1,1196 @@
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-10 13:07:23 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-04-10 08:03:27 CEST
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-10 13:07:25 CESTLOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-10 13:07:25 CESTLOG:  redo comienza en 19/8B77FC68
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-10 13:07:25 CESTLOG:  largo de registro no válido en 19/8B77FCA0: se esperaba al menos 24, se obtuvo 0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-10 13:07:25 CESTLOG:  redo listo en 19/8B77FC68 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-10 13:07:25 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-10 13:07:25 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.003 s, total=0.022 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=19/8B77FCA0, lsn de redo=19/8B77FCA0
+alumno_1: 09109126E y alumno_2:06593675N ::1(51278), 2025-04-16 16:15:32 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+alumno_1: 09109126E y alumno_2:06593675N ::1(51278), 2025-04-16 16:15:32 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+alumno_1: 09109126E y alumno_2:06593675N ::1(51802), 2025-04-16 16:36:11 CESTLOG:  sentencia: create database pl2;
+alumno_1: 09109126E y alumno_2:06593675N ::1(51810), 2025-04-16 16:36:18 CESTFATAL:  no existe la base de datos «pk2»
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 16:36:55 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 16:38:41 CESTLOG:  checkpoint completo: escritos 969 búfers (5.9%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=105.105 s, sync=0.443 s, total=105.591 s; archivos sincronizados=300, más largo=0.006 s, promedio=0.002 s; distancia=4578 kB, estimación=4578 kB; lsn=19/8BBF8798, lsn de redo=19/8BBF8760
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:47:23 CESTERROR:  error de sintaxis en o cerca de Â«ENCODINGÂ» en carÃ¡cter 1
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:47:23 CESTSENTENCIA:  ENCODING = 'UTF8'
+		LC_COLLATE = 'Spanish_Spain.1252'
+		LC_CTYPE = 'Spanish_Spain.1252'
+		TABLESPACE = pg_default
+	;
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:47:39 CESTERROR:  error de sintaxis en o cerca de Â«ENCODINGÂ» en carÃ¡cter 1
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:47:39 CESTSENTENCIA:  ENCODING = 'UTF8'
+		LC_COLLATE = 'Spanish_Spain.1252'
+		LC_CTYPE = 'Spanish_Spain.1252'
+		TABLESPACE = pg_default
+	;
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:47:48 CESTERROR:  error de sintaxis en o cerca de Â«ENCODINGÂ» en carÃ¡cter 1
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:47:48 CESTSENTENCIA:  ENCODING=UTF8;
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono integer NOT NULL,
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid),
+		CONSTRAINT clientes_telefono_key UNIQUE (telefono),
+		CONSTRAINT email_unique UNIQUE (email)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: ALTER TABLE reservas ADD CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos)
+	    REFERENCES vehiculos (vehiculoid) MATCH FULL
+	ON DELETE CASCADE ON UPDATE RESTRICT;
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: ALTER TABLE incidencias ADD CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas)
+	    REFERENCES reservas (reservaid) MATCH FULL
+	ON DELETE CASCADE ON UPDATE RESTRICT;
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: ALTER TABLE vehiculos ADD CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes)
+	    REFERENCES clientes (clienteid) MATCH FULL
+	ON DELETE CASCADE ON UPDATE RESTRICT;
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: ALTER TABLE pagos ADD CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas)
+	    REFERENCES reservas (reservaid) MATCH FULL
+	ON DELETE CASCADE ON UPDATE RESTRICT;
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: ALTER TABLE reservas ADD CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas)
+	    REFERENCES plazas (plazaid) MATCH FULL
+	ON DELETE CASCADE ON UPDATE RESTRICT;
+alumno_1: 09109126E y alumno_2:06593675N ::1(51812), 2025-04-16 16:49:56 CESTLOG:  sentencia: ALTER TABLE reservas ADD CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes)
+	    REFERENCES clientes (clienteid) MATCH FULL
+	ON DELETE CASCADE ON UPDATE RESTRICT;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 16:51:55 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 16:52:02 CESTLOG:  checkpoint completo: escritos 67 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=7.234 s, sync=0.098 s, total=7.365 s; archivos sincronizados=61, más largo=0.011 s, promedio=0.002 s; distancia=313 kB, estimación=4152 kB; lsn=19/8BC46D80, lsn de redo=19/8BC46D48
+alumno_1: 09109126E y alumno_2:06593675N ::1(52359), 2025-04-16 16:56:47 CESTLOG:  sentencia: drop database pl2
+	;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 16:56:47 CESTLOG:  empezando checkpoint: immediate force wait
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 16:56:47 CESTLOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.005 s, sync=0.002 s, total=0.025 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=1 kB, estimación=3737 kB; lsn=19/8BC47418, lsn de redo=19/8BC473E0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:01:47 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:01:47 CESTLOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.119 s, sync=0.005 s, total=0.153 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.003 s; distancia=0 kB, estimación=3363 kB; lsn=19/8BC475C8, lsn de redo=19/8BC47590
+alumno_1: 09109126E y alumno_2:06593675N ::1(52359), 2025-04-16 17:03:16 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1: 09109126E y alumno_2:06593675N ::1(52588), 2025-04-16 17:04:26 CESTLOG:  sentencia: create database pl2
+	;
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:04:42 CESTERROR:  error de sintaxis en o cerca de Â«/Â» en carÃ¡cter 1
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:04:42 CESTSENTENCIA:  /timing
+	;
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono integer NOT NULL,
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid),
+		CONSTRAINT clientes_telefono_key UNIQUE (telefono),
+		CONSTRAINT email_unique UNIQUE (email)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTERROR:  error de sintaxis en o cerca de Â«CONSTRAINTÂ» en carÃ¡cter 266
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTSENTENCIA:  CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid)
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTSENTENCIA:  CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:05:28 CESTSENTENCIA:  CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:08 CESTLOG:  sentencia: drop table reservas
+	;
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:08 CESTERROR:  no existe la tabla Â«reservasÂ»
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:08 CESTSENTENCIA:  drop table reservas
+	;
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:15 CESTLOG:  sentencia: drop table clientes;
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:15 CESTERROR:  no existe la tabla Â«clientesÂ»
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:15 CESTSENTENCIA:  drop table clientes;
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:37 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono integer NOT NULL,
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid),
+		CONSTRAINT clientes_telefono_key UNIQUE (telefono),
+		CONSTRAINT email_unique UNIQUE (email)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:37 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:37 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:37 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:37 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:06:37 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:06:47 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:08:34 CESTLOG:  checkpoint completo: escritos 983 búfers (6.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=106.665 s, sync=0.464 s, total=107.197 s; archivos sincronizados=340, más largo=0.006 s, promedio=0.002 s; distancia=4755 kB, estimación=4755 kB; lsn=19/8C0EC510, lsn de redo=19/8C0EC4A0
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:15:31 CESTERROR:  error de sintaxis en o cerca de Â«utfÂ» en carÃ¡cter 14
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:15:31 CESTSENTENCIA:  set encoding utf-8;
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:15:36 CESTERROR:  error de sintaxis en o cerca de Â«utf8Â» en carÃ¡cter 14
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:15:36 CESTSENTENCIA:  set encoding utf8;
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:15:42 CESTERROR:  error de sintaxis en o cerca de Â«UTF8Â» en carÃ¡cter 14
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:15:42 CESTSENTENCIA:  set encoding UTF8;
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:17:39 CESTERROR:  error de sintaxis en o cerca de Â«FROMÂ» en carÃ¡cter 1
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:17:39 CESTSENTENCIA:  FROM 'clientes.csv' 
+	WITH (FORMAT csv, HEADER, ENCODING 'UTF8');
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:18:22 CESTERROR:  error de sintaxis en o cerca de Â«FROMÂ» en carÃ¡cter 1
+alumno_1: 09109126E y alumno_2:06593675N ::1(52593), 2025-04-16 17:18:22 CESTSENTENCIA:  FROM 'Users/cristina/Desktop/Practicas_BBDDAA/PL2/clientes.csv' 
+	WITH (FORMAT csv, HEADER, ENCODING 'UTF8');
+alumno_1: 09109126E y alumno_2:06593675N ::1(53073), 2025-04-16 17:19:49 CESTLOG:  sentencia: COPY  clientes ( cliente_id, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53073), 2025-04-16 17:19:49 CESTERROR:  no existe la columna Â«cliente_idÂ» en la relaciÃ³n Â«clientesÂ»
+alumno_1: 09109126E y alumno_2:06593675N ::1(53073), 2025-04-16 17:19:49 CESTSENTENCIA:  COPY  clientes ( cliente_id, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53073), 2025-04-16 17:21:56 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53073), 2025-04-16 17:21:56 CESTERROR:  el valor Â«+34771446702Â» estÃ¡ fuera de rango para el tipo integer
+alumno_1: 09109126E y alumno_2:06593675N ::1(53073), 2025-04-16 17:21:56 CESTCONTEXTO:  COPY clientes, lÃ­nea 2, columna telefono: Â«+34771446702Â»
+alumno_1: 09109126E y alumno_2:06593675N ::1(53073), 2025-04-16 17:21:56 CESTSENTENCIA:  COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53189), 2025-04-16 17:23:50 CESTLOG:  sentencia: drop database pl2
+	;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:23:50 CESTLOG:  empezando checkpoint: immediate force wait
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:23:50 CESTLOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.002 s, total=0.023 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=1 kB, estimación=4280 kB; lsn=19/8C0ECC50, lsn de redo=19/8C0ECC18
+alumno_1: 09109126E y alumno_2:06593675N ::1(53189), 2025-04-16 17:23:55 CESTLOG:  sentencia: create database pl2;
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:18 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono text NOT NULL,
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid),
+		CONSTRAINT clientes_telefono_key UNIQUE (telefono),
+		CONSTRAINT email_unique UNIQUE (email)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:18 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:18 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:18 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:18 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:18 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:40 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:40 CESTERROR:  llave duplicada viola restricciÃ³n de unicidad Â«email_uniqueÂ»
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:40 CESTDETALLE:  Ya existe la llave (email)=(Manuel_DÃ­az555@gmail.com).
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:40 CESTCONTEXTO:  COPY clientes, lÃ­nea 1556
+alumno_1: 09109126E y alumno_2:06593675N ::1(53196), 2025-04-16 17:24:40 CESTSENTENCIA:  COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:28:50 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:30:41 CESTLOG:  checkpoint completo: escritos 1014 búfers (6.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=109.705 s, sync=0.492 s, total=110.229 s; archivos sincronizados=327, más largo=0.005 s, promedio=0.002 s; distancia=5296 kB, estimación=5296 kB; lsn=19/8C618F58, lsn de redo=19/8C618F20
+alumno_1: 09109126E y alumno_2:06593675N ::1(53392), 2025-04-16 17:31:20 CESTERROR:  error de sintaxis en o cerca de Â«databseÂ» en carÃ¡cter 6
+alumno_1: 09109126E y alumno_2:06593675N ::1(53392), 2025-04-16 17:31:20 CESTSENTENCIA:  drop databse pl2;
+alumno_1: 09109126E y alumno_2:06593675N ::1(53392), 2025-04-16 17:32:28 CESTLOG:  sentencia: drop database pl2;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:32:28 CESTLOG:  empezando checkpoint: immediate force wait
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:32:28 CESTLOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.002 s, total=0.025 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=1 kB, estimación=4767 kB; lsn=19/8C619748, lsn de redo=19/8C619710
+alumno_1: 09109126E y alumno_2:06593675N ::1(53392), 2025-04-16 17:32:34 CESTLOG:  sentencia: create database pl2;
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTERROR:  error de sintaxis en o cerca de Â«)Â» en carÃ¡cter 349
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTSENTENCIA:  CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono text NOT NULL, --deberia ser int
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid),
+		CONSTRAINT clientes_telefono_key UNIQUE (telefono),
+		--CONSTRAINT email_unique UNIQUE (email)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTSENTENCIA:  CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTSENTENCIA:  CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTSENTENCIA:  CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTSENTENCIA:  CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTERROR:  transacciÃ³n abortada, las Ã³rdenes serÃ¡n ignoradas hasta el fin de bloque de transacciÃ³n
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:32:52 CESTSENTENCIA:  CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:18 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono text NOT NULL, --deberia ser int
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid),
+		--CONSTRAINT email_unique UNIQUE (email),
+		CONSTRAINT clientes_telefono_key UNIQUE (telefono)
+		
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:18 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:18 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:18 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:18 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:18 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:34 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:35 CESTERROR:  llave duplicada viola restricciÃ³n de unicidad Â«clientes_telefono_keyÂ»
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:35 CESTDETALLE:  Ya existe la llave (telefono)=(+34792838170).
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:35 CESTCONTEXTO:  COPY clientes, lÃ­nea 20075
+alumno_1: 09109126E y alumno_2:06593675N ::1(53435), 2025-04-16 17:33:35 CESTSENTENCIA:  COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53492), 2025-04-16 17:35:03 CESTLOG:  sentencia: drop database pl2;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:35:03 CESTLOG:  empezando checkpoint: immediate force wait
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:35:03 CESTLOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.007 s, sync=0.008 s, total=0.034 s; archivos sincronizados=4, más largo=0.003 s, promedio=0.002 s; distancia=9588 kB, estimación=9588 kB; lsn=19/8CF767E0, lsn de redo=19/8CF767A8
+alumno_1: 09109126E y alumno_2:06593675N ::1(53492), 2025-04-16 17:35:09 CESTLOG:  sentencia: create database pl2;
+alumno_1: 09109126E y alumno_2:06593675N ::1(53506), 2025-04-16 17:35:24 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono text NOT NULL, --deberia ser int
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid)
+		--,	CONSTRAINT email_unique UNIQUE (email),
+		--CONSTRAINT clientes_telefono_key UNIQUE (telefono)
+		
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53506), 2025-04-16 17:35:24 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53506), 2025-04-16 17:35:24 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53506), 2025-04-16 17:35:24 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53506), 2025-04-16 17:35:24 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53506), 2025-04-16 17:35:24 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53506), 2025-04-16 17:35:38 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53544), 2025-04-16 17:36:38 CESTLOG:  sentencia: drop database pl2;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:36:38 CESTFATAL:  terminando el proceso autovacuum debido a una orden del administrador
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:36:38 CESTCONTEXTO:  recorriendo el bloque 9582 de la relaciÃ³n Â«public.clientesÂ»
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:36:38 CESTLOG:  empezando checkpoint: immediate force wait
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:36:38 CESTLOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 6 eliminados, 21 reciclados; write=0.014 s, sync=0.010 s, total=0.426 s; archivos sincronizados=4, más largo=0.004 s, promedio=0.003 s; distancia=431388 kB, estimación=431388 kB; lsn=19/A74BDB40, lsn de redo=19/A74BDB08
+alumno_1: 09109126E y alumno_2:06593675N ::1(53544), 2025-04-16 17:36:39 CESTLOG:  sentencia: create database pl2;
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:36:45 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono text NOT NULL, --deberia ser int
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid)
+		--,	CONSTRAINT email_unique UNIQUE (email),
+		--CONSTRAINT clientes_telefono_key UNIQUE (telefono)
+		
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:36:45 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:36:45 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:36:45 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:36:45 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:36:45 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:37:02 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:38:29 CESTLOG:  sentencia: COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:38:34 CESTERROR:  llave duplicada viola restricciÃ³n de unicidad Â«vehiculos_matricula_keyÂ»
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:38:34 CESTDETALLE:  Ya existe la llave (matricula)=(0000BBB).
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:38:34 CESTCONTEXTO:  COPY vehiculos, lÃ­nea 210002
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:38:34 CESTSENTENCIA:  COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:40:41 CESTERROR:  error de sintaxis al final de la entrada en carÃ¡cter 105
+alumno_1: 09109126E y alumno_2:06593675N ::1(53547), 2025-04-16 17:40:41 CESTSENTENCIA:  COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER
+alumno_1: 09109126E y alumno_2:06593675N ::1(53655), 2025-04-16 17:40:58 CESTLOG:  sentencia: drop database pl2;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:40:58 CESTLOG:  empezando checkpoint: immediate force wait
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:40:58 CESTLOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 29 reciclados; write=0.011 s, sync=0.006 s, total=0.251 s; archivos sincronizados=4, más largo=0.003 s, promedio=0.002 s; distancia=475472 kB, estimación=475472 kB; lsn=19/C4511B88, lsn de redo=19/C4511B50
+alumno_1: 09109126E y alumno_2:06593675N ::1(53655), 2025-04-16 17:40:59 CESTLOG:  sentencia: create database pl2;
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:41:00 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono text NOT NULL, --deberia ser int
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid)
+		--,	CONSTRAINT email_unique UNIQUE (email),
+		--CONSTRAINT clientes_telefono_key UNIQUE (telefono)
+		
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:41:00 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		--CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:41:00 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:41:00 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:41:00 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:41:00 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:41:10 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:41:43 CESTLOG:  sentencia: COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:41:48 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:42:14 CESTLOG:  checkpoint completo: escritos 9820 búfers (59.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.068 s, sync=0.428 s, total=25.717 s; archivos sincronizados=324, más largo=0.046 s, promedio=0.002 s; distancia=537409 kB, estimación=537409 kB; lsn=1A/33B0F20, lsn de redo=19/E51E2050
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:42:17 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:42:17 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:42:17 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:42:31 CESTERROR:  inserciÃ³n o actualizaciÃ³n en la tabla Â«vehiculosÂ» viola la llave forÃ¡nea Â«clientes_fkÂ»
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:42:31 CESTDETALLE:  La llave (clienteid_clientes)=(0) no estÃ¡ presente en la tabla Â«clientesÂ».
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:42:31 CESTSENTENCIA:  COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:46:47 CESTLOG:  checkpoint completo: escritos 814 búfers (5.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.951 s, sync=0.018 s, total=270.322 s; archivos sincronizados=9, más largo=0.004 s, promedio=0.002 s; distancia=539795 kB, estimación=539795 kB; lsn=1A/1F3CEBE8, lsn de redo=1A/6106D98
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 17:47:41 CESTLOG:  sentencia: COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:52:17 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 17:56:47 CESTLOG:  checkpoint completo: escritos 12790 búfers (78.1%); 0 archivos WAL añadidos, 0 eliminados, 26 reciclados; write=269.650 s, sync=0.026 s, total=269.867 s; archivos sincronizados=16, más largo=0.005 s, promedio=0.002 s; distancia=429880 kB, estimación=528803 kB; lsn=1A/204D5180, lsn de redo=1A/204D5148
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 18:02:56 CESTERROR:  una cadena de caracteres entre comillas estÃ¡ inconclusa en o cerca de Â«'NUÂ» en carÃ¡cter 91
+alumno_1: 09109126E y alumno_2:06593675N ::1(53660), 2025-04-16 18:02:56 CESTSENTENCIA:  COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NU
+alumno_1: 09109126E y alumno_2:06593675N ::1(54322), 2025-04-16 18:03:14 CESTLOG:  sentencia: drop database pl2;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:03:14 CESTLOG:  empezando checkpoint: immediate force wait
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:03:14 CESTLOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.005 s, sync=0.003 s, total=0.051 s; archivos sincronizados=1, más largo=0.003 s, promedio=0.003 s; distancia=2 kB, estimación=475923 kB; lsn=1A/204D5C20, lsn de redo=1A/204D5BE8
+alumno_1: 09109126E y alumno_2:06593675N ::1(54322), 2025-04-16 18:03:14 CESTLOG:  sentencia: create database pl2;
+alumno_1: 09109126E y alumno_2:06593675N ::1(54332), 2025-04-16 18:03:15 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono text NOT NULL, --deberia ser int
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid)
+		--,	CONSTRAINT email_unique UNIQUE (email),
+		--CONSTRAINT clientes_telefono_key UNIQUE (telefono)
+		
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54332), 2025-04-16 18:03:15 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		--CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54332), 2025-04-16 18:03:15 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54332), 2025-04-16 18:03:15 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54332), 2025-04-16 18:03:16 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54332), 2025-04-16 18:03:16 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54332), 2025-04-16 18:03:28 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:08:14 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:12:44 CESTLOG:  checkpoint completo: escritos 11225 búfers (68.5%); 0 archivos WAL añadidos, 1 eliminados, 25 reciclados; write=269.903 s, sync=0.434 s, total=270.658 s; archivos sincronizados=324, más largo=0.009 s, promedio=0.002 s; distancia=434793 kB, estimación=471810 kB; lsn=1A/3AD70238, lsn de redo=1A/3AD70200
+alumno_1: 09109126E y alumno_2:06593675N ::1(54662), 2025-04-16 18:15:29 CESTLOG:  sentencia: drop database pl2;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:15:29 CESTLOG:  empezando checkpoint: immediate force wait
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:15:29 CESTLOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.005 s, sync=0.002 s, total=0.041 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=2 kB, estimación=424629 kB; lsn=1A/3AD70D80, lsn de redo=1A/3AD70D48
+alumno_1: 09109126E y alumno_2:06593675N ::1(54662), 2025-04-16 18:15:30 CESTLOG:  sentencia: create database pl2;
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:15:31 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono text NOT NULL, --deberia ser int
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid),
+		CONSTRAINT email_unique UNIQUE (email),
+		CONSTRAINT clientes_telefono_key UNIQUE (telefono)
+		
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:15:31 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:15:31 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:15:31 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:15:31 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:15:31 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:15:33 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:16:48 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:17:55 CESTLOG:  checkpoint completo: escritos 4037 búfers (24.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=66.695 s, sync=0.398 s, total=67.344 s; archivos sincronizados=326, más largo=0.031 s, promedio=0.002 s; distancia=527926 kB, estimación=527926 kB; lsn=1A/78E91C30, lsn de redo=1A/5B0FE578
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:18:03 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:21:52 CESTLOG:  sentencia: COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:22:33 CESTLOG:  checkpoint completo: escritos 11444 búfers (69.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.901 s, sync=0.076 s, total=270.215 s; archivos sincronizados=13, más largo=0.019 s, promedio=0.006 s; distancia=540111 kB, estimación=540111 kB; lsn=1A/8F29C2C0, lsn de redo=1A/7C072248
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:23:03 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:24:26 CESTLOG:  checkpoint completo: escritos 15200 búfers (92.8%); 0 archivos WAL añadidos, 0 eliminados, 30 reciclados; write=82.820 s, sync=0.118 s, total=83.219 s; archivos sincronizados=16, más largo=0.051 s, promedio=0.008 s; distancia=502028 kB, estimación=536302 kB; lsn=1A/B865F8A8, lsn de redo=1A/9AAB5530
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:24:33 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:29:04 CESTLOG:  checkpoint completo: escritos 441 búfers (2.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.208 s, sync=1.049 s, total=270.630 s; archivos sincronizados=7, más largo=1.032 s, promedio=0.150 s; distancia=531249 kB, estimación=535797 kB; lsn=1A/D340AA10, lsn de redo=1A/BB181AD8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:29:33 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:32:46 CESTLOG:  sentencia: COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:33:07 CESTLOG:  checkpoint completo: escritos 181 búfers (1.1%); 0 archivos WAL añadidos, 0 eliminados, 24 reciclados; write=213.505 s, sync=0.137 s, total=213.966 s; archivos sincronizados=7, más largo=0.075 s, promedio=0.020 s; distancia=403198 kB, estimación=522537 kB; lsn=1A/E9153200, lsn de redo=1A/D3B41340
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:33:38 CESTLOG:  sentencia: COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:34:07 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:35:20 CESTLOG:  checkpoint completo: escritos 6754 búfers (41.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=73.194 s, sync=0.053 s, total=73.435 s; archivos sincronizados=19, más largo=0.018 s, promedio=0.003 s; distancia=530773 kB, estimación=530773 kB; lsn=1B/11D007F0, lsn de redo=1A/F4196A18
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:35:28 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:36:50 CESTLOG:  checkpoint completo: escritos 12123 búfers (74.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=81.723 s, sync=0.054 s, total=82.014 s; archivos sincronizados=3, más largo=0.045 s, promedio=0.018 s; distancia=539193 kB, estimación=539193 kB; lsn=1B/32BA8940, lsn de redo=1B/15025018
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:36:59 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:38:17 CESTLOG:  checkpoint completo: escritos 12884 búfers (78.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=77.397 s, sync=0.168 s, total=77.848 s; archivos sincronizados=4, más largo=0.104 s, promedio=0.042 s; distancia=540905 kB, estimación=540905 kB; lsn=1B/53CA3EA0, lsn de redo=1B/3605F7A8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:38:26 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:39:57 CESTLOG:  checkpoint completo: escritos 10415 búfers (63.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=90.058 s, sync=0.414 s, total=90.944 s; archivos sincronizados=3, más largo=0.263 s, promedio=0.138 s; distancia=540537 kB, estimación=540869 kB; lsn=1B/74D55008, lsn de redo=1B/5703DDF8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:40:06 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:41:22 CESTLOG:  checkpoint completo: escritos 12523 búfers (76.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=75.499 s, sync=0.426 s, total=76.328 s; archivos sincronizados=3, más largo=0.348 s, promedio=0.142 s; distancia=540778 kB, estimación=540860 kB; lsn=1B/95DEAE98, lsn de redo=1B/78058940
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:41:30 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:42:46 CESTLOG:  checkpoint completo: escritos 13109 búfers (80.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=75.186 s, sync=0.397 s, total=75.949 s; archivos sincronizados=3, más largo=0.348 s, promedio=0.132 s; distancia=540348 kB, estimación=540808 kB; lsn=1B/B6DD5230, lsn de redo=1B/99007990
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:42:53 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:44:16 CESTLOG:  checkpoint completo: escritos 12366 búfers (75.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=82.356 s, sync=0.424 s, total=83.224 s; archivos sincronizados=4, más largo=0.342 s, promedio=0.106 s; distancia=540772 kB, estimación=540805 kB; lsn=1B/D7E4BE90, lsn de redo=1B/BA020A38
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:44:25 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:45:22 CESTERROR:  no se pudo extender el archivo Â«base/131722/131755.2Â» con FileFallocate(): No space left on device
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:45:22 CESTHINT:  Verifique el espacio libre en disco.
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:45:22 CESTCONTEXTO:  COPY reservas, lÃ­nea 39307387
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:45:22 CESTSENTENCIA:  COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:45:52 CESTERROR:  no se pudo extender el archivo Â«base/131722/131755_vmÂ»: No space left on device
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:45:52 CESTHINT:  Verifique el espacio libre en disco.
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:45:52 CESTCONTEXTO:  recorriendo el bloque 0 de la relaciÃ³n Â«public.reservasÂ»
+	vacuum automÃ¡tico de la tabla Â«pl2.public.reservasÂ»
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:48:55 CESTLOG:  checkpoint completo: escritos 6254 búfers (38.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.765 s, sync=0.055 s, total=270.257 s; archivos sincronizados=5, más largo=0.043 s, promedio=0.011 s; distancia=540795 kB, estimación=540804 kB; lsn=1B/F00132C8, lsn de redo=1B/DB03F778
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:49:25 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:52:26 CESTLOG:  sentencia: COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:52:48 CESTERROR:  no se pudo extender el archivo Â«base/131722/131775Â» con FileFallocate(): No space left on device
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:52:48 CESTHINT:  Verifique el espacio libre en disco.
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:52:48 CESTCONTEXTO:  COPY pagos, lÃ­nea 1853001
+alumno_1: 09109126E y alumno_2:06593675N ::1(54672), 2025-04-16 18:52:48 CESTSENTENCIA:  COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:52:52 CESTERROR:  no se pudo extender el archivo Â«base/131722/131775_vmÂ»: No space left on device
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:52:52 CESTHINT:  Verifique el espacio libre en disco.
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:52:52 CESTCONTEXTO:  recorriendo el bloque 0 de la relaciÃ³n Â«public.pagosÂ»
+	vacuum automÃ¡tico de la tabla Â«pl2.public.pagosÂ»
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:53:52 CESTERROR:  no se pudo extender el archivo Â«base/131722/131775_vmÂ»: No space left on device
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:53:52 CESTHINT:  Verifique el espacio libre en disco.
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:53:52 CESTCONTEXTO:  recorriendo el bloque 0 de la relaciÃ³n Â«public.pagosÂ»
+	vacuum automÃ¡tico de la tabla Â«pl2.public.pagosÂ»
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:53:55 CESTLOG:  checkpoint completo: escritos 976 búfers (6.0%); 0 archivos WAL añadidos, 0 eliminados, 23 reciclados; write=269.174 s, sync=0.066 s, total=269.515 s; archivos sincronizados=11, más largo=0.037 s, promedio=0.006 s; distancia=388675 kB, estimación=525591 kB; lsn=1C/E8A2230, lsn de redo=1B/F2BD06C8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:54:25 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N ::1(55898), 2025-04-16 18:56:03 CESTLOG:  sentencia: drop database pl2;
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:56:03 CESTFATAL:  terminando el proceso autovacuum debido a una orden del administrador
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:56:03 CESTCONTEXTO:  haciendo Â«vacuumÂ» al bloque 14457 de la relaciÃ³n Â«public.pagosÂ»
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:56:03 CESTFATAL:  terminando el proceso autovacuum debido a una orden del administrador
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:56:03 CESTCONTEXTO:  mientras se hacÃ­a Â«vacuumÂ» al Ã­ndice Â«reservas_pkeyÂ» de la relaciÃ³n Â«public.reservasÂ»
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:56:04 CESTLOG:  checkpoint completo: escritos 4191 búfers (25.6%); 0 archivos WAL añadidos, 0 eliminados, 29 reciclados; write=98.559 s, sync=0.003 s, total=98.796 s; archivos sincronizados=1, más largo=0.003 s, promedio=0.003 s; distancia=466401 kB, estimación=519672 kB; lsn=1C/15F67F10, lsn de redo=1C/F348B18
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:56:04 CESTLOG:  empezando checkpoint: immediate force wait
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:56:04 CESTLOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 6 reciclados; write=0.003 s, sync=0.002 s, total=0.119 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=110717 kB, estimación=478776 kB; lsn=1C/15F67FC0, lsn de redo=1C/15F67F88
+alumno_1: 09109126E y alumno_2:06593675N ::1(55898), 2025-04-16 18:56:04 CESTLOG:  sentencia: create database pl2;
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 18:56:06 CESTLOG:  sentencia: CREATE TABLE clientes (
+		clienteid integer NOT NULL,
+		nombre text NOT NULL,
+		apellido text NOT NULL,
+		email text NOT NULL,
+		telefono integer NOT NULL, 
+		provincia text NOT NULL,
+		CONSTRAINT clientes_pkey PRIMARY KEY (clienteid),
+		CONSTRAINT email_unique UNIQUE (email),
+		CONSTRAINT clientes_telefono_key UNIQUE (telefono)
+		
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 18:56:06 CESTLOG:  sentencia: CREATE TABLE vehiculos (
+		vehiculoid integer NOT NULL,
+		matricula text NOT NULL,
+		marca text NOT NULL,
+		modelo text NOT NULL,
+		color text NOT NULL,
+		clienteid_clientes integer,
+		CONSTRAINT vehiculos_pkey PRIMARY KEY (vehiculoid),
+		CONSTRAINT vehiculos_matricula_key UNIQUE (matricula),
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 18:56:06 CESTLOG:  sentencia: CREATE TABLE plazas (
+		plazaid integer NOT NULL,
+		numero integer NOT NULL,
+		nivel integer NOT NULL,
+		seccion text NOT NULL,
+		CONSTRAINT plazas_pkey PRIMARY KEY (plazaid)
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 18:56:06 CESTLOG:  sentencia: CREATE TABLE reservas (
+		reservaid integer NOT NULL,
+		fechainicio timestamp NOT NULL,
+		fechafin timestamp NOT NULL,
+		vehiculoid_vehiculos integer,
+		plazaid_plazas integer,
+		clienteid_clientes integer,
+	
+		CONSTRAINT reservas_pkey PRIMARY KEY (reservaid),
+	    CONSTRAINT vehiculos_fk FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos (vehiculoid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,   
+	    CONSTRAINT clientes_fk FOREIGN KEY (clienteid_clientes) REFERENCES clientes (clienteid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT,
+	    CONSTRAINT plazas_fk FOREIGN KEY (plazaid_plazas) REFERENCES plazas (plazaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 18:56:06 CESTLOG:  sentencia: CREATE TABLE pagos (
+		pagoid integer NOT NULL,
+		cantidad numeric(10,2) NOT NULL,
+		fechapago timestamp NOT NULL,
+		metodopago text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT pagos_pkey PRIMARY KEY (pagoid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 18:56:06 CESTLOG:  sentencia: CREATE TABLE incidencias (
+		incidenciaid integer NOT NULL,
+		descripcion text NOT NULL,
+		fechaincidencia timestamp NOT NULL,
+		estado text NOT NULL,
+		reservaid_reservas integer,
+		CONSTRAINT incidencias_pkey PRIMARY KEY (incidenciaid),
+	    CONSTRAINT reservas_fk FOREIGN KEY (reservaid_reservas) REFERENCES reservas (reservaid) MATCH FULL ON DELETE CASCADE ON UPDATE RESTRICT
+	);
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 18:56:26 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:57:14 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:57:56 CESTLOG:  checkpoint completo: escritos 4027 búfers (24.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=40.567 s, sync=0.835 s, total=41.679 s; archivos sincronizados=326, más largo=0.079 s, promedio=0.003 s; distancia=527496 kB, estimación=527496 kB; lsn=1C/54802538, lsn de redo=1C/3628A0E0
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 18:57:56 CESTLOG:  sentencia: COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:57:59 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:58:44 CESTLOG:  checkpoint completo: escritos 5801 búfers (35.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=44.356 s, sync=0.321 s, total=44.898 s; archivos sincronizados=14, más largo=0.110 s, promedio=0.023 s; distancia=538135 kB, estimación=538135 kB; lsn=1C/74E3EEF8, lsn de redo=1C/57010068
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:58:49 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:59:25 CESTLOG:  checkpoint completo: escritos 12539 búfers (76.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=35.235 s, sync=0.346 s, total=35.871 s; archivos sincronizados=10, más largo=0.179 s, promedio=0.035 s; distancia=541652 kB, estimación=541652 kB; lsn=1C/960D68B0, lsn de redo=1C/781051B0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 18:59:27 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 19:02:18 CESTLOG:  sentencia: COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:03:57 CESTLOG:  checkpoint completo: escritos 1370 búfers (8.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.697 s, sync=0.018 s, total=269.869 s; archivos sincronizados=15, más largo=0.003 s, promedio=0.002 s; distancia=539776 kB, estimación=541464 kB; lsn=1C/B3DDCF60, lsn de redo=1C/99025340
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 19:13:44 CESTLOG:  sentencia: COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:13:51 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:14:26 CESTLOG:  checkpoint completo: escritos 5180 búfers (31.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=35.541 s, sync=0.067 s, total=35.719 s; archivos sincronizados=19, más largo=0.028 s, promedio=0.004 s; distancia=540564 kB, estimación=541374 kB; lsn=1C/D7E08290, lsn de redo=1C/BA00A550
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:14:30 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:15:06 CESTLOG:  checkpoint completo: escritos 11743 búfers (71.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=36.062 s, sync=0.052 s, total=36.240 s; archivos sincronizados=3, más largo=0.034 s, promedio=0.018 s; distancia=540799 kB, estimación=541317 kB; lsn=1C/F8CF5C08, lsn de redo=1C/DB02A440
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:15:10 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:15:47 CESTLOG:  checkpoint completo: escritos 12603 búfers (76.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=36.848 s, sync=0.046 s, total=37.008 s; archivos sincronizados=3, más largo=0.042 s, promedio=0.016 s; distancia=540794 kB, estimación=541264 kB; lsn=1D/19C3DDD0, lsn de redo=1C/FC048EE8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:15:51 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:16:30 CESTLOG:  checkpoint completo: escritos 12001 búfers (73.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=39.309 s, sync=0.073 s, total=39.591 s; archivos sincronizados=4, más largo=0.056 s, promedio=0.019 s; distancia=540640 kB, estimación=541202 kB; lsn=1D/3AD08850, lsn de redo=1D/1D040F08
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:16:34 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:17:13 CESTLOG:  checkpoint completo: escritos 11443 búfers (69.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=37.915 s, sync=0.270 s, total=38.426 s; archivos sincronizados=3, más largo=0.151 s, promedio=0.090 s; distancia=540659 kB, estimación=541148 kB; lsn=1D/5BF69768, lsn de redo=1D/3E03DBF8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:17:16 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:17:55 CESTLOG:  checkpoint completo: escritos 12095 búfers (73.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=38.908 s, sync=0.214 s, total=39.380 s; archivos sincronizados=3, más largo=0.148 s, promedio=0.072 s; distancia=540764 kB, estimación=541109 kB; lsn=1D/7CE69318, lsn de redo=1D/5F054F18
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:17:59 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:18:38 CESTLOG:  checkpoint completo: escritos 12243 búfers (74.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=38.446 s, sync=0.207 s, total=38.918 s; archivos sincronizados=4, más largo=0.116 s, promedio=0.052 s; distancia=540496 kB, estimación=541048 kB; lsn=1D/9DE9C020, lsn de redo=1D/80028F50
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:18:42 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:19:23 CESTLOG:  checkpoint completo: escritos 11745 búfers (71.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=40.533 s, sync=0.112 s, total=41.059 s; archivos sincronizados=3, más largo=0.058 s, promedio=0.038 s; distancia=540653 kB, estimación=541008 kB; lsn=1D/BEC90F48, lsn de redo=1D/A1024400
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:19:28 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:20:14 CESTLOG:  checkpoint completo: escritos 2000 búfers (12.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=45.397 s, sync=0.291 s, total=46.044 s; archivos sincronizados=8, más largo=0.155 s, promedio=0.037 s; distancia=541969 kB, estimación=541969 kB; lsn=1D/DFDA5E28, lsn de redo=1D/C2168988
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:20:20 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:20:52 CESTLOG:  checkpoint completo: escritos 1745 búfers (10.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=31.387 s, sync=0.203 s, total=31.908 s; archivos sincronizados=3, más largo=0.106 s, promedio=0.068 s; distancia=539477 kB, estimación=541720 kB; lsn=1E/C7DBA0, lsn de redo=1D/E303E068
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:20:58 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:21:24 CESTLOG:  checkpoint completo: escritos 1714 búfers (10.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=26.284 s, sync=0.189 s, total=26.823 s; archivos sincronizados=3, más largo=0.094 s, promedio=0.063 s; distancia=540949 kB, estimación=541643 kB; lsn=1E/21D33BF8, lsn de redo=1E/4083490
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:21:29 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:21:56 CESTLOG:  checkpoint completo: escritos 1643 búfers (10.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.983 s, sync=0.611 s, total=26.868 s; archivos sincronizados=3, más largo=0.488 s, promedio=0.204 s; distancia=540942 kB, estimación=541573 kB; lsn=1E/43045070, lsn de redo=1E/250C6FE0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:22:01 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:22:28 CESTLOG:  checkpoint completo: escritos 1604 búfers (9.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=26.512 s, sync=0.201 s, total=26.952 s; archivos sincronizados=3, más largo=0.107 s, promedio=0.067 s; distancia=540905 kB, estimación=541506 kB; lsn=1E/63D6BC28, lsn de redo=1E/46101668
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:22:33 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:23:00 CESTLOG:  checkpoint completo: escritos 1573 búfers (9.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.997 s, sync=0.487 s, total=26.839 s; archivos sincronizados=3, más largo=0.265 s, promedio=0.163 s; distancia=540390 kB, estimación=541394 kB; lsn=1E/85046328, lsn de redo=1E/670BAFB0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:23:04 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:23:30 CESTLOG:  checkpoint completo: escritos 1492 búfers (9.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.023 s, sync=0.577 s, total=25.870 s; archivos sincronizados=3, más largo=0.439 s, promedio=0.193 s; distancia=540341 kB, estimación=541289 kB; lsn=1E/A5F87410, lsn de redo=1E/88068768
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:23:35 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:24:01 CESTLOG:  checkpoint completo: escritos 1372 búfers (8.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.847 s, sync=0.358 s, total=26.510 s; archivos sincronizados=3, más largo=0.250 s, promedio=0.120 s; distancia=540652 kB, estimación=541225 kB; lsn=1E/C6F10D18, lsn de redo=1E/A90638B8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:24:06 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:24:32 CESTLOG:  checkpoint completo: escritos 1240 búfers (7.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.865 s, sync=0.585 s, total=25.777 s; archivos sincronizados=3, más largo=0.318 s, promedio=0.195 s; distancia=542241 kB, estimación=542241 kB; lsn=1E/E8048130, lsn de redo=1E/CA1EBEA8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:24:37 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:02 CESTLOG:  checkpoint completo: escritos 1094 búfers (6.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.252 s, sync=0.610 s, total=25.110 s; archivos sincronizados=3, más largo=0.372 s, promedio=0.204 s; distancia=539915 kB, estimación=542008 kB; lsn=1F/930B0E8, lsn de redo=1E/EB12EE40
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:05 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 28 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:05 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:05 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:26 CESTLOG:  checkpoint completo: escritos 976 búfers (6.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.441 s, sync=0.486 s, total=21.197 s; archivos sincronizados=3, más largo=0.248 s, promedio=0.162 s; distancia=539796 kB, estimación=541787 kB; lsn=1F/2A15ABA0, lsn de redo=1F/C053E40
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:29 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 24 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:29 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:29 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:49 CESTLOG:  checkpoint completo: escritos 836 búfers (5.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.595 s, sync=0.677 s, total=19.557 s; archivos sincronizados=3, más largo=0.431 s, promedio=0.226 s; distancia=541077 kB, estimación=541716 kB; lsn=1F/4B3FCAC0, lsn de redo=1F/2D0B95D8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:52 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:52 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:25:52 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:26:13 CESTLOG:  checkpoint completo: escritos 723 búfers (4.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.003 s, sync=0.848 s, total=21.126 s; archivos sincronizados=3, más largo=0.560 s, promedio=0.283 s; distancia=540684 kB, estimación=541613 kB; lsn=1F/6C52BD50, lsn de redo=1F/4E0BC9C8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:26:16 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 24 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:26:16 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:26:16 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:26:35 CESTLOG:  checkpoint completo: escritos 629 búfers (3.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.266 s, sync=0.792 s, total=19.306 s; archivos sincronizados=3, más largo=0.429 s, promedio=0.264 s; distancia=543256 kB, estimación=543256 kB; lsn=1F/8DA00D78, lsn de redo=1F/6F342A70
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:26:38 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:26:38 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:26:38 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:26:58 CESTLOG:  checkpoint completo: escritos 530 búfers (3.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.777 s, sync=0.794 s, total=19.799 s; archivos sincronizados=3, más largo=0.509 s, promedio=0.265 s; distancia=537878 kB, estimación=542718 kB; lsn=1F/AE5DB6F0, lsn de redo=1F/90088418
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:00 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:00 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:00 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:21 CESTLOG:  checkpoint completo: escritos 449 búfers (2.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.531 s, sync=0.907 s, total=20.719 s; archivos sincronizados=3, más largo=0.497 s, promedio=0.303 s; distancia=540654 kB, estimación=542512 kB; lsn=1F/CF775320, lsn de redo=1F/B1083EC0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:24 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 24 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:24 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:24 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:43 CESTLOG:  checkpoint completo: escritos 346 búfers (2.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.830 s, sync=1.001 s, total=19.090 s; archivos sincronizados=3, más largo=0.611 s, promedio=0.334 s; distancia=542547 kB, estimación=542547 kB; lsn=1F/F0AF8F90, lsn de redo=1F/D2258CF8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:45 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:45 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:27:45 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:06 CESTLOG:  checkpoint completo: escritos 327 búfers (2.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.983 s, sync=0.601 s, total=20.867 s; archivos sincronizados=3, más largo=0.336 s, promedio=0.201 s; distancia=540363 kB, estimación=542329 kB; lsn=20/115CEBC8, lsn de redo=1F/F320BB08
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:09 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 24 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:09 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:09 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:28 CESTLOG:  checkpoint completo: escritos 258 búfers (1.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.463 s, sync=0.420 s, total=19.150 s; archivos sincronizados=3, más largo=0.241 s, promedio=0.140 s; distancia=539461 kB, estimación=542042 kB; lsn=20/321B2B98, lsn de redo=20/140DD178
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:31 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:31 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:31 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:50 CESTLOG:  checkpoint completo: escritos 249 búfers (1.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=17.932 s, sync=0.573 s, total=18.742 s; archivos sincronizados=3, más largo=0.415 s, promedio=0.191 s; distancia=541216 kB, estimación=541959 kB; lsn=20/534466A0, lsn de redo=20/35165350
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:53 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:53 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:28:53 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:29:13 CESTLOG:  checkpoint completo: escritos 173 búfers (1.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.577 s, sync=0.990 s, total=19.814 s; archivos sincronizados=3, más largo=0.667 s, promedio=0.330 s; distancia=540012 kB, estimación=541765 kB; lsn=20/74885D20, lsn de redo=20/560C03B0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:29:15 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:29:15 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:29:15 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:29:35 CESTLOG:  checkpoint completo: escritos 175 búfers (1.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.260 s, sync=0.550 s, total=19.096 s; archivos sincronizados=3, más largo=0.481 s, promedio=0.184 s; distancia=540049 kB, estimación=541593 kB; lsn=20/95220298, lsn de redo=20/77024970
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:29:37 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:29:37 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:29:37 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:29:58 CESTLOG:  checkpoint completo: escritos 172 búfers (1.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.534 s, sync=0.730 s, total=20.522 s; archivos sincronizados=3, más largo=0.513 s, promedio=0.244 s; distancia=540694 kB, estimación=541503 kB; lsn=20/B62A7300, lsn de redo=20/9802A448
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:02 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 25 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:02 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:02 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:21 CESTLOG:  checkpoint completo: escritos 146 búfers (0.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.244 s, sync=0.795 s, total=19.301 s; archivos sincronizados=3, más largo=0.648 s, promedio=0.265 s; distancia=541970 kB, estimación=541970 kB; lsn=20/D750B380, lsn de redo=20/B916EEF8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:24 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:24 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:24 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:44 CESTLOG:  checkpoint completo: escritos 126 búfers (0.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=19.443 s, sync=0.574 s, total=20.274 s; archivos sincronizados=3, más largo=0.406 s, promedio=0.192 s; distancia=539771 kB, estimación=541750 kB; lsn=20/F84C10A0, lsn de redo=20/DA08DD18
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:48 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 24 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:48 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:30:48 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:08 CESTLOG:  checkpoint completo: escritos 127 búfers (0.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.473 s, sync=1.030 s, total=19.762 s; archivos sincronizados=3, más largo=0.549 s, promedio=0.343 s; distancia=542753 kB, estimación=542753 kB; lsn=21/1991D648, lsn de redo=20/FB296288
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:10 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:10 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:10 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:30 CESTLOG:  checkpoint completo: escritos 119 búfers (0.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.447 s, sync=0.961 s, total=19.655 s; archivos sincronizados=2, más largo=0.774 s, promedio=0.481 s; distancia=539372 kB, estimación=542415 kB; lsn=21/3A65F738, lsn de redo=21/1C151510
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:33 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 23 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:33 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:33 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:53 CESTLOG:  checkpoint completo: escritos 103 búfers (0.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=18.870 s, sync=0.747 s, total=19.858 s; archivos sincronizados=2, más largo=0.415 s, promedio=0.374 s; distancia=539542 kB, estimación=542127 kB; lsn=21/5B4262E8, lsn de redo=21/3D036E58
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:57 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 24 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:57 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:31:57 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:32:24 CESTLOG:  checkpoint completo: escritos 101 búfers (0.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=26.458 s, sync=0.687 s, total=27.410 s; archivos sincronizados=2, más largo=0.526 s, promedio=0.344 s; distancia=541723 kB, estimación=542087 kB; lsn=21/7C14BF00, lsn de redo=21/5E13DDE8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:32:29 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:32:55 CESTLOG:  checkpoint completo: escritos 80 búfers (0.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=24.973 s, sync=0.708 s, total=25.924 s; archivos sincronizados=2, más largo=0.491 s, promedio=0.354 s; distancia=541251 kB, estimación=542003 kB; lsn=21/9D24C1D8, lsn de redo=21/7F1CEBE0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:33:00 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:33:24 CESTLOG:  checkpoint completo: escritos 77 búfers (0.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=23.128 s, sync=0.366 s, total=23.720 s; archivos sincronizados=2, más largo=0.331 s, promedio=0.183 s; distancia=539155 kB, estimación=541719 kB; lsn=21/BDE0FD40, lsn de redo=21/A00537E0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:33:29 CESTLOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:33:29 CESTHINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:33:29 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:33:53 CESTLOG:  checkpoint completo: escritos 57 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=23.667 s, sync=0.750 s, total=24.663 s; archivos sincronizados=2, más largo=0.423 s, promedio=0.375 s; distancia=540485 kB, estimación=541595 kB; lsn=21/DF05CAA8, lsn de redo=21/C1024E30
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:33:59 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:34:26 CESTLOG:  checkpoint completo: escritos 52 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=26.024 s, sync=0.803 s, total=27.060 s; archivos sincronizados=2, más largo=0.531 s, promedio=0.402 s; distancia=541822 kB, estimación=541822 kB; lsn=22/18B6D0, lsn de redo=21/E21447C0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:34:33 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:35:04 CESTLOG:  checkpoint completo: escritos 55 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=29.962 s, sync=0.712 s, total=30.979 s; archivos sincronizados=2, más largo=0.577 s, promedio=0.356 s; distancia=540044 kB, estimación=541644 kB; lsn=22/21075D08, lsn de redo=22/30A79B8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:35:10 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:35:38 CESTLOG:  checkpoint completo: escritos 49 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=26.266 s, sync=0.900 s, total=27.448 s; archivos sincronizados=2, más largo=0.486 s, promedio=0.450 s; distancia=541231 kB, estimación=541603 kB; lsn=22/42162F38, lsn de redo=22/24133818
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:35:44 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:36:12 CESTLOG:  checkpoint completo: escritos 39 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=26.457 s, sync=1.157 s, total=27.836 s; archivos sincronizados=2, más largo=0.766 s, promedio=0.579 s; distancia=539571 kB, estimación=541400 kB; lsn=22/6311FCD0, lsn de redo=22/45020430
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:36:19 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:36:50 CESTLOG:  checkpoint completo: escritos 40 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=29.785 s, sync=1.271 s, total=31.432 s; archivos sincronizados=2, más largo=1.018 s, promedio=0.636 s; distancia=541580 kB, estimación=541580 kB; lsn=22/83FE6018, lsn de redo=22/661035F0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:37:07 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:38:35 CESTLOG:  checkpoint completo: escritos 28 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=86.830 s, sync=0.386 s, total=87.461 s; archivos sincronizados=2, más largo=0.241 s, promedio=0.193 s; distancia=539934 kB, estimación=541415 kB; lsn=22/A4CADDE0, lsn de redo=22/8704B0C0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:38:42 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:39:15 CESTLOG:  checkpoint completo: escritos 23 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=31.953 s, sync=0.216 s, total=32.446 s; archivos sincronizados=2, más largo=0.168 s, promedio=0.108 s; distancia=540832 kB, estimación=541357 kB; lsn=22/C5CFF000, lsn de redo=22/A8073378
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:39:22 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:39:54 CESTLOG:  checkpoint completo: escritos 34 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=31.255 s, sync=0.556 s, total=32.193 s; archivos sincronizados=2, más largo=0.352 s, promedio=0.278 s; distancia=540397 kB, estimación=541261 kB; lsn=22/E6E225F0, lsn de redo=22/C902E9F0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:40:04 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:40:41 CESTLOG:  checkpoint completo: escritos 21 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=36.282 s, sync=0.240 s, total=36.750 s; archivos sincronizados=2, más largo=0.161 s, promedio=0.120 s; distancia=541272 kB, estimación=541272 kB; lsn=23/7D73700, lsn de redo=22/EA0C4BF8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:40:49 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:41:21 CESTLOG:  checkpoint completo: escritos 20 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=31.083 s, sync=0.467 s, total=31.770 s; archivos sincronizados=2, más largo=0.324 s, promedio=0.234 s; distancia=540324 kB, estimación=541177 kB; lsn=23/28E0C688, lsn de redo=23/B06DEE0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:41:31 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:42:04 CESTLOG:  checkpoint completo: escritos 13 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=32.093 s, sync=0.507 s, total=32.822 s; archivos sincronizados=2, más largo=0.466 s, promedio=0.254 s; distancia=540853 kB, estimación=541145 kB; lsn=23/49DF62C0, lsn de redo=23/2C09B5C8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:42:14 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:43:07 CESTLOG:  checkpoint completo: escritos 9 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=51.818 s, sync=0.418 s, total=52.531 s; archivos sincronizados=2, más largo=0.228 s, promedio=0.209 s; distancia=540067 kB, estimación=541037 kB; lsn=23/677E9390, lsn de redo=23/4D0042F8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:44:34 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:46:03 CESTLOG:  checkpoint completo: escritos 10 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=88.803 s, sync=0.199 s, total=89.315 s; archivos sincronizados=2, más largo=0.173 s, promedio=0.100 s; distancia=540666 kB, estimación=541000 kB; lsn=23/7D8C0908, lsn de redo=23/6E002E38
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:49:34 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:50:53 CESTLOG:  checkpoint completo: escritos 19 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 28 reciclados; write=78.757 s, sync=0.292 s, total=79.306 s; archivos sincronizados=2, más largo=0.264 s, promedio=0.146 s; distancia=466801 kB, estimación=533580 kB; lsn=23/9B4A88B8, lsn de redo=23/8A7DF2A8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:54:34 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:55:45 CESTLOG:  checkpoint completo: escritos 12 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 30 reciclados; write=70.187 s, sync=0.163 s, total=70.658 s; archivos sincronizados=2, más largo=0.143 s, promedio=0.082 s; distancia=499626 kB, estimación=530185 kB; lsn=23/B0B993E0, lsn de redo=23/A8FC9CC0
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 19:58:59 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 20:00:01 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=60.813 s, sync=0.415 s, total=61.559 s; archivos sincronizados=2, más largo=0.260 s, promedio=0.208 s; distancia=524518 kB, estimación=529618 kB; lsn=23/DF375EB8, lsn de redo=23/C90035E8
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 20:02:28 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 20:02:57 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=28.239 s, sync=0.264 s, total=28.799 s; archivos sincronizados=2, más largo=0.208 s, promedio=0.132 s; distancia=540684 kB, estimación=540684 kB; lsn=23/EFD32980, lsn de redo=23/EA006800
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 20:07:01 CESTLOG:  empezando checkpoint: wal
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 20:07:34 CESTLOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=32.539 s, sync=0.262 s, total=33.072 s; archivos sincronizados=2, más largo=0.174 s, promedio=0.131 s; distancia=540686 kB, estimación=540686 kB; lsn=24/13084CC8, lsn de redo=24/B00A330
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 20:12:01 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 20:12:15 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 29 reciclados; write=13.928 s, sync=0.103 s, total=14.468 s; archivos sincronizados=2, más largo=0.062 s, promedio=0.052 s; distancia=488467 kB, estimación=535464 kB; lsn=24/2BE70598, lsn de redo=24/28D0F170
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 20:17:01 CESTLOG:  empezando checkpoint: time
+alumno_1: 09109126E y alumno_2:06593675N , 2025-04-16 20:17:09 CESTLOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 22 reciclados; write=7.105 s, sync=0.098 s, total=7.401 s; archivos sincronizados=2, más largo=0.053 s, promedio=0.049 s; distancia=356646 kB, estimación=517583 kB; lsn=24/3F278B78, lsn de redo=24/3E958D40
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 20:17:15 CESTERROR:  inserciÃ³n o actualizaciÃ³n en la tabla Â«reservasÂ» viola la llave forÃ¡nea Â«clientes_fkÂ»
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 20:17:15 CESTDETALLE:  La llave (clienteid_clientes)=(0) no estÃ¡ presente en la tabla Â«clientesÂ».
+alumno_1: 09109126E y alumno_2:06593675N ::1(55907), 2025-04-16 20:17:15 CESTSENTENCIA:  COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
