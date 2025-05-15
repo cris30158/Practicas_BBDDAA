@@ -1,0 +1,39 @@
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61351), 2025-05-06 08:26:40 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61351), 2025-05-06 08:26:40 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61357), 2025-05-06 08:26:49 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61357), 2025-05-06 08:26:49 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61360), 2025-05-06 08:26:53 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61360), 2025-05-06 08:26:53 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61369), 2025-05-06 08:27:55 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61369), 2025-05-06 08:27:55 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61377), 2025-05-06 08:28:21 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61377), 2025-05-06 08:28:21 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61379), 2025-05-06 08:28:30 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61379), 2025-05-06 08:28:30 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61383), 2025-05-06 08:28:54 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61383), 2025-05-06 08:28:54 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:06 CESTLOG:  sentencia: ALTER USER tu_usuario WITH PASSWORD 'nueva_contraseña';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:06 CESTERROR:  no existe el rol «tu_usuario»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:06 CESTSENTENCIA:  ALTER USER tu_usuario WITH PASSWORD 'nueva_contraseña';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:08 CESTLOG:  sentencia: ALTER USER tu_usuario WITH PASSWORD 'nueva_contraseña';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:08 CESTERROR:  no existe el rol «tu_usuario»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:08 CESTSENTENCIA:  ALTER USER tu_usuario WITH PASSWORD 'nueva_contraseña';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:25 CESTLOG:  sentencia: ALTER USER alvaro WITH PASSWORD 'Paniagua2005'
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:25 CESTERROR:  no existe el rol «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:25 CESTSENTENCIA:  ALTER USER alvaro WITH PASSWORD 'Paniagua2005'
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61449), 2025-05-06 08:31:50 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61449), 2025-05-06 08:31:50 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61476), 2025-05-06 08:34:12 CESTERROR:  error de sintaxis en o cerca de «postgres» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61476), 2025-05-06 08:34:12 CESTSENTENCIA:  postgres=# ALTER USER alvaro WITH PASSWORD 'Paniagua2005'        
+	postgres-# ;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:37:31 CESTLOG:  empezando checkpoint: force wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:37:31 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.002 s, sync=0.001 s, total=0.019 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=4101 kB, estimación=4101 kB; lsn=93/B9000060, lsn de redo=93/B9000028

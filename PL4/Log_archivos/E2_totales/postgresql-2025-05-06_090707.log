@@ -1,0 +1,8 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:07:07 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:07:07 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:07:07 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:07:07 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-06 09:04:47 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:07:07 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:11:24 CESTLOG:  proceso de servidor (PID 36120) fue terminado por una excepción 0xC000013A
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:11:24 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:11:24 CESTLOG:  terminando todos los otros procesos de servidor activos

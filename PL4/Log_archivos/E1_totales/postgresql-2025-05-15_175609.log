@@ -1,0 +1,24 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:09 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:09 CESTLOG:  escuchando en la dirección IPv6 «::», port 5434
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:09 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5434
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:09 CESTLOG:  el sistema de bases de datos fue interrumpido durante la recuperación en el instante de registro 2025-05-15 12:25:02 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:09 CESTHINT:  Si esto ha ocurrido más de una vez, algunos datos podrían estar corruptos y podría ser necesario escoger un punto de recuperación anterior.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:10 CESTLOG:  entrando al modo standby
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:10 CESTLOG:  recuperado el estado de replicación del nodo 3 a 93/C20E1128
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:10 CESTLOG:  redo comienza en 93/CC72B580
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:10 CESTLOG:  el estado de recuperación consistente fue alcanzado en 93/CC72B630
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:10 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones de sólo lectura
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:10 CESTLOG:  registro con prev-link 440000/0 incorrecto en 93/CC72B668
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:56:10 CESTLOG:  iniciando el flujo de WAL desde el primario en 93/CC000000 en el timeline 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:01:09 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:01:21 CESTLOG:  restartpoint completo: escritos 114 búfers (0.7%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=12.253 s, sync=0.037 s, total=12.312 s; archivos sincronizados=78, más largo=0.006 s, promedio=0.001 s; distancia=5190 kB, estimación=5190 kB; lsn=93/CCC3CE20, lsn de redo=93/CCC3CDE8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:01:21 CESTLOG:  restartpoint de recuperación en 93/CCC3CDE8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:01:21 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 17:50:10.404329+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:14:39 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:14:43 CESTLOG:  restartpoint completo: escritos 36 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.830 s, sync=0.014 s, total=3.853 s; archivos sincronizados=27, más largo=0.006 s, promedio=0.001 s; distancia=122 kB, estimación=4683 kB; lsn=93/CCC5BA10, lsn de redo=93/CCC5B9D8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:14:43 CESTLOG:  restartpoint de recuperación en 93/CCC5B9D8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:14:43 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 18:11:16.24584+02.
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60134), 2025-05-15 18:18:34 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60139), 2025-05-15 18:18:34 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

@@ -1,0 +1,51 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-06 09:07:07 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  redo comienza en 93/BA0002E8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  largo de registro no válido en 93/BA000320: se esperaba al menos 24, se obtuvo 0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  redo listo en 93/BA0002E8 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.002 s, total=0.012 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=93/BA000320, lsn de redo=93/BA000320
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:13:03 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:23:03 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:23:04 CESTLOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.752 s, sync=0.005 s, total=0.768 s; archivos sincronizados=3, más largo=0.003 s, promedio=0.002 s; distancia=43 kB, estimación=43 kB; lsn=93/BA00AFC0, lsn de redo=93/BA00AF88
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:24:44 CESTLOG:  sentencia: CREATE EXTENSION postgres_fdw;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:27:35 CESTLOG:  sentencia: CREATE SERVER m1_en_m2 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:28:03 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:28:06 CESTLOG:  checkpoint completo: escritos 27 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.836 s, sync=0.017 s, total=2.863 s; archivos sincronizados=19, más largo=0.006 s, promedio=0.001 s; distancia=73 kB, estimación=73 kB; lsn=93/BA01D5D8, lsn de redo=93/BA01D5A0
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:32:21 CESTLOG:  sentencia: CREATE USER MAPPING FOR Maestro2  SERVER m1_en_m2 OPTIONS (user 'postgres', password 'Paniagua2005')
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:32:21 CESTERROR:  no existe el rol «maestro2»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:32:21 CESTSENTENCIA:  CREATE USER MAPPING FOR Maestro2  SERVER m1_en_m2 OPTIONS (user 'postgres', password 'Paniagua2005')
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:35:37 CESTLOG:  sentencia: drop server m1_en_m2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:36:30 CESTLOG:  sentencia: CREATE SERVER m1_en_m2 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'telpark_m2');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:38:03 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:38:04 CESTLOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.650 s, sync=0.011 s, total=0.677 s; archivos sincronizados=7, más largo=0.006 s, promedio=0.002 s; distancia=21 kB, estimación=68 kB; lsn=93/BA022B78, lsn de redo=93/BA022B40
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:39:35 CESTLOG:  sentencia: CREATE USER MAPPING FOR postgres  SERVER m1_en_m2 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:39:48 CESTLOG:  sentencia: drop server m1_en_m2
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:39:48 CESTERROR:  no se puede eliminar servidor m1_en_m2 porque otros objetos dependen de él
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:39:48 CESTDETALLE:  mapeo para el usuario postgres en el servidor m1_en_m2 depende de servidor m1_en_m2
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:39:48 CESTHINT:  Use DROP ... CASCADE para eliminar además los objetos dependientes.
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:39:48 CESTSENTENCIA:  drop server m1_en_m2
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:40:49 CESTLOG:  sentencia: drop server m1_en_m2 cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:41:05 CESTLOG:  sentencia: CREATE SERVER m1_en_m2 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:41:10 CESTLOG:  sentencia: CREATE USER MAPPING FOR postgres  SERVER m1_en_m2 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:43:03 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:43:04 CESTLOG:  checkpoint completo: escritos 12 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.196 s, sync=0.016 s, total=1.229 s; archivos sincronizados=10, más largo=0.007 s, promedio=0.002 s; distancia=23 kB, estimación=63 kB; lsn=93/BA0288A8, lsn de redo=93/BA028870
+alumno_1= 09109126E y alumno_2= 06593675N ::1(49726), 2025-05-06 09:43:21 CESTLOG:  sentencia: CREATE SCHEMA telparkM1
+	;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:43:24 CESTLOG:  se recibió petición de apagado rápido
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:43:24 CESTLOG:  abortando transacciones activas
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:43:24 CESTERROR:  cancelando la sentencia debido a una petición del usuario
+alumno_1= 09109126E y alumno_2= 06593675N ::1(54557), 2025-05-06 09:43:24 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N ::1(50011), 2025-05-06 09:43:24 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:43:24 CESTLOG:  proceso ayudante «logical replication launcher» (PID 17300) terminó con código de salida 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:43:24 CESTLOG:  apagando
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:43:24 CESTLOG:  empezando checkpoint: shutdown immediate
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:43:24 CESTLOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.002 s, total=0.011 s; archivos sincronizados=4, más largo=0.001 s, promedio=0.001 s; distancia=3 kB, estimación=57 kB; lsn=93/BA029548, lsn de redo=93/BA029548
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:43:24 CESTLOG:  el sistema de bases de datos está apagado

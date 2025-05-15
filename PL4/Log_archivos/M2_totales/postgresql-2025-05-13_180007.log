@@ -1,0 +1,88 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:00:07 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:00:07 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:00:07 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:00:07 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-13 17:59:54 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:00:07 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:00:45 CESTERROR:  error de sintaxis en o cerca de «clientes» en carácter 18
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:00:45 CESTSENTENCIA:  truncate cascade clientes;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:01:18 CESTLOG:  sentencia: truncate clientes cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:01:33 CESTLOG:  sentencia: truncate plazas cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:01:49 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:01:49 CESTLOG:  sentencia: COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:01:49 CESTLOG:  sentencia: COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:01:49 CESTLOG:  sentencia: COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:01:49 CESTLOG:  sentencia: COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:01:49 CESTLOG:  sentencia: COPY  incidencias ( incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:05:07 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:05:18 CESTLOG:  checkpoint completo: escritos 100 búfers (0.6%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=10.550 s, sync=0.054 s, total=10.630 s; archivos sincronizados=76, más largo=0.006 s, promedio=0.001 s; distancia=560 kB, estimación=560 kB; lsn=93/C00C4AF8, lsn de redo=93/C00C4AC0
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:26:31 CESTLOG:  sentencia: truncate clientes cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:26:43 CESTLOG:  sentencia: truncate plazas cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTLOG:  sentencia: COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTERROR:  inserción o actualización en la tabla «vehiculos» viola la llave foránea «clientes_fk»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTDETALLE:  La llave (clienteid_clientes)=(1272641) no está presente en la tabla «clientes».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTSENTENCIA:  COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTLOG:  sentencia: COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTSENTENCIA:  COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTLOG:  sentencia: COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTSENTENCIA:  COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTLOG:  sentencia: COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTSENTENCIA:  COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTLOG:  sentencia: COPY  incidencias ( incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:27:00 CESTSENTENCIA:  COPY  incidencias ( incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:02 CESTLOG:  sentencia: truncate clientes cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:09 CESTLOG:  sentencia: truncate plazas cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTLOG:  sentencia: COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTERROR:  inserción o actualización en la tabla «vehiculos» viola la llave foránea «clientes_fk»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTDETALLE:  La llave (clienteid_clientes)=(100) no está presente en la tabla «clientes».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTSENTENCIA:  COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTLOG:  sentencia: COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTSENTENCIA:  COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTLOG:  sentencia: COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTSENTENCIA:  COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTLOG:  sentencia: COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTSENTENCIA:  COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTLOG:  sentencia: COPY  incidencias ( incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:29:15 CESTSENTENCIA:  COPY  incidencias ( incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:30:07 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:11 CESTLOG:  sentencia: truncate clientes;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:11 CESTERROR:  no se puede truncar una tabla referida en una llave foránea
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:11 CESTDETALLE:  La tabla «vehiculos» hace referencia a «clientes».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:11 CESTHINT:  Trunque la tabla «vehiculos» al mismo tiempo, o utilice TRUNCATE ... CASCADE.
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:11 CESTSENTENCIA:  truncate clientes;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:30:15 CESTLOG:  checkpoint completo: escritos 72 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=7.696 s, sync=0.039 s, total=7.765 s; archivos sincronizados=136, más largo=0.006 s, promedio=0.001 s; distancia=341 kB, estimación=538 kB; lsn=93/C011A340, lsn de redo=93/C011A2B0
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:18 CESTLOG:  sentencia: truncate pl2 ;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:18 CESTERROR:  no existe la relación «pl2»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:18 CESTSENTENCIA:  truncate pl2 ;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:24 CESTLOG:  sentencia: truncate clientes cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:31 CESTLOG:  sentencia: truncate plazas cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:38 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:38 CESTLOG:  sentencia: COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:38 CESTLOG:  sentencia: COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:38 CESTLOG:  sentencia: COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:38 CESTLOG:  sentencia: COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52083), 2025-05-13 18:30:38 CESTLOG:  sentencia: COPY  incidencias ( incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(56512), 2025-05-13 18:34:12 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:35:07 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:35:18 CESTLOG:  checkpoint completo: escritos 103 búfers (0.6%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=11.073 s, sync=0.041 s, total=11.149 s; archivos sincronizados=74, más largo=0.006 s, promedio=0.001 s; distancia=590 kB, estimación=590 kB; lsn=93/C01ADD80, lsn de redo=93/C01ADD48
+alumno_1= 09109126E y alumno_2= 06593675N ::1(56813), 2025-05-13 18:41:31 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52061), 2025-05-13 18:41:34 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52061), 2025-05-13 18:41:34 CESTSENTENCIA:  START_REPLICATION 93/C0000000 TIMELINE 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52061), 2025-05-13 18:41:34 CESTLOG:  se encontró fin de archivo inesperado en la conexión standby
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52061), 2025-05-13 18:41:34 CESTSENTENCIA:  START_REPLICATION 93/C0000000 TIMELINE 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:41:34 CESTLOG:  proceso de servidor (PID 10540) fue terminado por una excepción 0xC000013A
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:41:34 CESTDETALLE:  El proceso que falló estaba ejecutando: Commit;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:41:34 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 18:41:34 CESTLOG:  terminando todos los otros procesos de servidor activos

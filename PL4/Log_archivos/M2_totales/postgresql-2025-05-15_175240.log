@@ -1,0 +1,21 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:52:40 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:52:40 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:52:40 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:52:40 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-15 10:40:38 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:52:40 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59560), 2025-05-15 17:53:21 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59557), 2025-05-15 17:53:21 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59592), 2025-05-15 17:53:21 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:55:07 CESTLOG:  se recibió petición de apagado rápido
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:55:07 CESTERROR:  cancelando la sentencia debido a una petición del usuario
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:55:07 CESTLOG:  abortando transacciones activas
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59515), 2025-05-15 17:55:07 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:55:07 CESTLOG:  proceso ayudante «logical replication launcher» (PID 11360) terminó con código de salida 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:55:07 CESTLOG:  apagando
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:55:07 CESTLOG:  empezando checkpoint: shutdown immediate
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:55:07 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.003 s, total=0.018 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=93/C2000110, lsn de redo=93/C2000110
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59778), 2025-05-15 17:55:07 CESTLOG:  el PID 20912 en la petición de cancelación no coincidió con ningún proceso
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:55:07 CESTLOG:  el sistema de bases de datos está apagado

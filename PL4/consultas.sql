@@ -1,4 +1,4 @@
-Begin;
+-- Begin;
 
 --Coipamos la nueva BBDD de telpark (tiene menos datos para un manejo mas rapido) 
 --Se copieran en las tablas de M1 y M2 segun se ejecute en la consola con el puerto (32 o 33) correspondiente
@@ -9,6 +9,10 @@ Begin;
 -- \copy pagos(pagoid, cantidad, fechapago, metodopago, reservaid_reservas) FROM 'NWTLPK/pagos.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 -- \copy incidencias(incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion)  FROM 'NWTLPK/incidencias.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
+-- create publication m1pub for table clientes, vehiculos, plazas, reservas, pagos, incidencias;
 
+-- create publication m2pub for table clientes, vehiculos, plazas, reservas, pagos, incidencias;
 
-Commit;
+create subscription m1sub
+    connection 'host=localhost port=5433 dbname=pl2 user=postgres password=Paniagua2005' publication m2pub;
+-- Commit;

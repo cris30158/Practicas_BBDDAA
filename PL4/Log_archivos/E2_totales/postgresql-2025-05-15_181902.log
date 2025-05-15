@@ -1,0 +1,7 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:19:02 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:19:02 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:19:02 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:19:02 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-15 18:00:45 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:19:02 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:19:30 CESTLOG:  empezando checkpoint: force wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:19:30 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.003 s, sync=0.002 s, total=0.013 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=16383 kB, estimación=16383 kB; lsn=93/C3000060, lsn de redo=93/C3000028

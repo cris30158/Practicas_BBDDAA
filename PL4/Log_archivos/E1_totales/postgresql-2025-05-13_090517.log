@@ -1,0 +1,10 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:05:17 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:05:17 CESTLOG:  no se pudo enlazar a la dirección IPv6 «::»: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+	
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:05:17 CESTHINT:  ¿Hay otro postmaster en ejecución en el puerto 5432? Si no, aguarde unos segundos y reintente.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:05:17 CESTLOG:  no se pudo enlazar a la dirección IPv4 «0.0.0.0»: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+	
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:05:17 CESTHINT:  ¿Hay otro postmaster en ejecución en el puerto 5432? Si no, aguarde unos segundos y reintente.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:05:17 CESTWARNING:  no se pudo crear el socket de escucha para «*»
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:05:17 CESTFATAL:  no se pudo crear ningún socket TCP/IP
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:05:17 CESTLOG:  el sistema de bases de datos está apagado

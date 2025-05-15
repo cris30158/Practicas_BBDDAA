@@ -1,0 +1,29 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:40 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:40 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:40 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:40 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-14 18:24:58 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:42 CESTLOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:42 CESTLOG:  redo comienza en 93/C01B5CB0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:42 CESTLOG:  largo de registro no válido en 93/C01B5CE8: se esperaba al menos 24, se obtuvo 0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:42 CESTLOG:  redo listo en 93/C01B5CB0 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:42 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+alumno_1= 09109126E y alumno_2= 06593675N 127.0.0.1(52181), 2025-05-15 10:15:42 CESTFATAL:  el sistema de base de datos está iniciándose
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:42 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.012 s, sync=0.004 s, total=0.031 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=93/C01B5CE8, lsn de redo=93/C01B5CE8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:42 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:35:42 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:35:42 CESTLOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.427 s, sync=0.035 s, total=0.504 s; archivos sincronizados=4, más largo=0.029 s, promedio=0.009 s; distancia=5 kB, estimación=5 kB; lsn=93/C01B74B8, lsn de redo=93/C01B7480
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:36:52 CESTLOG:  empezando checkpoint: force wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:36:52 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.001 s, sync=0.001 s, total=0.018 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=14626 kB, estimación=14626 kB; lsn=93/C1000060, lsn de redo=93/C1000028
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52237), 2025-05-15 10:36:52 CESTERROR:  el segmento de WAL solicitado 0000000100000093000000C0 ya ha sido eliminado
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52237), 2025-05-15 10:36:52 CESTSENTENCIA:  START_REPLICATION 93/C0000000 TIMELINE 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:40:37 CESTLOG:  se recibió petición de apagado rápido
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:40:37 CESTLOG:  abortando transacciones activas
+alumno_1= 09109126E y alumno_2= 06593675N ::1(53525), 2025-05-15 10:40:37 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52253), 2025-05-15 10:40:37 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N ::1(52245), 2025-05-15 10:40:37 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N ::1(53669), 2025-05-15 10:40:37 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:40:37 CESTLOG:  proceso ayudante «logical replication launcher» (PID 9260) terminó con código de salida 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:40:38 CESTLOG:  apagando
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:40:38 CESTLOG:  empezando checkpoint: shutdown immediate
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:40:38 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.001 s, sync=0.001 s, total=0.018 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16384 kB, estimación=16384 kB; lsn=93/C2000060, lsn de redo=93/C2000060
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:40:38 CESTLOG:  el sistema de bases de datos está apagado

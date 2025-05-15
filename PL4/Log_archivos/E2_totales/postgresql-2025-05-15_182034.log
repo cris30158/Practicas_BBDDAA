@@ -1,0 +1,19 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:34 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:34 CESTLOG:  escuchando en la dirección IPv6 «::», port 5435
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:34 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5435
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:34 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-15 18:19:30 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:35 CESTLOG:  entrando al modo standby
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:35 CESTLOG:  iniciando recuperación de backup con LSN de redo 93/C3000028, LSN de checkpoint 93/C3000060, en timeline 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:35 CESTLOG:  redo comienza en 93/C3000028
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:35 CESTLOG:  se completó la recuperación de backup con LSN de redo 93/C3000028 y LSN de término 93/C3000138
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:35 CESTLOG:  el estado de recuperación consistente fue alcanzado en 93/C3000138
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:35 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones de sólo lectura
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:20:35 CESTLOG:  iniciando el flujo de WAL desde el primario en 93/C4000000 en el timeline 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:21:29 CESTLOG:  se recibió petición de apagado rápido
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:21:29 CESTLOG:  abortando transacciones activas
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:21:29 CESTFATAL:  terminando el proceso walreceiver debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:21:29 CESTLOG:  apagando
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:21:29 CESTLOG:  empezando restartpoint: shutdown immediate
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:21:29 CESTLOG:  restartpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.002 s, sync=0.001 s, total=0.019 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16384 kB, estimación=16384 kB; lsn=93/C4000060, lsn de redo=93/C4000060
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:21:29 CESTLOG:  restartpoint de recuperación en 93/C4000060
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:21:29 CESTLOG:  el sistema de bases de datos está apagado

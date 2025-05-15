@@ -1,0 +1,107 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:49 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:49 CESTLOG:  escuchando en la dirección IPv6 «::», port 5434
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:49 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5434
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:49 CESTLOG:  el sistema de bases de datos fue interrumpido durante la recuperación en el instante de registro 2025-05-13 18:37:46 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:49 CESTHINT:  Si esto ha ocurrido más de una vez, algunos datos podrían estar corruptos y podría ser necesario escoger un punto de recuperación anterior.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:50 CESTLOG:  entrando al modo standby
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:50 CESTLOG:  redo comienza en 93/C01900F8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:50 CESTLOG:  el estado de recuperación consistente fue alcanzado en 93/C01901A8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:50 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones de sólo lectura
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:50 CESTLOG:  largo de registro no válido en 93/C01901E0: se esperaba al menos 24, se obtuvo 0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:15:50 CESTLOG:  iniciando el flujo de WAL desde el primario en 93/C0000000 en el timeline 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:20:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:20:50 CESTLOG:  restartpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.568 s, sync=0.010 s, total=0.602 s; archivos sincronizados=6, más largo=0.007 s, promedio=0.002 s; distancia=7 kB, estimación=7 kB; lsn=93/C01920E8, lsn de redo=93/C01920B0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:20:50 CESTLOG:  restartpoint de recuperación en 93/C01920B0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:20:50 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-14 17:35:26.211152+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:44:59 CESTLOG:  replicación terminada por el servidor primario
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:44:59 CESTDETALLE:  Se alcanzó el fin de WAL en el timeline 1 en la posición 93/C0198990.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:44:59 CESTFATAL:  no se pudo enviar el mensaje fin-de-flujo al primario: el servidor ha cerrado la conexión inesperadamente
+		Probablemente se debe a que el servidor terminó de manera anormal
+		antes o durante el procesamiento de la petición.
+	no hay COPY alguno en ejecución
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:44:59 CESTLOG:  largo de registro no válido en 93/C0198990: se esperaba al menos 24, se obtuvo 0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:45:01 CESTLOG:  iniciando el flujo de WAL desde el primario en 93/C0000000 en el timeline 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:45:04 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:45:06 CESTLOG:  restartpoint completo: escritos 19 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.965 s, sync=0.043 s, total=2.049 s; archivos sincronizados=12, más largo=0.030 s, promedio=0.004 s; distancia=26 kB, estimación=26 kB; lsn=93/C0198918, lsn de redo=93/C0198918
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:45:06 CESTLOG:  restartpoint de recuperación en 93/C0198918
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:45:06 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 10:44:29.760275+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:50:34 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:51:00 CESTLOG:  restartpoint completo: escritos 234 búfers (1.4%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=25.515 s, sync=0.036 s, total=25.564 s; archivos sincronizados=59, más largo=0.002 s, promedio=0.001 s; distancia=4352 kB, estimación=4352 kB; lsn=93/C0909028, lsn de redo=93/C05D8C68
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:51:00 CESTLOG:  restartpoint de recuperación en 93/C05D8C68
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:51:00 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 10:51:00.267454+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:55:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:56:17 CESTLOG:  restartpoint completo: escritos 255 búfers (1.6%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=27.794 s, sync=0.025 s, total=27.865 s; archivos sincronizados=55, más largo=0.001 s, promedio=0.001 s; distancia=22558 kB, estimación=22558 kB; lsn=93/C1F61C68, lsn de redo=93/C1BE04D0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:56:17 CESTLOG:  restartpoint de recuperación en 93/C1BE04D0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 10:56:17 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 10:56:17.006521+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:00:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:01:17 CESTLOG:  restartpoint completo: escritos 253 búfers (1.5%); 0 archivos WAL añadidos, 0 eliminados, 2 reciclados; write=27.632 s, sync=0.065 s, total=27.749 s; archivos sincronizados=55, más largo=0.028 s, promedio=0.002 s; distancia=22885 kB, estimación=22885 kB; lsn=93/C355E8A0, lsn de redo=93/C3239CB0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:01:17 CESTLOG:  restartpoint de recuperación en 93/C3239CB0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:01:17 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:01:15.12105+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:05:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:06:16 CESTLOG:  restartpoint completo: escritos 252 búfers (1.5%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=27.398 s, sync=0.088 s, total=27.542 s; archivos sincronizados=55, más largo=0.029 s, promedio=0.002 s; distancia=22319 kB, estimación=22829 kB; lsn=93/C4AEF638, lsn de redo=93/C4805B60
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:06:16 CESTLOG:  restartpoint de recuperación en 93/C4805B60
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:06:16 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:06:15.067442+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:10:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:11:16 CESTLOG:  restartpoint completo: escritos 246 búfers (1.5%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=26.916 s, sync=0.055 s, total=27.018 s; archivos sincronizados=55, más largo=0.028 s, promedio=0.001 s; distancia=22414 kB, estimación=22787 kB; lsn=93/C61798C8, lsn de redo=93/C5DE9660
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:11:16 CESTLOG:  restartpoint de recuperación en 93/C5DE9660
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:11:16 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:11:15.660833+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:15:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:16:16 CESTLOG:  restartpoint completo: escritos 248 búfers (1.5%); 0 archivos WAL añadidos, 0 eliminados, 2 reciclados; write=27.140 s, sync=0.057 s, total=27.249 s; archivos sincronizados=55, más largo=0.003 s, promedio=0.002 s; distancia=22545 kB, estimación=22763 kB; lsn=93/C770C890, lsn de redo=93/C73EDB00
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:16:16 CESTLOG:  restartpoint de recuperación en 93/C73EDB00
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:16:16 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:16:16.299823+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:20:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:21:17 CESTLOG:  restartpoint completo: escritos 250 búfers (1.5%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=27.281 s, sync=0.019 s, total=27.321 s; archivos sincronizados=55, más largo=0.001 s, promedio=0.001 s; distancia=22486 kB, estimación=22735 kB; lsn=93/C8D025C0, lsn de redo=93/C89E3438
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:21:17 CESTLOG:  restartpoint de recuperación en 93/C89E3438
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:21:17 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:21:16.578871+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:25:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:26:15 CESTLOG:  restartpoint completo: escritos 244 búfers (1.5%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=26.628 s, sync=0.055 s, total=26.733 s; archivos sincronizados=55, más largo=0.008 s, promedio=0.001 s; distancia=22082 kB, estimación=22670 kB; lsn=93/CA28C820, lsn de redo=93/C9F73F58
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:26:15 CESTLOG:  restartpoint de recuperación en 93/C9F73F58
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:26:15 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:26:15.714005+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:30:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:31:16 CESTLOG:  restartpoint completo: escritos 240 búfers (1.5%); 0 archivos WAL añadidos, 0 eliminados, 2 reciclados; write=26.176 s, sync=0.073 s, total=26.303 s; archivos sincronizados=55, más largo=0.029 s, promedio=0.002 s; distancia=22461 kB, estimación=22649 kB; lsn=93/CB8812D0, lsn de redo=93/CB563488
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:31:16 CESTLOG:  restartpoint de recuperación en 93/CB563488
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:31:16 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:31:13.912692+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:35:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:35:56 CESTLOG:  restartpoint completo: escritos 72 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=7.600 s, sync=0.078 s, total=7.726 s; archivos sincronizados=58, más largo=0.029 s, promedio=0.002 s; distancia=18081 kB, estimación=22192 kB; lsn=93/CC70BBC8, lsn de redo=93/CC70BB90
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:35:56 CESTLOG:  restartpoint de recuperación en 93/CC70BB90
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:35:56 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:34:22.115918+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:40:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:40:50 CESTLOG:  restartpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.445 s, sync=0.005 s, total=0.491 s; archivos sincronizados=4, más largo=0.002 s, promedio=0.002 s; distancia=15 kB, estimación=19975 kB; lsn=93/CC70F850, lsn de redo=93/CC70F818
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:40:50 CESTLOG:  restartpoint de recuperación en 93/CC70F818
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:40:50 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:40:50.092371+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:45:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:45:50 CESTLOG:  restartpoint completo: escritos 13 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.321 s, sync=0.039 s, total=1.398 s; archivos sincronizados=13, más largo=0.028 s, promedio=0.003 s; distancia=32 kB, estimación=17980 kB; lsn=93/CC717B50, lsn de redo=93/CC717B18
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:45:50 CESTLOG:  restartpoint de recuperación en 93/CC717B18
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:45:50 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:44:37.365257+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:50:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:50:50 CESTLOG:  restartpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.554 s, sync=0.035 s, total=0.629 s; archivos sincronizados=6, más largo=0.028 s, promedio=0.006 s; distancia=12 kB, estimación=16184 kB; lsn=93/CC71AE40, lsn de redo=93/CC71AE08
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:50:50 CESTLOG:  restartpoint de recuperación en 93/CC71AE08
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:50:50 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:50:05.745219+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:55:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:55:49 CESTLOG:  restartpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.040 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=12 kB, estimación=14566 kB; lsn=93/CC71DEE8, lsn de redo=93/CC71DEB0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:55:49 CESTLOG:  restartpoint de recuperación en 93/CC71DEB0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 11:55:49 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:50:05.745219+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:00:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:00:50 CESTLOG:  restartpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.547 s, sync=0.036 s, total=0.624 s; archivos sincronizados=6, más largo=0.028 s, promedio=0.006 s; distancia=7 kB, estimación=13110 kB; lsn=93/CC71FB68, lsn de redo=93/CC71FB30
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:00:50 CESTLOG:  restartpoint de recuperación en 93/CC71FB30
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:00:50 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 12:00:28.275267+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:05:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:05:49 CESTLOG:  restartpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.042 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=12 kB, estimación=11801 kB; lsn=93/CC722DA8, lsn de redo=93/CC722D70
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:05:49 CESTLOG:  restartpoint de recuperación en 93/CC722D70
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:05:49 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 12:00:28.275267+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:10:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:10:49 CESTLOG:  restartpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.551 s, sync=0.037 s, total=0.629 s; archivos sincronizados=6, más largo=0.029 s, promedio=0.007 s; distancia=12 kB, estimación=10622 kB; lsn=93/CC7260D0, lsn de redo=93/CC726098
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:10:49 CESTLOG:  restartpoint de recuperación en 93/CC726098
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:10:49 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 12:10:32.153054+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:15:49 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:15:50 CESTLOG:  restartpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.545 s, sync=0.035 s, total=0.617 s; archivos sincronizados=6, más largo=0.028 s, promedio=0.006 s; distancia=14 kB, estimación=9561 kB; lsn=93/CC729AB0, lsn de redo=93/CC729A78
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:15:50 CESTLOG:  restartpoint de recuperación en 93/CC729A78
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:15:50 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 12:14:45.020343+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:25:04 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:25:04 CESTLOG:  restartpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.104 s, sync=0.009 s, total=0.154 s; archivos sincronizados=2, más largo=0.007 s, promedio=0.005 s; distancia=6 kB, estimación=8605 kB; lsn=93/CC72B5B8, lsn de redo=93/CC72B580
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:25:04 CESTLOG:  restartpoint de recuperación en 93/CC72B580
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:25:04 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 12:22:50.967762+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:29:31 CESTLOG:  proceso receptor de WAL (PID 23548) fue terminado por una excepción 0xC000013A
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:29:31 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:29:31 CESTLOG:  terminando todos los otros procesos de servidor activos
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 12:29:31 CESTLOG:  todos los procesos fueron terminados; reinicializando

@@ -1,0 +1,14 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:52:58 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:52:58 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:52:58 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:52:58 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-06 08:52:46 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:52:58 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:57:58 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:57:58 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.007 s, sync=0.003 s, total=0.034 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=93/BA0001C0, lsn de redo=93/BA000188
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:04:47 CESTLOG:  se recibió petición de apagado rápido
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:04:47 CESTLOG:  abortando transacciones activas
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:04:47 CESTLOG:  proceso ayudante «logical replication launcher» (PID 29004) terminó con código de salida 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:04:47 CESTLOG:  apagando
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:04:47 CESTLOG:  empezando checkpoint: shutdown immediate
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:04:47 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.016 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=0 kB; lsn=93/BA000270, lsn de redo=93/BA000270
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:04:47 CESTLOG:  el sistema de bases de datos está apagado

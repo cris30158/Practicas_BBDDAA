@@ -1,0 +1,14 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:25:42 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:25:42 CESTLOG:  escuchando en la dirección IPv6 «::», port 5435
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:25:42 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5435
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:25:42 CESTLOG:  el sistema de bases de datos fue apagado durante la recuperación en 2025-05-15 18:21:29 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:25:42 CESTLOG:  entrando al modo standby
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:25:42 CESTLOG:  el estado de recuperación consistente fue alcanzado en 93/C40000D8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:25:42 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones de sólo lectura
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:25:42 CESTLOG:  redo comienza en 93/C40000D8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:25:42 CESTLOG:  largo de registro no válido en 93/C4000110: se esperaba al menos 24, se obtuvo 0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:25:42 CESTLOG:  iniciando el flujo de WAL desde el primario en 93/C4000000 en el timeline 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:30:42 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:30:43 CESTLOG:  restartpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.559 s, sync=0.018 s, total=0.603 s; archivos sincronizados=6, más largo=0.006 s, promedio=0.003 s; distancia=11 kB, estimación=11 kB; lsn=93/C4002E00, lsn de redo=93/C4002DC8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:30:43 CESTLOG:  restartpoint de recuperación en 93/C4002DC8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:30:43 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 18:22:20.079241+02.

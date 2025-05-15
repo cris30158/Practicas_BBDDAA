@@ -1,0 +1,32 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:26 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:26 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:26 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:26 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-06 10:03:21 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:27 CESTLOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:27 CESTLOG:  redo comienza en 93/BA083280
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:27 CESTLOG:  largo de registro no válido en 93/BA083368: se esperaba al menos 24, se obtuvo 0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:27 CESTLOG:  redo listo en 93/BA083330 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:27 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:27 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.002 s, total=0.009 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=93/BA083368, lsn de redo=93/BA083368
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:12:27 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57207), 2025-05-06 10:12:44 CESTLOG:  sentencia: drop server m2_en_m1 cascade
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57207), 2025-05-06 10:12:44 CESTERROR:  no existe el servidor «m2_en_m1»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57207), 2025-05-06 10:12:44 CESTSENTENCIA:  drop server m2_en_m1 cascade
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57207), 2025-05-06 10:12:51 CESTLOG:  sentencia: drop server m1_en_m2 cascade
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57207), 2025-05-06 10:12:51 CESTERROR:  no existe el servidor «m1_en_m2»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57207), 2025-05-06 10:12:51 CESTSENTENCIA:  drop server m1_en_m2 cascade
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57244), 2025-05-06 10:12:59 CESTLOG:  sentencia: drop server m1_en_m2 cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57244), 2025-05-06 10:15:26 CESTLOG:  sentencia: CREATE SERVER m1_en_m2 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57244), 2025-05-06 10:15:32 CESTLOG:  sentencia: CREATE USER MAPPING FOR postgres SERVER m1_en_m2 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57244), 2025-05-06 10:15:41 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m1_en_m2 INTO telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57244), 2025-05-06 10:15:45 CESTERROR:  error de sintaxis en o cerca de «;» en carácter 23
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57244), 2025-05-06 10:15:45 CESTSENTENCIA:  IMPORT FOREIGN SCHEMA
+	;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:17:27 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:17:32 CESTLOG:  checkpoint completo: escritos 47 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.023 s, sync=0.027 s, total=5.068 s; archivos sincronizados=27, más largo=0.008 s, promedio=0.001 s; distancia=210 kB, estimación=210 kB; lsn=93/BA0B7D50, lsn de redo=93/BA0B7D18
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57283), 2025-05-06 10:18:38 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

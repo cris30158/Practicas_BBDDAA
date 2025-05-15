@@ -1,0 +1,128 @@
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61351), 2025-05-06 08:26:40 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61351), 2025-05-06 08:26:40 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61357), 2025-05-06 08:26:49 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61357), 2025-05-06 08:26:49 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61360), 2025-05-06 08:26:53 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61360), 2025-05-06 08:26:53 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61369), 2025-05-06 08:27:55 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61369), 2025-05-06 08:27:55 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61377), 2025-05-06 08:28:21 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61377), 2025-05-06 08:28:21 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61379), 2025-05-06 08:28:30 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61379), 2025-05-06 08:28:30 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61383), 2025-05-06 08:28:54 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61383), 2025-05-06 08:28:54 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:06 CESTLOG:  sentencia: ALTER USER tu_usuario WITH PASSWORD 'nueva_contraseña';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:06 CESTERROR:  no existe el rol «tu_usuario»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:06 CESTSENTENCIA:  ALTER USER tu_usuario WITH PASSWORD 'nueva_contraseña';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:08 CESTLOG:  sentencia: ALTER USER tu_usuario WITH PASSWORD 'nueva_contraseña';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:08 CESTERROR:  no existe el rol «tu_usuario»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:08 CESTSENTENCIA:  ALTER USER tu_usuario WITH PASSWORD 'nueva_contraseña';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:25 CESTLOG:  sentencia: ALTER USER alvaro WITH PASSWORD 'Paniagua2005'
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:25 CESTERROR:  no existe el rol «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61435), 2025-05-06 08:31:25 CESTSENTENCIA:  ALTER USER alvaro WITH PASSWORD 'Paniagua2005'
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61449), 2025-05-06 08:31:50 CESTFATAL:  la autentificación password falló para el usuario «alvaro»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61449), 2025-05-06 08:31:50 CESTDETALLE:  No existe el rol «alvaro».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61476), 2025-05-06 08:34:12 CESTERROR:  error de sintaxis en o cerca de «postgres» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61476), 2025-05-06 08:34:12 CESTSENTENCIA:  postgres=# ALTER USER alvaro WITH PASSWORD 'Paniagua2005'        
+	postgres-# ;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:37:31 CESTLOG:  empezando checkpoint: force wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:37:31 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.002 s, sync=0.001 s, total=0.019 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=4101 kB, estimación=4101 kB; lsn=93/B9000060, lsn de redo=93/B9000028
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:42:31 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:42:31 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.028 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16384 kB, estimación=16384 kB; lsn=93/BA000098, lsn de redo=93/BA000060
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:57:31 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 08:57:31 CESTLOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.763 s, sync=0.008 s, total=0.787 s; archivos sincronizados=3, más largo=0.006 s, promedio=0.003 s; distancia=43 kB, estimación=14749 kB; lsn=93/BA00AD38, lsn de redo=93/BA00AD00
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:43:42 CESTLOG:  sentencia: CREATE SERVER m2_en_m1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:43:42 CESTERROR:  no existe el conector de datos externos «postgres_fdw»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:43:42 CESTSENTENCIA:  CREATE SERVER m2_en_m1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:43:49 CESTLOG:  sentencia: CREATE EXTENSION postgres_fdw;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:43:57 CESTLOG:  sentencia: CREATE SERVER m2_en_m1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:44:12 CESTLOG:  sentencia: drop server m1_en_m2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:44:12 CESTERROR:  no existe el servidor «m1_en_m2»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:44:12 CESTSENTENCIA:  drop server m1_en_m2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:44:16 CESTLOG:  sentencia: drop server m2_en_m1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:44:23 CESTLOG:  sentencia: CREATE SERVER m2_en_m1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5433', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:45:05 CESTLOG:  sentencia: CREATE USER MAPPING FOR postgres  SERVER m2_en_m1 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:45:15 CESTLOG:  sentencia: CREATE SCHEMA telparkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:46:39 CESTERROR:  error de sintaxis en o cerca de «FOREING» en carácter 8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:46:39 CESTSENTENCIA:  IMPORT FOREING SCHEMA public FROM SERVER m1_en_m2 INTO telperkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:46:51 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m1_en_m2 INTO telperkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:46:51 CESTERROR:  no existe el servidor «m1_en_m2»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:46:51 CESTSENTENCIA:  IMPORT FOREIGN SCHEMA public FROM SERVER m1_en_m2 INTO telperkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:47:10 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telperkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:47:10 CESTERROR:  no existe el esquema «telperkm2»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:47:10 CESTSENTENCIA:  IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telperkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:47:13 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telperkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:47:13 CESTERROR:  no existe el esquema «telperkm1»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:47:13 CESTSENTENCIA:  IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telperkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:47:22 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telparkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:47:26 CESTERROR:  could not connect to server "m2_en_m1"
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:47:26 CESTDETALLE:  falló la conexión al servidor en «localhost» (::1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+	falló la conexión al servidor en «localhost» (127.0.0.1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:47:26 CESTSENTENCIA:  IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telparkM2;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:47:32 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:47:35 CESTLOG:  checkpoint completo: escritos 35 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.709 s, sync=0.020 s, total=3.749 s; archivos sincronizados=25, más largo=0.006 s, promedio=0.001 s; distancia=78 kB, estimación=13282 kB; lsn=93/BA01E698, lsn de redo=93/BA01E660
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:48:44 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telparkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62044), 2025-05-06 09:50:17 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62064), 2025-05-06 09:50:17 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:52:32 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:52:36 CESTLOG:  checkpoint completo: escritos 34 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.572 s, sync=0.024 s, total=3.615 s; archivos sincronizados=20, más largo=0.004 s, promedio=0.002 s; distancia=139 kB, estimación=11968 kB; lsn=93/BA041600, lsn de redo=93/BA0415C8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:55:34 CESTLOG:  sentencia: drop schema telpark2 cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:55:34 CESTERROR:  no existe el esquema «telpark2»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:55:34 CESTSENTENCIA:  drop schema telpark2 cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:55:51 CESTLOG:  sentencia: drop server m2_en_m1 cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:56:29 CESTLOG:  sentencia: CREATE SERVER m2_en_m1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:57:00 CESTLOG:  sentencia: CREATE USER MAPPING FOR pl2 SERVER m2_en_m1 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:57:00 CESTERROR:  no existe el rol «pl2»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:57:00 CESTSENTENCIA:  CREATE USER MAPPING FOR pl2 SERVER m2_en_m1 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:57:32 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:57:34 CESTLOG:  checkpoint completo: escritos 16 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.654 s, sync=0.014 s, total=1.686 s; archivos sincronizados=13, más largo=0.006 s, promedio=0.002 s; distancia=58 kB, estimación=10777 kB; lsn=93/BA04FEF8, lsn de redo=93/BA04FEC0
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:57:34 CESTLOG:  sentencia: CREATE USER MAPPING FOR postgres SERVER m2_en_m1 OPTIONS (user 'postgres', password 'Paniagua2005', dbname'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:57:34 CESTERROR:  el nombre de opción «dbname» no es válido
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:57:34 CESTSENTENCIA:  CREATE USER MAPPING FOR postgres SERVER m2_en_m1 OPTIONS (user 'postgres', password 'Paniagua2005', dbname'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55598), 2025-05-06 09:58:53 CESTLOG:  sentencia: drop server m2_en_m1 cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59554), 2025-05-06 09:59:03 CESTLOG:  sentencia: CREATE SERVER m2_en_m1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59554), 2025-05-06 09:59:03 CESTERROR:  no existe el conector de datos externos «postgres_fdw»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59554), 2025-05-06 09:59:03 CESTSENTENCIA:  CREATE SERVER m2_en_m1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59554), 2025-05-06 09:59:10 CESTLOG:  sentencia: CREATE EXTENSION postgres_fdw;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59554), 2025-05-06 09:59:15 CESTLOG:  sentencia: CREATE SERVER m2_en_m1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5432', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59554), 2025-05-06 09:59:31 CESTLOG:  sentencia: CREATE USER MAPPING FOR postgres SERVER m2_en_m1 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59554), 2025-05-06 09:59:42 CESTLOG:  sentencia: CREATE SCHEMA telparkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59554), 2025-05-06 10:01:57 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telparkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61713), 2025-05-06 10:02:11 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61721), 2025-05-06 10:02:11 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:02:32 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:02:42 CESTLOG:  checkpoint completo: escritos 94 búfers (0.6%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=10.132 s, sync=0.041 s, total=10.191 s; archivos sincronizados=48, más largo=0.007 s, promedio=0.001 s; distancia=249 kB, estimación=9724 kB; lsn=93/BA08E630, lsn de redo=93/BA08E5F8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59554), 2025-05-06 10:05:25 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59587), 2025-05-06 10:05:25 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59672), 2025-05-06 10:05:58 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59658), 2025-05-06 10:05:58 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57250), 2025-05-06 10:13:32 CESTLOG:  sentencia: drop server m2_en_m1 cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57250), 2025-05-06 10:14:13 CESTLOG:  sentencia: CREATE SERVER m2_en_m1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5433', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57250), 2025-05-06 10:14:42 CESTLOG:  sentencia: CREATE USER MAPPING FOR postgres SERVER m2_en_m1 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57250), 2025-05-06 10:14:56 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telparkM2;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:18:24 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:18:28 CESTLOG:  checkpoint completo: escritos 45 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.795 s, sync=0.010 s, total=4.816 s; archivos sincronizados=25, más largo=0.001 s, promedio=0.001 s; distancia=210 kB, estimación=8773 kB; lsn=93/BA0C3060, lsn de redo=93/BA0C3028
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57250), 2025-05-06 10:18:38 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(57288), 2025-05-06 10:18:39 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

@@ -1,0 +1,43 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:00:56 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:00:56 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:00:56 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:00:56 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-13 08:59:43 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:00:56 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:05:56 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:05:56 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.006 s, sync=0.003 s, total=0.032 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=93/C00001F8, lsn de redo=93/C00001C0
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:16:40 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (50000002, 'Fernando', 'Gutierrez', 'fernandogutierrez1@gmail.com', 700000001, 'Sevilla');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:18:32 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (50000003, 'Gabriel', 'Sanchez', 'gabrielsanchez55@yahoo.com', 700000002, 'Toledo');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:18:40 CESTLOG:  sentencia: delete from clientes where clienteid = 50000002;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:18:43 CESTLOG:  sentencia: delete from clientes where clienteid = 50000003;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:19:23 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (50000002, 'Fernando', 'Gutierrez', 'fernandogutierrez1@gmail.com', 700000001, 'Sevilla');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:19:24 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (50000003, 'Gabriel', 'Sanchez', 'gabrielsanchez55@yahoo.com', 700000002, 'Toledo');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:20:56 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:20:57 CESTLOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.769 s, sync=0.012 s, total=0.797 s; archivos sincronizados=6, más largo=0.006 s, promedio=0.002 s; distancia=45 kB, estimación=45 kB; lsn=93/C000B7C0, lsn de redo=93/C000B788
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:25:56 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:25:56 CESTLOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.221 s, sync=0.007 s, total=0.243 s; archivos sincronizados=2, más largo=0.006 s, promedio=0.004 s; distancia=5 kB, estimación=41 kB; lsn=93/C000CFB0, lsn de redo=93/C000CF78
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:27:08 CESTLOG:  sentencia: truncate cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:27:08 CESTERROR:  no existe la relación «cascade»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:27:08 CESTSENTENCIA:  truncate cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:28:22 CESTLOG:  sentencia: TRUNCATE clientes CASCADE;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:29:40 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (50000002, 'Fernando', 'Gutierrez', 'fernandogutierrez1@gmail.com', 700000001, 'Sevilla');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:29:41 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (50000003, 'Gabriel', 'Sanchez', 'gabrielsanchez55@yahoo.com', 700000002, 'Toledo');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:30:56 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:31:00 CESTLOG:  checkpoint completo: escritos 36 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.800 s, sync=0.038 s, total=3.856 s; archivos sincronizados=46, más largo=0.006 s, promedio=0.001 s; distancia=87 kB, estimación=87 kB; lsn=93/C0022E10, lsn de redo=93/C0022DD8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:32:52 CESTLOG:  sentencia: TRUNCATE clientes CASCADE;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:34:33 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (3, 'Fernando', 'Gutierrez', 'fernandogutierrez@gmail.com', 600000003, 'Sevilla');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60918), 2025-05-13 09:34:34 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (4, 'Gabriel', 'Sanchez', 'gabrielsanchez@yahoo.com', 600000004, 'Toledo');
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:35:56 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:36:00 CESTLOG:  checkpoint completo: escritos 35 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.702 s, sync=0.029 s, total=3.757 s; archivos sincronizados=42, más largo=0.007 s, promedio=0.001 s; distancia=85 kB, estimación=87 kB; lsn=93/C00383D8, lsn de redo=93/C00383A0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 10:00:06 CESTLOG:  proceso de servidor (PID 17924) fue terminado por una excepción 0xC000013A
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 10:00:06 CESTDETALLE:  El proceso que falló estaba ejecutando: START_REPLICATION 93/C0000000 TIMELINE 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 10:00:06 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 10:00:06 CESTLOG:  terminando todos los otros procesos de servidor activos
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 10:00:06 CESTLOG:  todos los procesos fueron terminados; reinicializando

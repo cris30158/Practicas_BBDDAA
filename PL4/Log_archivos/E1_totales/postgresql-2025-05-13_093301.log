@@ -1,0 +1,30 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:33:01 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:33:01 CESTLOG:  escuchando en la dirección IPv6 «::», port 5434
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:33:01 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5434
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:33:01 CESTLOG:  el sistema de bases de datos fue apagado durante la recuperación en 2025-05-13 09:32:21 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:33:01 CESTLOG:  entrando al modo standby
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:33:01 CESTLOG:  redo comienza en 93/C0016AF0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:33:01 CESTLOG:  el estado de recuperación consistente fue alcanzado en 93/C002C9F8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:33:01 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones de sólo lectura
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:33:01 CESTLOG:  largo de registro no válido en 93/C002C9F8: se esperaba al menos 24, se obtuvo 0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:33:01 CESTLOG:  iniciando el flujo de WAL desde el primario en 93/C0000000 en el timeline 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:38:01 CESTLOG:  empezando restartpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:38:08 CESTLOG:  restartpoint completo: escritos 67 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=7.035 s, sync=0.040 s, total=7.089 s; archivos sincronizados=48, más largo=0.007 s, promedio=0.001 s; distancia=210 kB, estimación=210 kB; lsn=93/C004B710, lsn de redo=93/C004B6D8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:38:08 CESTLOG:  restartpoint de recuperación en 93/C004B6D8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 09:38:08 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-13 09:34:20.331373+02.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 10:00:06 CESTLOG:  proceso de servidor (PID 25608) fue terminado por una excepción 0xC000013A
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 10:00:06 CESTDETALLE:  El proceso que falló estaba ejecutando: /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 72287)) AS "Total",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'active' AND datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 72287))  AS "Active",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'idle' AND datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 72287))  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 72287)) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 72287)) AS "Commits",
+	   (SE
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 10:00:06 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 10:00:06 CESTLOG:  terminando todos los otros procesos de servidor activos

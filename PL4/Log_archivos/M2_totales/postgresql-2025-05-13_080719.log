@@ -1,0 +1,23 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:19 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:19 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:19 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:19 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-06 10:17:32 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:20 CESTLOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:20 CESTLOG:  redo comienza en 93/BA0B7D18
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:20 CESTLOG:  largo de registro no válido en 93/BA0B7E00: se esperaba al menos 24, se obtuvo 0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:20 CESTLOG:  redo listo en 93/BA0B7DC8 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:20 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:20 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.002 s, total=0.010 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=93/BA0B7E00, lsn de redo=93/BA0B7E00
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:07:20 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59616), 2025-05-13 08:07:31 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59616), 2025-05-13 08:07:31 CESTDETALLE:  La conexión coincidió con el archivo «C:/Maestro2/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59618), 2025-05-13 08:07:38 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59618), 2025-05-13 08:07:38 CESTDETALLE:  La conexión coincidió con el archivo «C:/Maestro2/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:28:27 CESTLOG:  se recibió petición de apagado rápido
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:28:27 CESTLOG:  abortando transacciones activas
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:28:27 CESTERROR:  cancelando la sentencia debido a una petición del usuario
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:28:27 CESTLOG:  proceso ayudante «logical replication launcher» (PID 16184) terminó con código de salida 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:28:27 CESTLOG:  apagando
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:28:27 CESTLOG:  empezando checkpoint: shutdown immediate
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:28:27 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.010 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=0 kB; lsn=93/BA0B7EB0, lsn de redo=93/BA0B7EB0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-13 08:28:27 CESTLOG:  el sistema de bases de datos está apagado

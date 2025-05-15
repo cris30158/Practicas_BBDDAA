@@ -1,0 +1,53 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:48:13 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:48:13 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:48:13 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:48:13 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-06 09:43:24 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:48:13 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:49:36 CESTERROR:  error de sintaxis en o cerca de «FOREING» en carácter 8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:49:36 CESTSENTENCIA:  IMPORT FOREING SCHEMA public FROM SERVER m1_en_m2 INTO telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:49:46 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m1_en_m2 INTO telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61553), 2025-05-06 09:50:17 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:51:18 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:51:18 CESTERROR:  no existe el servidor «m2_en_m1»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:51:18 CESTSENTENCIA:  IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:51:28 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m1_en_m2 INTO telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:51:28 CESTERROR:  la relación «clientes» ya existe
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:51:28 CESTCONTEXTO:  importando la tabla foránea «clientes»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:51:28 CESTSENTENCIA:  IMPORT FOREIGN SCHEMA public FROM SERVER m1_en_m2 INTO telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:51:31 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m1_en_m2 INTO telparkM2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:51:31 CESTERROR:  no existe el esquema «telparkm2»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:51:31 CESTSENTENCIA:  IMPORT FOREIGN SCHEMA public FROM SERVER m1_en_m2 INTO telparkM2;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:53:13 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 09:53:17 CESTLOG:  checkpoint completo: escritos 40 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.029 s, sync=0.025 s, total=4.073 s; archivos sincronizados=25, más largo=0.007 s, promedio=0.001 s; distancia=140 kB, estimación=140 kB; lsn=93/BA04C618, lsn de redo=93/BA04C5E0
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61547), 2025-05-06 09:59:57 CESTLOG:  sentencia: drop server m1_en_m2 cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59569), 2025-05-06 10:00:24 CESTLOG:  sentencia: CREATE EXTENSION postgres_fdw;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59569), 2025-05-06 10:00:46 CESTLOG:  sentencia: CREATE SERVER m1_en_m2 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5433', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59569), 2025-05-06 10:01:03 CESTLOG:  sentencia: CREATE USER MAPPING FOR postgres SERVER m1_en_m2 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59569), 2025-05-06 10:01:20 CESTLOG:  sentencia: CREATE SCHEMA telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59569), 2025-05-06 10:01:39 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59569), 2025-05-06 10:01:39 CESTERROR:  no existe el servidor «m2_en_m1»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59569), 2025-05-06 10:01:39 CESTSENTENCIA:  IMPORT FOREIGN SCHEMA public FROM SERVER m2_en_m1 INTO telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59569), 2025-05-06 10:01:43 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER m1_en_m2 INTO telparkM1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61654), 2025-05-06 10:02:11 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61668), 2025-05-06 10:02:11 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:03:13 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:03:21 CESTLOG:  checkpoint completo: escritos 76 búfers (0.5%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=8.134 s, sync=0.042 s, total=8.192 s; archivos sincronizados=51, más largo=0.006 s, promedio=0.001 s; distancia=219 kB, estimación=219 kB; lsn=93/BA0832B8, lsn de redo=93/BA083280
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:05:25 CESTLOG:  proceso de servidor (PID 46264) fue terminado por una excepción 0xC000013A
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:05:25 CESTDETALLE:  El proceso que falló estaba ejecutando: /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 72287)) AS "Total",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'active' AND datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 72287))  AS "Active",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'idle' AND datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 72287))  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 72287)) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 72287)) AS "Commits",
+	   (SE
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:05:25 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-06 10:05:25 CESTLOG:  terminando todos los otros procesos de servidor activos

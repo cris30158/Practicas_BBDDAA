@@ -1,0 +1,36 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-04-22 08:24:31 CESTLOG:  el sistema de bases de datos fue apagado en 2025-04-22 08:24:29 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-04-22 08:29:31 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-04-22 08:29:31 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.003 s, total=0.022 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=93/B8BEB140, lsn de redo=93/B8BEB108
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:36:57 CESTERROR:  no existe la relación «coches» en carácter 15
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:36:57 CESTSENTENCIA:  select * from coches order by matricula limit 1;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:45:12 CESTERROR:  el operador no existe: text = integer en carácter 38
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:45:12 CESTHINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:45:12 CESTSENTENCIA:  select * from clientes where telefono=635526538;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:46:08 CESTERROR:  error de sintaxis en o cerca de «where» en carácter 30
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:46:08 CESTSENTENCIA:  select * from clientes where where clienteid='0';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:53:26 CESTERROR:  error de sintaxis en o cerca de «cliente» en carácter 8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:53:26 CESTSENTENCIA:  Create cliente('0','Cristina','Martínez','cyberquartzsl@gmail.com','635526538','Madrid');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:53:41 CESTERROR:  error de sintaxis en o cerca de «clientes» en carácter 8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:53:41 CESTSENTENCIA:  Create clientes('0','Cristina','Martínez','cyberquartzsl@gmail.com','635526538','Madrid');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:54:50 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (0, 'Cristina', 'Martínez', 'cyberquartzsl@gmail.com', 635526538, 'Madrid');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:54:53 CESTLOG:  sentencia: INSERT INTO vehiculos (vehiculoid, matricula, marca, modelo, color, clienteid_clientes)
+	VALUES (0, '0000CDV', 'marca_0', 'modelo_0', 'Rojo', 0);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:56:03 CESTWARNING:  no hay una transacción en curso
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:57:23 CESTLOG:  sentencia: delete from vehiculos where vehiculoid=0;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:57:35 CESTLOG:  sentencia: delete from clientes where clienteid=0;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:57:42 CESTWARNING:  no hay una transacción en curso
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:57:49 CESTERROR:  error de sintaxis en o cerca de «ç» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61366), 2025-04-22 08:57:49 CESTSENTENCIA:  ç
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62471), 2025-04-22 08:58:29 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62471), 2025-04-22 08:58:29 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62483), 2025-04-22 08:58:51 CESTERROR:  error de sintaxis en o cerca de «consultas» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62483), 2025-04-22 08:58:51 CESTSENTENCIA:  consultas.sql
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62483), 2025-04-22 08:58:58 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (0, 'Cristina', 'Martínez', 'cyberquartzsl@gmail.com', 635526538, 'Madrid');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(62483), 2025-04-22 08:58:58 CESTLOG:  sentencia: INSERT INTO vehiculos (vehiculoid, matricula, marca, modelo, color, clienteid_clientes)
+	VALUES (0, '0000CDV', 'marca_0', 'modelo_0', 'Rojo', 0);
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-04-22 08:59:32 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-04-22 08:59:33 CESTLOG:  checkpoint completo: escritos 13 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.333 s, sync=0.013 s, total=1.359 s; archivos sincronizados=12, más largo=0.006 s, promedio=0.002 s; distancia=76 kB, estimación=76 kB; lsn=93/B8BFE2A0, lsn de redo=93/B8BFE268

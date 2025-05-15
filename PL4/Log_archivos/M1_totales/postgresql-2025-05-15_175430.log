@@ -1,0 +1,30 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:54:30 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-15 17:54:28 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:54:30 CESTLOG:  recuperado el estado de replicación del nodo 3 a 93/C218AA20
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59759), 2025-05-15 17:54:52 CESTERROR:  parámetro de configuración «wall_level» no reconocido
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59759), 2025-05-15 17:54:52 CESTSENTENCIA:  show wall_level;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:59:30 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 17:59:30 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.002 s, total=0.016 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=93/CCC3CE20, lsn de redo=93/CCC3CDE8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60771), 2025-05-15 18:06:06 CESTERROR:  could not connect to server "m2_en_m1"
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60771), 2025-05-15 18:06:06 CESTDETALLE:  falló la conexión al servidor en «localhost» (::1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+	falló la conexión al servidor en «localhost» (127.0.0.1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60771), 2025-05-15 18:06:06 CESTSENTENCIA:  SELECT * FROM tlm2.clientes
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60649), 2025-05-15 18:10:19 CESTLOG:  sentencia: CREATE SERVER e2_en_m1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'localhost', port '5435', dbname 'pl2');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60649), 2025-05-15 18:10:36 CESTLOG:  sentencia: CREATE USER MAPPING FOR postgres SERVER m2_en_m1 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60649), 2025-05-15 18:10:36 CESTERROR:  el mapeo de usuario «postgres» ya existe para el servidor «m2_en_m1»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60649), 2025-05-15 18:10:36 CESTSENTENCIA:  CREATE USER MAPPING FOR postgres SERVER m2_en_m1 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60649), 2025-05-15 18:10:46 CESTLOG:  sentencia: CREATE USER MAPPING FOR postgres SERVER e2_en_m1 OPTIONS (user 'postgres', password 'Paniagua2005');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60649), 2025-05-15 18:11:00 CESTLOG:  sentencia: CREATE SCHEMA tlE2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60649), 2025-05-15 18:11:16 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public FROM SERVER e2_en_m1 INTO tlE2;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60649), 2025-05-15 18:11:29 CESTERROR:  no existe la relación «tle2clientes» en carácter 15
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60649), 2025-05-15 18:11:29 CESTSENTENCIA:  select * from tlE2clientes;
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:14:30 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:14:34 CESTLOG:  checkpoint completo: escritos 37 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.937 s, sync=0.026 s, total=3.984 s; archivos sincronizados=28, más largo=0.007 s, promedio=0.001 s; distancia=122 kB, estimación=122 kB; lsn=93/CCC5BA10, lsn de redo=93/CCC5B9D8
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60056), 2025-05-15 18:18:34 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60771), 2025-05-15 18:18:34 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60068), 2025-05-15 18:18:34 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
