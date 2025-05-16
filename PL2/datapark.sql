@@ -5,6 +5,7 @@ BEGIN;
 
 -- Crear tabla de clientes
 CREATE TABLE clientes (
+
 	clienteid integer NOT NULL,
 	nombre text NOT NULL,
 	apellido text NOT NULL,
@@ -77,22 +78,22 @@ CREATE TABLE incidencias (
 );
 
 
-COMMIT;
+-- COMMIT;
 
-/* 
-\i datapark.sql
+
+-- \i datapark.sql
  \timing
 
-\copy clientes(clienteid, nombre, apellido, email, telefono, provincia) FROM 'clientes.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
+\copy clientes(clienteid, nombre, apellido, email, telefono, provincia) FROM 'ej7/clientes.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
-\copy vehiculos(vehiculoid, matricula, marca, modelo, color, clienteid_clientes) FROM 'vehiculos.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
+\copy vehiculos(vehiculoid, matricula, marca, modelo, color, clienteid_clientes) FROM 'ej7/vehiculos.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
-\copy plazas(plazaid, numero, seccion, nivel) FROM 'plazas.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
+\copy plazas(plazaid, numero, seccion, nivel) FROM 'ej7/plazas.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
-\copy reservas(reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin) FROM 'reservas_final.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
+\copy reservas(reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin) FROM 'ej7/reservas_final.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
-\copy pagos(pagoid, cantidad, fechapago, metodopago, reservaid_reservas) FROM 'pagos.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
+\copy pagos(pagoid, cantidad, fechapago, metodopago, reservaid_reservas) FROM 'ej7/pagos.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
-\copy incidencias(incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion)  FROM 'incidencias.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
+\copy incidencias(incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion)  FROM 'ej7/incidencias.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
-*/
+Commit;

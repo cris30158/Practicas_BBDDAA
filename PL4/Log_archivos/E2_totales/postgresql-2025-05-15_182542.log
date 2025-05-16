@@ -12,3 +12,17 @@ alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:30:42 CESTLOG:  empeza
 alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:30:43 CESTLOG:  restartpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.559 s, sync=0.018 s, total=0.603 s; archivos sincronizados=6, más largo=0.006 s, promedio=0.003 s; distancia=11 kB, estimación=11 kB; lsn=93/C4002E00, lsn de redo=93/C4002DC8
 alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:30:43 CESTLOG:  restartpoint de recuperación en 93/C4002DC8
 alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:30:43 CESTDETALLE:  Última transacción completada al tiempo de registro 2025-05-15 18:22:20.079241+02.
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61846), 2025-05-15 18:33:35 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61834), 2025-05-15 18:33:35 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(61901), 2025-05-15 18:33:35 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:33:39 CESTFATAL:  no se pudo recibir datos desde el flujo de WAL: el servidor ha cerrado la conexión inesperadamente
+		Probablemente se debe a que el servidor terminó de manera anormal
+		antes o durante el procesamiento de la petición.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:33:39 CESTLOG:  largo de registro no válido en 93/C4002EB0: se esperaba al menos 24, se obtuvo 0
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:33:40 CESTLOG:  proceso receptor de WAL (PID 18524) fue terminado por una excepción 0xC000013A
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:33:40 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:33:40 CESTLOG:  terminando todos los otros procesos de servidor activos
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:33:40 CESTLOG:  todos los procesos fueron terminados; reinicializando

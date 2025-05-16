@@ -28,3 +28,107 @@ alumno_1= 09109126E y alumno_2= 06593675N ::1(60771), 2025-05-15 18:18:34 CESTLO
 	
 alumno_1= 09109126E y alumno_2= 06593675N ::1(60068), 2025-05-15 18:18:34 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
 	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(60649), 2025-05-15 18:33:39 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59877), 2025-05-15 18:33:40 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59877), 2025-05-15 18:33:40 CESTSENTENCIA:  START_REPLICATION 93/CC000000 TIMELINE 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59877), 2025-05-15 18:33:40 CESTLOG:  se encontró fin de archivo inesperado en la conexión standby
+alumno_1= 09109126E y alumno_2= 06593675N ::1(59877), 2025-05-15 18:33:40 CESTSENTENCIA:  START_REPLICATION 93/CC000000 TIMELINE 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:39:50 CESTLOG:  sentencia: truncate clientes cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:39:56 CESTLOG:  sentencia: truncate plazas cascade;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:16 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:16 CESTLOG:  sentencia: COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:17 CESTLOG:  sentencia: COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:17 CESTLOG:  sentencia: COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:24 CESTERROR:  inserción o actualización en la tabla «reservas» viola la llave foránea «plazas_fk»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:24 CESTDETALLE:  La llave (plazaid_plazas)=(30174) no está presente en la tabla «plazas».
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:24 CESTSENTENCIA:  COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:24 CESTLOG:  sentencia: COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:24 CESTERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:24 CESTSENTENCIA:  COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:24 CESTLOG:  sentencia: COPY  incidencias ( incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:24 CESTERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63356), 2025-05-15 18:41:24 CESTSENTENCIA:  COPY  incidencias ( incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63563), 2025-05-15 18:42:44 CESTLOG:  sentencia: COPY  clientes ( clienteid, nombre, apellido, email, telefono, provincia ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63563), 2025-05-15 18:42:44 CESTLOG:  sentencia: COPY  vehiculos ( vehiculoid, matricula, marca, modelo, color, clienteid_clientes ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63563), 2025-05-15 18:42:45 CESTLOG:  sentencia: COPY  plazas ( plazaid, numero, seccion, nivel ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63563), 2025-05-15 18:42:45 CESTLOG:  sentencia: COPY  reservas ( reservaid, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes, fechainicio, fechafin ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63563), 2025-05-15 18:42:58 CESTLOG:  sentencia: COPY  pagos ( pagoid, cantidad, fechapago, metodopago, reservaid_reservas ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:42:59 CESTLOG:  empezando checkpoint: wal
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63563), 2025-05-15 18:43:03 CESTLOG:  sentencia: COPY  incidencias ( incidenciaid, reservaid_reservas, estado, fechaincidencia, descripcion ) FROM STDIN DELIMITER ',' CSV HEADER NULL 'NULL';
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:47:29 CESTLOG:  checkpoint completo: escritos 3728 búfers (22.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.188 s, sync=0.050 s, total=269.327 s; archivos sincronizados=99, más largo=0.003 s, promedio=0.001 s; distancia=532111 kB, estimación=532111 kB; lsn=93/F4D639B8, lsn de redo=93/ED3FF758
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63563), 2025-05-15 19:04:57 CESTERROR:  error de sintaxis en o cerca de «pg_waldump» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(63563), 2025-05-15 19:04:57 CESTSENTENCIA:  pg_waldump /ruta/al/archivo/0000000100000093000000F4
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(53833), 2025-05-16 10:01:43 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(53833), 2025-05-16 10:01:43 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(53844), 2025-05-16 10:01:50 CESTFATAL:  no existe la base de datos «plw»
+alumno_1= 09109126E y alumno_2= 06593675N ::1(53849), 2025-05-16 10:02:07 CESTLOG:  sentencia: INSERT INTO clientes (clienteid, nombre, apellido, email, telefono, provincia)
+	VALUES (30002, 'Cristina', 'Martínez', 'cyberquartzsl@gmail.com', 635526538, 'Madrid');
+alumno_1= 09109126E y alumno_2= 06593675N ::1(53849), 2025-05-16 10:02:07 CESTLOG:  sentencia: INSERT INTO vehiculos (vehiculoid, matricula, marca, modelo, color, clienteid_clientes)
+	VALUES (50001, '0000CDV', 'marca_0', 'modelo_0', 'Rojo', 30002);
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 10:02:35 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 10:07:05 CESTLOG:  checkpoint completo: escritos 10673 búfers (65.1%); 0 archivos WAL añadidos, 0 eliminados, 7 reciclados; write=269.800 s, sync=0.027 s, total=269.875 s; archivos sincronizados=65, más largo=0.001 s, promedio=0.001 s; distancia=124381 kB, estimación=491338 kB; lsn=93/F4D76D68, lsn de redo=93/F4D76D30
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 10:37:35 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 10:37:35 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.322 s, sync=0.031 s, total=0.396 s; archivos sincronizados=2, más largo=0.029 s, promedio=0.016 s; distancia=11 kB, estimación=442205 kB; lsn=93/F4D79AF0, lsn de redo=93/F4D79AB8
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 10:42:35 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 10:42:36 CESTLOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.540 s, sync=0.035 s, total=0.618 s; archivos sincronizados=5, más largo=0.028 s, promedio=0.007 s; distancia=12 kB, estimación=397986 kB; lsn=93/F4D7CE88, lsn de redo=93/F4D7CE50
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55825), 2025-05-16 10:47:11 CESTERROR:  error de sintaxis en o cerca de «?» en carácter 23
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55825), 2025-05-16 10:47:11 CESTSENTENCIA:  select * from clientes?
+	;
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55825), 2025-05-16 10:53:22 CESTERROR:  error de sintaxis en o cerca de «nd» en carácter 1
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55825), 2025-05-16 10:53:22 CESTSENTENCIA:  nd,
+	    relfilenode,
+	    reltablespace,
+	    pg_tablespace.spcname AS tablespace,
+	    pg_namespace.nspname AS schema
+	FROM 
+	    pg_class
+	JOIN 
+	    pg_namespace ON pg_namespace.oid = pg_class.relnamespace
+	LEFT JOIN 
+	    pg_tablespace ON pg_tablespace.oid = pg_class.reltablespace
+	WHERE 
+	    relfilenode IN (73342, 73343, 73344, 73345, 73349, 73350, 73351, 73352);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55825), 2025-05-16 10:53:35 CESTERROR:  la referencia a la columna «oid» es ambigua en carácter 13
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55825), 2025-05-16 10:53:35 CESTSENTENCIA:  SELECT 
+	    oid AS rel_oid,
+	    relname,
+	    relkind,
+	    relfilenode,
+	    reltablespace,
+	    pg_tablespace.spcname AS tablespace,
+	    pg_namespace.nspname AS schema
+	FROM 
+	    pg_class
+	JOIN 
+	    pg_namespace ON pg_namespace.oid = pg_class.relnamespace
+	LEFT JOIN 
+	    pg_tablespace ON pg_tablespace.oid = pg_class.reltablespace
+	WHERE 
+	    relfilenode IN (73342, 73343, 73344, 73345, 73349, 73350, 73351, 73352);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55825), 2025-05-16 10:53:37 CESTERROR:  la referencia a la columna «oid» es ambigua en carácter 13
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55825), 2025-05-16 10:53:37 CESTSENTENCIA:  SELECT 
+	    oid AS rel_oid,
+	    relname,
+	    relkind,
+	    relfilenode,
+	    reltablespace,
+	    pg_tablespace.spcname AS tablespace,
+	    pg_namespace.nspname AS schema
+	FROM 
+	    pg_class
+	JOIN 
+	    pg_namespace ON pg_namespace.oid = pg_class.relnamespace
+	LEFT JOIN 
+	    pg_tablespace ON pg_tablespace.oid = pg_class.reltablespace
+	WHERE 
+	    relfilenode IN (73342, 73343, 73344, 73345, 73349, 73350, 73351, 73352);
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55825), 2025-05-16 11:04:38 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55470), 2025-05-16 11:04:38 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N ::1(55482), 2025-05-16 11:04:38 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N ::1(53849), 2025-05-16 11:04:38 CESTFATAL:  terminando la conexión debido a una orden del administrador
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 11:04:38 CESTLOG:  apagando
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 11:04:38 CESTLOG:  empezando checkpoint: shutdown immediate
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 11:04:38 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.004 s, total=0.023 s; archivos sincronizados=3, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=358187 kB; lsn=93/F4D7CF38, lsn de redo=93/F4D7CF38

@@ -61,7 +61,7 @@ def crear_clientes():
         writer.writeheader()
                
         #rellenar los datos
-        for i in range (3000001):
+        for i in range (30001):
             #creamos los valores
             cliente_id = i
             nombre = nombres[random.randint(0,len(nombres)-1)]
@@ -86,7 +86,7 @@ def crear_vehiculos():
         writer.writeheader()
 
         #rellenar los datos
-        for i in range (5000000):
+        for i in range (50000):
             #creamos los valores
             vehiculo_id= i+1
             
@@ -109,7 +109,7 @@ def crear_vehiculos():
 
             color = colores[random.randint(0,len(colores)-1)] 
 
-            cliente_id = random.randint(0,3000000)
+            cliente_id = random.randint(0,30000)
 
             #lo insertamos
             writer.writerow({
@@ -132,7 +132,7 @@ def crear_plazas():
         writer.writeheader()
 
         #rellenar los datos
-        for i in range (200000):
+        for i in range (2000):
             plaza_id = i+1     
             numero = i % (200000//11)
             section = seccion[numero % (len(seccion)-1)] 
@@ -153,8 +153,8 @@ def crear_plazas():
 def crear_reservas():
 
     vehiculos = cargar_vehiculos()
-    total_registros = 40_000_000
-    bloque_size = 1_000_000
+    total_registros = 400000
+    bloque_size = 10000
     bloques = total_registros // bloque_size
     archivo_salida = "PL2/ej7/reservas_final.csv"
 
@@ -177,7 +177,7 @@ def crear_reservas():
 def crear_pagos():
     pago_id = 1
 
-    with pd.read_csv('PL2/ej7/reservas_final.csv', chunksize=1_000_000) as reader, \
+    with pd.read_csv('PL2/ej7/reservas_final.csv', chunksize=10000) as reader, \
          open('PL2/ej7/pagos.csv', 'w', newline='') as f_out:
 
         writer = csv.writer(f_out, quoting=csv.QUOTE_NONNUMERIC)
@@ -200,16 +200,16 @@ def crear_incidencias():
     reservas_dict = cargar_reservas_dict()
 
     print("Seleccionando 4 millones de reservas únicas...")
-    reserva_ids = random.sample(list(reservas_dict.keys()), 4_000_000)
+    reserva_ids = random.sample(list(reservas_dict.keys()), 40000)
 
     print("Generando incidencias y escribiendo archivo...")
     with open('PL2/ej7/incidencias.csv', mode='w', newline='') as f_out:
         writer = csv.writer(f_out, quoting=csv.QUOTE_NONNUMERIC)
         writer.writerow(['incidencia_id', 'reserva_id', 'estado', 'fecha_incidencia', 'descripcion'])
 
-        for i in range(0, 4_000_000, 500_000):
-            print(f"Escribiendo bloque {(i // 500_000) + 1}...")
-            bloque = generar_bloque_incidencias(reservas_dict, reserva_ids, i, min(500_000, 4_000_000 - i))
+        for i in range(0, 40000, 5000):
+            print(f"Escribiendo bloque {(i // 5000) + 1}...")
+            bloque = generar_bloque_incidencias(reservas_dict, reserva_ids, i, min(5000, 40000 - i))
             writer.writerows(bloque)
     print(f"Incidencias generadas y guardadas en: {'PL2/ej7/incidencias.csv'}")
 
@@ -258,7 +258,7 @@ def generar_bloque_reservas(vehiculos, inicio_id, bloque_size):
         reserva_id = inicio_id + i
         vehiculo_id = random.choice(vehiculo_ids)
         cliente_id = vehiculos[vehiculo_id]
-        plaza_id = random.randint(1, 200000)
+        plaza_id = random.randint(1, 2000)
 
         fecha_inicio = generar_fecha_random()
         duracion = random.randint(1, 10)

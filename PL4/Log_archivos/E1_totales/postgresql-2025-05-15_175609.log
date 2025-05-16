@@ -22,3 +22,7 @@ alumno_1= 09109126E y alumno_2= 06593675N ::1(60134), 2025-05-15 18:18:34 CESTLO
 	
 alumno_1= 09109126E y alumno_2= 06593675N ::1(60139), 2025-05-15 18:18:34 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
 	
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:33:40 CESTLOG:  proceso receptor de WAL (PID 18992) fue terminado por una excepción 0xC000013A
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:33:40 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:33:40 CESTLOG:  terminando todos los otros procesos de servidor activos
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-15 18:33:40 CESTLOG:  todos los procesos fueron terminados; reinicializando
