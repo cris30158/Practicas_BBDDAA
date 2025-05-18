@@ -1,0 +1,5 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 11:04:40 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-16 11:04:38 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 11:04:40 CESTLOG:  recuperado el estado de replicación del nodo 3 a 93/C218AA20
+alumno_1= 09109126E y alumno_2= 06593675N ::1(56663), 2025-05-16 11:06:35 CESTLOG:  el PID 3548 en la petición de cancelación no coincidió con ningún proceso
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 11:07:16 CESTLOG:  empezando checkpoint: force wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 11:07:16 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.003 s, total=0.022 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=2572 kB, estimación=2572 kB; lsn=93/F5000060, lsn de redo=93/F5000028

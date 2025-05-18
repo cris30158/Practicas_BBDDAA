@@ -1,0 +1,23 @@
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:47 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:47 CESTLOG:  escuchando en la dirección IPv6 «::», port 5432
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:47 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5432
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:47 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-16 11:07:16 CEST
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  comenzando proceso de recuperación
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  iniciando recuperación de backup con LSN de redo 93/F5000028, LSN de checkpoint 93/F5000060, en timeline 1
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  se ha restaurado el archivo «0000000100000093000000F5» desde el área de archivado
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  recuperado el estado de replicación del nodo 3 a 93/C218AA20
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  redo comienza en 93/F5000028
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  se completó la recuperación de backup con LSN de redo 93/F5000028 y LSN de término 93/F5000138
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  el estado de recuperación consistente fue alcanzado en 93/F5000138
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones de sólo lectura
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  se ha restaurado el archivo «0000000100000093000000F6» desde el área de archivado
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  redo listo en 93/F60B02B8 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.07 s, transcurrido: 0.13 s
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  última transacción completada al tiempo de registro 2025-05-16 13:17:01.743148+02
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  se ha restaurado el archivo «0000000100000093000000F6» desde el área de archivado
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  seleccionado nuevo ID de timeline: 2
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  recuperación completa
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  checkpoint completo: escritos 103 búfers (0.6%); 0 archivos WAL añadidos, 0 eliminados, 3 reciclados; write=0.016 s, sync=0.024 s, total=0.055 s; archivos sincronizados=65, más largo=0.001 s, promedio=0.001 s; distancia=32768 kB, estimación=32768 kB; lsn=93/F7000028, lsn de redo=93/F7000028
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:09:48 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:14:48 CESTLOG:  empezando checkpoint: time
+alumno_1= 09109126E y alumno_2= 06593675N , 2025-05-16 14:14:50 CESTLOG:  checkpoint completo: escritos 15 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.636 s, sync=0.005 s, total=1.654 s; archivos sincronizados=10, más largo=0.001 s, promedio=0.001 s; distancia=5 kB, estimación=29491 kB; lsn=93/F7001588, lsn de redo=93/F7001550
